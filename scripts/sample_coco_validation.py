@@ -34,7 +34,7 @@ def main(argv=None):
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--count', type=int, default=300)
     parser.add_argument('--seed', type=int, default=42)
-    parser.add_argument('--support-manifests', type=Path, default=PROJECT_ROOT / 'data/supports/diaowu')
+    parser.add_argument('--support-manifests', type=Path, default=PROJECT_ROOT / 'data/references/diaowu')
     args = parser.parse_args(argv)
     if args.count < 1:
         parser.error('--count must be positive')

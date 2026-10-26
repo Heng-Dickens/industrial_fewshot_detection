@@ -15,6 +15,7 @@ from industrial_fewshot.data.labelme import read_json,write_json
 from industrial_fewshot.experiments import run_ablation
 from industrial_fewshot.labels import all_label_names
 from industrial_fewshot.runtime import run_async
+from industrial_fewshot.paths import resolve_location
 
 RUNTIME=ROOT/'outputs/runtime/chache_expanded_shots'
 STATE=RUNTIME/'status.json'
@@ -50,11 +51,11 @@ def verify_group(group,job):
     assert set(group['metrics']['score_threshold_results'])=={'0.5','0.7'}
     for manifest in group['support_manifests']:
         assert manifest['positive_count']==job['shot']
-        path=Path(manifest['path'])
+        path=resolve_location(Path(manifest['path']))
         assert hashlib.sha256(path.read_bytes()).hexdigest()==manifest['sha256']
         for row in read_json(path)['positive_samples']:
-            assert hashlib.sha256(Path(row['image_path']).read_bytes()).hexdigest()==row['image_sha256']
-            assert hashlib.sha256(Path(row['json_path']).read_bytes()).hexdigest()==row['annotation_sha256']
+            assert hashlib.sha256(resolve_location(Path(row['image_path'])).read_bytes()).hexdigest()==row['image_sha256']
+            assert hashlib.sha256(resolve_location(Path(row['json_path'])).read_bytes()).hexdigest()==row['annotation_sha256']
     return group
 
 

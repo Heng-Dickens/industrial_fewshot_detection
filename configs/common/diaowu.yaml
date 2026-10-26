@@ -9,12 +9,12 @@ dataset:
   recursive: true
   missing_ground_truth: negative
   manifest_file: ../../data/splits/diaowu/test.json
-reference_image_dir: ../../data/processed/diaowu/references
-support_manifest_dir: ../../data/supports/diaowu
+reference_image_dir: ../../data/references/diaowu
+support_manifest_dir: ../../data/references/diaowu
 preparation:
-  prepared_dir: ../../data/processed/diaowu
+  prepared_dir: ../../data/references/diaowu/preparation
   splits_dir: ../../data/splits/diaowu
-  supports_dir: ../../data/supports/diaowu
+  supports_dir: ../../data/references/diaowu
   support_counts: [1, 5, 10, 25]
   support_seeds: [0]
   split_seed: 0

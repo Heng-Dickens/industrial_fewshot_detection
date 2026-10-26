@@ -7,7 +7,7 @@
   "ground_truth_dir": null,
   "recursive": true,
   "missing_ground_truth": "negative",
-  "reference_image_dir": "..\\..\\data\\processed\\diaowu\\references",
+  "reference_image_dir": "..\\..\\data\\references\\diaowu",
   "labels": [
     {
       "name": "hanging object",

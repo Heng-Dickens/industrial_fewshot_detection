@@ -8,9 +8,8 @@
 configs/common/          共享数据、YOLOE视觉默认参数、新场景模板
 configs/specific/        可直接选择的模型、实验和辅助工具配置
 data/raw/                外部原始数据位置说明，不复制监控原图
-data/processed/diaowu/   COCO annotations.json、参考样本及准备报告
+data/references/         吊物、叉车和吊钩参考素材及固定shot清单
 data/splits/diaowu/      固定 train/val/test 清单，含图片指纹和本地评估真值
-data/supports/diaowu/    1/5/10/25 shot 支持集清单
 src/industrial_fewshot/  数据、检测器、提示词、后处理、评估、缓存和运行器
 scripts/                 准备、运行、评估、比较、稳定性分析及可视化入口
 tests/                   单元、集成及数据工具测试
@@ -33,7 +32,7 @@ python scripts/prepare_dataset.py --config configs/specific/visual_5shot.yaml
 python main.py --config configs/specific/mllm_ablation.yaml --dry-run
 ```
 
-准备数据只写项目派生清单和 COCO，不调用模型、不修改原始图片或人工 JSON。已有 50 个参考例子放在 `data/processed/diaowu/references`，含 25 正例和 25 负例、正例原图／JSON／局部裁剪／彩色框全图。
+准备数据只写项目派生清单和 COCO，不调用模型、不修改原始图片或人工 JSON。已有 50 个参考例子放在 `data/references/diaowu`，含 25 正例和 25 负例、正例原图／JSON／局部裁剪／彩色框全图。
 
 `configs/specific/` 可直接选择：
 

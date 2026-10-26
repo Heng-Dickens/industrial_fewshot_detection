@@ -1,0 +1,13 @@
+# 新版吊物300张，Qwen3.8-27B完整5shot输入组合。
+# 运行专用脚本以保留已有两组，结果直接写入原模型目录。
+# .\.venv-yoloe\Scripts\python.exe scripts/run_diaowu_qwen27b_all_5shot.py
+extends: [diaowu_qwen27b_prompt_5shot.yaml]
+concurrency: 8
+experiment_suite:
+  enabled: true
+  include_prompt_only: true
+  positive_counts: [5]
+  negative_variants: [false, true]
+  positive_variants: [O+J, O+C, O+B, O+C+J, O+B+J, O+C+B, O+C+B+J]
+  selection_seed: 0
+  exclude_reference_overlap: true

@@ -18,7 +18,7 @@
 ```json
 {
   "mode": "train",
-  "reference_image_dir": "../../data/processed/diaowu/references",
+  "reference_image_dir": "../../data/references/diaowu",
   "reference_mode": "text_only",
   "experiment_suite": {
     "enabled": true,

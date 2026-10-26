@@ -26,9 +26,17 @@ MOVED_DIRECTORIES = {
     "runs": "outputs/archive/runs_legacy",
     "outputs/runs/legacy": "outputs/archive/runs_legacy",
     "outputs/runs/runtime": "outputs/runtime",
-    "data/DiaoWuexample_prepared": "data/processed/diaowu/references",
-    "data/DiaoGouexample": "data/processed/diaogou/references",
-    "data/Chacheexampledata": "data/processed/chache/references",
+    "data/DiaoWuexample_prepared": "data/references/diaowu",
+    "data/DiaoGouexample": "data/references/diaogou",
+    "data/Chacheexampledata": "data/references/chache/review",
+    'data/processed/diaowu/references': 'data/references/diaowu',
+    'data/processed/diaogou/references': 'data/references/diaogou',
+    'data/processed/chache/references': 'data/references/chache/review',
+    'data/supports/chache': 'data/references/chache',
+    'data/supports/diaowu': 'data/references/diaowu',
+    'data/processed/diaowu_val300': 'data/references/diaowu/preparation/val300',
+    'data/supports/diaowu_val300': 'data/references/diaowu',
+    'data/processed/diaowu': 'data/references/diaowu/preparation',
     'configs/experiments': 'configs/specific',
     'configs/legacy': 'configs/specific',
     'configs/datasets': 'configs/common',
@@ -52,7 +60,7 @@ def resolve_location(path: Path) -> Path:
         relative = path.relative_to(PROJECT_ROOT).as_posix()
         if relative in CONFIG_FILE_ALIASES:
             return (PROJECT_ROOT / CONFIG_FILE_ALIASES[relative]).resolve()
-    for old, new in MOVED_DIRECTORIES.items():
+    for old, new in sorted(MOVED_DIRECTORIES.items(), key=lambda item: len(item[0]), reverse=True):
         original = PROJECT_ROOT / old
         if path == original or path.is_relative_to(original):
             return (PROJECT_ROOT / new / path.relative_to(original)).resolve()
@@ -79,7 +87,7 @@ def stable_reference_identity(value):
     result = {}
     for key, child in value.items():
         if key in {"image_path", "json_path"} and isinstance(child, str):
-            path = Path(child)
+            path = resolve_location(Path(child))
             for old, new in MOVED_DIRECTORIES.items():
                 relocated = PROJECT_ROOT / new
                 if path.is_absolute() and path.is_relative_to(relocated):
@@ -89,4 +97,30 @@ def stable_reference_identity(value):
                 if path.is_absolute() and path.is_relative_to(PROJECT_ROOT):
                     child = str(CACHE_ORIGIN_ROOT / path.relative_to(PROJECT_ROOT))
         result[key] = stable_reference_identity(child)
+    return result
+
+
+def reference_storage_identity(value):
+    """Keep local detector material hashes across the references-only move."""
+    if isinstance(value, list):
+        return [reference_storage_identity(v) for v in value]
+    if not isinstance(value, dict):
+        return value
+    previous = {
+        'data/references/chache/review': 'data/processed/chache/references',
+        'data/references/diaowu/preparation': 'data/processed/diaowu',
+        'data/references/diaowu': 'data/processed/diaowu/references',
+        'data/references/chache': 'data/supports/chache',
+        'data/references/diaogou': 'data/processed/diaogou/references',
+    }
+    result = {}
+    for key, child in value.items():
+        if key in {'image_path', 'json_path'} and isinstance(child, str):
+            path = Path(child)
+            for current, old in previous.items():
+                base = PROJECT_ROOT / current
+                if path.is_absolute() and path.is_relative_to(base):
+                    child = str(PROJECT_ROOT / old / path.relative_to(base))
+                    break
+        result[key] = reference_storage_identity(child)
     return result

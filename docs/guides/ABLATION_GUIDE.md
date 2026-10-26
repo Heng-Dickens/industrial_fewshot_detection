@@ -21,7 +21,7 @@
 D:\Data\江苏通用\训练数据\模具吊物喷油\模具车间1\00000
 ```
 
-旧模式可从 `data/processed/diaowu/references` 读取参考 JSON 和裁剪图。按文件名排序选取，各组涉及的参考类型使用相同样例。首次正式运行会为四种不同输入分别推理；再次运行相同配置和图片会自动复用各组成功结果。要运行旧四组，将 experiment_suite.enabled 设为 false、ablation.enabled 设为 true。
+旧模式可从 `data/references/diaowu` 读取参考 JSON 和裁剪图。按文件名排序选取，各组涉及的参考类型使用相同样例。首次正式运行会为四种不同输入分别推理；再次运行相同配置和图片会自动复用各组成功结果。要运行旧四组，将 experiment_suite.enabled 设为 false、ablation.enabled 设为 true。
 
 当前吊物配置使用 `missing_ground_truth: "negative"`，按这批数据的约定将没有同名 JSON 的待测图片作为负样本参与评估。这些图片若被预测出目标框，会计入 FP，影响 Precision/mAP 和代理 loss，不再从指标中排除。该标记仅在本地评估使用，模型不会获知待测图片是否为负样本。
 
@@ -43,7 +43,7 @@ python main.py --config configs/specific/diaowu_ablation_config.json
   "mode": "train",
   "missing_ground_truth": "negative",
   "reference_mode": "text_json_crops",
-  "reference_image_dir": "../../data/processed/diaowu/references",
+  "reference_image_dir": "../../data/references/diaowu",
   "experiment_suite": {"enabled": false},
   "max_reference_examples": 6,
   "max_reference_crops": 6,

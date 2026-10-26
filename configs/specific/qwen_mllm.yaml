@@ -32,7 +32,7 @@ labels:
 - name: hanging object
   description: 正在被吊具吊运的大型中空圆柱状吊物及其吊具组成的完整吊装组件
 image_dir: D:\Data\江苏通用\训练数据\模具吊物喷油\模具车间1\00000
-reference_image_dir: ../../data/processed/diaowu/references
+reference_image_dir: ../../data/references/diaowu
 prompt_file: ../../src/industrial_fewshot/prompts/templates/diaowu.txt
 review_prompt_file: ../../src/industrial_fewshot/prompts/templates/review.txt
 reference_mode: text_only

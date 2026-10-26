@@ -5,7 +5,7 @@
   "api_key_env": "VLLM_API_KEY",
   "api_key": "EMPTY",
   "image_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
-  "reference_image_dir": "..\\..\\data\\processed\\diaowu\\references",
+  "reference_image_dir": "..\\..\\data\\references\\diaowu",
   "max_reference_examples": 6,
   "max_reference_crops": 6,
   "concurrency": 4,

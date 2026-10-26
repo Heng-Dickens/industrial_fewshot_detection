@@ -10,8 +10,8 @@ task_id: chache
 scene_name: chache_val300
 mode: train
 prompt_file: ../../src/industrial_fewshot/prompts/templates/chache_v1_short.txt
-reference_image_dir: ../../data/supports/chache
-support_manifest_dir: ../../data/supports/chache
+reference_image_dir: ../../data/references/chache
+support_manifest_dir: ../../data/references/chache
 reference_per_class: true
 reference_mode: text_only
 max_reference_examples: 0

@@ -1,6 +1,6 @@
 # 叉车场景提示词 v1
 
-依据 `data/supports/chache` 中五类、每类10张参考样本编写。类别名沿用当前数据集；这里的中文车型名称用于概括可见外观，不替代原标签。
+依据 `data/references/chache` 中五类、每类10张参考样本编写。类别名沿用当前数据集；这里的中文车型名称用于概括可见外观，不替代原标签。
 
 ## 每类中文描述
 
@@ -32,7 +32,7 @@
 
 模板中的 `{{label_lines}}`、`{{label_name}}` 由项目 `render_prompt` 替换为本次检测标签；MLLM允许在同一次请求中列出五类。五类对照用于判别；只输出配置允许的类别。检测范围为车辆与相连门架、货叉或属具，不为司机、货物或拖车扩大框。
 
-对应的视觉提示位于 data/supports/chache（本地路径 `../../data/supports/chache`），每类 `preview.jpg` 可用于对照检查。
+对应的视觉提示位于 data/references/chache（本地路径 `../../data/references/chache`），每类 `preview.jpg` 可用于对照检查。
 
 旧版原始模板保存在 [chache_v0_original.txt](../../src/industrial_fewshot/prompts/templates/chache_v0_original.txt)。本次实验的v1短版采用上面的用户修改；v2加长版保存在 [chache_v2_expanded.txt](../../src/industrial_fewshot/prompts/templates/chache_v2_expanded.txt)，补充逐类排除、驾驶姿态、遮挡及框选细则。两版共享类别定义，不依据验证集成绩调整定义。
 

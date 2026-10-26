@@ -1,0 +1,23 @@
+# 新版吊物300张：仅文字提示 / 5shot原图+带框图，无负例。
+# 启动：.\.venv-yoloe\Scripts\python.exe scripts/run_diaowu_qwen27b_prompt_5shot.py
+extends: [mllm_ablation.yaml, ../common/diaowu_val300.yaml]
+model: qwen3.8-27b
+prompt_file: ../../src/industrial_fewshot/prompts/templates/diaowu.txt
+output_dir: ../../outputs/runs
+results_layout: true
+# 单独缓存版本：本次600张次重新推理；中断后仍可复用本次成功结果。
+cache_version: diaowu_large_v2_qwen27b_text_ob5_v1
+reuse_predictions: true
+enable_completeness_review: true
+require_suspension_evidence: true
+evaluation:
+  score_threshold: 0.5
+  score_thresholds: [0.5, 0.7]
+experiment_suite:
+  enabled: true
+  include_prompt_only: true
+  positive_counts: [5]
+  negative_variants: [false]
+  positive_variants: [O+B]
+  selection_seed: 0
+  exclude_reference_overlap: true

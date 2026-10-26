@@ -41,7 +41,7 @@ class ProjectLinkTests(unittest.TestCase):
 
     def test_batch_accepts_old_config_and_relocated_image_directory(self):
         with relocated_project() as (old, new):
-            image_dir = new / 'data/processed/diaogou/references'
+            image_dir = new / 'data/references/diaogou'
             image_dir.mkdir(parents=True)
             raw = batch_config(image_dir)
             raw['image_dir'] = str(old / 'data/DiaoGouexample')
@@ -53,7 +53,7 @@ class ProjectLinkTests(unittest.TestCase):
     def test_review_accepts_old_config_and_reference_mapping(self):
         with relocated_project() as (old, new):
             raw = review_config(new)
-            references = new / 'data/processed/chache/references'
+            references = new / 'data/references/chache/review'
             references.mkdir(parents=True)
             raw['reference_image_dir'] = str(old / 'data/Chacheexampledata')
             (new / 'configs/specific/review.json').write_text(json.dumps(raw), encoding='utf-8')

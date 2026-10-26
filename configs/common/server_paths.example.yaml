@@ -6,6 +6,6 @@ dataset:
   manifest_file: /srv/industrial-data/diaowu_val300/manifest.json
   recursive: false
   missing_ground_truth: error
-reference_image_dir: /srv/industrial-data/supports/diaowu
-support_manifest_dir: /srv/industrial-data/supports/diaowu
+reference_image_dir: /srv/industrial-data/references/diaowu
+support_manifest_dir: /srv/industrial-data/references/diaowu
 output_dir: /srv/industrial-results/runs

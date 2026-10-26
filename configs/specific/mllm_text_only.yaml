@@ -39,8 +39,8 @@ dataset:
   missing_ground_truth: negative
   manifest_file: ../../data/splits/diaowu/test.json
 image_dir: D:\Data\江苏通用\训练数据\模具吊物喷油\模具车间1\00000
-reference_image_dir: ../../data/processed/diaowu/references
-support_manifest_dir: ../../data/supports/diaowu
+reference_image_dir: ../../data/references/diaowu
+support_manifest_dir: ../../data/references/diaowu
 prompt_file: ../../src/industrial_fewshot/prompts/templates/diaowu.txt
 review_prompt_file: ../../src/industrial_fewshot/prompts/templates/review.txt
 reference_mode: text_only
@@ -98,9 +98,9 @@ reuse_predictions: true
 cache_version: v1
 missing_ground_truth: negative
 preparation:
-  prepared_dir: ../../data/processed/diaowu
+  prepared_dir: ../../data/references/diaowu/preparation
   splits_dir: ../../data/splits/diaowu
-  supports_dir: ../../data/supports/diaowu
+  supports_dir: ../../data/references/diaowu
   support_counts:
   - 1
   - 5

@@ -3,7 +3,7 @@
 程序：[review_existing_annotations.py](../../tool/review_existing_annotations.py)
 
 当前配置：[Chache_cannotation_review_config.json](../../configs/specific/Chache_cannotation_review_config.json)
-类别参考图：data/processed/chache/references/（本地路径 `../../data/processed/chache/references/`）
+类别参考图：data/references/chache/review/（本地路径 `../../data/references/chache/review/`）
 
 ## 1. 当前数据检查结果
 
@@ -26,7 +26,7 @@ D:\Data\江苏通用\标注待检查\calibdata\模具车间1
 
 当前使用 configs/specific/Chache_cannotation_review_config.json，不需要复制旧的配置。
 
-确认 labels 中的各类别描述与 data/processed/chache/references 下对应参考图一致，并保留每个 label 的 reference_image 映射。
+确认 labels 中的各类别描述与 data/references/chache/review 下对应参考图一致，并保留每个 label 的 reference_image 映射。
 
 确认定义正确后修改：
 
@@ -164,7 +164,7 @@ python tool/review_existing_annotations.py `
 
 程序不会扫描整个参考目录，而是按 labels 逐项读取：当前配置为 5 张图片——
 Chache1.png、Chache2.png、Chache3.png、Chache5.png 和 Qianyinche.png，
-均位于 data/processed/chache/references/ 下。
+均位于 data/references/chache/review/ 下。
 
 每次请求的图片顺序固定为：
 

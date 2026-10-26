@@ -12,7 +12,7 @@ from pathlib import Path
 
 from industrial_fewshot.postprocess.schema import validate_prediction
 from industrial_fewshot.data.labelme import read_json, write_json, validate_pixel_prediction
-from industrial_fewshot.paths import resolve_location, stable_project_path
+from industrial_fewshot.paths import resolve_location, stable_project_path, reference_storage_identity
 from industrial_fewshot.labels import target_label_names
 
 LOGGER = logging.getLogger(__name__)
@@ -23,6 +23,9 @@ GENERATION_KEYS = (
 
 
 def digest(value: dict) -> str:
+    if isinstance(value, dict) and value.get('schema') in {
+            'yoloe_visual.v1', 'yoloe_crop_text.v1', 'pet_dino.v1', 'wedetect.v1'}:
+        value = reference_storage_identity(value)
     return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True, allow_nan=False).encode("utf-8")).hexdigest()
 
 

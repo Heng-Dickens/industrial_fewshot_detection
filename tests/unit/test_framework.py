@@ -77,7 +77,7 @@ class FrameworkUnitTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             parent = Path(directory)
             old, new = parent / "annotationtool", parent / "industrial_fewshot_detection"
-            current = new / "data/processed/diaowu/references/a.png"
+            current = new / "data/references/diaowu/a.png"
             current.parent.mkdir(parents=True)
             current.write_bytes(b"unchanged")
             with patch.object(locations, "PROJECT_ROOT", new), patch.object(locations, "CACHE_ORIGIN_ROOT", old):

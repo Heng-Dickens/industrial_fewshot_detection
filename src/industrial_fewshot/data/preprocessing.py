@@ -107,9 +107,16 @@ def prepare_experiment_dataset(config: dict, *, dry_run=False) -> dict:
     splits = assign_splits(samples, ratios, split_seed, settings.get("group_by", "parent"))
     snapshot = digest({"images": [{key: item[key] for key in ("relative_path", "image_sha256", "ground_truth")} for item in samples]})
     prepared, splits_dir, supports_dir = (Path(settings[key]).resolve() for key in ("prepared_dir", "splits_dir", "supports_dir"))
-    for output in (prepared, splits_dir, supports_dir):
+    for kind, output in (('prepared', prepared), ('splits', splits_dir), ('supports', supports_dir)):
         for protected in (config["image_dir"], config["ground_truth_dir"], pool.root):
             if output == protected or output.is_relative_to(protected):
+                # Unified references keep only shot manifests and preparation
+                # metadata alongside the protected positive/negative assets.
+                if (protected == pool.root and protected not in (config['image_dir'], config['ground_truth_dir'])
+                        and ((kind == 'supports' and output == pool.root)
+                             or (kind == 'prepared' and (output == pool.root / 'preparation'
+                                 or output.is_relative_to(pool.root / 'preparation'))))):
+                    continue
                 raise ValueError(f"派生数据输出不能写入原图/真值/参考池内: {output}")
     report = {"schema": "industrial_fewshot.prepared.v1", "image_root": str(config["image_dir"]),
               "ground_truth_root": str(config["ground_truth_dir"]), "image_count": len(samples),

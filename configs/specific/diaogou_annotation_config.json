@@ -4,7 +4,7 @@
   "api_key_env": "VLLM_API_KEY",
   "api_key": "EMPTY",
   "image_dir": "D:\\Data\\江苏通用\\待标注\\吊装挂钩\\压延产出工位\\00000",
-  "reference_image_dir": "..\\..\\data\\processed\\diaogou\\references",
+  "reference_image_dir": "..\\..\\data\\references\\diaogou",
   "max_reference_examples": 6,
   "concurrency": 4,
   "max_attempts": 3,

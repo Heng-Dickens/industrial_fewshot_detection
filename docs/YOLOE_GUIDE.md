@@ -52,7 +52,7 @@ tool/compare_detectors.py           已保存的 YOLOE/VLM 结果统一比较
 
 ## 参考图的使用方式
 
-参考目录沿用 `data/processed/diaowu/references`，通过 `manifest.json` 匹配正样本原图与标注，不依赖已删除的旧混合目录。
+参考目录沿用 `data/references/diaowu`，通过 `manifest.json` 匹配正样本原图与标注，不依赖已删除的旧混合目录。
 
 1. 用与 VLM 相同的 seed 和文件 ID 顺序选择前 K 张正样本，默认 K=5。
 2. 从对应 LabelMe JSON 读取目标类别的矩形框；多边形取包围框。非目标类别的框不作为当前类的提示。
@@ -64,7 +64,7 @@ tool/compare_detectors.py           已保存的 YOLOE/VLM 结果统一比较
 
 YOLOE 视觉接口接收图像及空间框/掩码，不将长篇自然语言规则、原始 JSON 文本、已画框的像素图或无框负样本作为同一种提示机制处理。当前基线不使用负样本原型、文字融合或额外的负例过滤器；负样本留在待测集中检验误标。若以后增加负例拒识，应作为另一个明确命名的方法比较。
 
-当前 seed=0 的 1／5／10shot 优先使用最早运行的历史参考图；5shot 与 VLM 完全一致，为 `0000090.jpg`、`0000189.jpg`、`0001320.jpg`、`0001352.jpg`、`0003939.jpg`。固定清单、正负样本及配对素材见 支持集说明（本地路径 `../data/supports/diaowu/README.md`）。修改 seed 或张数后以实际运行元数据为准。
+当前 seed=0 的 1／5／10shot 优先使用最早运行的历史参考图；5shot 与 VLM 完全一致，为 `0000090.jpg`、`0000189.jpg`、`0001320.jpg`、`0001352.jpg`、`0003939.jpg`。固定清单、正负样本及配对素材见 支持集说明（本地路径 `../data/references/diaowu/README.md`）。修改 seed 或张数后以实际运行元数据为准。
 
 ## 场景配置
 

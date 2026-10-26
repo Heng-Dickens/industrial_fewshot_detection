@@ -1,5 +1,7 @@
 # 原地重组说明
 
+2026-10-26将 `data/processed/`、`data/supports/` 实际合并到 `data/references/`。各场景的参考素材和固定shot清单集中保存，旧地址继续兼容；详见[参考目录说明](guides/REFERENCE_LAYOUT.md)。
+
 工作目录从 `D:\Learn\VLM\annotationtool` 原地重命名为 `D:\Learn\VLM\industrial_fewshot_detection`，未新建副本。重新在编辑器／终端打开新根目录后继续工作。
 
 | 原路径 | 当前实现／数据 |
@@ -8,9 +10,9 @@
 | `annotate/tests` | `tests/` |
 | `config/*.json` | 共享设置在 `configs/common/`，专用JSON与实验YAML在 `configs/specific/` |
 | `prompts` | `src/industrial_fewshot/prompts/templates` |
-| `data/DiaoWuexample_prepared` | `data/processed/diaowu/references` |
-| `data/DiaoGouexample` | `data/processed/diaogou/references` |
-| `data/Chacheexampledata` | `data/processed/chache/references` |
+| `data/DiaoWuexample_prepared` | `data/references/diaowu` |
+| `data/DiaoGouexample` | `data/references/diaogou` |
+| `data/Chacheexampledata` | `data/references/chache/review` |
 | `runs` | `outputs/archive/runs_legacy` |
 | `tool` 的完整实现 | `src/industrial_fewshot`，新入口在 `scripts` |
 | `annotate` 中的指南 | `docs/guides` |
