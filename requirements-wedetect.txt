@@ -1,0 +1,11 @@
+# Separate environment; uses official deploy/test_coco_pytorch.py, no MMDetection.
+torch==2.5.1
+torchvision==0.20.1
+transformers==4.57.1
+numpy>=1.24,<2
+Pillow>=10
+pycocotools>=2.0.7
+tqdm
+sentencepiece
+protobuf
+huggingface-hub

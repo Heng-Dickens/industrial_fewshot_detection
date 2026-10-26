@@ -1,0 +1,8 @@
+# Copy to server_wedetect_text.local.yaml before running.
+# Then change server_paths.example.yaml below to server_paths.local.yaml.
+extends:
+  - wedetect_text.yaml
+  - ../common/server_paths.example.yaml
+wedetect:
+  worker_python: ../../.venv-wedetect/bin/python
+  device: cuda:0

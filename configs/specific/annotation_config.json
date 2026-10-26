@@ -1,0 +1,40 @@
+{
+  "base_url": "https://wytvllm.iepose.cn/v1",
+  "model": "Qwen3.8-27B-FP8",
+  "api_key_env": "VLLM_API_KEY",
+  "api_key": "EMPTY",
+  "image_dir": "D:\\Data\\江苏通用\\需要标注数据\\成型垫胶立库出入口\\00001",
+  "output_json": "D:\\Data\\江苏通用\\需要标注数据\\成型垫胶立库出入口\\annotations\\annotations.json",
+  "checkpoint_jsonl": "D:\\Data\\江苏通用\\需要标注数据\\成型垫胶立库出入口\\annotations\\annotations.checkpoint.jsonl",
+  "append_image_dir_suffix": true,
+  "concurrency": 8,
+  "max_attempts": 3,
+  "retry_delay_seconds": 2,
+  "timeout_seconds": 180,
+  "max_tokens": 512,
+  "temperature": 0.1,
+  "top_p": 0.9,
+  "enable_thinking": false,
+  "stream": false,
+  "enable_completeness_review": true,
+  "structured_output_mode": "json_schema",
+  "prompt_version": "vehicle-multi-instance-review-v3",
+  "extensions": [
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".bmp",
+    ".webp"
+  ],
+  "labels": [
+    {
+      "name": "green_tractor",
+      "description": "牵引车，通常为绿色，适用于工厂或物流牵引货物场景，是用于牵引拖车的四轮小型车辆，具有绿色车身与黑色靠背，上面最多有一个司机，不管是否有司机都需要标注"
+    },
+    {
+      "name": "forklift",
+      "description": "叉车，有绿色的和橙色的适用于工厂或物流搬运货物场景，是用于搬运货物的四轮小型车辆，具有四轮车身安装在车身前面的叉车臂，车身带有顶棚，上面最多有一个司机，不管是否有司机都需要标注"
+    }
+  ],
+  "extra_instruction": "目标被部分遮挡时，按照可见区域估计完整目标的紧致外接框，若目标被遮挡过大，超过本身大小的三分之一就不标注；目标距离较远小于画面的0.5%时不标注"
+}

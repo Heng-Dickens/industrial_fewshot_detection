@@ -1,0 +1,18 @@
+# Install matching torch/torchvision and compiled mmcv first; see the guide.
+numpy==1.23.5
+mmengine>=0.7.1,<1
+transformers==4.46.3
+scipy<1.14
+Pillow>=10
+matplotlib<3.9
+pycocotools>=2.0.7
+shapely
+six
+terminaltables
+tqdm
+fairscale
+jsonlines
+nltk
+emoji
+ddd-dataset
+huggingface-hub

@@ -1,0 +1,4 @@
+# Separate .venv-groundingdino, using the local Transformers checkpoint API.
+transformers==4.46.3
+huggingface-hub>=0.26.3,<1
+numpy>=1.24,<2

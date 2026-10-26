@@ -1,0 +1,46 @@
+# 叉车300图，五类同请求；只跑纯文字和每类5shot原图+带框图，无负例。
+extends: ../common/chache_val300.yaml
+model: qwen3.8-27b
+base_url: http://127.0.0.1:15721/v1
+api_protocol: anthropic_messages
+api_key_env: VLLM_API_KEY
+api_key: EMPTY
+backend: generic
+task_id: chache
+scene_name: chache_val300
+mode: train
+prompt_file: ../../src/industrial_fewshot/prompts/templates/chache_v1_short.txt
+reference_image_dir: ../../data/supports/chache
+support_manifest_dir: ../../data/supports/chache
+reference_per_class: true
+reference_mode: text_only
+max_reference_examples: 0
+max_reference_crops: 0
+max_reference_negatives: 0
+concurrency: 2  # 50张参考图的大请求在并发4下出现连接超时；降低并发，生成参数不变。
+max_attempts: 2
+retry_delay_seconds: 2
+timeout_seconds: 180
+max_tokens: 8192
+temperature: 0.1
+top_p: 0.9
+enable_thinking: false
+stream: false
+structured_output_mode: json_object
+enable_completeness_review: false
+require_suspension_evidence: false
+require_box_reason: true
+experiment_suite:
+  enabled: true
+  include_prompt_only: true
+  positive_counts: [5]
+  negative_variants: [false]
+  positive_variants: [O+B]
+  selection_seed: 0
+  exclude_reference_overlap: true
+ablation:
+  enabled: false
+output_dir: ../../outputs/runs
+results_layout: true
+reuse_predictions: true
+cache_version: chache_multiclass_prompt_v1

@@ -1,0 +1,11 @@
+# 加长版v2：Qwen3.8-Flash，每类1/5/10shot，原图+带框图，无负例。
+extends: chache_qwen_prompt_comparison_expanded.yaml
+model: qwen3.8-flash
+# CC Switch默认映射为Max；此别名选中Sonnet分组中的Flash。
+# 只修改本项目请求，响应仍必须严格等于qwen3.8-flash，未改CC Switch全局。
+proxy_request_model: claude-sonnet-4-6
+experiment_suite:
+  include_prompt_only: false
+  positive_counts: [1, 5, 10]
+  negative_variants: [false]
+  positive_variants: [O+B]

@@ -1,0 +1,42 @@
+{
+  "base_url": "http://172.10.60.156:8002/v1",
+  "model": "/data/caopan/Qwen3.8-27B",
+  "api_key_env": "VLLM_API_KEY",
+  "api_key": "EMPTY",
+  "image_dir": "D:\\Data\\江苏通用\\待标注\\吊装挂钩\\压延产出工位\\00000",
+  "reference_image_dir": "..\\..\\data\\processed\\diaogou\\references",
+  "max_reference_examples": 6,
+  "concurrency": 4,
+  "max_attempts": 3,
+  "retry_delay_seconds": 2,
+  "timeout_seconds": 180,
+  "max_tokens": 1024,
+  "temperature": 0.1,
+  "top_p": 0.9,
+  "enable_thinking": false,
+  "stream": false,
+  "enable_completeness_review": true,
+  "structured_output_mode": "json_schema",
+  "extensions": [
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".bmp",
+    ".webp"
+  ],
+  "labels": [
+    {
+      "name": "DiaoGou",
+      "description": "吊钩，通常为黄色或黑色带黄，自上而下的完整组件包括吊盘（吊臂上方与行车/天车连接的转盘或底盘）、悬臂（吊臂）、悬臂两侧的挂钩和吊臂下方悬挂的吊钩钩体，常见于行车/天车吊装作业场景，吊盘与下方可见钩体都必须框入，整个吊钩组件标注为一个紧致矩形框"
+    }
+  ],
+  "extra_instruction": "目标被部分遮挡时，按照可见区域估计完整目标的紧致外接框，若目标被遮挡过大，超过本身大小的三分之一就不标注；目标距离较远小于画面的0.5%时不标注；吊钩挂住或吊起物体时，物体下方仍可见的钩体部分也必须框入边界框内",
+  "scene_name": "workshop_crane_hook",
+  "mode": "test",
+  "backend": "diaogou",
+  "prompt_file": "..\\..\\src\\industrial_fewshot\\prompts\\templates\\diaogou.txt",
+  "review_prompt_file": "..\\..\\src\\industrial_fewshot\\prompts\\templates\\review.txt",
+  "output_dir": "..\\..\\outputs\\runs\\legacy\\workshop_crane_hook",
+  "reuse_predictions": true,
+  "cache_version": "v1"
+}

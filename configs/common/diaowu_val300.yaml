@@ -1,0 +1,16 @@
+# 300-image validation subset sampled from the JSTY validation archive, seed=42.
+# Reuse the existing labels and independent reference/support pool.
+extends: [diaowu.yaml]
+scene_name: diaowu_val300
+dataset:
+  image_dir: ../../data/raw/diaowu_val300/images
+  ground_truth_dir: ../../data/raw/diaowu_val300/images
+  recursive: false
+  missing_ground_truth: error
+  manifest_file: ../../data/raw/diaowu_val300/manifest.json
+preparation:
+  prepared_dir: ../../data/processed/diaowu_val300
+  splits_dir: ../../data/splits/diaowu_val300
+  supports_dir: ../../data/supports/diaowu_val300
+  split_seed: 42
+  split_ratios: {train: 0, val: 1, test: 0}

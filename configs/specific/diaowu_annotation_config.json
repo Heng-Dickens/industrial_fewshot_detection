@@ -1,0 +1,45 @@
+{
+  "base_url": "http://172.10.60.156:8002/v1",
+  "model": "/data/caopan/Qwen3.8-27B",
+  "api_key_env": "VLLM_API_KEY",
+  "api_key": "EMPTY",
+  "image_dir": "D:\\Data\\江苏通用\\待标注\\模具吊物喷油\\模具车间1\\00002",
+  "reference_image_dir": "..\\..\\data\\processed\\diaowu\\references",
+  "max_reference_examples": 6,
+  "max_reference_crops": 6,
+  "concurrency": 4,
+  "max_attempts": 3,
+  "retry_delay_seconds": 2,
+  "timeout_seconds": 180,
+  "max_tokens": 1024,
+  "temperature": 0.1,
+  "top_p": 0.9,
+  "enable_thinking": false,
+  "stream": false,
+  "enable_completeness_review": true,
+  "require_suspension_evidence": true,
+  "structured_output_mode": "json_schema",
+  "extensions": [
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".bmp",
+    ".webp"
+  ],
+  "labels": [
+    {
+      "name": "hanging object",
+      "description": "正在被吊具吊运的大型中空圆柱状吊物及其吊具组成的完整吊装组件"
+    }
+  ],
+  "extra_instruction": "",
+  "max_reference_negatives": 6,
+  "scene_name": "mold_workshop_hanging_object",
+  "mode": "test",
+  "backend": "diaowu",
+  "prompt_file": "..\\..\\src\\industrial_fewshot\\prompts\\templates\\diaowu.txt",
+  "review_prompt_file": "..\\..\\src\\industrial_fewshot\\prompts\\templates\\review.txt",
+  "output_dir": "..\\..\\outputs\\runs\\legacy\\mold_workshop_hanging_object",
+  "reuse_predictions": true,
+  "cache_version": "v1"
+}

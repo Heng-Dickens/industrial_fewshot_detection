@@ -1,0 +1,8 @@
+# 加长版v2：Qwen3.8-27B，每类1/5/10shot，原图+带框图，无负例。
+extends: chache_qwen_prompt_comparison_expanded.yaml
+model: qwen3.8-27b
+experiment_suite:
+  include_prompt_only: false
+  positive_counts: [1, 5, 10]
+  negative_variants: [false]
+  positive_variants: [O+B]

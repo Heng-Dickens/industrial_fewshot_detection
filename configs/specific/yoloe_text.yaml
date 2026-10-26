@@ -1,0 +1,30 @@
+extends: ../common/diaowu.yaml
+# YOLOE-11L: only text prompts, no reference-image feature encoding.
+backend: yoloe_text
+task_id: diaowu
+mode: train
+max_reference_examples: 0
+max_reference_crops: 0
+max_reference_negatives: 0
+yoloe_text:
+  source_dir: ../../third_party/yoloe
+  weights: ../../weights/yoloe/yoloe-11l-seg.pt
+  text_encoder_weights: ../../weights/yoloe/mobileclip_blt.pt
+  # Exact caption from the latest GroundingDINO experiment, including punctuation.
+  text_prompt: >-
+    a large hollow cylindrical load suspended from a yellow lifting hook by two taut
+    slings spread to opposite sides, including the hook and slings.
+  device: cpu
+  torch_threads: 4
+  imgsz: 640
+  confidence: 0.001
+  nms_iou: 0.7
+  max_detections: 100
+  exclude_reference_overlap: true
+# Match the latest saved GroundingDINO evaluation, retaining low-score boxes for AP.
+evaluation:
+  iou_threshold: 0.5
+  score_threshold: 0.5
+  max_detections_per_image: 100
+# YOLOE-11L, 0-shot text prompting; results directly in model_0shot/.
+output_dir: ../../outputs/runs

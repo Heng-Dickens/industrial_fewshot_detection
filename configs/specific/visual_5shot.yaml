@@ -1,0 +1,6 @@
+# 共享JSON提供模型、检测和评估默认值；本文件指定shot数。
+extends: [../common/diaowu.yaml, ../common/diaowu_yoloe_config.json]
+yoloe: {positive_count: 5}
+output_dir: ../../outputs/runs  # 自动命名为实际模型_5shot，直接保存结果。
+
+mode: train

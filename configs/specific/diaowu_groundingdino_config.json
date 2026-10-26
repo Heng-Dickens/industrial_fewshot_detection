@@ -1,0 +1,46 @@
+{
+  "backend": "groundingdino",
+  "task_id": "diaowu",
+  "mode": "train",
+  "max_reference_examples": 0,
+  "max_reference_crops": 0,
+  "max_reference_negatives": 0,
+  "groundingdino": {
+    "checkpoint": "../../weights/grounding-dino-tiny",
+    "device": "cpu",
+    "text_prompt": "a large hollow cylindrical load suspended from a yellow lifting hook by two taut slings spread to opposite sides, including the hook and slings.",
+    "box_threshold": 0.001,
+    "text_threshold": 0.25,
+    "nms_iou": 0.7,
+    "max_detections": 100,
+    "torch_threads": 4,
+    "exclude_reference_overlap": true
+  },
+  "scene_name": "mold_workshop_hanging_object_groundingdino",
+  "image_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+  "ground_truth_dir": null,
+  "recursive": true,
+  "missing_ground_truth": "negative",
+  "reference_image_dir": "../../data/processed/diaowu/references",
+  "labels": [
+    {
+      "name": "hanging object",
+      "description": "模具车间内符合吊物标注规则的被吊物本体及应纳入框选的组件"
+    }
+  ],
+  "output_dir": "../../outputs/runs",
+  "output_suffix": "_groundingdino_annotations",
+  "reuse_predictions": true,
+  "cache_version": "v1",
+  "evaluation": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.5,
+    "max_detections_per_image": 100,
+    "loss_weights": {
+      "box_l1": 1.0,
+      "box_iou": 1.0,
+      "false_positive": 1.0,
+      "false_negative": 1.0
+    }
+  }
+}

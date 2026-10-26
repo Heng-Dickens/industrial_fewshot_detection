@@ -1,0 +1,116 @@
+# 独立配置：模型、地址、数据和参数均在本文件，不依赖 extends。
+# 使用 CC Switch Claude 分组转发，上游 Key 由 CC Switch 管理；无需项目 .env。
+# structured_output_mode 必须为 json_object；保留 max_tokens=8192。
+# 每个预测框的可见证据反馈默认开启，配置 require_box_reason 可显式控制。
+
+# 保持原模型和本地地址；协议采用实测可用的 Claude Messages 转发。
+model: qwen3.8-max
+base_url: http://127.0.0.1:15721/v1
+api_protocol: anthropic_messages  # 实际请求 /v1/messages，使用 Claude 分组当前供应商。
+api_key_env: VLLM_API_KEY
+api_key: EMPTY
+
+# 推理参数：与 20261020T052055Z_bbe5e251 的运行记录一致。
+concurrency: 4
+max_attempts: 3
+retry_delay_seconds: 2
+timeout_seconds: 180
+max_tokens: 8192
+temperature: 0.1
+top_p: 0.9
+enable_thinking: false
+stream: false
+structured_output_mode: json_object
+enable_completeness_review: true
+require_suspension_evidence: true
+
+# 场景、图片和参考集：相对路径以本文件所在目录为准。
+scene_name: diaowu
+task_id: diaowu
+backend: diaowu
+mode: train
+labels:
+- name: hanging object
+  description: 正在被吊具吊运的大型中空圆柱状吊物及其吊具组成的完整吊装组件
+dataset:
+  image_dir: D:\Data\江苏通用\训练数据\模具吊物喷油\模具车间1\00000
+  ground_truth_dir: D:\Data\江苏通用\训练数据\模具吊物喷油\模具车间1\00000
+  recursive: true
+  missing_ground_truth: negative
+  manifest_file: ../../data/splits/diaowu/test.json
+image_dir: D:\Data\江苏通用\训练数据\模具吊物喷油\模具车间1\00000
+reference_image_dir: ../../data/processed/diaowu/references
+support_manifest_dir: ../../data/supports/diaowu
+prompt_file: ../../src/industrial_fewshot/prompts/templates/diaowu.txt
+review_prompt_file: ../../src/industrial_fewshot/prompts/templates/review.txt
+reference_mode: text_only
+max_reference_examples: 6
+max_reference_crops: 6
+max_reference_negatives: 0
+extra_instruction: ''
+extensions:
+- .jpg
+- .jpeg
+- .png
+- .bmp
+- .webp
+
+# 实验组合：O 原图、C 裁剪、B 画框原图、J 标注 JSON；负例启用时同为 5 张。
+experiment_suite:
+  enabled: true
+  include_prompt_only: true
+  positive_counts:
+  - 5
+  negative_variants:
+  - false
+  #- true
+  positive_variants:
+  - O+J
+  - O+C
+  - O+B
+  - O+C+J
+  - O+B+J
+  - O+C+B
+  - O+C+B+J
+  selection_seed: 0
+  exclude_reference_overlap: true
+ablation:
+  enabled: false
+  modes:
+  - text_only
+  - text_json
+  - text_crops
+  - text_json_crops
+
+# 评估、输出及缓存。
+evaluation:
+  iou_threshold: 0.5
+  score_threshold: 0.0
+  max_detections_per_image: 100
+  loss_weights:
+    box_l1: 1.0
+    box_iou: 1.0
+    false_positive: 1.0
+    false_negative: 1.0
+output_dir: ../../outputs/runs  # 自动按实际模型与 shot 数创建结果目录。
+output_suffix: _annotations
+reuse_predictions: true
+cache_version: v1
+missing_ground_truth: negative
+preparation:
+  prepared_dir: ../../data/processed/diaowu
+  splits_dir: ../../data/splits/diaowu
+  supports_dir: ../../data/supports/diaowu
+  support_counts:
+  - 1
+  - 5
+  - 10
+  - 25
+  support_seeds:
+  - 0
+  split_seed: 0
+  group_by: parent
+  split_ratios:
+    train: 0
+    val: 0
+    test: 1

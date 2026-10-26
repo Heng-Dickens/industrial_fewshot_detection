@@ -1,0 +1,21 @@
+extends: ../common/diaowu.yaml
+backend: groundingdino
+task_id: diaowu
+mode: train
+max_reference_examples: 0
+max_reference_crops: 0
+max_reference_negatives: 0
+groundingdino:
+  checkpoint: ../../weights/grounding-dino-tiny
+  device: cpu
+  # 精简翻译自 diaowu.txt：中空圆柱吊物、黄色吊钩、两侧张开的绷紧吊索，框含整套组件。
+  text_prompt: >-
+    a large hollow cylindrical load suspended from a yellow lifting hook by two taut
+    slings spread to opposite sides, including the hook and slings.
+  box_threshold: 0.001
+  text_threshold: 0.25
+  nms_iou: 0.7
+  max_detections: 100
+  torch_threads: 4
+  exclude_reference_overlap: true
+output_dir: ../../outputs/runs/groundingdino_text/zero_shot

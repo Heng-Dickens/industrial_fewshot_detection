@@ -1,0 +1,29 @@
+scene_name: diaowu
+task_id: diaowu
+labels:
+  - name: hanging object
+    description: 正在被吊具吊运的大型中空圆柱状吊物及其吊具组成的完整吊装组件
+dataset:
+  image_dir: D:/Data/江苏通用/训练数据/模具吊物喷油/模具车间1/00000
+  ground_truth_dir: D:/Data/江苏通用/训练数据/模具吊物喷油/模具车间1/00000
+  recursive: true
+  missing_ground_truth: negative
+  manifest_file: ../../data/splits/diaowu/test.json
+reference_image_dir: ../../data/processed/diaowu/references
+support_manifest_dir: ../../data/supports/diaowu
+preparation:
+  prepared_dir: ../../data/processed/diaowu
+  splits_dir: ../../data/splits/diaowu
+  supports_dir: ../../data/supports/diaowu
+  support_counts: [1, 5, 10, 25]
+  support_seeds: [0]
+  split_seed: 0
+  group_by: parent
+  # Current query folder is one video group; keep it as a fixed test cohort.
+  split_ratios: {train: 0, val: 0, test: 1}
+evaluation:
+  iou_threshold: 0.5
+  score_threshold: 0.0
+  score_thresholds: [0.5, 0.7]
+  max_detections_per_image: 100
+  loss_weights: {box_l1: 1.0, box_iou: 1.0, false_positive: 1.0, false_negative: 1.0}

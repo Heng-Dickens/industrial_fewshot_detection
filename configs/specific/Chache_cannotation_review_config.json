@@ -1,0 +1,59 @@
+{
+  "base_url": "https://wytvllm.iepose.cn/v1",
+  "model": "Qwen3.8-27B-FP8",
+  "api_key_env": "VLLM_API_KEY",
+  "api_key": "EMPTY",
+  "dataset_dir": "D:/Data/江苏通用/标注待检查/calibdata/模具车间1",
+  "output_dir": "D:\\Data\\江苏通用\\标注待检查\\calibdata\\模具车间1_vlm_corrected1",
+  "audit_dir": "D:/Data/江苏通用/标注待检查/calibdata/模具车间1_vlm_audit1",
+  "checkpoint_jsonl": "review.checkpoint.jsonl",
+  "reference_image_dir": "..\\..\\data\\processed\\chache\\references",
+  "use_reference_images": true,
+  "review_prompt": "先完整阅读 5 张类别参考图，再审核当前图片。参考图是类别外观的视觉基准，文字描述用于补充结构和用途；不得把参考图中的车辆当成当前图片目标。所有 Chache 类必须看到对应的叉车门架、立柱或叉臂才可保留或改成叉车类；当前框若前部不可见、被遮挡或结构不足以区分，使用 uncertain。牵引车没有叉车门架和成对货叉，前部清晰可见且没有叉车结构时应保留为 Qianyinche。只有有明确视觉证据时才输出 relabel，不能因为颜色、大小、顶棚或已有类别名猜测。",
+  "labels": [
+    {
+      "name": "Chache1",
+      "reference_image": "Chache1.png",
+      "description": "中型叉车，适用于工厂或物流搬运货物场景，具有四轮，还包括安装在车身前面的黑色叉车臂，车身为绿色或红色，带有顶棚，上面最多有一个坐着的司机，不管是否有司机都需要标注"
+    },
+    {
+      "name": "Chache2",
+      "reference_image": "Chache2.png",
+      "description": "小型叉车，适用于工厂或物流搬运货物场景，具有比车身要长的低矮叉车臂。车身为绿色没有顶棚，上面最多有一个司机，司机只能站着。低矮、绿色、无顶棚。"
+    },
+    {
+      "name": "Chache3",
+      "reference_image": "Chache3.png",
+      "description": "小型叉车，适用于工厂或物流搬运货物场景，具有比车身要长的黑色叉车臂。车身为绿色没有顶棚，上面最多有一个司机，司机只能站着。叉车臂架较高，绿色、无顶棚。"
+    },
+    {
+      "name": "Chache5",
+      "reference_image": "Chache5.png",
+      "description": "大型叉车，适用于工厂或物流搬运货物场景，车身前部具有醒目的黄色叉车门架。车身通常为橙色，具有顶棚，上面最多有一个坐着的司机，不管是否有司机都需要标注。"
+    },
+    {
+      "name": "Qianyinche",
+      "reference_image": "Qianyinche.png",
+      "description": "工业牵引车，适用于工厂或物流牵引货物场景，是用于牵引拖车的三轮低矮小型车辆，具有绿色圆润车身与黑色靠背，上面最多有一个司机，司机坐着，不管是否有司机都需要标注，只要没有叉车臂，就应该判定为 Qianyinche。"
+    }
+  ],
+  "label_definitions_confirmed": true,
+  "apply_remove": true,
+  "apply_relabel": true,
+  "apply_missing": false,
+  "review_empty_annotations": false,
+  "missing_max_iou": 0.25,
+  "image_mode": "hardlink",
+  "save_review_images": true,
+  "concurrency": 2,
+  "max_attempts": 3,
+  "retry_delay_seconds": 2,
+  "timeout_seconds": 180,
+  "max_tokens": 1024,
+  "temperature": 0.0,
+  "top_p": 0.9,
+  "enable_thinking": false,
+  "stream": false,
+  "structured_output_mode": "json_schema",
+  "prompt_version": "existing-label-review-v2-reference-images"
+}

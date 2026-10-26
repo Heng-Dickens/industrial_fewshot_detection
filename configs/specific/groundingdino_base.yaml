@@ -1,0 +1,27 @@
+# GroundingDINO-Base (Swin-B), local text-only 0-shot detection.
+# Same actual caption, fixed query cohort and evaluation as the saved Tiny run.
+extends: ../common/diaowu.yaml
+backend: groundingdino
+task_id: diaowu
+mode: train  # inference + evaluation; no training
+max_reference_examples: 0
+max_reference_crops: 0
+max_reference_negatives: 0
+output_dir: ../../outputs/runs
+reuse_predictions: true
+groundingdino:
+  checkpoint: ../../weights/grounding-dino-base
+  device: cpu
+  text_prompt: >-
+    a large hollow cylindrical load suspended from a yellow lifting hook by two taut
+    slings spread to opposite sides, including the hook and slings.
+  box_threshold: 0.001
+  text_threshold: 0.25
+  nms_iou: 0.7
+  max_detections: 100
+  torch_threads: 4
+  exclude_reference_overlap: true
+evaluation:
+  iou_threshold: 0.5
+  score_threshold: 0.5
+  max_detections_per_image: 100

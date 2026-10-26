@@ -1,0 +1,3 @@
+# 第二轮：同300图、同每类5shot，只更换为v2加长提示；另外保存结果。
+extends: chache_qwen_prompt_comparison.yaml
+prompt_file: ../../src/industrial_fewshot/prompts/templates/chache_v2_expanded.txt

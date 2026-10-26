@@ -1,0 +1,26 @@
+# PET-DINO Swin-T, independent visual supports (Visual-G), 300 test images.
+extends: [../common/diaowu_val300.yaml]
+backend: pet_dino
+mode: train
+max_reference_examples: 0
+max_reference_crops: 0
+max_reference_negatives: 0
+pet_dino:
+  source_dir: ../../third_party/pet_dino
+  worker_python: ../../.venv-pet_dino/Scripts/python.exe
+  model_config: ../../third_party/pet_dino/configs/pet_dino/pet_dino_swin-t_8xb4_12e_obj365.py
+  weights: ../../weights/pet_dino/pet_dino_swin_t.pth
+  language_model_dir: ../../weights/pet_dino/bert-base-uncased
+  prompt_mode: visual
+  positive_count: 5
+  selection_seed: 0
+  device: cpu
+  confidence: 0.001
+  nms_iou: 0.7
+  max_detections: 100
+  timeout_seconds: 600
+  exclude_reference_overlap: true
+evaluation:
+  score_threshold: 0.5
+  score_thresholds: [0.5, 0.7]
+output_dir: ../../outputs/runs

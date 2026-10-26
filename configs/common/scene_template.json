@@ -1,0 +1,90 @@
+{
+  "scene_name": "new_scene_new_object",
+  "mode": "test",
+  "backend": "generic",
+  "base_url": "http://127.0.0.1:8000/v1",
+  "model": "replace-with-your-model-name",
+  "api_key_env": "VLLM_API_KEY",
+  "api_key": "EMPTY",
+  "image_dir": "..\\..\\data\\your_scene\\images",
+  "ground_truth_dir": null,
+  "recursive": true,
+  "missing_ground_truth": "skip",
+  "output_dir": null,
+  "output_suffix": "_annotations",
+  "reuse_predictions": true,
+  "cache_version": "v1",
+  "labels": [
+    {
+      "name": "your_object",
+      "description": "替换为当前场景中该目标的外观、结构、判定条件与框选范围"
+    }
+  ],
+  "reference_image_dir": "..\\..\\data\\your_scene\\references",
+  "reference_mode": "configured",
+  "experiment_suite": {
+    "enabled": false,
+    "include_prompt_only": true,
+    "positive_counts": [
+      5
+    ],
+    "negative_variants": [
+      false,
+      true
+    ],
+    "positive_variants": [
+      "O+J",
+      "O+C",
+      "O+B",
+      "O+C+J",
+      "O+B+J",
+      "O+C+B",
+      "O+C+B+J"
+    ],
+    "selection_seed": 0,
+    "exclude_reference_overlap": true
+  },
+  "ablation": {
+    "enabled": false,
+    "modes": [
+      "text_only",
+      "text_json",
+      "text_crops",
+      "text_json_crops"
+    ]
+  },
+  "prompt_file": "..\\..\\src\\industrial_fewshot\\prompts\\templates\\generic.txt",
+  "review_prompt_file": "..\\..\\src\\industrial_fewshot\\prompts\\templates\\review.txt",
+  "max_reference_examples": 6,
+  "max_reference_crops": 6,
+  "max_reference_negatives": 0,
+  "extensions": [
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".bmp",
+    ".webp"
+  ],
+  "concurrency": 4,
+  "max_attempts": 3,
+  "retry_delay_seconds": 2,
+  "timeout_seconds": 180,
+  "max_tokens": 2048,
+  "temperature": 0.1,
+  "top_p": 0.9,
+  "enable_thinking": false,
+  "stream": false,
+  "enable_completeness_review": true,
+  "structured_output_mode": "json_schema",
+  "evaluation": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.0,
+    "max_detections_per_image": 100,
+    "loss_weights": {
+      "box_l1": 1.0,
+      "box_iou": 1.0,
+      "false_positive": 1.0,
+      "false_negative": 1.0
+    }
+  }
+}

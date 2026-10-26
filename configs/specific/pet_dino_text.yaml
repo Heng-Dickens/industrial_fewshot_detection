@@ -1,0 +1,8 @@
+# Same English description as the current GroundingDINO text baseline.
+extends: [pet_dino_5shot.yaml]
+pet_dino:
+  prompt_mode: text
+  positive_count: 0
+  text_prompt: >-
+    a large hollow cylindrical load suspended from a yellow lifting hook by two taut
+    slings spread to opposite sides, including the hook and slings.

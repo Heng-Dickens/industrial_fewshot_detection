@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "industrial-fewshot-detection"
+version = "0.1.0"
+description = "Config-driven industrial few-shot detection experiments"
+requires-python = ">=3.10"
+dependencies = ["Pillow>=10", "openai>=1.78.1", "numpy>=1.24", "scipy>=1.10", "PyYAML>=6", "pycocotools>=2.0.7"]
+
+[project.optional-dependencies]
+ovd = ["torch>=2.2,<3", "torchvision>=0.17", "transformers==4.46.3"]
+yolo-onnx = ["onnxruntime>=1.17,<2", "opencv-python>=4.8,<6"]
+
+[project.scripts]
+industrial-detect = "industrial_fewshot.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+industrial_fewshot = ["prompts/templates/*.txt"]

@@ -1,0 +1,8 @@
+# Copy to server_pet_dino_5shot.local.yaml before running.
+# Then change server_paths.example.yaml below to server_paths.local.yaml.
+extends:
+  - pet_dino_5shot.yaml
+  - ../common/server_paths.example.yaml
+pet_dino:
+  worker_python: ../../.venv-pet_dino/bin/python
+  device: cuda:0

@@ -1,0 +1,11 @@
+# Copy to server_paths.local.yaml and edit on the server; *.local.yaml is ignored.
+# Override ALL dataset paths; the Windows experiment configs remain unchanged.
+dataset:
+  image_dir: /srv/industrial-data/diaowu_val300/images
+  ground_truth_dir: /srv/industrial-data/diaowu_val300/images
+  manifest_file: /srv/industrial-data/diaowu_val300/manifest.json
+  recursive: false
+  missing_ground_truth: error
+reference_image_dir: /srv/industrial-data/supports/diaowu
+support_manifest_dir: /srv/industrial-data/supports/diaowu
+output_dir: /srv/industrial-results/runs

@@ -1,0 +1,56 @@
+# Full existing-method benchmark on the same 300 images; explicitly excludes qwen3.8-max.
+dataset_config: ../common/diaowu_val300.yaml
+output_root: ../../outputs/runs/diaowu_val300
+evaluation:
+  iou_threshold: 0.5
+  score_threshold: 0.5
+  score_thresholds: [0.5, 0.7]
+  max_detections_per_image: 100
+local:
+  - id: jsty_hanging_object_fp32
+    config: jsty_hanging_object.yaml
+  - id: yoloe-v8s-seg_visual_5shot
+    config: visual_5shot.yaml
+    overrides:
+      yoloe: {weights: ../../weights/yoloe/yoloe-v8s-seg.pt, positive_count: 5, selection_seed: 0}
+  - id: yoloe-11l-seg_visual_5shot
+    config: visual_5shot.yaml
+    overrides:
+      yoloe: {weights: ../../weights/yoloe/yoloe-11l-seg.pt, positive_count: 5, selection_seed: 0}
+  - id: yoloe-v8l-seg_visual_5shot
+    config: visual_5shot.yaml
+    overrides:
+      yoloe: {weights: ../../weights/yoloe/yoloe-v8l-seg.pt, positive_count: 5, selection_seed: 0}
+  - id: yoloe-11l-seg_text_0shot
+    config: yoloe_text.yaml
+  - id: yoloe-11l-seg_fusion_5shot
+    config: yoloe_fusion_5shot.yaml
+  - id: grounding-dino-tiny_text_0shot
+    config: zero_shot.yaml
+  - id: grounding-dino-base_text_0shot
+    config: groundingdino_base.yaml
+remote:
+  - id: qwen3.8-27b_5shot
+    config: mllm_ablation.yaml
+    overrides:
+      model: qwen3.8-27b
+      experiment_suite:
+        enabled: true
+        include_prompt_only: true
+        positive_counts: [5]
+        negative_variants: [false, true]
+        positive_variants: [O+J, O+C, O+B, O+C+J, O+B+J, O+C+B, O+C+B+J]
+        selection_seed: 0
+        exclude_reference_overlap: true
+  - id: qwen3.8-flash_5shot
+    config: mllm_ablation.yaml
+    overrides:
+      model: qwen3.8-flash
+      experiment_suite:
+        enabled: true
+        include_prompt_only: true
+        positive_counts: [5]
+        negative_variants: [false]
+        positive_variants: [O+J, O+C, O+B, O+C+J, O+B+J, O+C+B, O+C+B+J]
+        selection_seed: 0
+        exclude_reference_overlap: true

@@ -1,0 +1,13 @@
+# 吊物 val300：Qwen3.8-27B，5-shot，新版允许轻度遮挡的提示词。
+# 与旧版 15 组参考输入实验对应；本文件不会覆盖旧结果。
+extends: [mllm_ablation.yaml, ../common/diaowu_val300.yaml]
+model: qwen3.8-27b
+prompt_file: ../../src/industrial_fewshot/prompts/templates/diaowu.txt
+output_dir: ../../outputs/runs
+results_layout: true
+evaluation:
+  score_threshold: 0.5
+  score_thresholds: [0.5, 0.7]
+experiment_suite:
+  positive_counts: [5]
+  negative_variants: [false, true]

@@ -1,0 +1,4 @@
+# Add to the existing project YOLOE environment; do not replace its torch build.
+open-clip-torch==2.24.0
+timm==0.9.5
+./third_party/yoloe/third_party/ml-mobileclip
