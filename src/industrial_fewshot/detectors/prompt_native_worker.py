@@ -79,12 +79,15 @@ class WeDetectAdapter:
         del encoder
         self.model = module.SimpleYOLOWorldDetector(settings['variant'], score_thr=settings['confidence'],
             nms_iou=settings['nms_iou'], post_nms_topk=settings['max_detections'])
-        # Refuse partially loaded checkpoints: wrong Uni/Ref/variant weights
-        # must not silently produce results from random parameters.
+        # The official checkpoint retains ConvNeXt classification parameters;
+        # this detector's backbone returns stage features before that head.
+        # Still reject missing detector parameters or any other extra keys.
+        unused_classifier = {'backbone.norm.weight', 'backbone.norm.bias',
+                             'backbone.head.weight', 'backbone.head.bias'}
         original_load = self.model.load_state_dict
         def checked_load(state, strict=False):
             result = original_load(state, strict=False)
-            if result.missing_keys or result.unexpected_keys:
+            if result.missing_keys or set(result.unexpected_keys) - unused_classifier:
                 raise ValueError(f'WeDetect checkpoint incompatible: {result}')
             return result
         self.model.load_state_dict = checked_load

@@ -9,3 +9,5 @@ tqdm
 sentencepiece
 protobuf
 huggingface-hub
+# Official checkpoints pickle MMEngine configuration metadata during torch.load.
+mmengine>=0.7.1,<1

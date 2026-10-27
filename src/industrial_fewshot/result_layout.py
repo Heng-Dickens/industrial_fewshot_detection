@@ -1,4 +1,4 @@
-"""Readable dataset / prompt version / model-shot namespaces for project results."""
+"""Readable dataset, method and experiment namespaces for project results."""
 from __future__ import annotations
 
 import copy
@@ -113,13 +113,35 @@ def _namespace_for_report(root: Path, report: dict, *, create=False) -> tuple[Pa
                    else '旧版严格可见规则：人物遮挡时整图不标；保留用于与新版对比。'
                    if any('整张图不标注' in text for text in texts)
                    else '本次实际输入，完整文字及复核模板见各运行目录的 prompt.txt / review_template.txt。')
-    prompt_dir = _namespace(dataset_dir, family, 'prompt_version.json', prompt_identity,
-        {'family': family, 'description': description, 'prompts': contents,
-         'text_sha256': [hashlib.sha256(s['text'].encode()).hexdigest() if isinstance(s.get('text'), str) else None for s in snapshots]},
-        create=create, version=family not in {'视觉提示', '监督检测'})
+    prompt_payload = {'family': family, 'description': description, 'prompts': contents,
+        'text_sha256': [hashlib.sha256(s['text'].encode()).hexdigest() if isinstance(s.get('text'), str) else None for s in snapshots]}
+    extra = {}
+    if backends in ({'pet_dino'}, {'yoloe'}) and family == '视觉提示':
+        backend = next(iter(backends))
+        method = {'pet_dino': 'PET-DINO', 'yoloe': 'YOLOE'}[backend]
+        prompt_dir = _namespace(dataset_dir, method, 'method.json', digest({'backend': backend}),
+            {'name': method, 'backend': backend}, create=create)
+        version = family
+        extra = {'method': method, 'method_dir': str(prompt_dir)}
+    elif backends in ({'wedetect'}, {'groundingdino'}):
+        # Keep every prompt variant under its algorithm. The hidden registry
+        # reserves versions independently of model weights and repeat numbers.
+        backend = next(iter(backends))
+        method = {'wedetect': 'WeDetect', 'groundingdino': 'GroundingDINO'}[backend]
+        prompt_dir = _namespace(dataset_dir, method, 'method.json', digest({'backend': backend}),
+            {'name': method, 'backend': backend}, create=create)
+        registry = _namespace(prompt_dir / '.prompts', 'prompt', 'prompt_version.json',
+            prompt_identity, prompt_payload, create=create, version=True)
+        version = registry.name
+        extra = {'method': method, 'method_dir': str(prompt_dir),
+                 'prompt_registry_dir': str(registry), 'model_name_suffix': f'_{version}'}
+    else:
+        prompt_dir = _namespace(dataset_dir, family, 'prompt_version.json', prompt_identity,
+            prompt_payload, create=create, version=family not in {'视觉提示', '监督检测'})
+        version = prompt_dir.name
     return prompt_dir, {'root': str(root), 'dataset_dir': str(dataset_dir), 'dataset_name': dataset_dir.name,
                         'dataset_sha256': identity, 'prompt_dir': str(prompt_dir),
-                        'prompt_version': prompt_dir.name, 'prompt_identity': prompt_identity}
+                        'prompt_version': version, 'prompt_identity': prompt_identity, **extra}
 
 
 def apply_result_layout(config: dict, items: list[dict], *, create=False) -> dict:

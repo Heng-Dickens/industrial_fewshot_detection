@@ -36,7 +36,8 @@ def model_shot_name(config: dict) -> str:
                        or max(target['config'].get('max_reference_examples', 0),
                               target['config'].get('max_reference_crops', 0))
                        for target in config['targets']), default=0)]
-    return '+'.join(models) + '_' + '+'.join(f'{count}shot' for count in counts)
+    return ('+'.join(models) + '_' + '+'.join(f'{count}shot' for count in counts)
+            + (config.get('result_layout') or {}).get('model_name_suffix', ''))
 
 
 def group_name(spec: dict, *, include_shot=False) -> str:

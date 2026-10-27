@@ -45,7 +45,7 @@ def import_checks(backend, mode, root=ROOT):
         sys.path.insert(0,str(root/'third_party/pet_dino'))
         modules += ['mmcv', 'mmengine', 'mmdet.apis', 'transformers']
     else:
-        modules += ['transformers', 'sentencepiece', 'pycocotools.cocoeval']
+        modules += ['transformers', 'sentencepiece', 'pycocotools.cocoeval', 'mmengine']
     errors = []
     for name in modules:
         try:
