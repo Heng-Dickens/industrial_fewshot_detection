@@ -1,4 +1,4 @@
-# Code-only repository. New root-level files must be explicitly allowed.
+# Source code and selected experiment results. Other root-level files stay local.
 /*
 !/.gitignore
 !/.gitattributes
@@ -15,10 +15,39 @@
 !/tool/
 !/annotate/
 !/examples/
+!/outputs/
+
+# Track MLLM reports, metrics and experiment metadata only.
+/outputs/*
+!/outputs/runs/
+/outputs/runs/**
+!/outputs/runs/**/
+!/outputs/runs/*/*.md
+!/outputs/runs/*/*.csv
+!/outputs/runs/*/*.txt
+!/outputs/runs/*/dataset.json
+!/outputs/runs/*/prompt_results.json
+!/outputs/runs/*/results_summary.json
+!/outputs/runs/*/MLLM*/**/*.md
+!/outputs/runs/*/MLLM*/**/*.csv
+!/outputs/runs/*/MLLM*/**/*.txt
+!/outputs/runs/*/MLLM*/**/metrics.json
+!/outputs/runs/*/MLLM*/**/prompt.json
+!/outputs/runs/*/MLLM*/**/prompt_results.json
+!/outputs/runs/*/MLLM*/**/prompt_version.json
+!/outputs/runs/*/MLLM*/**/config.resolved.json
+!/outputs/runs/*/MLLM*/**/run.json
+
+# Per-image outputs and JSON bundles containing raw records stay local.
+# summary.json, comparison*.json and records.jsonl are excluded by default.
+/outputs/runs/**/feedback/
+/outputs/runs/**/predictions*/
+/outputs/runs/**/visualizations/
+/outputs/runs/**/.inference_cache/
+/outputs/runs/**/*.lock
 
 # Runtime assets remain local, including images, annotations and support sets.
 /data/
-/outputs/
 /runs/
 /weights/
 /third_party/

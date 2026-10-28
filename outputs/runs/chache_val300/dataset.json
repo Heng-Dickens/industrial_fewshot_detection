@@ -1,0 +1,9 @@
+{
+  "identity": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+  "name": "chache_val300",
+  "image_count": 300,
+  "image_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\chache_val300\\images",
+  "ground_truth_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\chache_val300\\images",
+  "dataset_manifest": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\chache_val300\\manifest.json",
+  "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b"
+}

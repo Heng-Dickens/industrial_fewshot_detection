@@ -1,0 +1,14 @@
+# 新版吊物300张：Qwen3.8-27B，O+C / O+B 的1shot和10shot。
+# 专用脚本分别创建模型_1shot、模型_10shot目录，每组直接保存结果。
+# .\.venv-yoloe\Scripts\python.exe scripts/run_diaowu_qwen27b_visual_1_10shot.py
+extends: [diaowu_qwen27b_prompt_5shot.yaml]
+model: qwen3.8-27b
+concurrency: 8
+experiment_suite:
+  enabled: true
+  include_prompt_only: false
+  positive_counts: [1, 10]
+  positive_variants: [O+C, O+B]
+  negative_variants: [false, true]
+  selection_seed: 0
+  exclude_reference_overlap: true

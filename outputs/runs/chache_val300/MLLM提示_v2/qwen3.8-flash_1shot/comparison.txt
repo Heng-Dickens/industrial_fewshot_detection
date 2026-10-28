@@ -1,0 +1,3 @@
+Images: 300 | success: 0 | failed requests: 0
+Evaluation: failed
+Results: D:\Learn\VLM\industrial_fewshot_detection\outputs\runs\chache_val300\MLLM提示_v2

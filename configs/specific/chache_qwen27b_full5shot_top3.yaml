@@ -1,0 +1,17 @@
+# 特种车辆五类，扩展版v2提示词；全部仅使用正例，不添加负例。
+# 每类5shot完成7种组合，按AP50选前三种，再分别运行每类1shot/10shot。
+# .\.venv-yoloe\Scripts\python.exe scripts/run_chache_qwen27b_full5shot_top3.py
+extends: chache_qwen27b_expanded_shots.yaml
+model: qwen3.8-27b
+prompt_file: ../../src/industrial_fewshot/prompts/templates/chache_v2_expanded.txt
+concurrency: 2
+enable_completeness_review: false
+max_reference_negatives: 0
+experiment_suite:
+  enabled: true
+  include_prompt_only: false
+  positive_counts: [5]
+  positive_variants: [O+J, O+C, O+B, O+C+J, O+B+J, O+C+B, O+C+B+J]
+  negative_variants: [false]
+  selection_seed: 0
+  exclude_reference_overlap: true
