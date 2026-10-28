@@ -1,0 +1,25 @@
+﻿dataset,method,model,prompt_version,shot_per_class,input,negative_references,run_dir,id,label,AP85,AP90,AP95
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v1,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v1,chache_val300-01,Chache1,0.01900338792932801,0.018590513353614065,0.0046079052957522515
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v1,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v1,chache_val300-01,Chache2,0.006225974320054323,0.002731874496929807,0.001112585485352659
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v1,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v1,chache_val300-01,Chache3,0.0029842236441977184,0.0007447683016196435,0.0
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v1,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v1,chache_val300-01,Chache4,0.1432304888982969,0.1233941875349483,0.03930735299424201
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v1,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v1,chache_val300-01,Qianyinche,0.19565960327999246,0.19358482734423807,0.010233856406661967
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,1,视觉参考,0,PET-DINO/pet_dino_swin_t_1shot,chache_val300-27,Chache1,0.007193827093388303,0.0011278613117317684,0.0006296443285404266
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,1,视觉参考,0,PET-DINO/pet_dino_swin_t_1shot,chache_val300-27,Chache2,0.01874514858635195,0.011623772177150753,0.00010293887698951297
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,1,视觉参考,0,PET-DINO/pet_dino_swin_t_1shot,chache_val300-27,Chache3,0.0341177743171729,0.03375802113006651,0.0019801980198019802
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,1,视觉参考,0,PET-DINO/pet_dino_swin_t_1shot,chache_val300-27,Chache4,0.17150440760671753,0.16864072484830311,0.14725803892464115
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,1,视觉参考,0,PET-DINO/pet_dino_swin_t_1shot,chache_val300-27,Qianyinche,0.44138978431508463,0.39814657159707073,0.04569590836422732
+chache_val300,WeDetect,wedetect_base,prompt_v4,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v4,chache_val300-33,Chache1,0.0730131211001189,0.05690257959177785,0.006761651774933593
+chache_val300,WeDetect,wedetect_base,prompt_v4,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v4,chache_val300-33,Chache2,0.0038421818826737415,0.0006279760361974866,0.0006279760361974866
+chache_val300,WeDetect,wedetect_base,prompt_v4,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v4,chache_val300-33,Chache3,0.004078870440752955,0.003439423164936103,0.0014851485148514854
+chache_val300,WeDetect,wedetect_base,prompt_v4,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v4,chache_val300-33,Chache4,0.4468940767095676,0.2688512772369517,0.1879376875235125
+chache_val300,WeDetect,wedetect_base,prompt_v4,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v4,chache_val300-33,Qianyinche,0.7638311348788345,0.6700274872710077,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,10,视觉参考,0,YOLOE/yoloe-v8l-seg_10shot,chache_val300-36,Chache1,0.030671306818850864,0.00897319149998022,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,10,视觉参考,0,YOLOE/yoloe-v8l-seg_10shot,chache_val300-36,Chache2,0.03431874553256419,0.021265795552819235,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,10,视觉参考,0,YOLOE/yoloe-v8l-seg_10shot,chache_val300-36,Chache3,0.041584158415841586,0.0059405940594059415,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,10,视觉参考,0,YOLOE/yoloe-v8l-seg_10shot,chache_val300-36,Chache4,0.23741571438383177,0.18148433695828609,0.057720211676340054
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,10,视觉参考,0,YOLOE/yoloe-v8l-seg_10shot,chache_val300-36,Qianyinche,0.20279233106849828,0.017495619497983915,0.0
+diaowu_val300,GroundingDINO,grounding-dino-base,prompt_v2,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v2,diaowu_val300-02,hanging object,0.0008327411262483775,0.0005267525500206849,3.640707268065277e-05
+diaowu_val300,PET-DINO,pet_dino_swin_t,视觉提示,1,视觉参考,0,PET-DINO/pet_dino_swin_t_1shot,diaowu_val300-26,hanging object,0.08676432359859355,0.0524979356806592,0.013300556472903978
+diaowu_val300,WeDetect,wedetect_base,文字提示_v1,0,text_only,0,文字提示_v1/wedetect_base_0shot,diaowu_val300-29,hanging object,0.009900990099009901,7.361330928631897e-05,0.0
+diaowu_val300,YOLOE,yoloe-v8l-seg,视觉提示,1,视觉参考,0,YOLOE/yoloe-v8l-seg_1shot,diaowu_val300-31,hanging object,0.15557118687575885,0.06136268151134173,0.006341058182425629

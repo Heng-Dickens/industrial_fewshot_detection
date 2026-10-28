@@ -1,0 +1,241 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "yoloe_fusion",
+  "model": "D:\\Learn\\VLM\\industrial_fewshot_detection\\weights\\yoloe\\yoloe-11l-seg.pt",
+  "kind": "text_visual",
+  "text": "a large hollow cylindrical load suspended from a yellow lifting hook by two taut slings spread to opposite sides, including the hook and slings.",
+  "text_sha256": "091262844b9fa3450a647b585a823ae0788df5b40a7c2016f239beb814f4f2d0",
+  "text_source": "yoloe_fusion.text_prompt",
+  "references": [
+    {
+      "sample_id": "positive/images/0000090.jpg",
+      "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0000090.jpg",
+      "image_sha256": "8e565471c2e978ced9a8176db0c5543b860abb547bef73eed64837554ac72306",
+      "bboxes": [
+        [
+          1377.75,
+          480.0,
+          1600.25,
+          880.0
+        ]
+      ],
+      "crops": [
+        {
+          "sample_id": "positive/images/0000090.jpg",
+          "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\crops\\hanging_object\\0000090_crop_001_hanging_object.png",
+          "image_sha256": "d837cebb6a249c32d5358d807cb9d741d65e13d94dc0b453db8868c087a18781",
+          "width": 224,
+          "height": 400,
+          "bboxes": [
+            [
+              0,
+              0,
+              224,
+              400
+            ]
+          ],
+          "source_bbox_xyxy": [
+            1377.75,
+            480.0,
+            1600.25,
+            880.0
+          ],
+          "source_crop_xyxy": [
+            1377,
+            480,
+            1601,
+            880
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "positive/images/0000189.jpg",
+      "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0000189.jpg",
+      "image_sha256": "19e0ecb2fe48c4ab19cc52a5056aeb7847e074c644da9920acdcf6f1eb00e758",
+      "bboxes": [
+        [
+          1189.0,
+          381.25,
+          1380.25,
+          710.0
+        ]
+      ],
+      "crops": [
+        {
+          "sample_id": "positive/images/0000189.jpg",
+          "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\crops\\hanging_object\\0000189_crop_001_hanging_object.png",
+          "image_sha256": "dad2a68c729528653b8783a50b6c6290bedf407d972cae4aec19e0f1d4880316",
+          "width": 192,
+          "height": 329,
+          "bboxes": [
+            [
+              0,
+              0,
+              192,
+              329
+            ]
+          ],
+          "source_bbox_xyxy": [
+            1189.0,
+            381.25,
+            1380.25,
+            710.0
+          ],
+          "source_crop_xyxy": [
+            1189,
+            381,
+            1381,
+            710
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "positive/images/0001320.jpg",
+      "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0001320.jpg",
+      "image_sha256": "e78769b05e4183ebfd01a72580e4d7eb36d01eb6ef94ef76908f6a6558e727e3",
+      "bboxes": [
+        [
+          1141.5,
+          385.0,
+          1484.0,
+          1011.25
+        ]
+      ],
+      "crops": [
+        {
+          "sample_id": "positive/images/0001320.jpg",
+          "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\crops\\hanging_object\\0001320_crop_001_hanging_object.png",
+          "image_sha256": "a3efe0756b48ea80d10b1b3470d0cf1d0c3f409de6fac81cf199fd834b8e4d21",
+          "width": 343,
+          "height": 627,
+          "bboxes": [
+            [
+              0,
+              0,
+              343,
+              627
+            ]
+          ],
+          "source_bbox_xyxy": [
+            1141.5,
+            385.0,
+            1484.0,
+            1011.25
+          ],
+          "source_crop_xyxy": [
+            1141,
+            385,
+            1484,
+            1012
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "positive/images/0001352.jpg",
+      "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0001352.jpg",
+      "image_sha256": "82e0721671c75970c1a923250f82806fbc2e4d6c8732aedf3be4cbd561df4bac",
+      "bboxes": [
+        [
+          1036.5,
+          700.0,
+          1286.5,
+          1178.75
+        ]
+      ],
+      "crops": [
+        {
+          "sample_id": "positive/images/0001352.jpg",
+          "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\crops\\hanging_object\\0001352_crop_001_hanging_object.png",
+          "image_sha256": "43af306200896e69b730a1ac7cab037568a4c04f5d57bdeb53fb965258192656",
+          "width": 251,
+          "height": 479,
+          "bboxes": [
+            [
+              0,
+              0,
+              251,
+              479
+            ]
+          ],
+          "source_bbox_xyxy": [
+            1036.5,
+            700.0,
+            1286.5,
+            1178.75
+          ],
+          "source_crop_xyxy": [
+            1036,
+            700,
+            1287,
+            1179
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "positive/images/0003939.jpg",
+      "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0003939.jpg",
+      "image_sha256": "9c1fd9ddb73bcfcd991e861c4be46679278b440c6524f0642885cf5a4681cc15",
+      "bboxes": [
+        [
+          1757.75,
+          420.0,
+          1897.75,
+          697.5
+        ]
+      ],
+      "crops": [
+        {
+          "sample_id": "positive/images/0003939.jpg",
+          "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\crops\\hanging_object\\0003939_crop_001_hanging_object.png",
+          "image_sha256": "8994d030264b517c4d7990e05e849535bdf38c55ac5163a68b68b6dadf0ebfe4",
+          "width": 141,
+          "height": 278,
+          "bboxes": [
+            [
+              0,
+              0,
+              141,
+              278
+            ]
+          ],
+          "source_bbox_xyxy": [
+            1757.75,
+            420.0,
+            1897.75,
+            697.5
+          ],
+          "source_crop_xyxy": [
+            1757,
+            420,
+            1898,
+            698
+          ]
+        }
+      ]
+    }
+  ],
+  "review_template": "",
+  "fusion": {
+    "visual_weight": 0.75,
+    "text_weight": 0.25,
+    "positive_count": 5,
+    "aggregation": "normalized_mean",
+    "visual_input": "prepared_target_crops"
+  },
+  "reference_inputs": {
+    "mode": "yoloe_fusion",
+    "counts": {
+      "reference_examples": 5,
+      "reference_crops": 5,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "8187d409e8a88e93cb16bac0a11cebdf9395263b4c23772225cc67217bcb4097"
+  },
+  "request_signature": "4ba1d0f0c4982060e22b6f09ce65a32466502795f57145a84bc2aab23e2398ee"
+}

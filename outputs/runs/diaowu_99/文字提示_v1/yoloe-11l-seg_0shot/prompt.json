@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "yoloe_text",
+  "model": "D:\\Learn\\VLM\\industrial_fewshot_detection\\weights\\yoloe\\yoloe-11l-seg.pt",
+  "kind": "text",
+  "text": "a large hollow cylindrical load suspended from a yellow lifting hook by two taut slings spread to opposite sides, including the hook and slings.",
+  "text_sha256": "091262844b9fa3450a647b585a823ae0788df5b40a7c2016f239beb814f4f2d0",
+  "text_source": "yoloe_text.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "yoloe_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "d0c7ab52808d5bc8781987a0b6443f6fbc17e96219515dc42e43b2394787cd86"
+  },
+  "request_signature": "1170e48853cb965550b37b16b082ac09605503995cb7f7751fbdd8e5c35c9d2b"
+}

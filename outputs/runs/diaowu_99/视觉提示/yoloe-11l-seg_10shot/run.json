@@ -1,0 +1,385 @@
+{
+  "scene_name": "mold_workshop_hanging_object_yoloe",
+  "config_file": "D:\\Learn\\VLM\\industrial_fewshot_detection\\configs\\experiments\\visual_10shot.yaml",
+  "mode": "train",
+  "image_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+  "config_sources": [
+    "D:\\Learn\\VLM\\industrial_fewshot_detection\\configs\\datasets\\diaowu.yaml",
+    "D:\\Learn\\VLM\\industrial_fewshot_detection\\configs\\legacy\\diaowu_yoloe_config.json",
+    "D:\\Learn\\VLM\\industrial_fewshot_detection\\configs\\models\\yoloe_visual.yaml",
+    "D:\\Learn\\VLM\\industrial_fewshot_detection\\configs\\experiments\\visual_10shot.yaml"
+  ],
+  "dataset_manifest": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\splits\\diaowu\\test.json",
+  "dataset_manifest_sha256": "38be7713189edadb4ef92ce459718fcb1d96a55867602484a143611e4f6c0748",
+  "support_manifests": [
+    {
+      "target_id": "diaowu",
+      "path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\supports\\diaowu\\10shot\\seed_0.json",
+      "sha256": "eb5859c59cbd47df162e5c70fed675b17d23bf5a0287a9150c9295f07ceda6b2",
+      "positive_count": 10,
+      "negative_count": 0
+    }
+  ],
+  "output_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\outputs\\runs",
+  "prompt_index_root": "D:\\Learn\\VLM\\industrial_fewshot_detection\\outputs\\runs",
+  "image_count": 99,
+  "ground_truth_image_count": 99,
+  "ground_truth_json_image_count": 58,
+  "assumed_negative_image_count": 41,
+  "unlabeled_image_count": 0,
+  "excluded_reference_overlap": [],
+  "dataset_sha256": "65dcc186b3d1d8cc2de51f6ca992bd5b629be8c987a111692306d386d5f4a22a",
+  "image_paths": [
+    "0000000.jpg",
+    "0000001.jpg",
+    "0000002.jpg",
+    "0000003.jpg",
+    "0000004.jpg",
+    "0000005.jpg",
+    "0000006.jpg",
+    "0000007.jpg",
+    "0000008.jpg",
+    "0000009.jpg",
+    "0000010.jpg",
+    "0000011.jpg",
+    "0000012.jpg",
+    "0000013.jpg",
+    "0000014.jpg",
+    "0000015.jpg",
+    "0000016.jpg",
+    "0000017.jpg",
+    "0000018.jpg",
+    "0000019.jpg",
+    "0000020.jpg",
+    "0000021.jpg",
+    "0000022.jpg",
+    "0000023.jpg",
+    "0000024.jpg",
+    "0000025.jpg",
+    "0000026.jpg",
+    "0000027.jpg",
+    "0000028.jpg",
+    "0000029.jpg",
+    "0000030.jpg",
+    "0000031.jpg",
+    "0000032.jpg",
+    "0000033.jpg",
+    "0000034.jpg",
+    "0000035.jpg",
+    "0000036.jpg",
+    "0000037.jpg",
+    "0000038.jpg",
+    "0000039.jpg",
+    "0000040.jpg",
+    "0000041.jpg",
+    "0000042.jpg",
+    "0000043.jpg",
+    "0000044.jpg",
+    "0000045.jpg",
+    "0000046.jpg",
+    "0000047.jpg",
+    "0000048.jpg",
+    "0000049.jpg",
+    "0000050.jpg",
+    "0000051.jpg",
+    "0000052.jpg",
+    "0000053.jpg",
+    "0000054.jpg",
+    "0000055.jpg",
+    "0000056.jpg",
+    "0000057.jpg",
+    "0000058.jpg",
+    "0000059.jpg",
+    "0000060.jpg",
+    "0000061.jpg",
+    "0000062.jpg",
+    "0000063.jpg",
+    "0000064.jpg",
+    "0000065.jpg",
+    "0000066.jpg",
+    "0000067.jpg",
+    "0000068.jpg",
+    "0000069.jpg",
+    "0000070.jpg",
+    "0000071.jpg",
+    "0000072.jpg",
+    "0000073.jpg",
+    "0000074.jpg",
+    "0000075.jpg",
+    "0000076.jpg",
+    "0000077.jpg",
+    "0000078.jpg",
+    "0000079.jpg",
+    "0000080.jpg",
+    "0000081.jpg",
+    "0000082.jpg",
+    "0000083.jpg",
+    "0000084.jpg",
+    "0000085.jpg",
+    "0000086.jpg",
+    "0000087.jpg",
+    "0000088.jpg",
+    "0000089.jpg",
+    "0000091.jpg",
+    "0000092.jpg",
+    "0000093.jpg",
+    "0000094.jpg",
+    "0000095.jpg",
+    "0000096.jpg",
+    "0000097.jpg",
+    "0000098.jpg",
+    "0000099.jpg"
+  ],
+  "ground_truth_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+  "missing_ground_truth": "negative",
+  "evaluation": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.5,
+    "max_detections_per_image": 100,
+    "loss_weights": {
+      "box_l1": 1.0,
+      "box_iou": 1.0,
+      "false_positive": 1.0,
+      "false_negative": 1.0
+    }
+  },
+  "cache_version": "v1",
+  "experiment": {},
+  "targets": [
+    {
+      "id": "diaowu",
+      "backend": "yoloe",
+      "label": "hanging object",
+      "model": "D:\\Learn\\VLM\\industrial_fewshot_detection\\weights\\yoloe\\yoloe-11l-seg.pt",
+      "base_url": null,
+      "api_protocol": "openai_chat_completions",
+      "prompt_file": null,
+      "review_prompt_file": null,
+      "reference_image_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references",
+      "reference_mode": "yoloe_visual",
+      "prompt_snapshot": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "yoloe",
+        "model": "D:\\Learn\\VLM\\industrial_fewshot_detection\\weights\\yoloe\\yoloe-11l-seg.pt",
+        "kind": "visual",
+        "text": null,
+        "text_sha256": null,
+        "text_source": "not_a_text_prompt",
+        "references": [
+          {
+            "sample_id": "positive/images/0000090.jpg",
+            "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0000090.jpg",
+            "image_sha256": "8e565471c2e978ced9a8176db0c5543b860abb547bef73eed64837554ac72306",
+            "bboxes": [
+              [
+                1377.75,
+                480.0,
+                1600.25,
+                880.0
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0000189.jpg",
+            "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0000189.jpg",
+            "image_sha256": "19e0ecb2fe48c4ab19cc52a5056aeb7847e074c644da9920acdcf6f1eb00e758",
+            "bboxes": [
+              [
+                1189.0,
+                381.25,
+                1380.25,
+                710.0
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0001320.jpg",
+            "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0001320.jpg",
+            "image_sha256": "e78769b05e4183ebfd01a72580e4d7eb36d01eb6ef94ef76908f6a6558e727e3",
+            "bboxes": [
+              [
+                1141.5,
+                385.0,
+                1484.0,
+                1011.25
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0001352.jpg",
+            "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0001352.jpg",
+            "image_sha256": "82e0721671c75970c1a923250f82806fbc2e4d6c8732aedf3be4cbd561df4bac",
+            "bboxes": [
+              [
+                1036.5,
+                700.0,
+                1286.5,
+                1178.75
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0003939.jpg",
+            "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0003939.jpg",
+            "image_sha256": "9c1fd9ddb73bcfcd991e861c4be46679278b440c6524f0642885cf5a4681cc15",
+            "bboxes": [
+              [
+                1757.75,
+                420.0,
+                1897.75,
+                697.5
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0003992.jpg",
+            "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0003992.jpg",
+            "image_sha256": "9fb5be49fe83265f68bbea620935be83903c87645326ee1488cfc7e51c04bce0",
+            "bboxes": [
+              [
+                1471.5,
+                805.0,
+                1774.0,
+                1400.0
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0005072.jpg",
+            "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0005072.jpg",
+            "image_sha256": "ca7d109f6001b3b46ed337780b3dde2dcd3d795ca090e662752f727166ae5443",
+            "bboxes": [
+              [
+                1415.917808219178,
+                551.3698630136987,
+                1657.3561643835617,
+                991.4383561643837
+              ],
+              [
+                2299.4794520547944,
+                460.6164383561644,
+                2412.292682926829,
+                685.0
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0001233.jpg",
+            "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0001233.jpg",
+            "image_sha256": "87a8458219d49dffd275cf10786023052797e14119e0565fbcc09ac19d14b928",
+            "bboxes": [
+              [
+                1352.0,
+                432.0,
+                1586.0,
+                876.0
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0002970.jpg",
+            "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0002970.jpg",
+            "image_sha256": "df76ecabcd3e0357d5b701b7fb18158554068950b0abd45ccc9adac28e46085f",
+            "bboxes": [
+              [
+                1186.4657534246574,
+                510.2739726027398,
+                1422.0487804878048,
+                998.4146341463415
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0002578.jpg",
+            "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0002578.jpg",
+            "image_sha256": "33da52bf7936ad0c954c54c40f3aab7ba6c4cc61ed3bf16d840ec2fe4e78a97d",
+            "bboxes": [
+              [
+                1373.109589041096,
+                273.972602739726,
+                1623.109589041096,
+                700.3424657534247
+              ]
+            ]
+          }
+        ],
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "yoloe_visual",
+          "counts": {
+            "reference_examples": 10,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 10,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "c51e5e053227e35579bee32bb5bb36ef4f588e43a4cd16f08346e99902d6896f"
+        },
+        "request_signature": "33d70a2b98951bd69c4d8665d6fe15880f44a2a9953f8f763b56b85fe0f8c13f"
+      },
+      "require_box_reason": false,
+      "local_model": {
+        "settings": {
+          "source_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\third_party\\yoloe",
+          "weights": "D:\\Learn\\VLM\\industrial_fewshot_detection\\weights\\yoloe\\yoloe-11l-seg.pt",
+          "positive_count": 10,
+          "selection_seed": 0,
+          "device": "cpu",
+          "imgsz": 640,
+          "confidence": 0.001,
+          "nms_iou": 0.7,
+          "max_detections": 100,
+          "aggregation": "normalized_mean",
+          "exclude_reference_overlap": true,
+          "torch_threads": 4
+        },
+        "weights_sha256": "a993fb0fc7c8830939ae14e6434a925dd1179428158c2761482eb8a8d8a3699f",
+        "source_sha256": "ebc80fa7068e0a35ce5d5e52b57173969159e19cd36f42fa8f1cb28b3f727fb9",
+        "upstream_revision": "40cd606cabdbe2b566d6f14a6b162c89206e9a1b",
+        "adapter_sha256": "0406503acebc4d876eca984b3daa5352c18c9b881da5c2f3db60d9a8f20255e9",
+        "runtime_ready": true
+      },
+      "reference_sample_ids": [
+        "positive/images/0000090.jpg",
+        "positive/images/0000189.jpg",
+        "positive/images/0001320.jpg",
+        "positive/images/0001352.jpg",
+        "positive/images/0003939.jpg",
+        "positive/images/0003992.jpg",
+        "positive/images/0005072.jpg",
+        "positive/images/0001233.jpg",
+        "positive/images/0002970.jpg",
+        "positive/images/0002578.jpg"
+      ],
+      "generation_settings": {},
+      "reference_count": {
+        "reference_examples": 10,
+        "reference_crops": 0,
+        "reference_negatives": 0,
+        "reference_originals": 10,
+        "reference_boxed_images": 0
+      },
+      "reference_manifest_sha256": "c51e5e053227e35579bee32bb5bb36ef4f588e43a4cd16f08346e99902d6896f",
+      "prompt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "request_signature": "33d70a2b98951bd69c4d8665d6fe15880f44a2a9953f8f763b56b85fe0f8c13f"
+    }
+  ],
+  "reused_prediction_count": 0,
+  "scheduled_inference_count": 99,
+  "reuse_predictions": true,
+  "local_model_setup": {
+    "diaowu": {
+      "model_load_seconds": 2.178980499971658,
+      "reference_encoding_seconds": 10.151694900006987
+    }
+  },
+  "result_layout": {
+    "root": "D:\\Learn\\VLM\\industrial_fewshot_detection\\outputs\\runs",
+    "dataset_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\outputs\\runs\\diaowu_99",
+    "dataset_name": "diaowu_99",
+    "dataset_sha256": "65dcc186b3d1d8cc2de51f6ca992bd5b629be8c987a111692306d386d5f4a22a",
+    "prompt_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\outputs\\runs\\diaowu_99\\视觉提示",
+    "prompt_version": "视觉提示",
+    "prompt_identity": "5dcfea801b71c21dacdc998f1a45eb556c372947c8b06bce6d4dbf6d9c54bedc"
+  }
+}

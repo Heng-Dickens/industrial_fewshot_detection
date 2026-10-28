@@ -1,0 +1,254 @@
+﻿dataset,method,model,prompt_version,shot_per_class,input,negative_references,run_dir,id,label,AP85,AP90,AP95
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v1,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v1,chache_val300-01,Chache1,0.01900338792932801,0.018590513353614065,0.0046079052957522515
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v1,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v1,chache_val300-01,Chache2,0.006225974320054323,0.002731874496929807,0.001112585485352659
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v1,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v1,chache_val300-01,Chache3,0.0029842236441977184,0.0007447683016196435,0.0
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v1,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v1,chache_val300-01,Chache4,0.1432304888982969,0.1233941875349483,0.03930735299424201
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v1,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v1,chache_val300-01,Qianyinche,0.19565960327999246,0.19358482734423807,0.010233856406661967
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v2,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v2,chache_val300-02,Chache1,0.044397257543467517,0.044123549601438286,0.030314852065681516
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v2,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v2,chache_val300-02,Chache2,0.008455428252601602,0.003452739555111886,0.0001547029702970297
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v2,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v2,chache_val300-02,Chache3,0.005409091274397827,0.0016712437667124379,0.0
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v2,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v2,chache_val300-02,Chache4,0.10997346554897187,0.10055610691258918,0.05063741522390402
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v2,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v2,chache_val300-02,Qianyinche,0.19873173246512935,0.15844724320984344,0.006725954946764098
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v3,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v3,chache_val300-03,Chache1,0.046369213640264445,0.04551650526484967,0.030275870700210223
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v3,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v3,chache_val300-03,Chache2,0.009229389841994989,0.003693390023618353,0.00015001500150015003
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v3,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v3,chache_val300-03,Chache3,0.00798075624224301,0.007858822866639439,0.0
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v3,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v3,chache_val300-03,Chache4,0.12319046988876439,0.114288808492797,0.05785471735726237
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v3,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v3,chache_val300-03,Qianyinche,0.12451991739794749,0.08276427465668217,0.0070148658362655094
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v4,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v4,chache_val300-04,Chache1,0.029330425312106462,0.019860742282252142,0.014924922792843801
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v4,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v4,chache_val300-04,Chache2,0.014406910812988293,0.005449076084495808,0.0
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v4,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v4,chache_val300-04,Chache3,0.010886818486677323,0.01077140681101077,0.0
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v4,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v4,chache_val300-04,Chache4,0.026715866346589744,0.02458542703173389,0.012060382229681584
+chache_val300,GroundingDINO,grounding-dino-base,prompt_v4,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v4,chache_val300-04,Qianyinche,0.035133492376800225,0.029132396485356715,0.002858074620654895
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v1,0,text_only,0,MLLM提示_v1/qwen3.8-27b_5shot/仅文字提示,chache_val300-05,Chache1,0.16274067074425116,0.10328295987493488,0.04384724186704384
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v1,0,text_only,0,MLLM提示_v1/qwen3.8-27b_5shot/仅文字提示,chache_val300-05,Chache2,0.02557755775577559,0.0,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v1,0,text_only,0,MLLM提示_v1/qwen3.8-27b_5shot/仅文字提示,chache_val300-05,Chache3,0.0,0.0,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v1,0,text_only,0,MLLM提示_v1/qwen3.8-27b_5shot/仅文字提示,chache_val300-05,Chache4,0.7220650636492213,0.5902233080450905,0.32891104236474095
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v1,0,text_only,0,MLLM提示_v1/qwen3.8-27b_5shot/仅文字提示,chache_val300-05,Qianyinche,0.33459761957394324,0.2670591383462673,0.0022002200220022005
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图_无负例,chache_val300-06,Chache1,0.41290629301821785,0.23779905463073792,0.0297029702970297
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图_无负例,chache_val300-06,Chache2,0.05014560279557367,0.01386138613861386,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图_无负例,chache_val300-06,Chache3,0.02635463546354636,0.014257425742574256,0.0033003300330033
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图_无负例,chache_val300-06,Chache4,0.7972449418854923,0.7139078063286186,0.46327716622593973
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图_无负例,chache_val300-06,Qianyinche,0.5755193544877342,0.38324447829398345,0.004158415841584159
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,0,text_only,0,MLLM提示_v2/qwen3.8-27b_5shot/仅文字提示,chache_val300-07,Chache1,0.15070348649771814,0.0896148621073287,0.04950495049504951
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,0,text_only,0,MLLM提示_v2/qwen3.8-27b_5shot/仅文字提示,chache_val300-07,Chache2,0.044236209335219226,0.0,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,0,text_only,0,MLLM提示_v2/qwen3.8-27b_5shot/仅文字提示,chache_val300-07,Chache3,0.0,0.0,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,0,text_only,0,MLLM提示_v2/qwen3.8-27b_5shot/仅文字提示,chache_val300-07,Chache4,0.5904950495049516,0.3766530499203767,0.2079207920792079
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,0,text_only,0,MLLM提示_v2/qwen3.8-27b_5shot/仅文字提示,chache_val300-07,Qianyinche,0.1991846243447875,0.03057658707047176,0.0033003300330033
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+B,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+带框图_无负例,chache_val300-08,Chache1,0.1534551900405741,0.1534551900405741,0.06078747409624684
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+B,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+带框图_无负例,chache_val300-08,Chache2,0.07838283828382837,0.009075907590759076,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+B,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+带框图_无负例,chache_val300-08,Chache3,0.07779349363507779,0.0594059405940594,0.0198019801980198
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+B,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+带框图_无负例,chache_val300-08,Chache4,0.5235852006253262,0.43423351623088013,0.2759709407473257
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+B,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+带框图_无负例,chache_val300-08,Qianyinche,0.3621362136213624,0.2234323432343233,0.0033003300330033
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图_无负例,chache_val300-09,Chache1,0.1397401644926398,0.1397401644926398,0.0594059405940594
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图_无负例,chache_val300-09,Chache2,0.09268426842684269,0.019801980198019802,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图_无负例,chache_val300-09,Chache3,0.066006600660066,0.0594059405940594,0.0297029702970297
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图_无负例,chache_val300-09,Chache4,0.5253225322532253,0.48556471031718523,0.2392739273927393
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图_无负例,chache_val300-09,Qianyinche,0.43962629345641324,0.3166745245953161,0.01376851970911377
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C+B,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图+带框图_无负例,chache_val300-10,Chache1,0.12315172145228677,0.11637775073188387,0.0594059405940594
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C+B,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图+带框图_无负例,chache_val300-10,Chache2,0.06820682068206821,0.04950495049504949,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C+B,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图+带框图_无负例,chache_val300-10,Chache3,0.07425742574257425,0.057991513437057995,0.009900990099009901
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C+B,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图+带框图_无负例,chache_val300-10,Chache4,0.5669141914191419,0.44951246677462764,0.28037089423228057
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C+B,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图+带框图_无负例,chache_val300-10,Qianyinche,0.505883259648532,0.3336523525770298,0.016613089880416616
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-11,Chache1,0.12731657781162734,0.12046204620462049,0.0594059405940594
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-11,Chache2,0.07945544554455444,0.034653465346534656,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-11,Chache3,0.09478741991846244,0.05299941758881771,0.013395457192778102
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-11,Chache4,0.5676909305837409,0.5231330586474796,0.23031588873173028
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,1,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_1shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-11,Qianyinche,0.38268582293011927,0.12030958530635671,0.007673267326732672
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+B,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+带框图_无负例,chache_val300-12,Chache1,0.3024752475247528,0.13645576297913503,0.0297029702970297
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+B,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+带框图_无负例,chache_val300-12,Chache2,0.034653465346534656,0.009900990099009901,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+B,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+带框图_无负例,chache_val300-12,Chache3,0.09856985698569852,0.04826732673267327,0.0037128712871287127
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+B,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+带框图_无负例,chache_val300-12,Chache4,0.8942228357451132,0.7559140529437547,0.3436503189792662
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+B,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+带框图_无负例,chache_val300-12,Qianyinche,0.522710436300624,0.2476954592010924,0.007125105223072915
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+B+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+带框图+标注JSON_无负例,chache_val300-13,Chache1,0.21510293886531504,0.10851485148514854,0.021452145214521455
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+B+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+带框图+标注JSON_无负例,chache_val300-13,Chache2,0.02805280528052805,0.012376237623762373,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+B+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+带框图+标注JSON_无负例,chache_val300-13,Chache3,0.033282559025133295,0.015486164001015488,0.005997715156130999
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+B+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+带框图+标注JSON_无负例,chache_val300-13,Chache4,0.7838459315623161,0.7566068021194179,0.3572607260726073
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+B+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+带框图+标注JSON_无负例,chache_val300-13,Qianyinche,0.5251440398277109,0.33656513956480366,0.012290469168497398
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图_无负例,chache_val300-14,Chache1,0.2207836168232208,0.17821782178217815,0.009900990099009901
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图_无负例,chache_val300-14,Chache2,0.09193776520509193,0.039603960396039604,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图_无负例,chache_val300-14,Chache3,0.21492341541846485,0.12860086913668742,0.049504950495049486
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图_无负例,chache_val300-14,Chache4,0.7829482948294817,0.6583983398339835,0.3802183789807553
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图_无负例,chache_val300-14,Qianyinche,0.5681860638894082,0.42536895198953817,0.006300630063006301
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+B,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+带框图_无负例,chache_val300-15,Chache1,0.34041302955608166,0.1792293515065793,0.04785478547854786
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+B,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+带框图_无负例,chache_val300-15,Chache2,0.036303630363036306,0.005657708628005657,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+B,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+带框图_无负例,chache_val300-15,Chache3,0.1641151510108994,0.13065424189477776,0.0297029702970297
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+B,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+带框图_无负例,chache_val300-15,Chache4,0.7400904110262146,0.6341223678376343,0.38883409787274403
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+B,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+带框图_无负例,chache_val300-15,Qianyinche,0.6419141914191412,0.38408063392263886,0.0009900990099009901
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-16,Chache1,0.42592566949002597,0.16090136486176096,0.0396039603960396
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-16,Chache2,0.0792079207920792,0.009900990099009901,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-16,Chache3,0.08809342472708806,0.06626047220106629,0.024371667936024365
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-16,Chache4,0.7054773790519787,0.6353474584910226,0.2978679103431582
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-16,Qianyinche,0.6587088228191542,0.4865357662021583,0.0060693874265475315
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+标注JSON_无负例,chache_val300-17,Chache1,0.33094682465958264,0.15943132774815943,0.06534653465346535
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+标注JSON_无负例,chache_val300-17,Chache2,0.023762376237623763,0.010297029702970298,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+标注JSON_无负例,chache_val300-17,Chache3,0.1714803187635836,0.1573151666899681,0.01885330233428201
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+标注JSON_无负例,chache_val300-17,Chache4,0.7405950615304447,0.6214101425735088,0.3659640689343662
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+C+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+裁剪图+标注JSON_无负例,chache_val300-17,Qianyinche,0.5320255124508148,0.32116093962337444,0.011389213455507042
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+标注JSON_无负例,chache_val300-18,Chache1,0.1448019801980198,0.10891089108910891,0.0594059405940594
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+标注JSON_无负例,chache_val300-18,Chache2,0.01914191419141914,0.0132013201320132,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+标注JSON_无负例,chache_val300-18,Chache3,0.1167317724328264,0.08067177685510488,0.01502650265026503
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+标注JSON_无负例,chache_val300-18,Chache4,0.757187938288921,0.6406514399185858,0.2725056917633259
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,5,O+J,0,MLLM提示_v2/qwen3.8-27b_5shot/原图+标注JSON_无负例,chache_val300-18,Qianyinche,0.4326647470052955,0.23768174693873004,0.012843592051512842
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+B,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+带框图_无负例,chache_val300-19,Chache1,0.3140788733251206,0.18390346674735378,0.009900990099009901
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+B,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+带框图_无负例,chache_val300-19,Chache2,0.10376237623762377,0.039603960396039604,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+B,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+带框图_无负例,chache_val300-19,Chache3,0.23469846984698464,0.16831683168316833,0.07695769576957698
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+B,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+带框图_无负例,chache_val300-19,Chache4,0.8448025944033597,0.7595696116935341,0.41502030387370514
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+B,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+带框图_无负例,chache_val300-19,Qianyinche,0.5053406049824835,0.3049935428325443,0.0009900990099009901
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图_无负例,chache_val300-20,Chache1,0.42504133098192465,0.3358633517049356,0.0059405940594059415
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图_无负例,chache_val300-20,Chache2,0.09158415841584158,0.009900990099009901,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图_无负例,chache_val300-20,Chache3,0.24678217821782175,0.18939179632248937,0.04112718964204113
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图_无负例,chache_val300-20,Chache4,0.9066373303997064,0.8258125812581246,0.3877657880730604
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图_无负例,chache_val300-20,Qianyinche,0.5603594553984272,0.40258132956152787,0.0027002700270027003
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C+B,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图+带框图_无负例,chache_val300-21,Chache1,0.3895915299629704,0.14814190397367918,0.009900990099009901
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C+B,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图+带框图_无负例,chache_val300-21,Chache2,0.04950495049504949,0.0066006600660066,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C+B,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图+带框图_无负例,chache_val300-21,Chache3,0.19068091019628283,0.15754733368073642,0.05033003300330032
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C+B,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图+带框图_无负例,chache_val300-21,Chache4,0.9050520436659059,0.8212019004098197,0.3202105924878205
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C+B,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图+带框图_无负例,chache_val300-21,Qianyinche,0.6135998505510936,0.3872890228908805,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-22,Chache1,0.39507959991401415,0.2660891089108911,0.0594059405940594
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-22,Chache2,0.02970297029702971,0.013027618551328814,0.0
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-22,Chache3,0.1618533994771618,0.14222638480064226,0.05771117652305768
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-22,Chache4,0.7926626591230556,0.7268426842684265,0.39751090493664765
+chache_val300,MLLM,qwen3.8-27b,MLLM提示_v2,10,O+C+B+J,0,MLLM提示_v2/qwen3.8-27b_10shot/原图+裁剪图+带框图+标注JSON_无负例,chache_val300-22,Qianyinche,0.5136921384446137,0.2018315018315018,0.005236100533130237
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,1,O+B,0,MLLM提示_v2/qwen3.8-flash_1shot_第2次/原图+带框图_无负例,chache_val300-24,Chache1,0.21574257425742566,0.15120462046204616,0.04356435643564356
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,1,O+B,0,MLLM提示_v2/qwen3.8-flash_1shot_第2次/原图+带框图_无负例,chache_val300-24,Chache2,0.04702970297029703,0.0,0.0
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,1,O+B,0,MLLM提示_v2/qwen3.8-flash_1shot_第2次/原图+带框图_无负例,chache_val300-24,Chache3,0.07920792079207921,0.0594059405940594,0.0297029702970297
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,1,O+B,0,MLLM提示_v2/qwen3.8-flash_1shot_第2次/原图+带框图_无负例,chache_val300-24,Chache4,0.6229938378453233,0.438170740150938,0.3359264497878362
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,1,O+B,0,MLLM提示_v2/qwen3.8-flash_1shot_第2次/原图+带框图_无负例,chache_val300-24,Qianyinche,0.6636299585285951,0.5604479393127747,0.052357778150696435
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,5,O+B,0,MLLM提示_v2/qwen3.8-flash_5shot/原图+带框图_无负例,chache_val300-25,Chache1,0.2597841270772078,0.2332636178834314,0.07274639627314254
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,5,O+B,0,MLLM提示_v2/qwen3.8-flash_5shot/原图+带框图_无负例,chache_val300-25,Chache2,0.06534653465346534,0.009900990099009901,0.0
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,5,O+B,0,MLLM提示_v2/qwen3.8-flash_5shot/原图+带框图_无负例,chache_val300-25,Chache3,0.08745874587458745,0.0297029702970297,0.009900990099009901
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,5,O+B,0,MLLM提示_v2/qwen3.8-flash_5shot/原图+带框图_无负例,chache_val300-25,Chache4,0.7685643564356436,0.6429702970297027,0.2888613861386142
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,5,O+B,0,MLLM提示_v2/qwen3.8-flash_5shot/原图+带框图_无负例,chache_val300-25,Qianyinche,0.6441803282827019,0.4280121492152131,0.025406314216327292
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,10,O+B,0,MLLM提示_v2/qwen3.8-flash_10shot/原图+带框图_无负例,chache_val300-26,Chache1,0.27873372502085375,0.19181226946224036,0.033648364836483646
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,10,O+B,0,MLLM提示_v2/qwen3.8-flash_10shot/原图+带框图_无负例,chache_val300-26,Chache2,0.06782178217821783,0.034653465346534656,0.0
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,10,O+B,0,MLLM提示_v2/qwen3.8-flash_10shot/原图+带框图_无负例,chache_val300-26,Chache3,0.24423289569008236,0.13377503163850213,0.0049504950495049506
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,10,O+B,0,MLLM提示_v2/qwen3.8-flash_10shot/原图+带框图_无负例,chache_val300-26,Chache4,0.7449534824172088,0.5361200587824906,0.3327074086719017
+chache_val300,MLLM,qwen3.8-flash,MLLM提示_v2,10,O+B,0,MLLM提示_v2/qwen3.8-flash_10shot/原图+带框图_无负例,chache_val300-26,Qianyinche,0.5937142473552564,0.4987827360072638,0.09271247637584268
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,1,视觉参考,0,PET-DINO/pet_dino_swin_t_1shot,chache_val300-27,Chache1,0.007193827093388303,0.0011278613117317684,0.0006296443285404266
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,1,视觉参考,0,PET-DINO/pet_dino_swin_t_1shot,chache_val300-27,Chache2,0.01874514858635195,0.011623772177150753,0.00010293887698951297
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,1,视觉参考,0,PET-DINO/pet_dino_swin_t_1shot,chache_val300-27,Chache3,0.0341177743171729,0.03375802113006651,0.0019801980198019802
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,1,视觉参考,0,PET-DINO/pet_dino_swin_t_1shot,chache_val300-27,Chache4,0.17150440760671753,0.16864072484830311,0.14725803892464115
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,1,视觉参考,0,PET-DINO/pet_dino_swin_t_1shot,chache_val300-27,Qianyinche,0.44138978431508463,0.39814657159707073,0.04569590836422732
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,5,视觉参考,0,PET-DINO/pet_dino_swin_t_5shot,chache_val300-28,Chache1,0.0113370894485733,0.010001089493291976,0.00627965301946741
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,5,视觉参考,0,PET-DINO/pet_dino_swin_t_5shot,chache_val300-28,Chache2,0.08686226669472404,0.04852502738988223,0.004676930459003347
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,5,视觉参考,0,PET-DINO/pet_dino_swin_t_5shot,chache_val300-28,Chache3,0.012175453730928694,0.004053880494818335,0.0027037454813169846
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,5,视觉参考,0,PET-DINO/pet_dino_swin_t_5shot,chache_val300-28,Chache4,0.18011772101394852,0.16384919218678437,0.14024390968797745
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,5,视觉参考,0,PET-DINO/pet_dino_swin_t_5shot,chache_val300-28,Qianyinche,0.3494688007891801,0.19468458943463585,0.04118929579815542
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,10,视觉参考,0,PET-DINO/pet_dino_swin_t_10shot,chache_val300-29,Chache1,0.09283801823266036,0.0896257888723587,0.06059934077711627
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,10,视觉参考,0,PET-DINO/pet_dino_swin_t_10shot,chache_val300-29,Chache2,0.13519750478121217,0.08244809514990181,0.003962406228473288
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,10,视觉参考,0,PET-DINO/pet_dino_swin_t_10shot,chache_val300-29,Chache3,0.03389732071932832,0.024752475247524754,0.009900990099009901
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,10,视觉参考,0,PET-DINO/pet_dino_swin_t_10shot,chache_val300-29,Chache4,0.261077560096394,0.2537600828728975,0.20231114548018259
+chache_val300,PET-DINO,pet_dino_swin_t,视觉提示,10,视觉参考,0,PET-DINO/pet_dino_swin_t_10shot,chache_val300-29,Qianyinche,0.06585134810756756,0.051215721511708376,0.03024296399878878
+chache_val300,WeDetect,wedetect_base,prompt_v1,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v1,chache_val300-30,Chache1,0.13177253156796018,0.10049673466953925,0.010708427511129532
+chache_val300,WeDetect,wedetect_base,prompt_v1,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v1,chache_val300-30,Chache2,0.00851933384680854,0.0035467046337795934,0.0009889857051672182
+chache_val300,WeDetect,wedetect_base,prompt_v1,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v1,chache_val300-30,Chache3,0.011341326868631154,0.01083039202691778,0.005974735404574939
+chache_val300,WeDetect,wedetect_base,prompt_v1,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v1,chache_val300-30,Chache4,0.3361466956941692,0.19066175710277916,0.15542435866149948
+chache_val300,WeDetect,wedetect_base,prompt_v1,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v1,chache_val300-30,Qianyinche,0.011301698082221976,0.008012098673381027,0.0
+chache_val300,WeDetect,wedetect_base,prompt_v2,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v2,chache_val300-31,Chache1,0.09293657829589047,0.05844237972999486,0.006798625181490809
+chache_val300,WeDetect,wedetect_base,prompt_v2,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v2,chache_val300-31,Chache2,0.013988462179263954,0.006831999323504082,0.0018001800180018003
+chache_val300,WeDetect,wedetect_base,prompt_v2,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v2,chache_val300-31,Chache3,0.007999324439900975,0.007140082766444623,0.0037128712871287127
+chache_val300,WeDetect,wedetect_base,prompt_v2,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v2,chache_val300-31,Chache4,0.3080233997644805,0.15680822240736805,0.11528411392447091
+chache_val300,WeDetect,wedetect_base,prompt_v2,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v2,chache_val300-31,Qianyinche,0.05566774423845958,0.04861317474085561,0.0
+chache_val300,WeDetect,wedetect_base,prompt_v3,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v3,chache_val300-32,Chache1,0.12673499418295753,0.09712965366217863,0.009462788384101568
+chache_val300,WeDetect,wedetect_base,prompt_v3,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v3,chache_val300-32,Chache2,0.013972221354416366,0.001967416042399631,0.0019116358164897164
+chache_val300,WeDetect,wedetect_base,prompt_v3,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v3,chache_val300-32,Chache3,0.010389343063146803,0.00994579732643939,0.004243281471004243
+chache_val300,WeDetect,wedetect_base,prompt_v3,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v3,chache_val300-32,Chache4,0.4376478458250701,0.27859178076560465,0.19455046555432207
+chache_val300,WeDetect,wedetect_base,prompt_v3,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v3,chache_val300-32,Qianyinche,0.04237730943632942,0.03519677865755374,0.0
+chache_val300,WeDetect,wedetect_base,prompt_v4,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v4,chache_val300-33,Chache1,0.0730131211001189,0.05690257959177785,0.006761651774933593
+chache_val300,WeDetect,wedetect_base,prompt_v4,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v4,chache_val300-33,Chache2,0.0038421818826737415,0.0006279760361974866,0.0006279760361974866
+chache_val300,WeDetect,wedetect_base,prompt_v4,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v4,chache_val300-33,Chache3,0.004078870440752955,0.003439423164936103,0.0014851485148514854
+chache_val300,WeDetect,wedetect_base,prompt_v4,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v4,chache_val300-33,Chache4,0.4468940767095676,0.2688512772369517,0.1879376875235125
+chache_val300,WeDetect,wedetect_base,prompt_v4,0,text_only,0,WeDetect/wedetect_base_0shot_prompt_v4,chache_val300-33,Qianyinche,0.7638311348788345,0.6700274872710077,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,1,视觉参考,0,YOLOE/yoloe-v8l-seg_1shot,chache_val300-34,Chache1,0.00941746770655876,0.0023628528380898696,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,1,视觉参考,0,YOLOE/yoloe-v8l-seg_1shot,chache_val300-34,Chache2,0.02496907883476669,0.018919413220479228,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,1,视觉参考,0,YOLOE/yoloe-v8l-seg_1shot,chache_val300-34,Chache3,0.03253182461103254,0.0014144271570014143,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,1,视觉参考,0,YOLOE/yoloe-v8l-seg_1shot,chache_val300-34,Chache4,0.15523670384593571,0.12520941138052766,0.00997423813113899
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,1,视觉参考,0,YOLOE/yoloe-v8l-seg_1shot,chache_val300-34,Qianyinche,0.038129794040647653,0.0034615172881362994,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,5,视觉参考,0,YOLOE/yoloe-v8l-seg_5shot,chache_val300-35,Chache1,0.012726620791864061,0.004783021371440002,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,5,视觉参考,0,YOLOE/yoloe-v8l-seg_5shot,chache_val300-35,Chache2,0.03230320206110867,0.02123688053051869,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,5,视觉参考,0,YOLOE/yoloe-v8l-seg_5shot,chache_val300-35,Chache3,0.03564356435643565,0.0029702970297029708,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,5,视觉参考,0,YOLOE/yoloe-v8l-seg_5shot,chache_val300-35,Chache4,0.13631728097558926,0.10039704770386504,0.019226528543457425
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,5,视觉参考,0,YOLOE/yoloe-v8l-seg_5shot,chache_val300-35,Qianyinche,0.19373862505365805,0.01887863274001888,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,10,视觉参考,0,YOLOE/yoloe-v8l-seg_10shot,chache_val300-36,Chache1,0.030671306818850864,0.00897319149998022,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,10,视觉参考,0,YOLOE/yoloe-v8l-seg_10shot,chache_val300-36,Chache2,0.03431874553256419,0.021265795552819235,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,10,视觉参考,0,YOLOE/yoloe-v8l-seg_10shot,chache_val300-36,Chache3,0.041584158415841586,0.0059405940594059415,0.0
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,10,视觉参考,0,YOLOE/yoloe-v8l-seg_10shot,chache_val300-36,Chache4,0.23741571438383177,0.18148433695828609,0.057720211676340054
+chache_val300,YOLOE,yoloe-v8l-seg,视觉提示,10,视觉参考,0,YOLOE/yoloe-v8l-seg_10shot,chache_val300-36,Qianyinche,0.20279233106849828,0.017495619497983915,0.0
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,0,text_only,0,MLLM提示_v1/qwen3.8-27b_1shot/仅文字提示,diaowu_99-01,hanging object,0.39163916391639153,0.29093678598629114,0.0198019801980198
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,0,text_only,0,MLLM提示_v1/qwen3.8-27b_5shot/仅文字提示,diaowu_99-02,hanging object,0.38711783266238703,0.3012185833968014,0.026138613861386144
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,1,O+B,1,MLLM提示_v1/qwen3.8-27b_1shot/原图+带框图_含1张负例,diaowu_99-03,hanging object,0.38650531719838616,0.281811514484782,0.023296447291787994
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,1,O+C,1,MLLM提示_v1/qwen3.8-27b_1shot/原图+裁剪图_含1张负例,diaowu_99-04,hanging object,0.3024824221552592,0.22054814177069879,0.03465346534653464
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,1,O+C+B,1,MLLM提示_v1/qwen3.8-27b_1shot/原图+裁剪图+带框图_含1张负例,diaowu_99-05,hanging object,0.3694665985205958,0.2232576198796348,0.024752475247524747
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,1,O+C+B+J,1,MLLM提示_v1/qwen3.8-27b_1shot/原图+裁剪图+带框图+标注JSON_含1张负例,diaowu_99-06,hanging object,0.33129027188433174,0.22442244224422422,0.00884016973125884
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,1,O+C+J,1,MLLM提示_v1/qwen3.8-27b_1shot/原图+裁剪图+标注JSON_含1张负例,diaowu_99-07,hanging object,0.3095362167795723,0.21495570609692566,0.009075907590759076
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,1,O+J,1,MLLM提示_v1/qwen3.8-27b_1shot/原图+标注JSON_含1张负例,diaowu_99-08,hanging object,0.27380515829360685,0.236621130467477,0.008377760853008377
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图_无负例,diaowu_99-09,hanging object,0.4356435643564354,0.4107077374404105,0.06674000733406675
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图_含5张负例,diaowu_99-10,hanging object,0.4402891376094131,0.29634811307217657,0.054455445544554455
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B+J,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图+标注JSON_无负例,diaowu_99-11,hanging object,0.37509822410812516,0.18670438472418668,0.042354235423542344
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B+J,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图+标注JSON_含5张负例,diaowu_99-12,hanging object,0.4063991304790851,0.29792979297929756,0.05020119659024725
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图_无负例,diaowu_99-13,hanging object,0.46204620462046175,0.36616293208268186,0.046676096181046685
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图_含5张负例,diaowu_99-14,hanging object,0.37509822410812516,0.29241971816229256,0.043153371940967696
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C+B,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图+带框图_无负例,diaowu_99-15,hanging object,0.3594821020563596,0.21896420411271872,0.026100649280614327
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C+B,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图+带框图_含5张负例,diaowu_99-16,hanging object,0.4483174177573143,0.354996098943968,0.01866519985331867
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C+B+J,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图+带框图+标注JSON_无负例,diaowu_99-17,hanging object,0.4397055090124392,0.20106626047220094,0.037623762376237636
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C+B+J,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图+带框图+标注JSON_含5张负例,diaowu_99-18,hanging object,0.41781040172982786,0.2623762376237624,0.021602160216021606
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C+J,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图+标注JSON_无负例,diaowu_99-19,hanging object,0.41574683784167854,0.22466246624662467,0.01668500183351668
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C+J,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图+标注JSON_含5张负例,diaowu_99-20,hanging object,0.4327171633419504,0.2524752475247525,0.0342034203420342
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+J,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+标注JSON_无负例,diaowu_99-21,hanging object,0.4135459916959437,0.27336014851485146,0.04982433727243691
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+J,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+标注JSON_含5张负例,diaowu_99-22,hanging object,0.3620868240670221,0.20910891089108927,0.024825847885573214
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,10,O+B,0,MLLM提示_v1/qwen3.8-27b_10shot/原图+带框图_无负例,diaowu_99-23,hanging object,0.4022610771715472,0.3029281651569415,0.0348034803480348
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,10,O+B+J,0,MLLM提示_v1/qwen3.8-27b_10shot/原图+带框图+标注JSON_无负例,diaowu_99-24,hanging object,0.3846510266790225,0.2623762376237624,0.05326049846363948
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,10,O+C,0,MLLM提示_v1/qwen3.8-27b_10shot/原图+裁剪图_无负例,diaowu_99-25,hanging object,0.34616795012834595,0.24752475247524752,0.05828507379039793
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,10,O+C+B,0,MLLM提示_v1/qwen3.8-27b_10shot/原图+裁剪图+带框图_无负例,diaowu_99-26,hanging object,0.373861386138614,0.3043564356435639,0.045984598459845996
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,10,O+C+B+J,0,MLLM提示_v1/qwen3.8-27b_10shot/原图+裁剪图+带框图+标注JSON_无负例,diaowu_99-27,hanging object,0.431418236163239,0.257235534874242,0.037708376831023835
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,10,O+C+J,0,MLLM提示_v1/qwen3.8-27b_10shot/原图+裁剪图+标注JSON_无负例,diaowu_99-28,hanging object,0.3846510266790225,0.22065063649222066,0.039791987639097935
+diaowu_99,MLLM,qwen3.8-27b,MLLM提示_v1,10,O+J,0,MLLM提示_v1/qwen3.8-27b_10shot/原图+标注JSON_无负例,diaowu_99-29,hanging object,0.41420552311641395,0.25741051028179723,0.02717244429157556
+diaowu_99,MLLM,qwen3.8-flash,MLLM提示_v1,0,text_only,0,MLLM提示_v1/qwen3.8-flash_5shot/仅文字提示,diaowu_99-30,hanging object,0.3404913824715805,0.2780344701136782,0.027227722772277228
+diaowu_99,MLLM,qwen3.8-flash,MLLM提示_v1,5,O+B,0,MLLM提示_v1/qwen3.8-flash_5shot/原图+带框图_无负例,diaowu_99-31,hanging object,0.32008486562942007,0.2373408769448375,0.037765205091937745
+diaowu_99,MLLM,qwen3.8-flash,MLLM提示_v1,5,O+B+J,0,MLLM提示_v1/qwen3.8-flash_5shot/原图+带框图+标注JSON_无负例,diaowu_99-32,hanging object,0.2518149080856716,0.20573675014560294,0.051223063482818874
+diaowu_99,MLLM,qwen3.8-flash,MLLM提示_v1,5,O+C,0,MLLM提示_v1/qwen3.8-flash_5shot/原图+裁剪图_无负例,diaowu_99-33,hanging object,0.3261669024045256,0.2628615802756743,0.013651365136513648
+diaowu_99,MLLM,qwen3.8-flash,MLLM提示_v1,5,O+C+B,0,MLLM提示_v1/qwen3.8-flash_5shot/原图+裁剪图+带框图_无负例,diaowu_99-34,hanging object,0.34142237753187027,0.2876287628762881,0.048990613347048975
+diaowu_99,MLLM,qwen3.8-flash,MLLM提示_v1,5,O+C+B+J,0,MLLM提示_v1/qwen3.8-flash_5shot/原图+裁剪图+带框图+标注JSON_无负例,diaowu_99-35,hanging object,0.32746168452461727,0.20849851584756077,0.008652966136949828
+diaowu_99,MLLM,qwen3.8-flash,MLLM提示_v1,5,O+C+J,0,MLLM提示_v1/qwen3.8-flash_5shot/原图+裁剪图+标注JSON_无负例,diaowu_99-36,hanging object,0.3122711243727118,0.2883314739924692,0.07583321712452933
+diaowu_99,MLLM,qwen3.8-flash,MLLM提示_v1,5,O+J,0,MLLM提示_v1/qwen3.8-flash_5shot/原图+标注JSON_无负例,diaowu_99-37,hanging object,0.2526184125261839,0.22890035482421478,0.014349261013057828
+diaowu_99,MLLM,qwen3.8-max,MLLM提示_v1,0,text_only,0,MLLM提示_v1/qwen3.8-max_5shot/仅文字提示,diaowu_99-38,hanging object,0.3347477604903348,0.28807166430928816,0.060760812923397606
+diaowu_99,MLLM,qwen3.8-max,MLLM提示_v1,5,O+B,0,MLLM提示_v1/qwen3.8-max_5shot/原图+带框图_无负例,diaowu_99-39,hanging object,0.3190927944335051,0.20100119255623053,0.008486562942008485
+diaowu_99,MLLM,qwen3.8-max,MLLM提示_v1,5,O+B+J,0,MLLM提示_v1/qwen3.8-max_5shot/原图+带框图+标注JSON_无负例,diaowu_99-40,hanging object,0.3696623508504696,0.07903421921139482,0.0010422094841063053
+diaowu_99,MLLM,qwen3.8-max,MLLM提示_v1,5,O+C,0,MLLM提示_v1/qwen3.8-max_5shot/原图+裁剪图_无负例,diaowu_99-41,hanging object,0.2759748455379464,0.07886650734038922,0.0
+diaowu_99,MLLM,qwen3.8-max,MLLM提示_v1,5,O+C+B,0,MLLM提示_v1/qwen3.8-max_5shot/原图+裁剪图+带框图_无负例,diaowu_99-42,hanging object,0.23229246001523232,0.045696877380045686,0.0012376237623762376
+diaowu_99,MLLM,qwen3.8-max,MLLM提示_v1,5,O+C+B+J,0,MLLM提示_v1/qwen3.8-max_5shot/原图+裁剪图+带框图+标注JSON_无负例,diaowu_99-43,hanging object,0.2563388347491055,0.0721246037647243,0.0019801980198019802
+diaowu_99,MLLM,qwen3.8-max,MLLM提示_v1,5,O+C+J,0,MLLM提示_v1/qwen3.8-max_5shot/原图+裁剪图+标注JSON_无负例,diaowu_99-44,hanging object,0.23522517086873512,0.0302030203020302,0.0081008100810081
+diaowu_99,MLLM,qwen3.8-max,MLLM提示_v1,5,O+J,0,MLLM提示_v1/qwen3.8-max_5shot/原图+标注JSON_无负例,diaowu_99-45,hanging object,0.30777627452186224,0.09207706484934204,0.0
+diaowu_val300,GroundingDINO,grounding-dino-base,prompt_v1,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v1,diaowu_val300-01,hanging object,0.0003694454703877954,0.00016008231111436824,1.7835337034363936e-06
+diaowu_val300,GroundingDINO,grounding-dino-base,prompt_v2,0,text_only,0,GroundingDINO/grounding-dino-base_0shot_prompt_v2,diaowu_val300-02,hanging object,0.0008327411262483775,0.0005267525500206849,3.640707268065277e-05
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,0,text_only,0,MLLM提示_v1/qwen3.8-27b_5shot/仅文字提示,diaowu_val300-03,hanging object,0.3626739285078744,0.25651571761161795,0.041669627249288035
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,1,O+B,0,MLLM提示_v1/qwen3.8-27b_1shot/原图+带框图_无负例,diaowu_val300-04,hanging object,0.3379216734122654,0.22852948584363844,0.03745744319440303
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,1,O+B,1,MLLM提示_v1/qwen3.8-27b_1shot/原图+带框图_含1张负例,diaowu_val300-05,hanging object,0.3636458402203095,0.25203600912312113,0.04174008256955381
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,1,O+C,0,MLLM提示_v1/qwen3.8-27b_1shot/原图+裁剪图_无负例,diaowu_val300-06,hanging object,0.34634810388242504,0.2215735375187002,0.041535289135533136
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,1,O+C,1,MLLM提示_v1/qwen3.8-27b_1shot/原图+裁剪图_含1张负例,diaowu_val300-07,hanging object,0.35244390465429987,0.23758722842860427,0.04665980533855907
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图_无负例,diaowu_val300-08,hanging object,0.3694253281246455,0.23515731036242601,0.03297072291442316
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图_含5张负例,diaowu_val300-09,hanging object,0.3797682185796129,0.2683646152252463,0.024805460553973736
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B+J,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图+标注JSON_无负例,diaowu_val300-10,hanging object,0.3814953874136482,0.2088138484178086,0.03341231965836177
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+B+J,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+带框图+标注JSON_含5张负例,diaowu_val300-11,hanging object,0.36022464078540967,0.23949252798864107,0.028332530591010627
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图_无负例,diaowu_val300-12,hanging object,0.3368605387090032,0.21026376780279557,0.03730262821671794
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图_含5张负例,diaowu_val300-13,hanging object,0.36554610203125826,0.23560534526004126,0.0658494591091148
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C+B,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图+带框图_无负例,diaowu_val300-14,hanging object,0.35816580770533246,0.21984150720300158,0.03059051453090515
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C+B,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图+带框图_含5张负例,diaowu_val300-15,hanging object,0.3769647286099832,0.2275622778739636,0.03348290598290598
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C+B+J,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图+带框图+标注JSON_无负例,diaowu_val300-16,hanging object,0.3419211773036948,0.21035190798791178,0.022445864951045696
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C+B+J,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图+带框图+标注JSON_含5张负例,diaowu_val300-17,hanging object,0.35981187313772867,0.21864337883842092,0.03968867406484363
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C+J,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图+标注JSON_无负例,diaowu_val300-18,hanging object,0.3440705537153676,0.19919368420490016,0.03139030936060638
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+C+J,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+裁剪图+标注JSON_含5张负例,diaowu_val300-19,hanging object,0.35564546376250183,0.19294567520815692,0.028467871708722357
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+J,0,MLLM提示_v1/qwen3.8-27b_5shot/原图+标注JSON_无负例,diaowu_val300-20,hanging object,0.3176192358039744,0.2219889719615211,0.029721491524513935
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,5,O+J,5,MLLM提示_v1/qwen3.8-27b_5shot/原图+标注JSON_含5张负例,diaowu_val300-21,hanging object,0.36029344226018434,0.2284228680734816,0.0379272302230223
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,10,O+B,0,MLLM提示_v1/qwen3.8-27b_10shot/原图+带框图_无负例,diaowu_val300-22,hanging object,0.3543836582241627,0.22970939951137967,0.036075214634618616
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,10,O+B,10,MLLM提示_v1/qwen3.8-27b_10shot/原图+带框图_含10张负例,diaowu_val300-23,hanging object,0.36471326174194185,0.24971043108427649,0.03411918733906477
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,10,O+C,0,MLLM提示_v1/qwen3.8-27b_10shot/原图+裁剪图_无负例,diaowu_val300-24,hanging object,0.37276462315410813,0.24591951638462262,0.061945488438797554
+diaowu_val300,MLLM,qwen3.8-27b,MLLM提示_v1,10,O+C,10,MLLM提示_v1/qwen3.8-27b_10shot/原图+裁剪图_含10张负例,diaowu_val300-25,hanging object,0.3731277874211832,0.2529452519625037,0.03587604602047236
+diaowu_val300,PET-DINO,pet_dino_swin_t,视觉提示,1,视觉参考,0,PET-DINO/pet_dino_swin_t_1shot,diaowu_val300-26,hanging object,0.08676432359859355,0.0524979356806592,0.013300556472903978
+diaowu_val300,PET-DINO,pet_dino_swin_t,视觉提示,5,视觉参考,0,PET-DINO/pet_dino_swin_t_5shot,diaowu_val300-27,hanging object,0.022730821227034237,0.013319501027714517,0.001737737005381417
+diaowu_val300,PET-DINO,pet_dino_swin_t,视觉提示,10,视觉参考,0,PET-DINO/pet_dino_swin_t_10shot,diaowu_val300-28,hanging object,0.04402838768703295,0.029262791382453204,0.004339379099662613
+diaowu_val300,WeDetect,wedetect_base,文字提示_v1,0,text_only,0,文字提示_v1/wedetect_base_0shot,diaowu_val300-29,hanging object,0.009900990099009901,7.361330928631897e-05,0.0
+diaowu_val300,WeDetect,wedetect_base,文字提示_v2,0,text_only,0,文字提示_v2/wedetect_base_0shot,diaowu_val300-30,hanging object,0.0006517011148119419,0.00021292451825827746,2.6544209380723597e-05
+diaowu_val300,YOLOE,yoloe-v8l-seg,视觉提示,1,视觉参考,0,YOLOE/yoloe-v8l-seg_1shot,diaowu_val300-31,hanging object,0.15557118687575885,0.06136268151134173,0.006341058182425629
+diaowu_val300,YOLOE,yoloe-v8l-seg,视觉提示,5,视觉参考,0,YOLOE/yoloe-v8l-seg_5shot,diaowu_val300-32,hanging object,0.14612713394686705,0.05764913578344011,0.0026210364399271782
+diaowu_val300,YOLOE,yoloe-v8l-seg,视觉提示,10,视觉参考,0,YOLOE/yoloe-v8l-seg_10shot,diaowu_val300-33,hanging object,0.14152466652545292,0.05478675784508959,0.0040132654042103234

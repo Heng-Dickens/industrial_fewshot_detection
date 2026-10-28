@@ -1,0 +1,14 @@
+{
+  "identity": "49759c1fce6cd15ed4887a62e216ad911051cff1043e5cfecd8180074b56235b",
+  "family": "文字提示",
+  "description": "本次实际输入，完整文字及复核模板见各运行目录的 prompt.txt / review_template.txt。",
+  "prompts": [
+    {
+      "text": "a large hollow cylindrical load suspended from a yellow lifting hook by two taut slings spread to opposite sides, including the hook and slings.",
+      "review_template": ""
+    }
+  ],
+  "text_sha256": [
+    "091262844b9fa3450a647b585a823ae0788df5b40a7c2016f239beb814f4f2d0"
+  ]
+}
