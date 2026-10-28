@@ -1,0 +1,5 @@
+{
+  "identity": "3dc2617d5f56317ac2bc4bf04406aa788de689f8d02b011ba9382dee0c50e72d",
+  "name": "GroundingDINO",
+  "backend": "groundingdino"
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+  "kind": "text",
+  "text": "电动托盘搬运车",
+  "text_sha256": "3c7a2bdf03e9f24ede66a18a7478047bb6dc30d8915592d60436af237189df58",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "9becf1c2897a90893c884303befaf12b2bab04cd18bb9c82e739b602b9cc80d0"
+  },
+  "request_signature": "bee15792a208c598fb95ff3cf33ca1e64eb59d88f070405a1f49777ead8ea1bb"
+}

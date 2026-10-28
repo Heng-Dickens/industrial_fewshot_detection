@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+  "kind": "text",
+  "text": "低位搬运车，车体小而低，驾驶员站着，前方伸出贴近地面的长双叉，无高起升门架和护顶架。",
+  "text_sha256": "b38e72faddaf462bd819143d24bc1af80f816ca8fd4ee8a0b96b09314118bcf1",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "568c01b979f410ee6160e63bbd0a1715d8bb45187c7a5d09c8043e8f084ecca3"
+  },
+  "request_signature": "93aa65a5b783dcea29f92fe831a9f7d47500853a30ce92098181244f63cb1f8e"
+}

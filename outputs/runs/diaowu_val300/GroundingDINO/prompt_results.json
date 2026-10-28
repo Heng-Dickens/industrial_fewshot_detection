@@ -1,0 +1,79 @@
+{
+  "schema": "industrial_fewshot.prompt_results.v1",
+  "runs": [
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v1",
+      "target_id": "diaowu",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "吊物",
+        "text_sha256": "fb4fc59a71a21423955cfa0a59d6cc2d0c08d9a135503b22f8b02bc805eac609",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "28f2e229688f422ff16750cb1507b1cd5a40807c67e87765b9cdf010ee418fa8"
+        },
+        "request_signature": "bb9d7c4b1bb2e3b4ef15b7b229b9757defbfa6de8bd50e81d8abddfe437f6df6"
+      },
+      "request_signature": "bb9d7c4b1bb2e3b4ef15b7b229b9757defbfa6de8bd50e81d8abddfe437f6df6",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v1/prompt.txt",
+      "AP50": 0.004874514902546681,
+      "AP50_95": 0.0025336452560228632,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v2",
+      "target_id": "diaowu",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "被吊起的圆筒吊物",
+        "text_sha256": "dcb1adc5ee3c4f2d266b549dacd644513d844b6aa17fa9e2b25421f82a3dc527",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "b9df233a0f0dac48a5f1d5a058a645cdb06242441be80817b033b1eec562d66c"
+        },
+        "request_signature": "e20123b344c8da4bde28b1b7ba08ab3260571fe3c6ce738068a9c94afc7ac3e7"
+      },
+      "request_signature": "e20123b344c8da4bde28b1b7ba08ab3260571fe3c6ce738068a9c94afc7ac3e7",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v2/prompt.txt",
+      "AP50": 0.009969126906811973,
+      "AP50_95": 0.005181797481237961,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    }
+  ]
+}

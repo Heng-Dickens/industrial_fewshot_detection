@@ -1,0 +1,37 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "yoloe",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/yoloe-v8l-seg.pt",
+  "kind": "visual",
+  "text": null,
+  "text_sha256": null,
+  "text_source": "not_a_text_prompt",
+  "references": [
+    {
+      "sample_id": "positive/images/s02_00006_0003239.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache1/positive/images/s02_00006_0003239.jpg",
+      "image_sha256": "4f9c0956200d55391ed13c368fdf448ce6ab20d60bffb610235d57d50770c41e",
+      "bboxes": [
+        [
+          1477.74998784,
+          486.25000639999996,
+          1846.49998848,
+          795.0000064000001
+        ]
+      ]
+    }
+  ],
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "yoloe_visual",
+    "counts": {
+      "reference_examples": 1,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 1,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "26d3ae553de29ae8670331f9c77c8fc146e9e1e08c3c056941f6be78b1945575"
+  },
+  "request_signature": "7bc04a2765355e3afe187668d41c26122204ffafbf3fb21d0e752c3be15d17ce"
+}

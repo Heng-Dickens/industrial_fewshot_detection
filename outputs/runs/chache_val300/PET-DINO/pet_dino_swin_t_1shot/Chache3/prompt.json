@@ -1,0 +1,37 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "pet_dino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/pet_dino/pet_dino_swin_t.pth",
+  "kind": "visual",
+  "text": null,
+  "text_sha256": null,
+  "text_source": "support_images_and_boxes",
+  "references": [
+    {
+      "sample_id": "positive/images/s04_00001_0000931.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000931.jpg",
+      "image_sha256": "8a7040490f961c54f56b60796f2bdb383c10dd4ee121ffe4e63c1504e83cc186",
+      "bboxes": [
+        [
+          542.4561504,
+          85.6140354,
+          712.2123936,
+          322.3008846
+        ]
+      ]
+    }
+  ],
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "pet_dino",
+    "counts": {
+      "reference_examples": 1,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 1,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "33a85e5b3bf0aa48e6c03dfb455510ae0621089a1fb3444a239c5bb6f0ad7e2a"
+  },
+  "request_signature": "fa6af4a3b63a9f49067cd61c1ae98c776b4ebabc72ce86093be46b00de58b54b"
+}

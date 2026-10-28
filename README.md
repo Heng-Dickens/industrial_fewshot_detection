@@ -2,7 +2,7 @@
 
 工业场景少样本目标检测对比实验：MLLM、YOLOE 视觉／文字提示、GroundingDINO 本地文本检测。项目在原工作目录中重组，并原地改名为 `D:\Learn\VLM\industrial_fewshot_detection`，没有创建另一份项目副本。
 
-本仓库只同步代码、配置、提示词、安装脚本和使用文档。`data/`、`outputs/`、`weights/`、`third_party/`、虚拟环境、真实 `.env` 和 `*.local.yaml` 不进入 Git。服务器通过固定版本的导入脚本恢复第三方源码；数据与模型单独准备。首次同步、Linux 环境安装和服务器路径配置见[Git 与服务器部署说明](docs/guides/GIT_SERVER_DEPLOYMENT.md)。下文涉及的数据及历史结果是本地运行资产，克隆仓库不会附带。
+本仓库同步代码、公共配置、提示词、安装脚本、使用文档，以及所有算法的实验报告、指标和运行元数据，包括 Qwen、PET-DINO、GroundingDINO、WeDetect、YOLOE。`outputs/runs/` 中的总表、评估报告、`metrics.json`、提示词和配置快照，以及 `outputs/comparisons/` 中的专题报告与对比图进入 Git；逐图预测、`records.jsonl`、含原始记录的 `summary.json`、运行缓存和日志留在本机。`data/`、`weights/`、`third_party/`、虚拟环境、真实 `.env` 和 `*.local.yaml` 不进入 Git。服务器通过固定版本的导入脚本恢复第三方源码；数据与模型单独准备。首次同步、Linux 环境安装和服务器路径配置见[Git 与服务器部署说明](docs/guides/GIT_SERVER_DEPLOYMENT.md)。克隆后可查看已提交的实验指标和报告；重新评估、推理和生成逐图画框结果仍需另行准备数据与原始预测。
 
 ```text
 configs/common/          共享数据、YOLOE视觉默认参数、新场景模板
@@ -72,6 +72,8 @@ YOLOE 的1/5/10/25-shot也按数据集和提示类型保存，例如原99张测�
 迁入的 JSTY 吊物模型运行命令为 `.\.venv-yoloe\Scripts\python.exe main.py --config configs/specific/jsty_hanging_object.yaml`。它使用本地 ONNX Runtime，模型参数在 `configs/specific/jsty_hanging_object.yaml`，结果直接写入模型名称加 `_监督检测` 的目录。模型实际为1类，已适配三层原始DFL输出、浮点坐标、缓存及全部评估工具；参见 [JSTY模型说明](docs/JSTY_MODEL_GUIDE.md)。
 
 ## 公平比较及结果
+
+全部实验按数据集汇总在 [outputs/README.md](outputs/README.md)，每个数据集的 `results_summary.md`、`results_summary.csv`、`results_summary.json` 分别用于阅读、筛选和程序分析。包含所有已有算法、提示词、shot、输入组合及重复运行；使用 `python scripts/summarize_results.py` 更新，不调用模型。汇总规则见 [结果目录说明](docs/guides/RESULT_LAYOUT.md)。
 
 提示词与结果对应关系见 `outputs/runs/prompt_results.md`。每次运行保存实际 `prompt.txt` 和 `prompt.json`；GroundingDINO、YOLOE文字和融合模式保存实际文字，YOLOE视觉模式和监督模型说明各自的输入方式。历史提示词按各次保存的证据恢复，操作说明见 [提示词记录](docs/guides/PROMPT_RECORDS.md)。
 

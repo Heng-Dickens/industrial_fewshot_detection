@@ -1,0 +1,5 @@
+Chache1: 10-shot visual supports; see class prompt.json
+Chache2: 10-shot visual supports; see class prompt.json
+Chache3: 10-shot visual supports; see class prompt.json
+Chache4: 10-shot visual supports; see class prompt.json
+Qianyinche: 10-shot visual supports; see class prompt.json

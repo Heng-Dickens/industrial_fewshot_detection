@@ -1,0 +1,745 @@
+{
+  "schema": "industrial_fewshot.prompt_results.v1",
+  "runs": [
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v1",
+      "target_id": "Chache1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "叉车",
+        "text_sha256": "5bed3fa8ff6e41b56639aeeb9a3be547b46368c11025db403525860e82ead737",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "f69bf74da6e829af8281f33d2a358d44f01c8503e3b6b76dc90b3e7cb31ed398"
+        },
+        "request_signature": "63b43249204228ff27e4abaa50d80e0bf26a3e240c4525e1b2ea7a6c759547d2"
+      },
+      "request_signature": "63b43249204228ff27e4abaa50d80e0bf26a3e240c4525e1b2ea7a6c759547d2",
+      "prompt_file": "wedetect_base_0shot_prompt_v1/Chache1/prompt.txt",
+      "AP50": 0.1802812627569113,
+      "AP50_95": 0.13174278879285156,
+      "precision": 0.28,
+      "recall": 0.18617021276595744,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v1",
+      "target_id": "Chache2",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "搬运车",
+        "text_sha256": "0d999bc48ea38b2b9527b9d9a907c231c7f504977baaee840c7e39eab76a703e",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "810c2501623dabd03b941a3125d71ee5c870c7c0dd44b33f81f102ba469c220b"
+        },
+        "request_signature": "a2c4e57085d55e5da4a920b2a941d376f770be37322472c4c89a8442a5b7e872"
+      },
+      "request_signature": "a2c4e57085d55e5da4a920b2a941d376f770be37322472c4c89a8442a5b7e872",
+      "prompt_file": "wedetect_base_0shot_prompt_v1/Chache2/prompt.txt",
+      "AP50": 0.1802812627569113,
+      "AP50_95": 0.13174278879285156,
+      "precision": 0.28,
+      "recall": 0.18617021276595744,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v1",
+      "target_id": "Chache3",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "堆高车",
+        "text_sha256": "2bd73cffdaa064fb5a85dfb1cd14e5a5d8a86e38e4f634ad5c0384ae31119368",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "93587f93dac4e225081afa2da35aa444b16358550bc668117aa89c1f3bd93daa"
+        },
+        "request_signature": "87ba1e47e0d6d5fd5bd878c674bf363eec2d01937a39108936ef867a46b97184"
+      },
+      "request_signature": "87ba1e47e0d6d5fd5bd878c674bf363eec2d01937a39108936ef867a46b97184",
+      "prompt_file": "wedetect_base_0shot_prompt_v1/Chache3/prompt.txt",
+      "AP50": 0.1802812627569113,
+      "AP50_95": 0.13174278879285156,
+      "precision": 0.28,
+      "recall": 0.18617021276595744,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v1",
+      "target_id": "Chache4",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "叉车",
+        "text_sha256": "5bed3fa8ff6e41b56639aeeb9a3be547b46368c11025db403525860e82ead737",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "f69bf74da6e829af8281f33d2a358d44f01c8503e3b6b76dc90b3e7cb31ed398"
+        },
+        "request_signature": "ee02ece4e7a8de5f4a08b0393975c708a556c3aa55e2bdfe7f27e769ab55abca"
+      },
+      "request_signature": "ee02ece4e7a8de5f4a08b0393975c708a556c3aa55e2bdfe7f27e769ab55abca",
+      "prompt_file": "wedetect_base_0shot_prompt_v1/Chache4/prompt.txt",
+      "AP50": 0.1802812627569113,
+      "AP50_95": 0.13174278879285156,
+      "precision": 0.28,
+      "recall": 0.18617021276595744,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v1",
+      "target_id": "Qianyinche",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "牵引车",
+        "text_sha256": "24b27587b8d6e625dc4a42f0d4293dab02ec488e022152c41b12325703138883",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "64cfecaa633c7c3efdf8f4e612982d3c0fd047a207adf91dd5f8f667fe777ac0"
+        },
+        "request_signature": "8aed6a93e055b3dd8950ffd07f7adbfabd4b3d788501016b6ae7162ca9bbc8ee"
+      },
+      "request_signature": "8aed6a93e055b3dd8950ffd07f7adbfabd4b3d788501016b6ae7162ca9bbc8ee",
+      "prompt_file": "wedetect_base_0shot_prompt_v1/Qianyinche/prompt.txt",
+      "AP50": 0.1802812627569113,
+      "AP50_95": 0.13174278879285156,
+      "precision": 0.28,
+      "recall": 0.18617021276595744,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v2",
+      "target_id": "Chache1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "平衡重叉车",
+        "text_sha256": "33f7f2324e91b082bdfbb6c079e9208070d85a999cbe59f8dcd2f007a19c0b50",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "098d718515716bc9126525a63fe5a5ad73706f25cf1488509dbc37e8b57dc568"
+        },
+        "request_signature": "c56af00a622f8d74eb1cb021760843f5293c2a1fb7c1a33d5e383e18edea1e92"
+      },
+      "request_signature": "c56af00a622f8d74eb1cb021760843f5293c2a1fb7c1a33d5e383e18edea1e92",
+      "prompt_file": "wedetect_base_0shot_prompt_v2/Chache1/prompt.txt",
+      "AP50": 0.19062953441020772,
+      "AP50_95": 0.13269031497770342,
+      "precision": 0.2,
+      "recall": 0.1276595744680851,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v2",
+      "target_id": "Chache2",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "电动托盘搬运车",
+        "text_sha256": "3c7a2bdf03e9f24ede66a18a7478047bb6dc30d8915592d60436af237189df58",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "b379facc394a40df2773f0c18c2b998ee4ad3f7d2dd8bf19e3ff771b5b1aced1"
+        },
+        "request_signature": "aa19fc0c43cad7eaf91934807eb81e8266f56904acefe7aad5191966ee02c6f6"
+      },
+      "request_signature": "aa19fc0c43cad7eaf91934807eb81e8266f56904acefe7aad5191966ee02c6f6",
+      "prompt_file": "wedetect_base_0shot_prompt_v2/Chache2/prompt.txt",
+      "AP50": 0.19062953441020772,
+      "AP50_95": 0.13269031497770342,
+      "precision": 0.2,
+      "recall": 0.1276595744680851,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v2",
+      "target_id": "Chache3",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "站驾式堆高车",
+        "text_sha256": "95f3766e0cc3e32b71576cb0921986e53d188c69b8e99317131e266058a394a2",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "c439b7cba753c5cd1bf20877260bd730bfcf5e597c0970ee85d84cf25dcdbbea"
+        },
+        "request_signature": "af8f6999b6949d5f02e1b6ede0e613b33c0bb59b998d126b4b51eaf41fbc5900"
+      },
+      "request_signature": "af8f6999b6949d5f02e1b6ede0e613b33c0bb59b998d126b4b51eaf41fbc5900",
+      "prompt_file": "wedetect_base_0shot_prompt_v2/Chache3/prompt.txt",
+      "AP50": 0.19062953441020772,
+      "AP50_95": 0.13269031497770342,
+      "precision": 0.2,
+      "recall": 0.1276595744680851,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v2",
+      "target_id": "Chache4",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "带属具的叉车",
+        "text_sha256": "cff654f7fd8cebcae984705c619574419d7c1dec9ec5b95d7262893627be3b3a",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "b5852dad0f97de3665addc981dbcc7eb571eb3142b2c3480956a187fcf625f52"
+        },
+        "request_signature": "c14822639ca74bd6fb238422004face5d39f12b5dfca81342be820a389a2a58f"
+      },
+      "request_signature": "c14822639ca74bd6fb238422004face5d39f12b5dfca81342be820a389a2a58f",
+      "prompt_file": "wedetect_base_0shot_prompt_v2/Chache4/prompt.txt",
+      "AP50": 0.19062953441020772,
+      "AP50_95": 0.13269031497770342,
+      "precision": 0.2,
+      "recall": 0.1276595744680851,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v2",
+      "target_id": "Qianyinche",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "电动牵引车",
+        "text_sha256": "864f8a0ec3b44b95157d4757da02f5eb9214a912a3396338460b98d161dd8ea2",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "e0b103fd1a7f3df39b6b61fcb5a51c248b84ff801b2e96ddff5c0b2b5fa84d38"
+        },
+        "request_signature": "557141c3a4a71f2d72b235152c0b85379bd1c4ff7b0038a799c6b5f6c6e19f00"
+      },
+      "request_signature": "557141c3a4a71f2d72b235152c0b85379bd1c4ff7b0038a799c6b5f6c6e19f00",
+      "prompt_file": "wedetect_base_0shot_prompt_v2/Qianyinche/prompt.txt",
+      "AP50": 0.19062953441020772,
+      "AP50_95": 0.13269031497770342,
+      "precision": 0.2,
+      "recall": 0.1276595744680851,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v3",
+      "target_id": "Chache1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "有护顶架和普通货叉的座驾叉车",
+        "text_sha256": "efe46512996bf1ec2b8913b05556007a0e6aba7af80efaaed366c862a2d680a8",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "41282aba5d3781ad85ebc062f3dc4b16cd7b72be8d1822b7daa9cbc8a25ff6ed"
+        },
+        "request_signature": "97e7272ceb922fc4625bb960807c46e195b0708da318996f3c012c2c6b589e27"
+      },
+      "request_signature": "97e7272ceb922fc4625bb960807c46e195b0708da318996f3c012c2c6b589e27",
+      "prompt_file": "wedetect_base_0shot_prompt_v3/Chache1/prompt.txt",
+      "AP50": 0.20696050152137194,
+      "AP50_95": 0.15647727147304022,
+      "precision": 0.32786885245901637,
+      "recall": 0.10638297872340426,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v3",
+      "target_id": "Chache2",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "无门架的低位双叉搬运车",
+        "text_sha256": "198adb68a9cb2ce60f3218a0dd996abb6747bc61d433afdaf727ed7ada6a861a",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "eaa501f87920ee8f2cbe30d5b0d1577bdcb75ba85d78926b6d05bf28da2754d9"
+        },
+        "request_signature": "3049311972719d639e6000c850096c640e1e0e86bfab04e418a936d862352735"
+      },
+      "request_signature": "3049311972719d639e6000c850096c640e1e0e86bfab04e418a936d862352735",
+      "prompt_file": "wedetect_base_0shot_prompt_v3/Chache2/prompt.txt",
+      "AP50": 0.20696050152137194,
+      "AP50_95": 0.15647727147304022,
+      "precision": 0.32786885245901637,
+      "recall": 0.10638297872340426,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v3",
+      "target_id": "Chache3",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "有高门架的站驾式堆高车",
+        "text_sha256": "12a4965f7a3213032bb001f9d6ac8f24080ce0f071b1ea59e5138e36b8e07fb6",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "ce1fb8adb659b560c5fe0535d15664e2577fe0313ae038b4d02a80dad7a3ecc7"
+        },
+        "request_signature": "e8f3a1035fc1287aaa9b6e6c09e2d398b048447dd514f4272ff2bf756367fbab"
+      },
+      "request_signature": "e8f3a1035fc1287aaa9b6e6c09e2d398b048447dd514f4272ff2bf756367fbab",
+      "prompt_file": "wedetect_base_0shot_prompt_v3/Chache3/prompt.txt",
+      "AP50": 0.20696050152137194,
+      "AP50_95": 0.15647727147304022,
+      "precision": 0.32786885245901637,
+      "recall": 0.10638297872340426,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v3",
+      "target_id": "Chache4",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "装有黄色大型属具的叉车",
+        "text_sha256": "46f5eaca090181a1a354685df1a7339c5f3ee1e366ed1e6a42686bbb8351f48f",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "92c180c9e292c32f8c534c930cd0deb8505a8f9a6a4a5798cc3253c679a8958b"
+        },
+        "request_signature": "803344eeafd5b4abd3f88bf467c02ad7f48282a2b2ea87fcda36cbb04bde7787"
+      },
+      "request_signature": "803344eeafd5b4abd3f88bf467c02ad7f48282a2b2ea87fcda36cbb04bde7787",
+      "prompt_file": "wedetect_base_0shot_prompt_v3/Chache4/prompt.txt",
+      "AP50": 0.20696050152137194,
+      "AP50_95": 0.15647727147304022,
+      "precision": 0.32786885245901637,
+      "recall": 0.10638297872340426,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v3",
+      "target_id": "Qianyinche",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "没有门架和货叉的座驾牵引车",
+        "text_sha256": "1e1a10c311165fd694129d5f2137b5c957c2cf673ad98f2cedd05531a8951c2a",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "053f1cc94e4f538a7f58a3d774a42612ad55ca8c224257794f2eb74903e50454"
+        },
+        "request_signature": "171084d0a9d8da08a517ec51cc3b976ecfe03e16ebd0165f1f6d7c84f22be712"
+      },
+      "request_signature": "171084d0a9d8da08a517ec51cc3b976ecfe03e16ebd0165f1f6d7c84f22be712",
+      "prompt_file": "wedetect_base_0shot_prompt_v3/Qianyinche/prompt.txt",
+      "AP50": 0.20696050152137194,
+      "AP50_95": 0.15647727147304022,
+      "precision": 0.32786885245901637,
+      "recall": 0.10638297872340426,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v4",
+      "target_id": "Chache1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "普通座驾叉车，驾驶位上方有护顶架，驾驶员坐着，前方有高门架和普通成对细长货叉；车身多为绿色或红色。",
+        "text_sha256": "419432b6ebdf416c6ca82cce6f08363d1345243ad565ee21810a277d2695a9d5",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "03a8b1bdf8a5a1e35c59442e464780edd53520c0324b3607b7196c192bb472f4"
+        },
+        "request_signature": "eca3aac2bbe75a1640f5d56792de903b950973771cc7fc19ac6a831c4e29cf46"
+      },
+      "request_signature": "eca3aac2bbe75a1640f5d56792de903b950973771cc7fc19ac6a831c4e29cf46",
+      "prompt_file": "wedetect_base_0shot_prompt_v4/Chache1/prompt.txt",
+      "AP50": 0.35100796625825553,
+      "AP50_95": 0.27557779718331393,
+      "precision": 0.5636363636363636,
+      "recall": 0.16489361702127658,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v4",
+      "target_id": "Chache2",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "低位搬运车，车体小而低，驾驶员站着，前方伸出贴近地面的长双叉，无高起升门架和护顶架。",
+        "text_sha256": "b38e72faddaf462bd819143d24bc1af80f816ca8fd4ee8a0b96b09314118bcf1",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "6166562d4aa0e6476f8ebb20fb1bd5c657087f7258382de1cdf3b4e31bba5a38"
+        },
+        "request_signature": "e5c9546988c79000bd049b7e18d2029a95ad68a7b38d04921f134bd397a16b89"
+      },
+      "request_signature": "e5c9546988c79000bd049b7e18d2029a95ad68a7b38d04921f134bd397a16b89",
+      "prompt_file": "wedetect_base_0shot_prompt_v4/Chache2/prompt.txt",
+      "AP50": 0.35100796625825553,
+      "AP50_95": 0.27557779718331393,
+      "precision": 0.5636363636363636,
+      "recall": 0.16489361702127658,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v4",
+      "target_id": "Chache3",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "紧凑起重机车，车体较小，驾驶员站着，前方有明显竖直高门架及下部货叉，无驾驶位护顶架。",
+        "text_sha256": "d302c6d86231383600e372c615b079ccf248e80738c8981b371c05cc5f062ba7",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "0816dac5449b61b276b8f73ebec9cbb06a76c014a4944c975491d45dbbf72d77"
+        },
+        "request_signature": "3442a290c341f149fb2ebf250f3e1634ee26d0e8144ed80557c4967b4a20546d"
+      },
+      "request_signature": "3442a290c341f149fb2ebf250f3e1634ee26d0e8144ed80557c4967b4a20546d",
+      "prompt_file": "wedetect_base_0shot_prompt_v4/Chache3/prompt.txt",
+      "AP50": 0.35100796625825553,
+      "AP50_95": 0.27557779718331393,
+      "precision": 0.5636363636363636,
+      "recall": 0.16489361702127658,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v4",
+      "target_id": "Chache4",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "带大型专用属具的座驾叉车，驾驶员坐着，带护顶架和粗壮门架，前端装有醒目的黄色宽大搬运属具；车身通常为橙色。",
+        "text_sha256": "7e1f71e802248fff3e418b6901b01af3c979c8837a66fb79b1dc98946f3ad598",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "0f6037d07c3db3c553b82c976ca126d5696f6d0c3b5a01eafc5a6ab32469d5b0"
+        },
+        "request_signature": "2f31b89eeda09305121de8a54a1dfccff4472854eaa792846a3ef4a2edb116d1"
+      },
+      "request_signature": "2f31b89eeda09305121de8a54a1dfccff4472854eaa792846a3ef4a2edb116d1",
+      "prompt_file": "wedetect_base_0shot_prompt_v4/Chache4/prompt.txt",
+      "AP50": 0.35100796625825553,
+      "AP50_95": 0.27557779718331393,
+      "precision": 0.5636363636363636,
+      "recall": 0.16489361702127658,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "wedetect_base_0shot_prompt_v4",
+      "target_id": "Qianyinche",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "单座位牵引车，车体低矮紧凑、外形圆润，带座椅和靠背，驾驶员坐着，无起升门架和成对货叉；车身通常为绿色。",
+        "text_sha256": "31f6e7e6dcd616bd06c9de506e633cbaadea692cc1914167d13df4914a500309",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "3e197a1406491b650c4765de4d2f0174b58ce665c0e30e101be21b1355bf838b"
+        },
+        "request_signature": "9bbe1afdb00868e1acf4c944c47782fe7e783d673af563e53481a627239a9fdd"
+      },
+      "request_signature": "9bbe1afdb00868e1acf4c944c47782fe7e783d673af563e53481a627239a9fdd",
+      "prompt_file": "wedetect_base_0shot_prompt_v4/Qianyinche/prompt.txt",
+      "AP50": 0.35100796625825553,
+      "AP50_95": 0.27557779718331393,
+      "precision": 0.5636363636363636,
+      "recall": 0.16489361702127658,
+      "score_threshold": 0.5,
+      "status": "complete"
+    }
+  ]
+}

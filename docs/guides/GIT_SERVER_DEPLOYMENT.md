@@ -1,19 +1,32 @@
 # 代码仓库与服务器部署
 
-项目根目录是独立 Git 仓库，不使用上一级 `D:\Learn\VLM` 的仓库。当前仅准备本地版本，尚未设置远程地址或推送。所有命令均在项目根目录执行。
+项目根目录是独立 Git 仓库，不使用上一级 `D:\Learn\VLM` 的仓库。所有命令均在项目根目录执行；已配置 `origin` 的机器无需重复添加远程地址。
 
 ## 同步范围
 
 | 进入 Git | 单独准备，不进入 Git |
 |---|---|
 | `main.py`、`src/`（含全部文字 prompt） | `data/` 全部图片、标注、manifest、支持集 |
-| `configs/common/`、`configs/specific/` 的公共配置及示例 | `outputs/`、`runs/` 全部实验结果和缓存 |
+| `configs/common/`、`configs/specific/` 的公共配置及示例 | `outputs/runtime/`、`outputs/environment_setup/`、缓存、日志、旧归档及根目录 `runs/` |
+| `outputs/runs/` 所有算法的报告、总表、指标、提示词和运行配置快照 | 逐图 `predictions*/`、`feedback/`、`records.jsonl`、含原始记录的 `summary.json` |
+| `outputs/comparisons/` 的专题报告、诊断摘要、索引和对比图 | 原始数据图片与完整逐图推理产物 |
 | `scripts/` 安装、下载、数据准备、推理和评估入口 | `weights/` 模型和语言编码器文件 |
 | `requirements*.txt`、`pyproject.toml` | `third_party/`，按固定 commit 在服务器重新导入 |
 | 测试、兼容工具、示例、操作文档 | `.venv*/`、`.planning/`、IDE 设置、临时文件 |
 | `.env.example` 空模板 | 真实 `.env`、`*.local.yaml/json`、私钥及历史结果分析文档 |
 
 忽略规则只控制 Git，不删除本地资产。根目录使用显式允许列表；新建根目录文件如需同步，必须同时在 `.gitignore` 中放行。不要用 `git add -f` 强行加入数据或密钥。
+
+结果规则适用于全部后端，包括 MLLM/Qwen、PET-DINO、GroundingDINO、WeDetect、YOLOE，以及按历史提示词版本保存的实验目录。JSON采用文件名允许列表：`metrics.json`、`run.json`、`config.resolved.json`、`prompt*.json`、`dataset.json`、`results_summary.json`、`method.json`、`experiment.json`、`experiment_results.json`。已有结果不会因修改 `.gitignore` 自动上传，仍需暂存、提交和推送：
+
+```bash
+git add .gitignore outputs/README.md outputs/runs/ outputs/comparisons/
+git diff --cached --stat
+git commit -m "Sync results from all detector backends"
+git push origin main
+```
+
+提交前同时检查已有暂存变更。其他机器执行 `git pull --ff-only` 后即可查看报告和总表；若要重算指标，还需单独准备图片、真值和完整预测记录。
 
 第三方源码由 `scripts/import_prompt_detectors.py` 固定版本：YOLOE `40cd606cabdbe2b566d6f14a6b162c89206e9a1b`、PET-DINO `7830a462f9a320f34293cce0aabdda1256d9dc15`、WeDetect `42c34c6742a22f26280bb0e59f95a701baee1a32`。安装时保留上游许可证，下载的源码不反向提交到本仓库。
 
@@ -25,7 +38,7 @@
 Set-Location D:\Learn\VLM\industrial_fewshot_detection
 git rev-parse --show-toplevel
 git status --short
-git ls-files data outputs runs weights third_party .env
+git ls-files data runs weights third_party .env
 # 上一条应没有输出。
 git remote add origin <REMOTE_URL>
 git push -u origin main
@@ -76,7 +89,7 @@ python3.10 -m venv .venv
 
 ## 数据、模型及本地配置
 
-Git 只传代码。服务器需另行准备测试图片、对应 LabelMe 真值、测试 manifest，以及视觉提示用的原图、框标注和 support manifests。保留相同目录结构和文件内容才能复现实验；manifest/支持集也是数据，不随 Git 分发。可以由共享磁盘提供，也可以之后单独传输。
+Git 传输代码及选定的实验报告和指标。服务器需另行准备测试图片、对应 LabelMe 真值、测试 manifest，以及视觉提示用的原图、框标注和 support manifests。保留相同目录结构和文件内容才能复现实验；manifest/支持集也是数据，不随 Git 分发。可以由共享磁盘提供，也可以之后单独传输。
 
 新增了路径模板和两个 Linux 模型示例，保留现有 `common` / `specific` 两层结构：
 
@@ -116,4 +129,4 @@ git pull --ff-only
 .venv/bin/python -m pip install -e .
 ```
 
-服务器使用 `.local.yaml` 保存路径和设备配置，更新公共配置时这些本地文件不会被 Git 覆盖。结果由当前输出路径重新生成；Git 更新不会同步已有实验结果。不要在服务器执行 `git clean -fdx`，它会删除被忽略的数据、权重及环境。
+服务器使用 `.local.yaml` 保存路径和设备配置，更新公共配置时这些本地文件不会被 Git 覆盖。Git 更新会同步已提交的实验报告和指标；被忽略的原始预测、数据和缓存需单独传输或在本机重新生成。不要在服务器执行 `git clean -fdx`，它会删除被忽略的数据、权重及环境。

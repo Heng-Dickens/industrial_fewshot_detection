@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "wedetect",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+  "kind": "text",
+  "text": "有护顶架和普通货叉的座驾叉车",
+  "text_sha256": "efe46512996bf1ec2b8913b05556007a0e6aba7af80efaaed366c862a2d680a8",
+  "text_source": "wedetect.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "wedetect",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "41282aba5d3781ad85ebc062f3dc4b16cd7b72be8d1822b7daa9cbc8a25ff6ed"
+  },
+  "request_signature": "97e7272ceb922fc4625bb960807c46e195b0708da318996f3c012c2c6b589e27"
+}

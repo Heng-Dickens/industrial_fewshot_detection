@@ -1,0 +1,7 @@
+﻿dataset,shot_per_class,image_count,mAP50,mAP50_95,precision,recall,failures,run_dir
+diaowu_val300,1,300,0.1899607768509276,0.13223645717434768,1.0,0.022857142857142857,0,/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/PET-DINO/pet_dino_swin_t_1shot
+diaowu_val300,5,300,0.1000659819867979,0.055714365609075736,0.0,0.0,0,/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/PET-DINO/pet_dino_swin_t_5shot
+diaowu_val300,10,300,0.15168766594178668,0.09108472785701568,0.0,0.0,0,/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/PET-DINO/pet_dino_swin_t_10shot
+chache_val300,1,300,0.1948970392630056,0.14666491120568637,0.43548387096774194,0.14361702127659576,0,/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/PET-DINO/pet_dino_swin_t_1shot
+chache_val300,5,300,0.20325807323380043,0.1439573390161412,1.0,0.010638297872340425,0,/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/PET-DINO/pet_dino_swin_t_5shot
+chache_val300,10,300,0.2253682347188032,0.15972215505967796,0.0,0.0,0,/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/PET-DINO/pet_dino_swin_t_10shot

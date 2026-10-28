@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "wedetect",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+  "kind": "text",
+  "text": "没有门架和货叉的座驾牵引车",
+  "text_sha256": "1e1a10c311165fd694129d5f2137b5c957c2cf673ad98f2cedd05531a8951c2a",
+  "text_source": "wedetect.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "wedetect",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "053f1cc94e4f538a7f58a3d774a42612ad55ca8c224257794f2eb74903e50454"
+  },
+  "request_signature": "171084d0a9d8da08a517ec51cc3b976ecfe03e16ebd0165f1f6d7c84f22be712"
+}

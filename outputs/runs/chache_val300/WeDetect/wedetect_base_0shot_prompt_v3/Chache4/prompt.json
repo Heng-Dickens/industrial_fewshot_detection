@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "wedetect",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+  "kind": "text",
+  "text": "装有黄色大型属具的叉车",
+  "text_sha256": "46f5eaca090181a1a354685df1a7339c5f3ee1e366ed1e6a42686bbb8351f48f",
+  "text_source": "wedetect.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "wedetect",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "92c180c9e292c32f8c534c930cd0deb8505a8f9a6a4a5798cc3253c679a8958b"
+  },
+  "request_signature": "803344eeafd5b4abd3f88bf467c02ad7f48282a2b2ea87fcda36cbb04bde7787"
+}

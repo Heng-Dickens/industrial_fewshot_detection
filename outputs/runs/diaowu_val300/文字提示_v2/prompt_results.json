@@ -1,0 +1,42 @@
+{
+  "schema": "industrial_fewshot.prompt_results.v1",
+  "runs": [
+    {
+      "run_dir": "wedetect_base_0shot",
+      "target_id": "diaowu",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "被吊起的圆筒吊物",
+        "text_sha256": "dcb1adc5ee3c4f2d266b549dacd644513d844b6aa17fa9e2b25421f82a3dc527",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "8e97c7f61dfae73c64c213618957053246fc152c222349b23841b0aa0e97ceb1"
+        },
+        "request_signature": "891f766936858720313c1c12ff5910335ec92824f3149700cefed3c803df8f68"
+      },
+      "request_signature": "891f766936858720313c1c12ff5910335ec92824f3149700cefed3c803df8f68",
+      "prompt_file": "wedetect_base_0shot/prompt.txt",
+      "AP50": 0.0007072135785007071,
+      "AP50_95": 0.0005770943534105822,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    }
+  ]
+}

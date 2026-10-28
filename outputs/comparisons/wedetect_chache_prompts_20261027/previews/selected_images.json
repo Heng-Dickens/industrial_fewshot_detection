@@ -1,0 +1,219 @@
+[
+  {
+    "path": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images/s00_00000_0000102.jpg",
+    "relative_path": "s00_00000_0000102.jpg",
+    "width": 1920,
+    "height": 1080,
+    "image_sha256": "b7ea58f744fca9b164c4c0e170c6f81350aeb90a6b00ca09fb32b60838dd2ba8",
+    "ground_truth": [
+      {
+        "label": "Chache1",
+        "bbox_pixels_xyxy": [
+          667.0175423999999,
+          440.0000028,
+          739.8245568,
+          570.7017539999999
+        ]
+      }
+    ],
+    "ground_truth_source": "json"
+  },
+  {
+    "path": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images/s00_00000_0000326.jpg",
+    "relative_path": "s00_00000_0000326.jpg",
+    "width": 1920,
+    "height": 1080,
+    "image_sha256": "3bd405672a4b15a02a3e10949f4e8a46f738f30c6375c0b31e935f0179bd3e98",
+    "ground_truth": [
+      {
+        "label": "Chache1",
+        "bbox_pixels_xyxy": [
+          718.4745792,
+          657.7966097999999,
+          1054.7368512,
+          1044.3859685999998
+        ]
+      }
+    ],
+    "ground_truth_source": "json"
+  },
+  {
+    "path": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images/s00_00000_0000052.jpg",
+    "relative_path": "s00_00000_0000052.jpg",
+    "width": 1920,
+    "height": 1080,
+    "image_sha256": "3edae3442748f771ee28bf4b63c6fe2f9b3c206427d1c135f5e766907710d769",
+    "ground_truth": [
+      {
+        "label": "Chache2",
+        "bbox_pixels_xyxy": [
+          675.6814271999999,
+          448.42085999999995,
+          716.9767488,
+          512.4031056
+        ]
+      }
+    ],
+    "ground_truth_source": "json"
+  },
+  {
+    "path": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images/s00_00000_0000036.jpg",
+    "relative_path": "s00_00000_0000036.jpg",
+    "width": 1920,
+    "height": 1080,
+    "image_sha256": "8f6bc62d4cde5745363478055b54670f4e7566f35127956c73f1498d8f884b1e",
+    "ground_truth": [
+      {
+        "label": "Chache2",
+        "bbox_pixels_xyxy": [
+          523.5593184,
+          856.9491552000001,
+          744.7690656,
+          1079.0000064
+        ]
+      }
+    ],
+    "ground_truth_source": "json"
+  },
+  {
+    "path": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images/s03_00000_0000499.jpg",
+    "relative_path": "s03_00000_0000499.jpg",
+    "width": 1920,
+    "height": 1080,
+    "image_sha256": "a1e5de6a3e8bf92a57d15afd3cf4e68d73a737ab63469037a8d05299a87aaa4e",
+    "ground_truth": [
+      {
+        "label": "Chache3",
+        "bbox_pixels_xyxy": [
+          1035.2212415999998,
+          492.2123922,
+          1166.1946944,
+          596.6371710000001
+        ]
+      }
+    ],
+    "ground_truth_source": "json"
+  },
+  {
+    "path": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images/s04_00001_0000919.jpg",
+    "relative_path": "s04_00001_0000919.jpg",
+    "width": 1920,
+    "height": 1080,
+    "image_sha256": "b80696724bf96ccc7cb448ae966ca3d8380c40f4a533ae46047d09436fb3632b",
+    "ground_truth": [
+      {
+        "label": "Chache3",
+        "bbox_pixels_xyxy": [
+          110.87718720000001,
+          554.9122782000001,
+          460.55398080000003,
+          1079.000001
+        ]
+      }
+    ],
+    "ground_truth_source": "json"
+  },
+  {
+    "path": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images/s04_00004_0002288.jpg",
+    "relative_path": "s04_00004_0002288.jpg",
+    "width": 1920,
+    "height": 1080,
+    "image_sha256": "9bc2c73bbaabd76af3a6ff063b379fd7822a8073d12c1e9283c95107d8d6ec61",
+    "ground_truth": [
+      {
+        "label": "Chache4",
+        "bbox_pixels_xyxy": [
+          488.94737280000004,
+          0.0,
+          734.5614143999999,
+          276.8421024
+        ]
+      }
+    ],
+    "ground_truth_source": "json"
+  },
+  {
+    "path": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images/s04_00004_0002274.jpg",
+    "relative_path": "s04_00004_0002274.jpg",
+    "width": 1920,
+    "height": 1080,
+    "image_sha256": "6feda9378af88eac77415925f9c2a41152e09655f2b1c06c337ee3a66c450ddb",
+    "ground_truth": [
+      {
+        "label": "Chache4",
+        "bbox_pixels_xyxy": [
+          327.5438496,
+          171.5789412,
+          1106.3200608,
+          1078.9999956000001
+        ]
+      }
+    ],
+    "ground_truth_source": "json"
+  },
+  {
+    "path": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images/s03_00000_0000232.jpg",
+    "relative_path": "s03_00000_0000232.jpg",
+    "width": 1920,
+    "height": 1080,
+    "image_sha256": "984cc5dee0853ffcbefdd6d048cf978513b21627e52d4137b2e9523cbfee450a",
+    "ground_truth": [
+      {
+        "label": "Qianyinche",
+        "bbox_pixels_xyxy": [
+          1193.6283071999999,
+          262.1238948,
+          1254.6902592000001,
+          324.07079400000003
+        ]
+      }
+    ],
+    "ground_truth_source": "json"
+  },
+  {
+    "path": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images/s04_00001_0000716.jpg",
+    "relative_path": "s04_00001_0000716.jpg",
+    "width": 1920,
+    "height": 1080,
+    "image_sha256": "aa03305f9e89e52c3b107a97c2742470d35f09d482c74ccfb859f0eab69c84f1",
+    "ground_truth": [
+      {
+        "label": "Qianyinche",
+        "bbox_pixels_xyxy": [
+          1070.5263168,
+          231.22806480000003,
+          1200.35088,
+          396.14034960000004
+        ]
+      },
+      {
+        "label": "Qianyinche",
+        "bbox_pixels_xyxy": [
+          837.1186367999999,
+          611.1864396,
+          1137.1929791999999,
+          940.8771972
+        ]
+      }
+    ],
+    "ground_truth_source": "json"
+  },
+  {
+    "path": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images/s00_00000_0000059.jpg",
+    "relative_path": "s00_00000_0000059.jpg",
+    "width": 1920,
+    "height": 1080,
+    "image_sha256": "12ca041a81abb83b768267278407c9c742ea37e03cde86c0b42612912219b0c1",
+    "ground_truth": [],
+    "ground_truth_source": "json"
+  },
+  {
+    "path": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images/s00_00000_0000144.jpg",
+    "relative_path": "s00_00000_0000144.jpg",
+    "width": 1920,
+    "height": 1080,
+    "image_sha256": "4187bf6e287e407a02180e988faa2482f60055a82baa3f44f71f8e85a7fe695c",
+    "ground_truth": [],
+    "ground_truth_source": "json"
+  }
+]

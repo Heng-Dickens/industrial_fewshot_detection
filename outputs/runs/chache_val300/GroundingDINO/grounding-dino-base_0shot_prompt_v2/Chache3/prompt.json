@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+  "kind": "text",
+  "text": "站驾式堆高车",
+  "text_sha256": "95f3766e0cc3e32b71576cb0921986e53d188c69b8e99317131e266058a394a2",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "30d3e47b56c02e3b5542b66e5ee8382455c7e07eba98a55260803db7048f5a0d"
+  },
+  "request_signature": "20a9cd51b94a216c3a38bc6ea3fd7a916fa28eeb3e36aa78c6805bfb82ad9f71"
+}

@@ -1,0 +1,42 @@
+{
+  "identity": "5aaf2dc772f034cc06d5f9763535dadd3665d807ba9096a601129780f4ccfcbf",
+  "family": "文字提示",
+  "description": "WeDetect 五类特种车辆：简短类别词；每类独立查询后合并评估。",
+  "prompts": [
+    {
+      "text": "叉车",
+      "review_template": ""
+    },
+    {
+      "text": "搬运车",
+      "review_template": ""
+    },
+    {
+      "text": "堆高车",
+      "review_template": ""
+    },
+    {
+      "text": "叉车",
+      "review_template": ""
+    },
+    {
+      "text": "牵引车",
+      "review_template": ""
+    }
+  ],
+  "text_sha256": [
+    "5bed3fa8ff6e41b56639aeeb9a3be547b46368c11025db403525860e82ead737",
+    "0d999bc48ea38b2b9527b9d9a907c231c7f504977baaee840c7e39eab76a703e",
+    "2bd73cffdaa064fb5a85dfb1cd14e5a5d8a86e38e4f634ad5c0384ae31119368",
+    "5bed3fa8ff6e41b56639aeeb9a3be547b46368c11025db403525860e82ead737",
+    "24b27587b8d6e625dc4a42f0d4293dab02ec488e022152c41b12325703138883"
+  ],
+  "prompt_group": "short",
+  "class_prompts": {
+    "Chache1": "叉车",
+    "Chache2": "搬运车",
+    "Chache3": "堆高车",
+    "Chache4": "叉车",
+    "Qianyinche": "牵引车"
+  }
+}

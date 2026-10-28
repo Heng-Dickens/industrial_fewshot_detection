@@ -1,0 +1,6 @@
+PET-DINO Visual-G: 1 independent supports per class, seed=0.
+Chache1: /home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/pet_dino_shots_20261027/supports/chache_val300/Chache1/1shot/seed_0.json
+Chache2: /home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/pet_dino_shots_20261027/supports/chache_val300/Chache2/1shot/seed_0.json
+Chache3: /home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/pet_dino_shots_20261027/supports/chache_val300/Chache3/1shot/seed_0.json
+Chache4: /home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/pet_dino_shots_20261027/supports/chache_val300/Chache4/1shot/seed_0.json
+Qianyinche: /home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/pet_dino_shots_20261027/supports/chache_val300/Qianyinche/1shot/seed_0.json

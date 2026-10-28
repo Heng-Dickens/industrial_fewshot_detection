@@ -1,0 +1,14 @@
+{
+  "identity": "76b70d82e7779e0a08917e722f8bb77b3f7aa6adaf8faf3461eab0280c1deef1",
+  "family": "文字提示",
+  "description": "本次实际输入，完整文字及复核模板见各运行目录的 prompt.txt / review_template.txt。",
+  "prompts": [
+    {
+      "text": "被吊起的圆筒吊物",
+      "review_template": ""
+    }
+  ],
+  "text_sha256": [
+    "dcb1adc5ee3c4f2d266b549dacd644513d844b6aa17fa9e2b25421f82a3dc527"
+  ]
+}

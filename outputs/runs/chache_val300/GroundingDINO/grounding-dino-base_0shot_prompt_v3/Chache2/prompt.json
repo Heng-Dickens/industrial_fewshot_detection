@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+  "kind": "text",
+  "text": "无门架的低位双叉搬运车",
+  "text_sha256": "198adb68a9cb2ce60f3218a0dd996abb6747bc61d433afdaf727ed7ada6a861a",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "4bb83a17a6b359ecbde8538a0bd4f37d6bdf8c13194662217d8b5bb2d8d1b038"
+  },
+  "request_signature": "87b6cfa6320c69fd44250d72bdb15a02b232e2bcf017dc4ce7b31729740bf666"
+}

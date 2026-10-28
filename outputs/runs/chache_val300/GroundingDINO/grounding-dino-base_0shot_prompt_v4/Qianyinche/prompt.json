@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+  "kind": "text",
+  "text": "单座位牵引车，车体低矮紧凑、外形圆润，带座椅和靠背，驾驶员坐着，无起升门架和成对货叉；车身通常为绿色。",
+  "text_sha256": "31f6e7e6dcd616bd06c9de506e633cbaadea692cc1914167d13df4914a500309",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "224927b332123e480324729d3276ea2436998fadb0e0fe401934464e23f8bb47"
+  },
+  "request_signature": "3ec6d4ee19ccd8473bb4ca681acfcee0d01a383a835a3dfc76657fd6cdfe2a7c"
+}

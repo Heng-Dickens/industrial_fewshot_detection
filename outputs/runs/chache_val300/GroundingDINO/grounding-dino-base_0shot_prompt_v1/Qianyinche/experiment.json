@@ -1,0 +1,50 @@
+{
+  "protocol": "Frozen 300-image cohorts. YOLOE uses exactly the PET-DINO 1/5/10-shot supports, boxes and seed=0. GroundingDINO uses verbatim WeDetect Chinese prompts. Every class queries every image; class-labelled predictions are merged without cross-class NMS. Candidate floor=0.001, NMS IoU=0.7, maxDets=100/class, evaluation IoU=0.5 and score=0.5. Model-native preprocessing and feature aggregation are retained. Fresh inference; no training/API calls.",
+  "job": {
+    "id": "chache_val300_groundingdino_short_Qianyinche",
+    "experiment_id": "chache_val300_groundingdino_short",
+    "dataset": "chache_val300",
+    "backend": "groundingdino",
+    "target_id": "Qianyinche",
+    "label": "Qianyinche",
+    "shot": 0,
+    "config_file": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/aligned_baselines_20261027/configs/chache_val300_groundingdino_short_Qianyinche.local.json",
+    "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO/grounding-dino-base_0shot_prompt_v1/Qianyinche",
+    "result_layout": {
+      "root": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs",
+      "dataset_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300",
+      "dataset_name": "chache_val300",
+      "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+      "prompt_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO",
+      "prompt_version": "prompt_v1",
+      "prompt_identity": "5aaf2dc772f034cc06d5f9763535dadd3665d807ba9096a601129780f4ccfcbf",
+      "method": "GroundingDINO",
+      "method_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO",
+      "prompt_registry_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO/.prompts/prompt_v1",
+      "model_name_suffix": "_prompt_v1"
+    },
+    "expected_prompt": {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "牵引车",
+      "text_sha256": "24b27587b8d6e625dc4a42f0d4293dab02ec488e022152c41b12325703138883",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "64cfecaa633c7c3efdf8f4e612982d3c0fd047a207adf91dd5f8f667fe777ac0"
+      },
+      "request_signature": "8aed6a93e055b3dd8950ffd07f7adbfabd4b3d788501016b6ae7162ca9bbc8ee"
+    }
+  }
+}

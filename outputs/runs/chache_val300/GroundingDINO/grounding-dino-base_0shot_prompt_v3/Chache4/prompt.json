@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+  "kind": "text",
+  "text": "装有黄色大型属具的叉车",
+  "text_sha256": "46f5eaca090181a1a354685df1a7339c5f3ee1e366ed1e6a42686bbb8351f48f",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "7859ab6976e801d697a203373a0b2cd979c73b70fd9040cc0366fc9c6e0d6313"
+  },
+  "request_signature": "c2177826748f52ada90047393bf0d1954c3e56a53690746fda0ba25561453269"
+}

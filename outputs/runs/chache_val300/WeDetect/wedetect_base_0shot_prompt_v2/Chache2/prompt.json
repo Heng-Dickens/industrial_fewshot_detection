@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "wedetect",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+  "kind": "text",
+  "text": "电动托盘搬运车",
+  "text_sha256": "3c7a2bdf03e9f24ede66a18a7478047bb6dc30d8915592d60436af237189df58",
+  "text_source": "wedetect.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "wedetect",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "b379facc394a40df2773f0c18c2b998ee4ad3f7d2dd8bf19e3ff771b5b1aced1"
+  },
+  "request_signature": "aa19fc0c43cad7eaf91934807eb81e8266f56904acefe7aad5191966ee02c6f6"
+}

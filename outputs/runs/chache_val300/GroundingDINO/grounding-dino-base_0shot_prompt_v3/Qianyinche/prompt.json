@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+  "kind": "text",
+  "text": "没有门架和货叉的座驾牵引车",
+  "text_sha256": "1e1a10c311165fd694129d5f2137b5c957c2cf673ad98f2cedd05531a8951c2a",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "fbde0422d69885eb726a55211e0f61df3cdde9bff4829834b5f5795260244aea"
+  },
+  "request_signature": "70e94e51c35327b7bc78ae8a3e7aca88d0b2d077a9b07dc768187017e8de4e63"
+}

@@ -1,0 +1,55 @@
+
+chache_wedetect_long_Qianyinche
+【提示词记录】
+WeDetect 文字 prompt：单座位牵引车，车体低矮紧凑、外形圆润，带座椅和靠背，驾驶员坐着，无起升门架和成对货叉；车身通常为绿色。
+输入快照：prompt.json；具体记录位于本次结果目录。
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.718
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.869
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.790
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.399
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.750
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.750
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.842
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.842
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.633
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.856
+
++------------+------+--------+------+
+| category   | AP   | Recall | F2   |
++------------+------+--------+------+
+| Qianyinche | 86.9 | 100.0  | 16.2 |
++------------+------+--------+------+
+| mean       | 86.9 | 100.0  | 16.2 |
++------------+------+--------+------+
+COCO categories: AP50 / Recall50; F2 from TP/FP at IoU=0.50, maxDets=100, all scores.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.5, maxDets=100
++------------+-----+------+-----+-----------+--------+------+-------+
+| class      | tps | dets | gts | precision | recall | F2   | error |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Qianyinche | 19  | 20   | 48  | 95.0      | 39.6   | 44.8 | 0.05  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| mean       | 19  | 20   | 48  | 95.0      | 39.6   | 44.8 | 0.05  |
++------------+-----+------+-----+-----------+--------+------+-------+
+TP=19 | FP=1 | FN=29
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.7, maxDets=100
++------------+-----+------+-----+-----------+--------+-----+-------+
+| class      | tps | dets | gts | precision | recall | F2  | error |
++------------+-----+------+-----+-----------+--------+-----+-------+
+| Qianyinche | 3   | 3    | 48  | 100.0     | 6.2    | 7.7 | 0.00  |
++------------+-----+------+-----+-----------+--------+-----+-------+
+| mean       | 3   | 3    | 48  | 100.0     | 6.2    | 7.7 | 0.00  |
++------------+-----+------+-----+-----------+--------+-----+-------+
+TP=3 | FP=0 | FN=45
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+Score thresholds filter output boxes and P/R/F2 counts; COCO AP/AR above uses all saved scores.
+Status: complete | images: 300 | failed requests: 0 | image accuracy: 90.7% | proxy loss: 0.7872
+
+Results: /home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v4/Qianyinche

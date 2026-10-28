@@ -17,26 +17,35 @@
 !/examples/
 !/outputs/
 
-# Track MLLM reports, metrics and experiment metadata only.
+# Track reports, metrics and experiment metadata for every detector backend.
 /outputs/*
+!/outputs/README.md
 !/outputs/runs/
 /outputs/runs/**
 !/outputs/runs/**/
-!/outputs/runs/*/*.md
-!/outputs/runs/*/*.csv
-!/outputs/runs/*/*.txt
-!/outputs/runs/*/dataset.json
-!/outputs/runs/*/prompt_results.json
-!/outputs/runs/*/results_summary.json
-!/outputs/runs/*/MLLM*/**/*.md
-!/outputs/runs/*/MLLM*/**/*.csv
-!/outputs/runs/*/MLLM*/**/*.txt
-!/outputs/runs/*/MLLM*/**/metrics.json
-!/outputs/runs/*/MLLM*/**/prompt.json
-!/outputs/runs/*/MLLM*/**/prompt_results.json
-!/outputs/runs/*/MLLM*/**/prompt_version.json
-!/outputs/runs/*/MLLM*/**/config.resolved.json
-!/outputs/runs/*/MLLM*/**/run.json
+!/outputs/runs/**/*.md
+!/outputs/runs/**/*.csv
+!/outputs/runs/**/*.txt
+!/outputs/runs/**/dataset.json
+!/outputs/runs/**/results_summary.json
+!/outputs/runs/**/metrics.json
+!/outputs/runs/**/prompt.json
+!/outputs/runs/**/prompt_results.json
+!/outputs/runs/**/prompt_version.json
+!/outputs/runs/**/config.resolved.json
+!/outputs/runs/**/run.json
+!/outputs/runs/**/method.json
+!/outputs/runs/**/experiment.json
+!/outputs/runs/**/experiment_results.json
+
+# Topic comparisons contain compact reports, indexes and diagnostic summaries.
+!/outputs/comparisons/
+/outputs/comparisons/**
+!/outputs/comparisons/**/
+!/outputs/comparisons/**/*.md
+!/outputs/comparisons/**/*.csv
+!/outputs/comparisons/**/*.txt
+!/outputs/comparisons/**/*.json
 
 # Per-image outputs and JSON bundles containing raw records stay local.
 # summary.json, comparison*.json and records.jsonl are excluded by default.
@@ -45,6 +54,19 @@
 /outputs/runs/**/visualizations/
 /outputs/runs/**/.inference_cache/
 /outputs/runs/**/*.lock
+/outputs/runs/**/runtime/
+/outputs/runs/**/cache/
+/outputs/runs/**/.cache/
+/outputs/runs/**/logs/
+/outputs/comparisons/**/records.jsonl
+/outputs/comparisons/**/summary.json
+/outputs/comparisons/**/predictions*/
+/outputs/comparisons/**/feedback/
+/outputs/comparisons/**/.inference_cache/
+/outputs/comparisons/**/runtime/
+/outputs/comparisons/**/cache/
+/outputs/comparisons/**/.cache/
+/outputs/comparisons/**/logs/
 
 # Runtime assets remain local, including images, annotations and support sets.
 /data/
@@ -115,3 +137,9 @@ dist/
 *.webp
 *.mp4
 *.avi
+
+# Saved comparison figures are small, reviewable experiment artifacts.
+!/outputs/comparisons/**/*.jpg
+!/outputs/comparisons/**/*.jpeg
+!/outputs/comparisons/**/*.png
+!/outputs/comparisons/**/*.webp

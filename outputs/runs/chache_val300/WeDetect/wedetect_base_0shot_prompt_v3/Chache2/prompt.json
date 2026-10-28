@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "wedetect",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+  "kind": "text",
+  "text": "无门架的低位双叉搬运车",
+  "text_sha256": "198adb68a9cb2ce60f3218a0dd996abb6747bc61d433afdaf727ed7ada6a861a",
+  "text_source": "wedetect.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "wedetect",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "eaa501f87920ee8f2cbe30d5b0d1577bdcb75ba85d78926b6d05bf28da2754d9"
+  },
+  "request_signature": "3049311972719d639e6000c850096c640e1e0e86bfab04e418a936d862352735"
+}

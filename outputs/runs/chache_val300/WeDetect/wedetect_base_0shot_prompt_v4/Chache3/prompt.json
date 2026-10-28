@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "wedetect",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+  "kind": "text",
+  "text": "紧凑起重机车，车体较小，驾驶员站着，前方有明显竖直高门架及下部货叉，无驾驶位护顶架。",
+  "text_sha256": "d302c6d86231383600e372c615b079ccf248e80738c8981b371c05cc5f062ba7",
+  "text_source": "wedetect.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "wedetect",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "0816dac5449b61b276b8f73ebec9cbb06a76c014a4944c975491d45dbbf72d77"
+  },
+  "request_signature": "3442a290c341f149fb2ebf250f3e1634ee26d0e8144ed80557c4967b4a20546d"
+}

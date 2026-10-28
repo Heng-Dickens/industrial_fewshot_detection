@@ -1,0 +1,119 @@
+{
+  "snapshots": [
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "有护顶架和普通货叉的座驾叉车",
+      "text_sha256": "efe46512996bf1ec2b8913b05556007a0e6aba7af80efaaed366c862a2d680a8",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "fbf214320eb6467c92f0d2e0a80512a5f3290684ec1e5ecd1bd83599371808ae"
+      },
+      "request_signature": "03a1987c9d7fd0bafc67e4081e46f6f7999c6f08362911aef2598ddb8f9f7a7e"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "无门架的低位双叉搬运车",
+      "text_sha256": "198adb68a9cb2ce60f3218a0dd996abb6747bc61d433afdaf727ed7ada6a861a",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "4bb83a17a6b359ecbde8538a0bd4f37d6bdf8c13194662217d8b5bb2d8d1b038"
+      },
+      "request_signature": "87b6cfa6320c69fd44250d72bdb15a02b232e2bcf017dc4ce7b31729740bf666"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "有高门架的站驾式堆高车",
+      "text_sha256": "12a4965f7a3213032bb001f9d6ac8f24080ce0f071b1ea59e5138e36b8e07fb6",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "1a2fb7b50a3a76d592481b7fe4765355739f205810e28588dd4731671737c3ae"
+      },
+      "request_signature": "a015c2b74fe4f53b3acc7273ac5fa395ffabf8e334dc3e94d58caa79f43eb141"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "装有黄色大型属具的叉车",
+      "text_sha256": "46f5eaca090181a1a354685df1a7339c5f3ee1e366ed1e6a42686bbb8351f48f",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "7859ab6976e801d697a203373a0b2cd979c73b70fd9040cc0366fc9c6e0d6313"
+      },
+      "request_signature": "c2177826748f52ada90047393bf0d1954c3e56a53690746fda0ba25561453269"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "没有门架和货叉的座驾牵引车",
+      "text_sha256": "1e1a10c311165fd694129d5f2137b5c957c2cf673ad98f2cedd05531a8951c2a",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "fbde0422d69885eb726a55211e0f61df3cdde9bff4829834b5f5795260244aea"
+      },
+      "request_signature": "70e94e51c35327b7bc78ae8a3e7aca88d0b2d077a9b07dc768187017e8de4e63"
+    }
+  ]
+}

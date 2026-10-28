@@ -1,0 +1,48 @@
+{
+  "id": "chache_val300_groundingdino_long",
+  "dataset": "chache_val300",
+  "backend": "groundingdino",
+  "variant": "long",
+  "description": "长描述",
+  "shot_per_class": 0,
+  "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO/grounding-dino-base_0shot_prompt_v4",
+  "baseline_run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v4",
+  "evaluation": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.5,
+    "max_detections_per_image": 100,
+    "score_thresholds": [
+      0.001,
+      0.002,
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.7
+    ]
+  },
+  "result_layout": {
+    "root": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs",
+    "dataset_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300",
+    "dataset_name": "chache_val300",
+    "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+    "prompt_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO",
+    "prompt_version": "prompt_v4",
+    "prompt_identity": "01c5ce6d43208d41c6d0a55f6238718fccfe9eb640c5bcea9b766467e84664d3",
+    "method": "GroundingDINO",
+    "method_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO",
+    "prompt_registry_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO/.prompts/prompt_v4",
+    "model_name_suffix": "_prompt_v4"
+  },
+  "jobs": [
+    "chache_val300_groundingdino_long_Chache1",
+    "chache_val300_groundingdino_long_Chache2",
+    "chache_val300_groundingdino_long_Chache3",
+    "chache_val300_groundingdino_long_Chache4",
+    "chache_val300_groundingdino_long_Qianyinche"
+  ]
+}

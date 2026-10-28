@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "wedetect",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+  "kind": "text",
+  "text": "平衡重叉车",
+  "text_sha256": "33f7f2324e91b082bdfbb6c079e9208070d85a999cbe59f8dcd2f007a19c0b50",
+  "text_source": "wedetect.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "wedetect",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "098d718515716bc9126525a63fe5a5ad73706f25cf1488509dbc37e8b57dc568"
+  },
+  "request_signature": "c56af00a622f8d74eb1cb021760843f5293c2a1fb7c1a33d5e383e18edea1e92"
+}

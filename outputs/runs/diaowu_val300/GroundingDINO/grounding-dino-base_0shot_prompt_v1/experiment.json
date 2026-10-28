@@ -1,0 +1,41 @@
+{
+  "id": "diaowu_val300_groundingdino_prompt1",
+  "dataset": "diaowu_val300",
+  "backend": "groundingdino",
+  "variant": "prompt1",
+  "description": "吊物",
+  "shot_per_class": 0,
+  "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/GroundingDINO/grounding-dino-base_0shot_prompt_v1",
+  "baseline_run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/文字提示_v1/wedetect_base_0shot",
+  "evaluation": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.5,
+    "max_detections_per_image": 100,
+    "score_thresholds": [
+      0.5,
+      0.7
+    ],
+    "loss_weights": {
+      "box_l1": 1.0,
+      "box_iou": 1.0,
+      "false_positive": 1.0,
+      "false_negative": 1.0
+    }
+  },
+  "result_layout": {
+    "root": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs",
+    "dataset_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300",
+    "dataset_name": "diaowu_val300",
+    "dataset_sha256": "470b98531e4a34810e7ee42bf250e39c97480e42427c3d84152e29e4d368f3fc",
+    "prompt_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/GroundingDINO",
+    "prompt_version": "prompt_v1",
+    "prompt_identity": "ea5226c91fd1efeccc088f204fc976abcfbc75c101271a9001b34e5a9cc87a9a",
+    "method": "GroundingDINO",
+    "method_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/GroundingDINO",
+    "prompt_registry_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/GroundingDINO/.prompts/prompt_v1",
+    "model_name_suffix": "_prompt_v1"
+  },
+  "jobs": [
+    "diaowu_val300_groundingdino_prompt1_diaowu"
+  ]
+}

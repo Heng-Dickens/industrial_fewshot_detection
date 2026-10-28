@@ -1,5 +1,16 @@
 # 按测试数据集与提示词查找结果
 
+全部实验入口为 [outputs/README.md](../../outputs/README.md)。每个 `outputs/runs/<数据集>/` 使用统一的 `results_summary.md`、`results_summary.csv`、`results_summary.json`，覆盖该数据集的全部已有算法，不限于 MLLM。
+
+```bash
+python scripts/summarize_results.py
+python scripts/summarize_results.py --dataset chache_val300
+```
+
+脚本只读取保存的运行和指标，不调用模型或重算 AP。合并五类的实验占一行，单类结果作为来源和每类 AP50 列保留；不同数据指纹、类别范围和未完成状态明确标注。数据、逐图记录在本机存在时检查图像哈希及各目标的记录覆盖；仅同步了指标时注明未进行逐图核验。CSV采用UTF-8 BOM和单个LF换行，率指标的 `_pct` 列使用百分数，JSON保留0～1原始值。
+
+原有 `summarize_chache_results.py`、`summarize_diaowu_results.py` 命令也更新这套统一总表。总表更新前的原文件按内容哈希保存到 `outputs/archive/summary_snapshots/`。各实验原目录和专题分析路径保持稳定；缓存、环境检查、中断归档不计入正式实验数。
+
 项目 `outputs/runs` 使用以下结构：
 
 ```text

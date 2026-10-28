@@ -1,0 +1,119 @@
+{
+  "snapshots": [
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "平衡重叉车",
+      "text_sha256": "33f7f2324e91b082bdfbb6c079e9208070d85a999cbe59f8dcd2f007a19c0b50",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "480f15e386e48c6cd9bb0edc34a00f4ce06a8d534cae326f4c29165e0de2035c"
+      },
+      "request_signature": "ecbff2bdda5d95180ddbc4c3b500ff5aa1588e53e669eea5f09d66b59bfbb003"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "电动托盘搬运车",
+      "text_sha256": "3c7a2bdf03e9f24ede66a18a7478047bb6dc30d8915592d60436af237189df58",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "9becf1c2897a90893c884303befaf12b2bab04cd18bb9c82e739b602b9cc80d0"
+      },
+      "request_signature": "bee15792a208c598fb95ff3cf33ca1e64eb59d88f070405a1f49777ead8ea1bb"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "站驾式堆高车",
+      "text_sha256": "95f3766e0cc3e32b71576cb0921986e53d188c69b8e99317131e266058a394a2",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "30d3e47b56c02e3b5542b66e5ee8382455c7e07eba98a55260803db7048f5a0d"
+      },
+      "request_signature": "20a9cd51b94a216c3a38bc6ea3fd7a916fa28eeb3e36aa78c6805bfb82ad9f71"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "带属具的叉车",
+      "text_sha256": "cff654f7fd8cebcae984705c619574419d7c1dec9ec5b95d7262893627be3b3a",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "bb63c6181dc77c95cc75e9bccb2218a91a7c8ec4a5ac7c12548850408d29befe"
+      },
+      "request_signature": "39fe4966cae7e14481a0d337447d23126ce1eccee0fe603f0d40d82f780c55fc"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "电动牵引车",
+      "text_sha256": "864f8a0ec3b44b95157d4757da02f5eb9214a912a3396338460b98d161dd8ea2",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "662ed2fb3c9738209117ffb1c9ebf4603813d6a1e44157a241d928b507284c41"
+      },
+      "request_signature": "3f314147bdc5b93d3ffcf9ecea43b359b083160384e92150d14d7c56709b7664"
+    }
+  ]
+}

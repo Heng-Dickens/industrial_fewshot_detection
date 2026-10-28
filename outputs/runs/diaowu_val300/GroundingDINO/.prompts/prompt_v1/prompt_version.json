@@ -1,0 +1,14 @@
+{
+  "identity": "ea5226c91fd1efeccc088f204fc976abcfbc75c101271a9001b34e5a9cc87a9a",
+  "family": "文字提示",
+  "description": "本次实际输入，完整文字及复核模板见各运行目录的 prompt.txt / review_template.txt。",
+  "prompts": [
+    {
+      "text": "吊物",
+      "review_template": ""
+    }
+  ],
+  "text_sha256": [
+    "fb4fc59a71a21423955cfa0a59d6cc2d0c08d9a135503b22f8b02bc805eac609"
+  ]
+}

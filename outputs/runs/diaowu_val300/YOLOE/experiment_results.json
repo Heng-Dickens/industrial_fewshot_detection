@@ -1,0 +1,131 @@
+{
+  "protocol": "Frozen 300-image cohorts. YOLOE uses exactly the PET-DINO 1/5/10-shot supports, boxes and seed=0. GroundingDINO uses verbatim WeDetect Chinese prompts. Every class queries every image; class-labelled predictions are merged without cross-class NMS. Candidate floor=0.001, NMS IoU=0.7, maxDets=100/class, evaluation IoU=0.5 and score=0.5. Model-native preprocessing and feature aggregation are retained. Fresh inference; no training/API calls.",
+  "runs": [
+    {
+      "dataset": "diaowu_val300",
+      "method": "YOLOE",
+      "variant": "1-shot",
+      "shot_per_class": 1,
+      "mAP50": 0.5303463351834642,
+      "mAP50_95": 0.3255727733363881,
+      "precision": 0.8435754189944135,
+      "recall": 0.43142857142857144,
+      "baseline_AP50": 0.1899607768509276,
+      "baseline_AP50_95": 0.13223645717434768,
+      "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/YOLOE/yoloe-v8l-seg_1shot",
+      "baseline_run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/PET-DINO/pet_dino_swin_t_1shot",
+      "failed": 0,
+      "per_class": {
+        "hanging object": {
+          "ground_truth_count": 350,
+          "tp": 151,
+          "fp": 28,
+          "fn": 199,
+          "precision": 0.8435754189944135,
+          "recall": 0.43142857142857144,
+          "f1": 0.5708884688090737,
+          "AP50": 0.5303463351834642,
+          "AP75": 0.3701162031027681,
+          "AP50_95": 0.3255727733363881,
+          "ap_by_iou": {
+            "0.5": 0.5303463351834642,
+            "0.55": 0.5183538481381653,
+            "0.6": 0.5018056238580001,
+            "0.65": 0.4541888349796567,
+            "0.7": 0.41710793460009526,
+            "0.75": 0.3701162031027681,
+            "0.8": 0.24053402693220516,
+            "0.85": 0.15557118687575885,
+            "0.9": 0.06136268151134173,
+            "0.95": 0.006341058182425629
+          },
+          "f2": 0.47815072830905636
+        }
+      }
+    },
+    {
+      "dataset": "diaowu_val300",
+      "method": "YOLOE",
+      "variant": "5-shot",
+      "shot_per_class": 5,
+      "mAP50": 0.548099512607689,
+      "mAP50_95": 0.3316943315029114,
+      "precision": 0.777292576419214,
+      "recall": 0.5085714285714286,
+      "baseline_AP50": 0.1000659819867979,
+      "baseline_AP50_95": 0.055714365609075736,
+      "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/YOLOE/yoloe-v8l-seg_5shot",
+      "baseline_run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/PET-DINO/pet_dino_swin_t_5shot",
+      "failed": 0,
+      "per_class": {
+        "hanging object": {
+          "ground_truth_count": 350,
+          "tp": 178,
+          "fp": 51,
+          "fn": 172,
+          "precision": 0.777292576419214,
+          "recall": 0.5085714285714286,
+          "f1": 0.614853195164076,
+          "AP50": 0.548099512607689,
+          "AP75": 0.3751568667329993,
+          "AP50_95": 0.3316943315029114,
+          "ap_by_iou": {
+            "0.5": 0.548099512607689,
+            "0.55": 0.536531844360352,
+            "0.6": 0.5195082669355158,
+            "0.65": 0.4714295600717078,
+            "0.7": 0.4246115495900568,
+            "0.75": 0.3751568667329993,
+            "0.8": 0.23520840856056022,
+            "0.85": 0.14612713394686705,
+            "0.9": 0.05764913578344011,
+            "0.95": 0.0026210364399271782
+          },
+          "f2": 0.5463474524248005
+        }
+      }
+    },
+    {
+      "dataset": "diaowu_val300",
+      "method": "YOLOE",
+      "variant": "10-shot",
+      "shot_per_class": 10,
+      "mAP50": 0.5595630443517717,
+      "mAP50_95": 0.33762161849885686,
+      "precision": 0.7420634920634921,
+      "recall": 0.5342857142857143,
+      "baseline_AP50": 0.15168766594178668,
+      "baseline_AP50_95": 0.09108472785701568,
+      "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/YOLOE/yoloe-v8l-seg_10shot",
+      "baseline_run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/PET-DINO/pet_dino_swin_t_10shot",
+      "failed": 0,
+      "per_class": {
+        "hanging object": {
+          "ground_truth_count": 350,
+          "tp": 187,
+          "fp": 65,
+          "fn": 163,
+          "precision": 0.7420634920634921,
+          "recall": 0.5342857142857143,
+          "f1": 0.6212624584717608,
+          "AP50": 0.5595630443517717,
+          "AP75": 0.3828147825958111,
+          "AP50_95": 0.33762161849885686,
+          "ap_by_iou": {
+            "0.5": 0.5595630443517717,
+            "0.55": 0.5450162880982716,
+            "0.6": 0.5304639545217181,
+            "0.65": 0.47910766660327625,
+            "0.7": 0.43642442402827397,
+            "0.75": 0.3828147825958111,
+            "0.8": 0.242501335014693,
+            "0.85": 0.14152466652545292,
+            "0.9": 0.05478675784508959,
+            "0.95": 0.0040132654042103234
+          },
+          "f2": 0.5659806295399515
+        }
+      }
+    }
+  ]
+}

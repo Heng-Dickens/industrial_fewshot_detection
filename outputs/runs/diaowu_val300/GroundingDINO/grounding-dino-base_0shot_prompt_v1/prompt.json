@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+  "kind": "text",
+  "text": "吊物",
+  "text_sha256": "fb4fc59a71a21423955cfa0a59d6cc2d0c08d9a135503b22f8b02bc805eac609",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "28f2e229688f422ff16750cb1507b1cd5a40807c67e87765b9cdf010ee418fa8"
+  },
+  "request_signature": "bb9d7c4b1bb2e3b4ef15b7b229b9757defbfa6de8bd50e81d8abddfe437f6df6"
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "industrial_fewshot.prompt_results.v1",
+  "runs": [
+    {
+      "run_dir": "wedetect_base_0shot",
+      "target_id": "diaowu",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "wedetect",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+        "kind": "text",
+        "text": "吊物",
+        "text_sha256": "fb4fc59a71a21423955cfa0a59d6cc2d0c08d9a135503b22f8b02bc805eac609",
+        "text_source": "wedetect.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "wedetect",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "8a8a1b62e3895d48ef4a6017f4517e4540fa985ca6e84e01ff07926143007e6b"
+        },
+        "request_signature": "86bd12f2d386316cb4d462245e9343be8f4f3284644c32f3ed1ed535e63e6194"
+      },
+      "request_signature": "86bd12f2d386316cb4d462245e9343be8f4f3284644c32f3ed1ed535e63e6194",
+      "prompt_file": "wedetect_base_0shot/prompt.txt",
+      "AP50": 0.011711988700112023,
+      "AP50_95": 0.008574511623468036,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    }
+  ]
+}

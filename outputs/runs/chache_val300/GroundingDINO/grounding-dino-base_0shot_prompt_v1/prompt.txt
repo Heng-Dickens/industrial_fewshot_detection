@@ -1,0 +1,5 @@
+Chache1: 叉车
+Chache2: 搬运车
+Chache3: 堆高车
+Chache4: 叉车
+Qianyinche: 牵引车
