@@ -7,7 +7,8 @@ import unittest
 from unittest.mock import patch
 
 from scripts.analyze_box_precision import (analyze, box_errors, build_samples, digest,
-                                          load_manifest, match_counts, saved_ap, select_ovd_best, tolerance_ok)
+                                          load_manifest, match_counts, saved_ap, select_ovd_best, tolerance_ok, tolerance_ap,
+                                          restore_saved_geometry)
 from industrial_fewshot.evaluation.detection_metrics import _curve
 
 
@@ -16,6 +17,45 @@ def obj(box, score=0.9, label='A'):
 
 
 class BoxPrecisionTest(unittest.TestCase):
+    def test_cached_counts_require_identical_sources_and_never_infer_ap(self):
+        import copy
+        row = dict(id='demo-01', dataset='demo', run_dir='method/run',
+                   AP85=.3, AP90=.2, AP95=.1, AP85_95=.2, AP_box20=None,
+                   score_thresholds={})
+        sources = {f'outputs/runs/demo/method/run/{name}': name
+                   for name in ('metrics.json', 'run.json')}
+        data = dict(rows=[row], source_sha256=sources, confidence_bins=[])
+        old = dict(row, score_thresholds={'0.5': {'joint20_count': 2}})
+        previous = dict(rows=[old], source_sha256=dict(sources), confidence_bins=[], generated_at='earlier')
+        mismatch = copy.deepcopy(previous)
+        mismatch['source_sha256']['outputs/runs/demo/method/run/run.json'] = 'changed'
+        self.assertFalse(restore_saved_geometry(data, mismatch))
+        self.assertEqual(restore_saved_geometry(data, previous), {'demo-01'})
+        self.assertEqual(row['score_thresholds']['0.5']['joint20_count'], 2)
+        self.assertIsNone(row['AP_box20'])
+
+    def test_tolerance_ap_keeps_false_positives_duplicates_and_full_gt_denominator(self):
+        samples = [dict(ground_truth=[obj([0, 0, 100, 50])], predictions=[
+            obj([200, 0, 300, 50], .99), obj([10, 5, 130, 65], .9), obj([10, 5, 130, 65], .8)])]
+        result = tolerance_ap(samples, ['A'])
+        self.assertAlmostEqual(result['AP_box20'], .5)
+        self.assertEqual(result['per_class']['A']['tp'], 1)
+        self.assertEqual(result['per_class']['A']['fp'], 2)
+        self.assertEqual(_curve(samples, 'A', .85, 100)['ap'], 0.)
+        self.assertEqual(tolerance_ap([dict(ground_truth=[obj([0, 0, 100, 50])], predictions=[])], ['A'])['AP_box20'], 0.)
+
+    def test_tolerance_ap_is_macro_and_agrees_with_existing_tolerance_counts(self):
+        rng = random.Random(20261028)
+        for _ in range(20):
+            samples = [dict(ground_truth=[obj([0, 0, 100, 50])], predictions=[
+                obj([rng.randrange(0, 30), 0, rng.randrange(90, 130), 50],
+                    rng.choice([.5, .9]), rng.choice(['A', 'B'])) for _ in range(8)])]
+            ap = tolerance_ap(samples, ['A', 'B'])
+            counts = match_counts(samples, ['A', 'B'], 0)
+            self.assertEqual(ap['per_class']['A']['tp'], counts['per_class']['A']['joint20_count'])
+            self.assertEqual(ap['AP_box20'], ap['per_class']['A']['AP_box20'])
+            self.assertIsNone(ap['per_class']['B']['AP_box20'])
+
     def test_ovd_best_excludes_mllm_and_failed_runs_and_ranks_by_ap85(self):
         rows = [(1, dict(method='MLLM', eligible_for_comparison=True, run_dir='mllm')),
                 (2, dict(method='YOLOE', eligible_for_comparison=True, run_dir='yolo1')),

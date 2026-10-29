@@ -6,6 +6,7 @@ source metrics. Missing raw coordinates remain unavailable, rather than zero.
 from __future__ import annotations
 
 import argparse
+from bisect import bisect_left
 from collections import Counter
 import csv
 from datetime import datetime
@@ -102,6 +103,45 @@ def ranked_predictions(sample, label, lower, upper, max_dets):
             and (upper is None or p['confidence'] < upper)]
 
 
+def tolerance_ap(samples, labels, max_dets=100, tolerance=0.2):
+    """101-point AP with the original joint geometry acceptance, unchanged boxes."""
+    per_class = {}
+    for label in labels:
+        truths = [[g for g in s['ground_truth'] if g['label'] == label] for s in samples]
+        gt_count = sum(map(len, truths))
+        ranked = [(p['confidence'], i, p) for i, sample in enumerate(samples)
+                  for p in ranked_predictions(sample, label, 0., None, max_dets)]
+        ranked.sort(key=lambda entry: -entry[0])
+        claimed = [set() for _ in samples]
+        tp = fp = 0
+        recalls, precisions = [], []
+        for _, index, prediction in ranked:
+            candidates = [(box_iou(prediction['bbox_pixels_xyxy'], g['bbox_pixels_xyxy']), j)
+                          for j, g in enumerate(truths[index]) if j not in claimed[index]
+                          and tolerance_ok(prediction['bbox_pixels_xyxy'], g['bbox_pixels_xyxy'], tolerance)]
+            if candidates:
+                _, j = max(candidates)
+                claimed[index].add(j)
+                tp += 1
+            else:
+                fp += 1
+            recalls.append(tp / gt_count if gt_count else 0.)
+            precisions.append(tp / (tp + fp))
+        for i in range(len(precisions) - 2, -1, -1):
+            precisions[i] = max(precisions[i], precisions[i + 1])
+        ap = None
+        if gt_count:
+            values = []
+            for step in range(101):
+                i = bisect_left(recalls, step / 100)
+                values.append(precisions[i] if i < len(precisions) else 0.)
+            ap = sum(values) / 101
+        per_class[label] = dict(AP_box20=ap, ground_truth_count=gt_count,
+                                tp=tp, fp=fp, fn=gt_count - tp)
+    available = [r['AP_box20'] for r in per_class.values() if r['AP_box20'] is not None]
+    return dict(AP_box20=sum(available) / len(available) if available else None, per_class=per_class)
+
+
 def match_counts(samples, labels, lower, upper=None, max_dets=100, tolerance=0.2):
     """Independent class-aware greedy associations for IoU and box tolerances.
 
@@ -120,6 +160,8 @@ def match_counts(samples, labels, lower, upper=None, max_dets=100, tolerance=0.2
             predictions = ranked_predictions(sample, label, lower, upper, max_dets)
             counts['prediction_count'] += len(predictions)
             counts['ground_truth_count'] += len(gt)
+            if not gt:
+                continue
             claimed = {kind: set() for kind in ('iou50', 'iou85', 'tol20', 'both')}
             for prediction in predictions:
                 box = prediction['bbox_pixels_xyxy']
@@ -305,6 +347,46 @@ def counts_cell(row, score):
             f"（{pct(point['joint20_prediction_rate'])}%）；GT {pct(point['joint20_gt_coverage'])}%")
 
 
+def restore_saved_geometry(data, previous, allow_unverified=False):
+    """Retain verified historical count statistics when raw files are absent.
+
+    Counts cannot determine tolerance AP: that new value remains unavailable.
+    Changed file hashes require explicit historical-only reuse and labelling.
+    """
+    prior = {(r['dataset'], r['run_dir']): r for r in previous.get('rows', [])}
+    restored = set()
+    for row in data['rows']:
+        old = prior.get((row['dataset'], row['run_dir']))
+        if row.get('score_thresholds') or not old or not old.get('score_thresholds'):
+            continue
+        keys = [f"outputs/runs/{row['dataset']}/{row['run_dir']}/{name}"
+                for name in ('metrics.json', 'run.json')]
+        matching_sources = all(data['source_sha256'].get(k) and
+            data['source_sha256'][k] == previous.get('source_sha256', {}).get(k) for k in keys)
+        if not matching_sources and not allow_unverified:
+            continue
+        if any(row.get(k) != old.get(k) for k in ('method', 'model', 'prompt_version',
+                'shot_per_class', 'input', 'negative_references', 'ground_truth_count')):
+            continue
+        if any((row.get(k) is None) != (old.get(k) is None) or
+               (row.get(k) is not None and abs(row[k] - old[k]) > 1e-12)
+               for k in ('AP85', 'AP90', 'AP95', 'AP85_95')):
+            continue
+        row['score_thresholds'] = old['score_thresholds']
+        row['geometry_statistics_source'] = old.get('geometry_statistics_source') or (
+            '保留已存统计；本机缺坐标，未复算' if matching_sources else
+            '保留历史统计；来源文件哈希已变化，本机缺坐标未复核')
+        row['geometry_statistics_generated_at'] = old.get('geometry_statistics_generated_at', previous.get('generated_at'))
+        restored.add(row['id'])
+    if restored:
+        data['cached_source_sha256'] = previous.get('cached_source_sha256', previous.get('source_sha256', {}))
+        data['confidence_bins'] = [r for r in data['confidence_bins'] if r['id'] not in restored]
+        origins = {r['id']: r['geometry_statistics_source'] for r in data['rows'] if r['id'] in restored}
+        data['confidence_bins'].extend(dict(r, geometry_statistics_source=origins[r['id']])
+                                       for r in previous.get('confidence_bins', []) if r['id'] in restored)
+    return restored
+
+
 def markdown(data):
     title = '# OVD 最佳实验：AP85 与框几何误差 20%' if data.get('ovd_best') else '# AP85 与框几何误差 20% 统计'
     lines = [title, '',
@@ -313,10 +395,12 @@ def markdown(data):
              '- AP85/90/95：同类别预测按置信度排序，一对一匹配，101 点插值 AP；多类取有 GT 类别的宏平均。直接读取原指标中的 `ap_by_iou`，不先按 IoU 筛掉误检。',
              '- AP85:95 = (AP85 + AP90 + AP95) / 3。AP 使用全部已保存候选分数；置信度阈值统计是另外的工作点，不是 AP。候选在模型输出前被删掉的部分无法恢复。',
              '- 宽误差 = |预测宽 − GT宽| / GT宽；高误差同理。横向中心偏移 = |预测中心x − GT中心x| / GT宽；纵向偏移以 GT高归一化。四项均 ≤ 20% 才合格；未额外要求 IoU ≥ 0.85。',
+             '- **四项≤20% AP**：预测框不移动，以上四项同时满足20%容差即为可匹配框；按原置信度排序、同类一对一匹配，计算101点插值AP，再对有GT的类别取宏平均。该列采用几何容差匹配，不是IoU=0.20的AP，也不是GT辅助修框值或理论上界。',
              '- 同类预测按置信度降序，一张图内每个 GT 最多使用一次；从满足四项误差约束且未匹配的 GT 中选最大 IoU。误检、重复框、错分类不重复计数。',
              '- 数量表为“合格框/选中预测框数（预测合格率）；GT覆盖率”。漏检保留在 GT 分母。无预测时合格数为 0、预测合格率未定义，GT覆盖率为 0。每图每类沿用保存的 maxDets 上限。',
              '- `confidence_thresholds.csv` 给出 score≥0.0/0.1/…/1.0 的累计统计；`confidence_bins.csv` 给出独立分数区间（左闭右开，最后区间含1.0）。分箱各自重新一对一匹配，不可将分箱合格数相加当成累计结果。',
              '- CSV 中带 `_pct` 的字段为百分数，其余率字段和 JSON 使用 0–1。缺原始坐标显示“—”，不能从 AP、TP/FP/FN 或平均 IoU 反推误差合格数。',
+             '- 缺坐标的实验保留原表的历史合格数量；部分来源文件哈希与历史报告不同，数量未在本机重新复核，详见JSON中的 `geometry_statistics_source`。新“四项≤20% AP”显示“—”，不由合格率反推。',
              '- `size20_on_iou50_count` / `offset20_on_iou50_count` 是 IoU≥0.5 匹配框中分别满足宽高/中心偏移约束的辅助数量；`joint20_count` 独立按四项联合约束匹配。', '',
              '[AP及主统计 CSV](ap_summary.csv) · [置信度累计 CSV](confidence_thresholds.csv) · '
              '[置信度分箱 CSV](confidence_bins.csv) · [各类别AP CSV](class_ap.csv) · [完整汇总JSON](analysis.json)', '']
@@ -328,24 +412,27 @@ def markdown(data):
         lines += [f'## {dataset}', '',
                   f"共 {len(rows)} 组；保存 AP85 的 {sum(r['AP85'] is not None for r in rows)} 组；"
                   f"完成框误差统计的 {sum(r['geometry_status'] == '可计算' for r in rows)} 组。", '',
-                  '| # | 方法/模型 | prompt / shot / 输入 / 负例 | AP85% | AP90% | AP95% | AP85:95% | score≥0.5 四项≤20% | score≥0.7 四项≤20% | 状态 |',
-                  '|---:|---|---|---:|---:|---:|---:|---|---|---|']
+                  '| # | 方法/模型 | prompt / shot / 输入 / 负例 | AP85% | AP90% | AP95% | AP85:95% | 四项≤20% AP% | score≥0.5 四项≤20% | score≥0.7 四项≤20% | 状态 |',
+                  '|---:|---|---|---:|---:|---:|---:|---:|---|---|---|']
         for row in rows:
             path = quote('../../runs/' + dataset + '/' + row['run_dir'] + '/' + row['detail_file'], safe='/')
             description = f"{row['prompt_version']} / {row['shot_per_class']}shot / {row['input']} / {row['negative_references']}负"
             status = row['original_status'] + ('；缺坐标' if row['geometry_status'] != '可计算' else '')
+            if row.get('geometry_statistics_source'):
+                status += '；数量沿用已存统计'
             lines.append('| ' + ' | '.join([row['id'], f"{row['method']} / {row['model']}",
                          f'[{description}]({path})', *[pct(row[k]) for k in ('AP85', 'AP90', 'AP95', 'AP85_95')],
+                         pct(row.get('AP_box20')),
                          counts_cell(row, .5), counts_cell(row, .7), status]) + ' |')
         lines += ['', '**各方法在本数据集的最高 AP85（仅原总表允许比较的完整实验）**', '',
-                  '| 方法 | AP85% | AP90% | AP95% | shot / 输入 / 负例 | 实验ID |',
-                  '|---|---:|---:|---:|---|---|']
+                  '| 方法 | AP85% | AP90% | AP95% | 四项≤20% AP% | shot / 输入 / 负例 | 实验ID |',
+                  '|---|---:|---:|---:|---:|---|---|']
         for method in sorted({r['method'] for r in rows}):
             eligible = [r for r in rows if r['method'] == method and r['eligible_for_comparison'] and r['AP85'] is not None]
             if not eligible:
                 continue
             best = max(eligible, key=lambda r: r['AP85'])
-            lines.append('| ' + ' | '.join([method, *[pct(best[k]) for k in ('AP85', 'AP90', 'AP95')],
+            lines.append('| ' + ' | '.join([method, *[pct(best[k]) for k in ('AP85', 'AP90', 'AP95')], pct(best.get('AP_box20')),
                          f"{best['shot_per_class']} / {best['input']} / {best['negative_references']}", best['id']]) + ' |')
         unavailable = [r for r in rows if r['geometry_status'] != '可计算']
         if unavailable:
@@ -369,6 +456,7 @@ def markdown(data):
 
 def analyze(outputs, destination, datasets=None, tolerance=0.2, ovd_best=False):
     outputs, destination = Path(outputs).resolve(), Path(destination).resolve()
+    previous = read(destination / 'analysis.json')
     project = outputs.parent
     sources, rows, operating_rows, bin_rows, class_rows = {}, [], [], [], []
 
@@ -411,7 +499,8 @@ def analyze(outputs, destination, datasets=None, tolerance=0.2, ovd_best=False):
             row = dict(identity, **saved_ap(metrics), original_status=original['status'],
                        eligible_for_comparison=original['eligible_for_comparison'],
                        ground_truth_count=original['ground_truth_count'],
-                       geometry_status='未计算', score_thresholds={}, source_consistency=None)
+                       geometry_status='未计算', score_thresholds={}, source_consistency=None,
+                       AP_box20=None, class_AP_box20={})
             row['detail_file'] = 'metrics.json' if metric_path.is_file() else 'run.json'
             try:
                 if manifest_error:
@@ -444,6 +533,8 @@ def analyze(outputs, destination, datasets=None, tolerance=0.2, ovd_best=False):
                 if discrepancies:
                     raise ValueError('本地预测与保存 AP 不一致，未发布混用来源的框误差；详见校验说明')
                 row['geometry_status'] = '可计算'
+                tolerance_curve = tolerance_ap(samples, labels, limit, tolerance)
+                row.update(AP_box20=tolerance_curve['AP_box20'], class_AP_box20=tolerance_curve['per_class'])
                 for score in SCORE_LEVELS:
                     point = match_counts(samples, labels, score, max_dets=limit, tolerance=tolerance)
                     row['score_thresholds'][f'{score:g}'] = point
@@ -473,7 +564,9 @@ def analyze(outputs, destination, datasets=None, tolerance=0.2, ovd_best=False):
                                          eligible_for_comparison=row['eligible_for_comparison']))
             rows.append(row)
             for label, aps in row['class_AP'].items():
-                class_rows.append(dict(identity, label=label, **aps))
+                class_rows.append(dict(identity, label=label, **aps,
+                    AP_box20=row['class_AP_box20'].get(label, {}).get('AP_box20')))
+            print(f"{row['id']} {row['method']}: AP_box20={row['AP_box20']}; {row['geometry_status']}", flush=True)
         print(dataset + ': ' + str(sum(r['dataset'] == dataset and r['geometry_status'] == '可计算' for r in rows))
               + '/' + str(len(indexed)) + ' geometry runs available', flush=True)
     data = dict(schema='industrial_fewshot.box_precision.v1',
@@ -484,7 +577,22 @@ def analyze(outputs, destination, datasets=None, tolerance=0.2, ovd_best=False):
                 source_sha256=sources,
                 source_policy='Saved AP grid; geometry only on complete source records with matching manifest identity and AP checks.',
                 box_error_policy='abs(dw)/GTw, abs(dh)/GTh, abs(dcx)/GTw, abs(dcy)/GTh; all <= tolerance; class-aware score-ranked one-to-one matching.',
+                tolerance_ap_policy='Unmodified coordinates and scores; joint four-error tolerance replaces IoU acceptance; 101-point score-ranked class-aware one-to-one AP, macro averaged over GT classes.',
                 confidence_bins=bin_rows)
+    restored = restore_saved_geometry(data, previous, allow_unverified=True)
+    if restored:
+        operating_rows = [r for r in operating_rows if r['id'] not in restored]
+        for row in rows:
+            if row['id'] not in restored:
+                continue
+            identity = {k: row.get(k) for k in ('id', 'dataset', 'method', 'model', 'prompt_version',
+                        'shot_per_class', 'input', 'negative_references', 'run_dir')}
+            for score, point in row['score_thresholds'].items():
+                operating_rows.append(dict(identity, score_threshold=float(score),
+                    geometry_status=row['geometry_status'], original_status=row['original_status'],
+                    eligible_for_comparison=row['eligible_for_comparison'],
+                    geometry_statistics_source=row['geometry_statistics_source'], **point))
+        bin_rows = data['confidence_bins']
     # Assert source files stayed byte-identical throughout analysis.
     for key, expected in sources.items():
         path = project / key
@@ -495,7 +603,7 @@ def analyze(outputs, destination, datasets=None, tolerance=0.2, ovd_best=False):
     ap_rows = []
     for row in rows:
         item = dict(row)
-        for key in ('AP85', 'AP90', 'AP95', 'AP85_95'):
+        for key in ('AP85', 'AP90', 'AP95', 'AP85_95', 'AP_box20'):
             item[key + '_pct'] = item[key] * 100 if item[key] is not None else None
         for score in (0.5, 0.7):
             point = row['score_thresholds'].get(f'{score:g}', {})

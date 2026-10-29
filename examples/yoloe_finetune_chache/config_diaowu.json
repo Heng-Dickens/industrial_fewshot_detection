@@ -1,0 +1,13 @@
+{
+  "extends": "config.json",
+  "scene": "diaowu",
+  "dev_images": "data/raw/diaowu_val100/images",
+  "dev_manifest": "data/raw/diaowu_val100/manifest.json",
+  "test_manifest": "data/raw/diaowu_val300/manifest.json",
+  "data": "data/finetune/diaowu_10shot_val100/dataset.yaml",
+  "project": "outputs/finetuning/diaowu_yoloe",
+  "class_names": ["hanging object"],
+  "text_prompts": [
+    "a large hollow cylindrical load suspended by a lifting hook and taut slings, including the connected lifting assembly"
+  ]
+}

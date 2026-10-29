@@ -79,7 +79,7 @@ outputs/runs/chache_val300/
 画框对照图和运行目录索引。配置、派生清单、缓存与日志位于
 `outputs/runtime/wedetect_chache_prompts_20261027/`；中断残留归入 `outputs/archive/interrupted_runs/`。
 迁移记录保存在 runtime 下的 `result_layout_migration.json` 和 `method_layout_migration.json`，
-更改前的元数据位于对应 `.planning` 备份。原来分散在 `文字提示_v1～v4` 的目录索引存入
+迁移已完成，核验后的一次性 `.planning` 备份已清理，迁移记录继续保留。原来分散在 `文字提示_v1～v4` 的目录索引存入
 `outputs/archive/previous_prompt_layout/`；实际预测仅保留在新的 WeDetect 实验目录。
 
 `scripts/run_wedetect_chache_prompts.py` 后续直接写入该标准目录，`--output` 仅指定对比报告位置。
@@ -139,6 +139,10 @@ python main.py --config configs/specific/mllm_val300_partial_occlusion.yaml
 
 该配置明确为 Qwen3.8-27B、5-shot、15 组、300 张图，继续使用现有 CC Switch 转发，并同时给出 0.5 / 0.7 的结果。它与旧版结果分目录保存。修改提示词及整理历史目录本身不会触发新版远程推理。
 
-历史未完成分组的原始文件存入 `outputs/archive/interrupted_runs`，完成基线时从成功缓存恢复，活动目录不产生重复残缺结果。更早的遗留数据在 `outputs/archive/runs_legacy`，运行辅助文件在 `outputs/runtime`。路径迁移表为 `outputs/result_layout_migration.json`，修改前的元数据备份在 `.planning/result_layout_backup`。历史提示词和指标原字节保留，不把新规则归因给旧指标。
+历史未完成分组的原始文件存入 `outputs/archive/interrupted_runs`，完成基线时从成功缓存恢复，活动目录不产生重复残缺结果。更早的遗留数据在 `outputs/archive/runs_legacy`，运行辅助文件在 `outputs/runtime`。一次性迁移备份在完成核验后可清理，历史提示词和指标原字节保留，不把新规则归因给旧指标。
+
+框误差分析统一保留 [总体表](../../outputs/comparisons/iou85_box20_20261028/README.md) 及其 CSV/JSON；其中已含各方法最佳配置，不再保留一份独立的最佳实验结果。旧的修框上界分析已移除，当前“四项误差≤20%”使用原预测框。
+
+已完成的本地检测缓存可在逐条验证与正式 `records.jsonl` 一致后清理；缓存只是加速副本。保留正式记录、`run.json`、配置、支持集、指标、预测文件和 MLLM 成功缓存，以便重新评估、复用或追溯实验。
 
 自定义项目外输出目录默认保留原布局；可配置 `results_layout: true` 使用相同分组规则。项目内 `outputs/runs` 默认启用，可显式设为 `false` 用于独立兼容脚本。
