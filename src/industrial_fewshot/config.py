@@ -24,7 +24,7 @@ DEFAULTS = {
 
 
 def resolve(base: Path, value: str) -> Path:
-    return (base / Path(value).expanduser()).resolve()
+    return resolve_location((base / Path(value).expanduser()).resolve())
 
 
 
@@ -228,11 +228,11 @@ def load_config(path: Path, mode: str | None = None, image_dir: Path | None = No
         output = source.with_name(source.name + suffix).resolve()
     # Reading old locations keeps switching to the sibling default from costing
     # another model request. All writes and locks remain in the selected output.
-    cache_search_dirs = [resolve(base, "../runs"), PROJECT_ROOT / "outputs/runs/legacy"]
-    cache_search_dirs.extend(PROJECT_ROOT / 'outputs/runs/qwen_mllm' / kind
+    cache_search_dirs = [resolve(base, "../runs"), PROJECT_ROOT / "outputs/legacy"]
+    cache_search_dirs.extend(PROJECT_ROOT / 'outputs/qwen_mllm' / kind
                              for kind in ('ablation', 'fewshot', 'text_only'))
     if raw.get('backend') == 'yoloe':
-        cache_search_dirs.append(PROJECT_ROOT / 'outputs/runs/yoloe_visual' / f"{local_settings['positive_count']}shot")
+        cache_search_dirs.append(PROJECT_ROOT / 'outputs/yoloe_visual' / f"{local_settings['positive_count']}shot")
     if source.name:
         cache_search_dirs.append(source.with_name(source.name + suffix))
     if specified_output and specified_output.strip():
@@ -263,7 +263,7 @@ def load_config(path: Path, mode: str | None = None, image_dir: Path | None = No
         raise ValueError('results_layout 必须是布尔值')
     return {
         "scene_name": scene_name,
-        "results_layout": raw.get("results_layout", output.is_relative_to(PROJECT_ROOT / 'outputs/runs')),
+        "results_layout": raw.get("results_layout", output.is_relative_to(PROJECT_ROOT / 'outputs')),
         "resume_comparison_dir": resolve(base, raw['resume_comparison_dir']) if raw.get('resume_comparison_dir') else None,
         "config_sources": config_sources,
         "resolved_config": redact(raw),

@@ -1,0 +1,6 @@
+{
+  "method": "OVD-MLLM",
+  "dataset": "diaowu_val300",
+  "stage": "deduplicated",
+  "source_run": "outputs/YOLOE/finetune/diaowu_val300/runs/yoloe_diaowu_search_20261029/head_full_960_seed2/test_val300/fixed_head"
+}

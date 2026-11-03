@@ -1,0 +1,745 @@
+{
+  "schema": "industrial_fewshot.prompt_results.v1",
+  "runs": [
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v1",
+      "target_id": "Chache1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "叉车",
+        "text_sha256": "5bed3fa8ff6e41b56639aeeb9a3be547b46368c11025db403525860e82ead737",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "13eef708fb598f17b2ed4dceaac936af527458b78db4d768176861a93aec9884"
+        },
+        "request_signature": "efb90deb5cab316a314d5dfea411dbc628907454a00d64eec21610a29d5a3afb"
+      },
+      "request_signature": "efb90deb5cab316a314d5dfea411dbc628907454a00d64eec21610a29d5a3afb",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v1/Chache1/prompt.txt",
+      "AP50": 0.10585081287656099,
+      "AP50_95": 0.08305440229623873,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v1",
+      "target_id": "Chache2",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "搬运车",
+        "text_sha256": "0d999bc48ea38b2b9527b9d9a907c231c7f504977baaee840c7e39eab76a703e",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "0a172be61e2993584693ec09409d5a82aadc57302cfe2f6068da035a9c378c30"
+        },
+        "request_signature": "05a4988fccad2601c579f3415a967c02016f64ddb3d8a2258906821279d20a06"
+      },
+      "request_signature": "05a4988fccad2601c579f3415a967c02016f64ddb3d8a2258906821279d20a06",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v1/Chache2/prompt.txt",
+      "AP50": 0.10585081287656099,
+      "AP50_95": 0.08305440229623873,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v1",
+      "target_id": "Chache3",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "堆高车",
+        "text_sha256": "2bd73cffdaa064fb5a85dfb1cd14e5a5d8a86e38e4f634ad5c0384ae31119368",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "55a4d77c4fd5667890c561110f9510d7b09abd56ce0d5a6c445e78ee10b0039e"
+        },
+        "request_signature": "4c4e28f1c744e5c54e9713736021741184f56c69ddad6e0a39573c6a183f0654"
+      },
+      "request_signature": "4c4e28f1c744e5c54e9713736021741184f56c69ddad6e0a39573c6a183f0654",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v1/Chache3/prompt.txt",
+      "AP50": 0.10585081287656099,
+      "AP50_95": 0.08305440229623873,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v1",
+      "target_id": "Chache4",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "叉车",
+        "text_sha256": "5bed3fa8ff6e41b56639aeeb9a3be547b46368c11025db403525860e82ead737",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "13eef708fb598f17b2ed4dceaac936af527458b78db4d768176861a93aec9884"
+        },
+        "request_signature": "68fc21f4f11c9c5007290786f9a6fec263b5b3be62e6d858951a233f850e09f0"
+      },
+      "request_signature": "68fc21f4f11c9c5007290786f9a6fec263b5b3be62e6d858951a233f850e09f0",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v1/Chache4/prompt.txt",
+      "AP50": 0.10585081287656099,
+      "AP50_95": 0.08305440229623873,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v1",
+      "target_id": "Qianyinche",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "牵引车",
+        "text_sha256": "24b27587b8d6e625dc4a42f0d4293dab02ec488e022152c41b12325703138883",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "29e56e12fa218566786fc23b77ea79548898b3a4da1e40ebdd7f07fe02445139"
+        },
+        "request_signature": "11e3dae21a73227b61b26927abad9268e2dac1eb48d9aafe90360fe9bd7027c0"
+      },
+      "request_signature": "11e3dae21a73227b61b26927abad9268e2dac1eb48d9aafe90360fe9bd7027c0",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v1/Qianyinche/prompt.txt",
+      "AP50": 0.10585081287656099,
+      "AP50_95": 0.08305440229623873,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v2",
+      "target_id": "Chache1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "平衡重叉车",
+        "text_sha256": "33f7f2324e91b082bdfbb6c079e9208070d85a999cbe59f8dcd2f007a19c0b50",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "480f15e386e48c6cd9bb0edc34a00f4ce06a8d534cae326f4c29165e0de2035c"
+        },
+        "request_signature": "ecbff2bdda5d95180ddbc4c3b500ff5aa1588e53e669eea5f09d66b59bfbb003"
+      },
+      "request_signature": "ecbff2bdda5d95180ddbc4c3b500ff5aa1588e53e669eea5f09d66b59bfbb003",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v2/Chache1/prompt.txt",
+      "AP50": 0.10494307452271415,
+      "AP50_95": 0.08276610132787869,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v2",
+      "target_id": "Chache2",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "电动托盘搬运车",
+        "text_sha256": "3c7a2bdf03e9f24ede66a18a7478047bb6dc30d8915592d60436af237189df58",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "9becf1c2897a90893c884303befaf12b2bab04cd18bb9c82e739b602b9cc80d0"
+        },
+        "request_signature": "bee15792a208c598fb95ff3cf33ca1e64eb59d88f070405a1f49777ead8ea1bb"
+      },
+      "request_signature": "bee15792a208c598fb95ff3cf33ca1e64eb59d88f070405a1f49777ead8ea1bb",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v2/Chache2/prompt.txt",
+      "AP50": 0.10494307452271415,
+      "AP50_95": 0.08276610132787869,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v2",
+      "target_id": "Chache3",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "站驾式堆高车",
+        "text_sha256": "95f3766e0cc3e32b71576cb0921986e53d188c69b8e99317131e266058a394a2",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "30d3e47b56c02e3b5542b66e5ee8382455c7e07eba98a55260803db7048f5a0d"
+        },
+        "request_signature": "20a9cd51b94a216c3a38bc6ea3fd7a916fa28eeb3e36aa78c6805bfb82ad9f71"
+      },
+      "request_signature": "20a9cd51b94a216c3a38bc6ea3fd7a916fa28eeb3e36aa78c6805bfb82ad9f71",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v2/Chache3/prompt.txt",
+      "AP50": 0.10494307452271415,
+      "AP50_95": 0.08276610132787869,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v2",
+      "target_id": "Chache4",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "带属具的叉车",
+        "text_sha256": "cff654f7fd8cebcae984705c619574419d7c1dec9ec5b95d7262893627be3b3a",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "bb63c6181dc77c95cc75e9bccb2218a91a7c8ec4a5ac7c12548850408d29befe"
+        },
+        "request_signature": "39fe4966cae7e14481a0d337447d23126ce1eccee0fe603f0d40d82f780c55fc"
+      },
+      "request_signature": "39fe4966cae7e14481a0d337447d23126ce1eccee0fe603f0d40d82f780c55fc",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v2/Chache4/prompt.txt",
+      "AP50": 0.10494307452271415,
+      "AP50_95": 0.08276610132787869,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v2",
+      "target_id": "Qianyinche",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "电动牵引车",
+        "text_sha256": "864f8a0ec3b44b95157d4757da02f5eb9214a912a3396338460b98d161dd8ea2",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "662ed2fb3c9738209117ffb1c9ebf4603813d6a1e44157a241d928b507284c41"
+        },
+        "request_signature": "3f314147bdc5b93d3ffcf9ecea43b359b083160384e92150d14d7c56709b7664"
+      },
+      "request_signature": "3f314147bdc5b93d3ffcf9ecea43b359b083160384e92150d14d7c56709b7664",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v2/Qianyinche/prompt.txt",
+      "AP50": 0.10494307452271415,
+      "AP50_95": 0.08276610132787869,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v3",
+      "target_id": "Chache1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "有护顶架和普通货叉的座驾叉车",
+        "text_sha256": "efe46512996bf1ec2b8913b05556007a0e6aba7af80efaaed366c862a2d680a8",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "fbf214320eb6467c92f0d2e0a80512a5f3290684ec1e5ecd1bd83599371808ae"
+        },
+        "request_signature": "03a1987c9d7fd0bafc67e4081e46f6f7999c6f08362911aef2598ddb8f9f7a7e"
+      },
+      "request_signature": "03a1987c9d7fd0bafc67e4081e46f6f7999c6f08362911aef2598ddb8f9f7a7e",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v3/Chache1/prompt.txt",
+      "AP50": 0.09279446617916715,
+      "AP50_95": 0.07145866919013207,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v3",
+      "target_id": "Chache2",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "无门架的低位双叉搬运车",
+        "text_sha256": "198adb68a9cb2ce60f3218a0dd996abb6747bc61d433afdaf727ed7ada6a861a",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "4bb83a17a6b359ecbde8538a0bd4f37d6bdf8c13194662217d8b5bb2d8d1b038"
+        },
+        "request_signature": "87b6cfa6320c69fd44250d72bdb15a02b232e2bcf017dc4ce7b31729740bf666"
+      },
+      "request_signature": "87b6cfa6320c69fd44250d72bdb15a02b232e2bcf017dc4ce7b31729740bf666",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v3/Chache2/prompt.txt",
+      "AP50": 0.09279446617916715,
+      "AP50_95": 0.07145866919013207,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v3",
+      "target_id": "Chache3",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "有高门架的站驾式堆高车",
+        "text_sha256": "12a4965f7a3213032bb001f9d6ac8f24080ce0f071b1ea59e5138e36b8e07fb6",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "1a2fb7b50a3a76d592481b7fe4765355739f205810e28588dd4731671737c3ae"
+        },
+        "request_signature": "a015c2b74fe4f53b3acc7273ac5fa395ffabf8e334dc3e94d58caa79f43eb141"
+      },
+      "request_signature": "a015c2b74fe4f53b3acc7273ac5fa395ffabf8e334dc3e94d58caa79f43eb141",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v3/Chache3/prompt.txt",
+      "AP50": 0.09279446617916715,
+      "AP50_95": 0.07145866919013207,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v3",
+      "target_id": "Chache4",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "装有黄色大型属具的叉车",
+        "text_sha256": "46f5eaca090181a1a354685df1a7339c5f3ee1e366ed1e6a42686bbb8351f48f",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "7859ab6976e801d697a203373a0b2cd979c73b70fd9040cc0366fc9c6e0d6313"
+        },
+        "request_signature": "c2177826748f52ada90047393bf0d1954c3e56a53690746fda0ba25561453269"
+      },
+      "request_signature": "c2177826748f52ada90047393bf0d1954c3e56a53690746fda0ba25561453269",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v3/Chache4/prompt.txt",
+      "AP50": 0.09279446617916715,
+      "AP50_95": 0.07145866919013207,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v3",
+      "target_id": "Qianyinche",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "没有门架和货叉的座驾牵引车",
+        "text_sha256": "1e1a10c311165fd694129d5f2137b5c957c2cf673ad98f2cedd05531a8951c2a",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "fbde0422d69885eb726a55211e0f61df3cdde9bff4829834b5f5795260244aea"
+        },
+        "request_signature": "70e94e51c35327b7bc78ae8a3e7aca88d0b2d077a9b07dc768187017e8de4e63"
+      },
+      "request_signature": "70e94e51c35327b7bc78ae8a3e7aca88d0b2d077a9b07dc768187017e8de4e63",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v3/Qianyinche/prompt.txt",
+      "AP50": 0.09279446617916715,
+      "AP50_95": 0.07145866919013207,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v4",
+      "target_id": "Chache1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "普通座驾叉车，驾驶位上方有护顶架，驾驶员坐着，前方有高门架和普通成对细长货叉；车身多为绿色或红色。",
+        "text_sha256": "419432b6ebdf416c6ca82cce6f08363d1345243ad565ee21810a277d2695a9d5",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "d0df9bd2126503c38abaee32f3e755152297d2e7098a0eb1e522c92bec9eecf6"
+        },
+        "request_signature": "42594122e417e4322321a10b529b1a52d6b44b8726c11dcfb19a78e936e84d80"
+      },
+      "request_signature": "42594122e417e4322321a10b529b1a52d6b44b8726c11dcfb19a78e936e84d80",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v4/Chache1/prompt.txt",
+      "AP50": 0.03788500707874394,
+      "AP50_95": 0.028755161519865485,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v4",
+      "target_id": "Chache2",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "低位搬运车，车体小而低，驾驶员站着，前方伸出贴近地面的长双叉，无高起升门架和护顶架。",
+        "text_sha256": "b38e72faddaf462bd819143d24bc1af80f816ca8fd4ee8a0b96b09314118bcf1",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "568c01b979f410ee6160e63bbd0a1715d8bb45187c7a5d09c8043e8f084ecca3"
+        },
+        "request_signature": "93aa65a5b783dcea29f92fe831a9f7d47500853a30ce92098181244f63cb1f8e"
+      },
+      "request_signature": "93aa65a5b783dcea29f92fe831a9f7d47500853a30ce92098181244f63cb1f8e",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v4/Chache2/prompt.txt",
+      "AP50": 0.03788500707874394,
+      "AP50_95": 0.028755161519865485,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v4",
+      "target_id": "Chache3",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "紧凑起重机车，车体较小，驾驶员站着，前方有明显竖直高门架及下部货叉，无驾驶位护顶架。",
+        "text_sha256": "d302c6d86231383600e372c615b079ccf248e80738c8981b371c05cc5f062ba7",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "ee46d3900f200e0115b6d668b55ee5378d45c45d9cdde241b89ec95cb7a4b1a5"
+        },
+        "request_signature": "496e6588ab97bd4acbaf02ce2f05c936ef8b04da4442bbbdff9cfe04e8b3525a"
+      },
+      "request_signature": "496e6588ab97bd4acbaf02ce2f05c936ef8b04da4442bbbdff9cfe04e8b3525a",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v4/Chache3/prompt.txt",
+      "AP50": 0.03788500707874394,
+      "AP50_95": 0.028755161519865485,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v4",
+      "target_id": "Chache4",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "带大型专用属具的座驾叉车，驾驶员坐着，带护顶架和粗壮门架，前端装有醒目的黄色宽大搬运属具；车身通常为橙色。",
+        "text_sha256": "7e1f71e802248fff3e418b6901b01af3c979c8837a66fb79b1dc98946f3ad598",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "5e804f053092f342c1f47a7a7059d7dfa219eb68668a41686a918ac68eacdb00"
+        },
+        "request_signature": "f341ecbd0dd2a20d498c433b05557b40dc5f456af47df06f85ecc4dde51260fd"
+      },
+      "request_signature": "f341ecbd0dd2a20d498c433b05557b40dc5f456af47df06f85ecc4dde51260fd",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v4/Chache4/prompt.txt",
+      "AP50": 0.03788500707874394,
+      "AP50_95": 0.028755161519865485,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "grounding-dino-base_0shot_prompt_v4",
+      "target_id": "Qianyinche",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "groundingdino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+        "kind": "text",
+        "text": "单座位牵引车，车体低矮紧凑、外形圆润，带座椅和靠背，驾驶员坐着，无起升门架和成对货叉；车身通常为绿色。",
+        "text_sha256": "31f6e7e6dcd616bd06c9de506e633cbaadea692cc1914167d13df4914a500309",
+        "text_source": "groundingdino.text_prompt",
+        "references": null,
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "ovd_text",
+          "counts": {
+            "reference_examples": 0,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 0,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "224927b332123e480324729d3276ea2436998fadb0e0fe401934464e23f8bb47"
+        },
+        "request_signature": "3ec6d4ee19ccd8473bb4ca681acfcee0d01a383a835a3dfc76657fd6cdfe2a7c"
+      },
+      "request_signature": "3ec6d4ee19ccd8473bb4ca681acfcee0d01a383a835a3dfc76657fd6cdfe2a7c",
+      "prompt_file": "grounding-dino-base_0shot_prompt_v4/Qianyinche/prompt.txt",
+      "AP50": 0.03788500707874394,
+      "AP50_95": 0.028755161519865485,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    }
+  ]
+}

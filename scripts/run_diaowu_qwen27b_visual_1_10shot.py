@@ -19,11 +19,11 @@ from industrial_fewshot.runtime import run_async
 from run_diaowu_qwen27b_all_5shot import verify
 
 CONFIG = ROOT / 'configs/specific/diaowu_qwen27b_visual_1_10shot.yaml'
-RUNTIME = ROOT / 'outputs/runtime/diaowu_qwen27b_visual_1_10shot'
+RUNTIME = ROOT / 'outputs/_shared/runtime/diaowu_qwen27b_visual_1_10shot'
 STATE = RUNTIME / 'status.json'
 STOP = RUNTIME / 'STOP'
 DATASET = '470b98531e4a34810e7ee42bf250e39c97480e42427c3d84152e29e4d368f3fc'
-BASELINE_STATE = ROOT / 'outputs/runtime/diaowu_qwen27b_all_5shot/status.json'
+BASELINE_STATE = ROOT / 'outputs/_shared/runtime/diaowu_qwen27b_all_5shot/status.json'
 
 
 def now():

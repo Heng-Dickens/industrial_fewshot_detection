@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "migrated_artifact_groups": 86,
+  "legacy_locations_resolved": 94,
+  "namespace_checks": [
+    {
+      "backend": "yoloe",
+      "path": "outputs/YOLOE/experiments/chache_val300"
+    },
+    {
+      "backend": "yoloe_text",
+      "path": "outputs/YOLOE/experiments/chache_val300/文字提示_v1"
+    },
+    {
+      "backend": "pet_dino",
+      "path": "outputs/PET-DINO/experiments/chache_val300"
+    },
+    {
+      "backend": "wedetect",
+      "path": "outputs/WeDetect/experiments/chache_val300"
+    },
+    {
+      "backend": "groundingdino",
+      "path": "outputs/GroundingDINO/experiments/chache_val300"
+    },
+    {
+      "backend": "generic",
+      "path": "outputs/Qwen/experiments/chache_val300/MLLM提示_v3"
+    },
+    {
+      "backend": "yolo_onnx",
+      "path": "outputs/JSTY-YOLO/experiments/chache_val300/监督检测"
+    }
+  ],
+  "paired_prediction_integrity": [
+    {
+      "dataset": "chache_val100",
+      "status": "passed",
+      "source_sha256": "adc640c20306ba49b9b9a4ed24e8919f67449a8add83cf1a172c42ff4c57cf5d"
+    },
+    {
+      "dataset": "chache_val300",
+      "status": "passed",
+      "source_sha256": "5bfd43384cfb1814a2a3272314401da10ecab04f4c153d4e3d2d4cab127da733"
+    },
+    {
+      "dataset": "diaowu_val100",
+      "status": "passed",
+      "source_sha256": "1354912c4f3a976fb589dc0401a18a87dbef759ce1f60f0605a586d7a8b218f0"
+    },
+    {
+      "dataset": "diaowu_val300",
+      "status": "passed",
+      "source_sha256": "984e361e7dd78b45f4f80deb82c06f7008807de6b48518ee93194c551ca958cf"
+    }
+  ],
+  "syntax_checked_files": 130,
+  "experiment_rows": 150,
+  "removed_directories": [
+    "examples",
+    "tests",
+    "outputs/runs",
+    "outputs/comparisons",
+    "outputs/finetuning"
+  ],
+  "note": "No training or inference invoked; original prediction/cohort and prompt hashes verified. All artifact moves verified inode/size/mtime before documentation edits."
+}

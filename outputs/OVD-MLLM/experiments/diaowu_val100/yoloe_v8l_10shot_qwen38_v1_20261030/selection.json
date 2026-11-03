@@ -1,0 +1,12 @@
+{
+  "threshold": 0.01,
+  "limit": 500,
+  "candidates": 1834,
+  "recall50": 0.92,
+  "recall85": 0.41333333333333333,
+  "box20_coverage": 0.7733333333333333,
+  "lost_recall50": 0.02666666666666667,
+  "selection_policy": "user_fixed_floor",
+  "criterion": "User fixed score>=0.01; no additional global truncation beyond source 100/class (500 total). Dev recall loss is reported, not optimized away.",
+  "source_sha256": "1354912c4f3a976fb589dc0401a18a87dbef759ce1f60f0605a586d7a8b218f0"
+}

@@ -1,0 +1,55 @@
+
+diaowu_val300
+【提示词记录】
+MLLM 文字 prompt：完整内容见 prompt.txt，复核模板见 review_template.txt。
+输入快照：prompt.json；具体记录位于本次结果目录。
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.476
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.580
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.524
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.476
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.478
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.509
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.509
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.509
+
++----------------+------+--------+------+
+| category       | AP   | Recall | F2   |
++----------------+------+--------+------+
+| hanging object | 58.0 | 59.7   | 64.2 |
++----------------+------+--------+------+
+| mean           | 58.0 | 59.7   | 64.2 |
++----------------+------+--------+------+
+COCO categories: AP50 / Recall50; F2 from TP/FP at IoU=0.50, maxDets=100, all scores.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.5, maxDets=100
++----------------+-----+------+-----+-----------+--------+------+-------+
+| class          | tps | dets | gts | precision | recall | F2   | error |
++----------------+-----+------+-----+-----------+--------+------+-------+
+| hanging object | 195 | 205  | 350 | 95.1      | 55.7   | 60.7 | 0.05  |
++----------------+-----+------+-----+-----------+--------+------+-------+
+| mean           | 195 | 205  | 350 | 95.1      | 55.7   | 60.7 | 0.05  |
++----------------+-----+------+-----+-----------+--------+------+-------+
+TP=195 | FP=10 | FN=155
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.7, maxDets=100
++----------------+-----+------+-----+-----------+--------+------+-------+
+| class          | tps | dets | gts | precision | recall | F2   | error |
++----------------+-----+------+-----+-----------+--------+------+-------+
+| hanging object | 184 | 192  | 350 | 95.8      | 52.6   | 57.8 | 0.04  |
++----------------+-----+------+-----+-----------+--------+------+-------+
+| mean           | 184 | 192  | 350 | 95.8      | 52.6   | 57.8 | 0.04  |
++----------------+-----+------+-----+-----------+--------+------+-------+
+TP=184 | FP=8 | FN=166
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+Score thresholds filter output boxes and P/R/F2 counts; COCO AP/AR above uses all saved scores.
+Status: complete | images: 300 | failed requests: 0 | image accuracy: 48.7% | proxy loss: 0.5848
+
+Results: /home/yuheng/Work/industrial_fewshot_detection/outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_head_10shot_qwen27b_1shot_20261103/deduplicated

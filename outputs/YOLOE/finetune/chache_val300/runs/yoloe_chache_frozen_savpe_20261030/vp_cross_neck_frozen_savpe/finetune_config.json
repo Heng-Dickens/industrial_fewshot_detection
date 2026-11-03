@@ -1,0 +1,110 @@
+{
+  "paths": {
+    "source_dir": "/home/yuheng/Work/industrial_fewshot_detection/third_party/yoloe",
+    "weights": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/yoloe-v8l-seg.pt",
+    "text_encoder": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/mobileclip_blt.pt",
+    "data": "/home/yuheng/Work/industrial_fewshot_detection/data/finetune/chache_10shot_val100/dataset.yaml",
+    "project": "/home/yuheng/Work/industrial_fewshot_detection/outputs/finetuning/chache_yoloe/yoloe_chache_frozen_savpe_20261030"
+  },
+  "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/finetuning/chache_yoloe/yoloe_chache_frozen_savpe_20261030/vp_cross_neck_frozen_savpe",
+  "method": "yoloe-vp",
+  "strategy": "neck",
+  "scene": "chache",
+  "shot_per_class": 10,
+  "dev_images": "data/raw/chache_val100/images",
+  "dev_manifest": "data/raw/chache_val100/manifest.json",
+  "test_manifest": "data/raw/chache_val300/manifest.json",
+  "class_names": [
+    "Chache1",
+    "Chache2",
+    "Chache3",
+    "Chache4",
+    "Qianyinche"
+  ],
+  "text_prompts": [
+    "a seated forklift with an overhead guard, a tall mast and two narrow forks",
+    "a low pallet truck with two long forks near the ground, without a tall mast or overhead guard",
+    "a compact stand-on stacker with a tall vertical mast and forks, without an overhead guard",
+    "a seated forklift with an overhead guard and a large wide yellow load handling attachment",
+    "a small seated industrial tow tractor without a lifting mast or forks"
+  ],
+  "device": "0",
+  "cuda_visible_devices": "3",
+  "batch": 2,
+  "training": {
+    "epochs": 60,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 1e-05,
+    "lrf": 0.1,
+    "weight_decay": 0.0005,
+    "patience": 12,
+    "workers": 0,
+    "seed": 0,
+    "amp": false,
+    "half": false,
+    "warmup_epochs": 0.0,
+    "mosaic": 0.0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "close_mosaic": 0,
+    "degrees": 0.0,
+    "translate": 0.05,
+    "scale": 0.1,
+    "fliplr": 0.0,
+    "flipud": 0.0,
+    "cache": false,
+    "deterministic": true,
+    "val_interval": 1,
+    "plots": false,
+    "save_period": -1
+  },
+  "adaptation": {
+    "protocol": "cross_image",
+    "scope": "neck",
+    "loss": "detection",
+    "freeze_savpe_bn_stats": true,
+    "freeze_savpe": true
+  },
+  "execute": true,
+  "freeze": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "22.savpe"
+  ],
+  "source": {
+    "repository": "https://github.com/THU-MIG/yoloe",
+    "revision": "40cd606cabdbe2b566d6f14a6b162c89206e9a1b",
+    "archive_sha256": "bec9d01917b2b96764b84c1338a4e72604e3890acecf9005ebc22c485d9951db",
+    "local_modifications": []
+  },
+  "input_sha256": {
+    "weights": "14e9c146f7f7efa0bfea8c5f82952c9f95fb1f9c3bf0f18b3727b76624f9d746",
+    "data": "1c86b25f5b5531643af0ba07f0ff5722ede3eafc491e653a2c0c62f205c64133"
+  },
+  "preparation_sha256": "89081a9b0d44455747d83577c6a108546c82840da49ab7595d5c0702dcd0ef04",
+  "dev_manifest_sha256": "4d46d8f22fcfbdc0d7326407279a6841f5fe706190f4925246d011494b7ba053",
+  "test_manifest_sha256": "5785e116b57c5f02185d0fd2fa6bdb5b7cd1ffc4af04cd736294c2bebe23c04d",
+  "nbs": 2,
+  "status": "completed",
+  "note": "New FP32 warm start; not resume. Independent dev for checkpoint selection.",
+  "visual_training_protocol": "cross_image bbox-conditioned training; cross-image dev validation with training-only support prototypes; scope=neck, loss=detection",
+  "trainable_parameter_count": 25794502,
+  "frozen_savpe_verification": {
+    "savpe_initial_sha256": "ac21f6c1e85e01d4e7427c15ea7fccfcca84c372f690cc37a7d731ff82fc20f0",
+    "monitored_parameter": "model.12.cv1.conv.weight",
+    "nonzero_gradient_batches": 1500,
+    "savpe_final_sha256": "ac21f6c1e85e01d4e7427c15ea7fccfcca84c372f690cc37a7d731ff82fc20f0",
+    "savpe_ema_sha256": "ac21f6c1e85e01d4e7427c15ea7fccfcca84c372f690cc37a7d731ff82fc20f0",
+    "savpe_unchanged": true,
+    "other_parameter_updated": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "scene": "chache",
+  "split": "val300",
+  "images": 300,
+  "predictions": 122211,
+  "candidate_floor": 0.001,
+  "reference_shot_per_class": 10,
+  "labels": [
+    "Chache1",
+    "Chache2",
+    "Chache3",
+    "Chache4",
+    "Qianyinche"
+  ],
+  "stamp": "yoloe_v8l_10shot_qwen38_v1_20261030"
+}

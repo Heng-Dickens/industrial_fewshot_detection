@@ -1,0 +1,47 @@
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.440
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.717
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.517
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.559
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.620
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.637
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.637
+
++----------------+------+--------+-----+
+| category       | AP   | Recall | F2  |
++----------------+------+--------+-----+
+| hanging object | 71.7 | 94.7   | 3.5 |
++----------------+------+--------+-----+
+| mean           | 71.7 | 94.7   | 3.5 |
++----------------+------+--------+-----+
+COCO categories: AP50 / Recall50; F2 from TP/FP at IoU=0.50, maxDets=100, all scores.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.5, maxDets=100
++----------------+-----+------+-----+-----------+--------+------+-------+
+| class          | tps | dets | gts | precision | recall | F2   | error |
++----------------+-----+------+-----+-----------+--------+------+-------+
+| hanging object | 55  | 72   | 75  | 76.4      | 73.3   | 73.9 | 0.24  |
++----------------+-----+------+-----+-----------+--------+------+-------+
+| mean           | 55  | 72   | 75  | 76.4      | 73.3   | 73.9 | 0.24  |
++----------------+-----+------+-----+-----------+--------+------+-------+
+TP=55 | FP=17 | FN=20
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.7, maxDets=100
++----------------+-----+------+-----+-----------+--------+------+-------+
+| class          | tps | dets | gts | precision | recall | F2   | error |
++----------------+-----+------+-----+-----------+--------+------+-------+
+| hanging object | 49  | 59   | 75  | 83.1      | 65.3   | 68.2 | 0.17  |
++----------------+-----+------+-----+-----------+--------+------+-------+
+| mean           | 49  | 59   | 75  | 83.1      | 65.3   | 68.2 | 0.17  |
++----------------+-----+------+-----+-----------+--------+------+-------+
+TP=49 | FP=10 | FN=26
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+Score thresholds filter output boxes and P/R/F2 counts; COCO AP/AR above uses all saved scores.
+Status: complete | images: 100 | failed requests: 0 | image accuracy: 66.0% | proxy loss: 0.7060

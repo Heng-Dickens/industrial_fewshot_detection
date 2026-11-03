@@ -1,0 +1,14 @@
+{
+  "identity": "5dcfea801b71c21dacdc998f1a45eb556c372947c8b06bce6d4dbf6d9c54bedc",
+  "family": "视觉提示",
+  "description": "本次实际输入，完整文字及复核模板见各运行目录的 prompt.txt / review_template.txt。",
+  "prompts": [
+    {
+      "text": null,
+      "review_template": ""
+    }
+  ],
+  "text_sha256": [
+    null
+  ]
+}

@@ -118,7 +118,7 @@ def main(argv=None):
     parser.add_argument('--load-model',action='store_true')
     args = parser.parse_args(argv)
     os.environ.update(HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',YOLO_AUTOINSTALL='false',
-                      YOLO_CONFIG_DIR=str(ROOT/'outputs/runtime/yoloe_settings'))
+                      YOLO_CONFIG_DIR=str(ROOT/'outputs/_shared/runtime/yoloe_settings'))
     print(f'Checking {args.backend}, Python: {sys.executable}',flush=True)
     errors = []
     for path in asset_paths(args.backend,args.mode,args.variant,args.model):

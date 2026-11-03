@@ -1,0 +1,12 @@
+# 吊物300张：Flash的O+B/O+C各1/5/10shot，无负例，共6组。
+# 提示、逐框理由、完整性复核、评估阈值均沿用现有27B吊物实验。
+extends: diaowu_qwen27b_prompt_5shot.yaml
+model: qwen3.8-flash
+proxy_request_model: claude-sonnet-4-6
+concurrency: 2
+cache_version: qwenflash_val300_visual_supplement_v1
+experiment_suite:
+  include_prompt_only: false
+  positive_counts: [1, 5, 10]
+  positive_variants: [O+B, O+C]
+  negative_variants: [false]

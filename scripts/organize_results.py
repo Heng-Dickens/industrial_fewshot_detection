@@ -17,7 +17,7 @@ from industrial_fewshot.prompt_records import recover_prompt, refresh_prompt_ind
 from industrial_fewshot.result_layout import namespace_for_report
 from industrial_fewshot.run_discovery import saved_runs
 
-RUNS = ROOT / 'outputs/runs'
+RUNS = ROOT / 'outputs'
 BACKUP = ROOT / '.planning/result_layout_backup'
 MANIFEST = ROOT / 'outputs/result_layout_migration.json'
 
@@ -129,14 +129,14 @@ def organize():
         directory = Path(old)
         if (not (directory / 'metrics.json').is_file() and directory.parent in units
                 and report['image_count'] == 300):
-            archive = ROOT / 'outputs/archive/interrupted_runs/diaowu_val300' / directory.parent.name / directory.name
+            archive = ROOT / 'outputs/_shared/archive/history/interrupted_runs/diaowu_val300' / directory.parent.name / directory.name
             checked(archive)
             if archive.exists():
                 raise ValueError(f'Archive destination exists: {archive}')
             interrupted[old] = str(archive)
     # Keep the result root dedicated to datasets; caches stay hidden in place.
     auxiliary = {}
-    for name, destination in {'legacy': ROOT / 'outputs/archive/runs_legacy', 'runtime': ROOT / 'outputs/runtime'}.items():
+    for name, destination in {'legacy': ROOT / 'outputs/_shared/archive/history/runs_legacy', 'runtime': ROOT / 'outputs/_shared/runtime'}.items():
         source = RUNS / name
         if source.exists():
             checked(source, RUNS)
@@ -254,6 +254,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--apply', action='store_true', required=True)
     parser.parse_args()
+    if (ROOT / 'outputs/_shared/layout_migration.json').is_file():
+        from summarize_results import refresh
+        refresh()
+        return
     organize()
 
 

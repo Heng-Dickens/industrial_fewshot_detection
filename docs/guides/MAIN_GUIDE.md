@@ -76,7 +76,7 @@ python main.py --config configs/specific/workshop_b_forklift.json
 }
 ```
 
-例如输入 `D:\Data\江苏通用\训练数据\模具吊物喷油\模具车间1\00000`，未指定输出时根目录为同级的 `00000_annotations`，其中按模型与 shot 保存完整结果。若输出到项目 `outputs/runs`，会再按数据集与提示词版本分组，见 [结果目录说明](RESULT_LAYOUT.md)：
+例如输入 `D:\Data\江苏通用\训练数据\模具吊物喷油\模具车间1\00000`，未指定输出时根目录为同级的 `00000_annotations`，其中按模型与 shot 保存完整结果。若输出到项目 `outputs`，会按方法、数据集与提示词版本分组，见 [结果目录说明](RESULT_LAYOUT.md)：
 
 ```text
 <实际输出根目录>/<模型与shot>/
@@ -122,7 +122,7 @@ python main.py --config configs/specific/diaowu_annotation_config_2.json --mode 
 
 ```powershell
 python -m pip install numpy scipy
-python main.py --evaluate-only "outputs/archive/runs_legacy/某个场景/原来的运行目录"
+python main.py --evaluate-only "outputs/_shared/archive/history/runs_legacy/某个场景/原来的运行目录"
 ```
 
 该命令只读取 `run.json`、`records.jsonl`、原始图片尺寸与真值 JSON，写出同一运行目录里的 `metrics.json` 和 `summary.json`。它不创建模型客户端、不读取参考图、不发起推理，也不改写 `records.jsonl` 或预测 JSON。当前配置里的模型、图片目录或提示词即使改了，也不会触发重新推理：恢复使用原运行记录的图片目录与类别。
@@ -130,7 +130,7 @@ python main.py --evaluate-only "outputs/archive/runs_legacy/某个场景/原来�
 新运行会保存评估参数和真值根目录。对于早期只有 `run.json`/`records.jsonl` 的运行，建议显式提供原场景配置，以读取其评估参数和可选的独立真值目录：
 
 ```powershell
-python main.py --config configs/specific/diaowu_annotation_config_2.json --evaluate-only "outputs/archive/runs_legacy/某个场景/原来的运行目录"
+python main.py --config configs/specific/diaowu_annotation_config_2.json --evaluate-only "outputs/_shared/archive/history/runs_legacy/某个场景/原来的运行目录"
 ```
 
 补算时，配置中显式设置的 `missing_ground_truth` 会覆盖原运行保存的策略；例如改为 negative 后，可直接把已有完整预测中的无 JSON 图片纳入负样本评估，不需要重新推理。

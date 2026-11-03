@@ -1,0 +1,8 @@
+# Preserve v1 and completeness review; 20shot uses an isolated nested reference set.
+extends: diaowu_qwen27b_prompt_5shot.yaml
+concurrency: 2
+experiment_suite:
+  positive_counts: [1, 20]
+  positive_variants: [O+B+J]
+  include_prompt_only: false
+  negative_variants: [false]

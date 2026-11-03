@@ -1,0 +1,8 @@
+输入类型：PET-DINO 视觉提示，无文字 prompt。
+模型使用参考原图及其目标框生成视觉原型；本文件仅说明输入方式，不作为模型文字输入。
+参考样本数：5
+- positive/images/0000090.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0000090.jpg
+- positive/images/0000189.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0000189.jpg
+- positive/images/0001320.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0001320.jpg
+- positive/images/0001352.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0001352.jpg
+- positive/images/0003939.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0003939.jpg

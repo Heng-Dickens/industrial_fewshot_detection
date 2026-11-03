@@ -1,0 +1,8 @@
+{
+  "dataset": "chache_val300",
+  "shot_per_class": 1,
+  "seed": 0,
+  "protocol": "PET-DINO Swin-T Visual-G, seed=0, frozen nested supports per class; average the official per-support visual embeddings. Each class independently queries all 300 images, including negatives. Merge class-labelled predictions without cross-class NMS. No query GT is used for support encoding or class routing. No training.",
+  "support_manifest": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/pet_dino_shots_20261027/supports/chache_val300/Chache3/1shot/seed_0.json",
+  "runtime": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/pet_dino_shots_20261027"
+}

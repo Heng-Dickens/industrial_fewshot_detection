@@ -1,0 +1,9 @@
+{
+  "identity": "470b98531e4a34810e7ee42bf250e39c97480e42427c3d84152e29e4d368f3fc",
+  "name": "diaowu_val300",
+  "image_count": 300,
+  "image_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\diaowu_val300\\images",
+  "ground_truth_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\diaowu_val300\\images",
+  "dataset_manifest": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\diaowu_val300\\manifest.json",
+  "dataset_sha256": "470b98531e4a34810e7ee42bf250e39c97480e42427c3d84152e29e4d368f3fc"
+}

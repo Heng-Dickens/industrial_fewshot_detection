@@ -1,0 +1,8 @@
+# Model names and per-request routing aliases are set by the batch driver.
+# All other settings match the completed 27B 10shot O+C+B baseline.
+extends: chache_qwen27b_input_supplement.yaml
+experiment_suite:
+  positive_counts: [10]
+  positive_variants: [O+C+B]
+  include_prompt_only: false
+  negative_variants: [false]

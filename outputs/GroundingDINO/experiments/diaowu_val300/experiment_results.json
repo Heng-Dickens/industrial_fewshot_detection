@@ -1,0 +1,89 @@
+{
+  "protocol": "Frozen 300-image cohorts. YOLOE uses exactly the PET-DINO 1/5/10-shot supports, boxes and seed=0. GroundingDINO uses verbatim WeDetect Chinese prompts. Every class queries every image; class-labelled predictions are merged without cross-class NMS. Candidate floor=0.001, NMS IoU=0.7, maxDets=100/class, evaluation IoU=0.5 and score=0.5. Model-native preprocessing and feature aggregation are retained. Fresh inference; no training/API calls.",
+  "runs": [
+    {
+      "dataset": "diaowu_val300",
+      "method": "GroundingDINO",
+      "variant": "吊物",
+      "shot_per_class": 0,
+      "mAP50": 0.004874514902546681,
+      "mAP50_95": 0.0025336452560228632,
+      "precision": 0.0,
+      "recall": 0.0,
+      "baseline_AP50": 0.011711988700112023,
+      "baseline_AP50_95": 0.008574511623468036,
+      "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/GroundingDINO/grounding-dino-base_0shot_prompt_v1",
+      "baseline_run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/文字提示_v1/wedetect_base_0shot",
+      "failed": 0,
+      "per_class": {
+        "hanging object": {
+          "ground_truth_count": 350,
+          "tp": 0,
+          "fp": 0,
+          "fn": 350,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "AP50": 0.004874514902546681,
+          "AP75": 0.0027536306320551777,
+          "AP50_95": 0.0025336452560228632,
+          "ap_by_iou": {
+            "0.5": 0.004874514902546681,
+            "0.55": 0.0045651744812947375,
+            "0.6": 0.004159101333580851,
+            "0.65": 0.0037854992734730804,
+            "0.7": 0.003392055632287484,
+            "0.75": 0.0027536306320551777,
+            "0.8": 0.0012751649897850207,
+            "0.85": 0.0003694454703877954,
+            "0.9": 0.00016008231111436824,
+            "0.95": 1.7835337034363936e-06
+          },
+          "f2": 0.0
+        }
+      }
+    },
+    {
+      "dataset": "diaowu_val300",
+      "method": "GroundingDINO",
+      "variant": "被吊起的圆筒吊物",
+      "shot_per_class": 0,
+      "mAP50": 0.009969126906811973,
+      "mAP50_95": 0.005181797481237961,
+      "precision": 0.0,
+      "recall": 0.0,
+      "baseline_AP50": 0.0007072135785007071,
+      "baseline_AP50_95": 0.0005770943534105822,
+      "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/GroundingDINO/grounding-dino-base_0shot_prompt_v2",
+      "baseline_run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/文字提示_v2/wedetect_base_0shot",
+      "failed": 0,
+      "per_class": {
+        "hanging object": {
+          "ground_truth_count": 350,
+          "tp": 0,
+          "fp": 0,
+          "fn": 350,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "AP50": 0.009969126906811973,
+          "AP75": 0.005647964769746403,
+          "AP50_95": 0.005181797481237961,
+          "ap_by_iou": {
+            "0.5": 0.009969126906811973,
+            "0.55": 0.009450365398249843,
+            "0.6": 0.008509391511596413,
+            "0.65": 0.007449648316075244,
+            "0.7": 0.006694152950388633,
+            "0.75": 0.005647964769746403,
+            "0.8": 0.0027014242105613834,
+            "0.85": 0.0008327411262483775,
+            "0.9": 0.0005267525500206849,
+            "0.95": 3.640707268065277e-05
+          },
+          "f2": 0.0
+        }
+      }
+    }
+  ]
+}

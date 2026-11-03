@@ -23,9 +23,9 @@ CONFIG_FILE_ALIASES = {
 }
 MOVED_DIRECTORIES = {
     "config": "configs/specific", "prompts": "src/industrial_fewshot/prompts/templates",
-    "runs": "outputs/archive/runs_legacy",
-    "outputs/runs/legacy": "outputs/archive/runs_legacy",
-    "outputs/runs/runtime": "outputs/runtime",
+    "runs": "outputs/_shared/archive/history/runs_legacy",
+    "outputs/legacy": "outputs/_shared/archive/history/runs_legacy",
+    "outputs/_shared/runtime": "outputs/_shared/runtime",
     "data/DiaoWuexample_prepared": "data/references/diaowu",
     "data/DiaoGouexample": "data/references/diaogou",
     "data/Chacheexampledata": "data/references/chache/review",
@@ -45,11 +45,33 @@ MOVED_DIRECTORIES = {
 
 
 def resolve_location(path: Path) -> Path:
+    # Frozen manifests copied from Windows retain their original absolute paths.
+    # Rebase only an explicitly identifiable project path, then apply the same
+    # recorded layout migrations below. Dataset/support hashes remain unchanged.
+    raw = str(path)
+    if '\\' in raw or ':/' in raw:
+        normalized = '/'.join(part for part in raw.replace('\\', '/').split('/') if part)
+        for name in ('industrial_fewshot_detection', 'annotationtool'):
+            marker = '/' + name + '/'
+            if marker in normalized:
+                relative = normalized.rsplit(marker, 1)[1]
+                if relative.startswith(('data/', 'outputs/', 'configs/', 'src/')):
+                    candidate = (PROJECT_ROOT / relative).resolve()
+                    if not candidate.is_relative_to(PROJECT_ROOT):
+                        raise ValueError('Recorded project path escapes the project root.')
+                    path = candidate
+                    break
     path = path.expanduser().resolve()
     if PROJECT_ROOT != CACHE_ORIGIN_ROOT and path.is_relative_to(CACHE_ORIGIN_ROOT):
         path = PROJECT_ROOT / path.relative_to(CACHE_ORIGIN_ROOT)
     if path.exists():
         return path
+    manifest = PROJECT_ROOT / 'outputs/_shared/layout_migration.json'
+    if manifest.is_file():
+        for old, new in _output_moves(str(manifest), manifest.stat().st_mtime_ns):
+            original = Path(old)
+            if path == original or path.is_relative_to(original):
+                return (Path(new) / path.relative_to(original)).resolve()
     manifest = PROJECT_ROOT / 'outputs/result_layout_migration.json'
     if manifest.is_file():
         for old, new in _output_moves(str(manifest), manifest.stat().st_mtime_ns):

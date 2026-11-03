@@ -6,7 +6,7 @@
 
 统一入口为 `main.py --config ...`。YOLOE 读取当前整理好的参考集，默认使用与 VLM 相同的 **5 张正样本原图**及各自的 JSON 目标框，在其余图片上执行本地检测。`train` 表示检测并评估，`test` 表示只检测，均不更新模型权重。
 
-需要更新模型权重时，参见 [YOLOE叉车少样本检测微调样例](../examples/yoloe_finetune_chache/README.md)。样例单独提供固定支持集转换、独立开发验证集和FP32检测头微调入口，逐步说明各阶段的作用；默认只显示计划，必须显式指定执行开关才转换数据或开始训练。该样例尚未运行验证。
+需要更新模型权重时，参见 [微调任务导航](../outputs/YOLOE/finetune/README.md)：[叉车任务](../outputs/YOLOE/finetune/scripts/chache/README.md) 与 [吊物任务](../outputs/YOLOE/finetune/scripts/diaowu/README.md) 分别维护独立配置和入口，仅共享通用代码。两任务均支持固定检测头、SAVPE视觉提示编码器和YOLOv8-L预训练微调；默认只显示计划，显式执行开关才转换数据或训练，样例尚未运行验证。
 
 ## 目录与来源
 
@@ -30,7 +30,7 @@ tool/compare_detectors.py           已保存的 YOLOE/VLM 结果统一比较
 
 已在项目内建立 `.venv-yoloe`，继承本机 `D:\anaconda3\envs\yoloenv` 的 Python 3.10、CPU PyTorch 和 torchvision，新增依赖安装在该项目环境内。原有 yoloenv 的 ultralytics 安装保持原状。适配器在导入时明确选择 `third_party/yoloe`，防止误用其它项目或新版 PyPI ultralytics。
 
-当前本地已存在 `weights/yoloe/yoloe-v8s-seg.pt`，并已有 `outputs/runs/diaowu_99/视觉提示/yoloe-v8s-seg_5shot/` 检测记录。是否重新加载模型执行检测取决于实际推理参数和成功缓存；全部命中时仅导出记录并重新计算评估指标。
+当前本地已存在 `weights/yoloe/yoloe-v8s-seg.pt`，并已有 `outputs/YOLOE/experiments/diaowu_99/视觉提示/yoloe-v8s-seg_5shot/` 检测记录。是否重新加载模型执行检测取决于实际推理参数和成功缓存；全部命中时仅导出记录并重新计算评估指标。
 
 重新建立环境（当前机器已完成，无需重复）：
 
@@ -114,11 +114,11 @@ YOLOE 视觉接口接收图像及空间框/掩码，不将长篇自然语言规�
 
 输出在配置的结果根目录下按实际模型和 shot 数命名，重复运行追加 `_第2次` 等后缀；目录内直接保存与 VLM 相同格式的 `run.json`、`summary.json`、`records.jsonl`、`metrics.json` 和 `predictions/*.json`。保留 YOLOE 浮点像素坐标，不经 VLM 的 0~1000 整数坐标量化。`predictions/*.json` 只保留置信度不低于 `evaluation.score_threshold` 的框（供 LabelMe 人工查看的最终标注）；`records.jsonl` 与所有指标计算仍使用 conf=0.001 保留的全部候选，保证 AP 排名完整。
 
-当前1/5/10/25-shot实验按 `outputs/runs/<测试数据集>/视觉提示/<模型与shot>/` 保存，文字和联合模式归入对应 `文字提示_vN`，详见 [结果目录说明](guides/RESULT_LAYOUT.md)。模型目录内直接保存 `evaluation.txt`、`feedback/` 等结果，终端使用共同的COCO AP/AR和VOC统计格式。YOLOE的反馈记录框、分数并标明不支持自然语言理由，不会生成MLLM的逐框文字解释。旧YOLOE输出根中的缓存仍可读取。
+当前1/5/10/25-shot实验按 `outputs/<方法>/experiments/<测试数据集>/视觉提示/<模型与shot>/` 保存，文字和联合模式归入对应 `文字提示_vN`，详见 [结果目录说明](guides/RESULT_LAYOUT.md)。模型目录内直接保存 `evaluation.txt`、`feedback/` 等结果，终端使用共同的COCO AP/AR和VOC统计格式。YOLOE的反馈记录框、分数并标明不支持自然语言理由，不会生成MLLM的逐框文字解释。旧YOLOE输出根中的缓存仍可读取。
 
 重新运行相同输入自动复用成功结果；更换权重、源码、有效参考框/原图或检测参数会使对应缓存失效。只改评估阈值或真值时自动复用检测结果。失败不会被缓存为成功，下一次会重试。模型初始化/参考编码时间与逐图时间分别记录；缓存命中不计作新检测计时。
 
-`outputs/runs/.inference_cache/` 是按输入内容索引的成功检测缓存，内部散列名用于精确匹配。更早历史数据在 `outputs/archive/runs_legacy/`，Ultralytics运行设置在 `outputs/runtime/yoloe_settings/`。各数据集的模型目录内，`predictions/` 为逐图 LabelMe 标注，`feedback/` 为逐图框和分数，`records.jsonl` 为完整推理记录，`run.json` 为运行元数据，`summary.json` 为汇总，`metrics.json` 为结构化指标，`evaluation.txt` 为可读报告。MLLM在模型／shot下按参考材料分组；YOLOE单组实验直接保存这些文件。
+`outputs/_shared/cache/inference/` 是按输入内容索引的成功检测缓存，内部散列名用于精确匹配。更早历史数据在 `outputs/_shared/archive/history/runs_legacy/`，Ultralytics运行设置在 `outputs/_shared/runtime/yoloe_settings/`。各数据集的模型目录内，`predictions/` 为逐图 LabelMe 标注，`feedback/` 为逐图框和分数，`records.jsonl` 为完整推理记录，`run.json` 为运行元数据，`summary.json` 为汇总，`metrics.json` 为结构化指标，`evaluation.txt` 为可读报告。MLLM在模型／shot下按参考材料分组；YOLOE单组实验直接保存这些文件。
 
 ## 比较已有结果
 
@@ -127,7 +127,7 @@ YOLOE 视觉接口接收图像及空间框/掩码，不将长篇自然语言规�
   --yoloe-run "YOLOE的单次运行目录" `
   --vlm-run "VLM的ablation目录或单组运行目录" `
   --evaluation-config configs/common/diaowu_yoloe_config.json `
-  --output-dir outputs/comparisons/yoloe_vs_vlm
+  --output-dir outputs/<方法>/comparisons/fewshot/diaowu_val300/yoloe_vs_vlm_20261030
 ```
 
 可以多次传 `--vlm-run`。比较工具仅读取已有结果，核对逐图指纹，在同一套当前真值和阈值下重算所有方法的 Precision、Recall、F1、mAP50、mAP50_95、整图正确率、负样本误报/错误率和代理 loss。推理失败留在准确率分母中。输出 `detector_comparison.csv` 和 `detector_comparison.json`，另含模型、参考数、是否与 YOLOE 使用相同参考集、可用的历史逐图耗时。
@@ -137,3 +137,7 @@ YOLOE 视觉接口接收图像及空间框/掩码，不将长篇自然语言规�
 准确率比较优先检查 mAP、召回与负样本错误率。候选框保留阈值和最终评估阈值需要分开记录；相同数值的置信度不代表两种模型校准一致，可用已有结果在统一评估阈值下重复比较，阈值的选择应使用独立验证集。代理 loss 仅为当前工程评估值，不是两种模型的训练损失。
 
 本机 YOLOE 是 CPU 推理，当前 VLM 是远端服务；历史计时包括网络、预处理、复核/重试等各自开销，且旧记录可能没有时间。因此这些数据只能反映各自部署下的耗时，不能直接声称相同硬件的 FPS。实际优劣要等两边在同一测试集合上得到结果后再判断。
+
+## 微调后的SAVPE状态
+
+固定头融合微调会移除SAVPE；视觉提示微调在savpe/head/neck/full范围均保留并训练SAVPE。详见[机制、证据及逐实验分类](guides/YOLOE_FINETUNING_METHODS.md)，结果由[comparisons总索引](../outputs/README.md)进入。

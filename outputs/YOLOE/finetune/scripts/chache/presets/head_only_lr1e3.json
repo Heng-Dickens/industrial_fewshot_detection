@@ -1,0 +1,9 @@
+{
+  "extends": "../config.json",
+  "training": {
+    "epochs": 200,
+    "lr0": 0.001,
+    "patience": 30,
+    "val_interval": 1
+  }
+}

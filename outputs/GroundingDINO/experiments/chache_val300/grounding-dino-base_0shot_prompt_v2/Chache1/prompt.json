@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+  "kind": "text",
+  "text": "平衡重叉车",
+  "text_sha256": "33f7f2324e91b082bdfbb6c079e9208070d85a999cbe59f8dcd2f007a19c0b50",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "480f15e386e48c6cd9bb0edc34a00f4ce06a8d534cae326f4c29165e0de2035c"
+  },
+  "request_signature": "ecbff2bdda5d95180ddbc4c3b500ff5aa1588e53e669eea5f09d66b59bfbb003"
+}

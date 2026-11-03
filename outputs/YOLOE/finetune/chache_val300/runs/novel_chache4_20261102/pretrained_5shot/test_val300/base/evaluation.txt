@@ -1,0 +1,65 @@
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.144
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.257
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.120
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.270
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.142
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.271
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.486
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.545
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.623
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.547
+
++------------+------+--------+-----+
+| category   | AP   | Recall | F2  |
++------------+------+--------+-----+
+| Chache1    | 9.8  | 87.5   | 0.6 |
++------------+------+--------+-----+
+| Chache2    | 8.6  | 96.7   | 0.5 |
++------------+------+--------+-----+
+| Chache3    | 11.1 | 87.5   | 0.6 |
++------------+------+--------+-----+
+| Qianyinche | 73.1 | 100.0  | 1.5 |
++------------+------+--------+-----+
+| mean       | 25.7 | 92.9   | 0.8 |
++------------+------+--------+-----+
+COCO categories: AP50 / Recall50; F2 from TP/FP at IoU=0.50, maxDets=100, all scores.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.5, maxDets=100
++------------+-----+------+-----+-----------+--------+------+-------+
+| class      | tps | dets | gts | precision | recall | F2   | error |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache1    | 6   | 65   | 40  | 9.2       | 15.0   | 13.3 | 0.91  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache2    | 10  | 77   | 30  | 13.0      | 33.3   | 25.4 | 0.87  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache3    | 5   | 18   | 40  | 27.8      | 12.5   | 14.0 | 0.72  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Qianyinche | 23  | 30   | 48  | 76.7      | 47.9   | 51.8 | 0.23  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| mean       | 44  | 190  | 158 | 31.7      | 27.2   | 26.1 | 0.68  |
++------------+-----+------+-----+-----------+--------+------+-------+
+TP=44 | FP=146 | FN=114
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.7, maxDets=100
++------------+-----+------+-----+-----------+--------+------+-------+
+| class      | tps | dets | gts | precision | recall | F2   | error |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache1    | 4   | 16   | 40  | 25.0      | 10.0   | 11.4 | 0.75  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache2    | 4   | 22   | 30  | 18.2      | 13.3   | 14.1 | 0.82  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache3    | 1   | 2    | 40  | 50.0      | 2.5    | 3.1  | 0.50  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Qianyinche | 10  | 11   | 48  | 90.9      | 20.8   | 24.6 | 0.09  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| mean       | 19  | 51   | 158 | 46.0      | 11.7   | 13.3 | 0.54  |
++------------+-----+------+-----+-----------+--------+------+-------+
+TP=19 | FP=32 | FN=139
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+Score thresholds filter output boxes and P/R/F2 counts; COCO AP/AR above uses all saved scores.
+Status: complete | images: 300 | failed requests: 0 | image accuracy: 47.3% | proxy loss: 1.9016

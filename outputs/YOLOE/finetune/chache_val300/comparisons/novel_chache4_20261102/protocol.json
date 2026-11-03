@@ -1,0 +1,90 @@
+{
+  "schema": "industrial_fewshot.heldout_visual_class.v1",
+  "novel_classes": [
+    "Chache4"
+  ],
+  "base_classes": [
+    "Chache1",
+    "Chache2",
+    "Chache3",
+    "Qianyinche"
+  ],
+  "evaluation_classes": [
+    "Chache1",
+    "Chache2",
+    "Chache3",
+    "Chache4",
+    "Qianyinche"
+  ],
+  "shots": [
+    5,
+    10
+  ],
+  "support_seed": 0,
+  "training_seed": 0,
+  "train_protocol": "same_image",
+  "train_scope": "full",
+  "savpe_weights_trainable": true,
+  "savpe_bn_running_statistics_frozen": true,
+  "validation": "identical base-only 88-image subset",
+  "checkpoint_selection": "upstream fitness on base-only dev; Chache4 GT never used",
+  "inference": "independent single-class queries, including Chache4, merged without cross-class NMS",
+  "evaluation": "all frozen 300 test images; novel/base/all GT and predictions projected by label",
+  "pretrained_seen_categories_unknown": true,
+  "limitations": [
+    "Novel means absent from THIS fine-tuning; no claim of absence from original pretraining.",
+    "Image hashes disjoint; video/camera independence is not established.",
+    "One training/support seed; one held-out category; exploratory comparison.",
+    "Reference annotations contain only declared class; unannotated visual co-occurrence is not certified.",
+    "Five-class condition has extra Chache4 gradient supervision; same per-class K, not equal total images.",
+    "Validation excludes Chache4-positive images for BOTH trained conditions, so five-class model selection also uses base GT only."
+  ],
+  "dev_image_count": 88,
+  "excluded_dev_image_count": 12,
+  "dev_box_counts": {
+    "Chache2": 12,
+    "Chache1": 16,
+    "Qianyinche": 19,
+    "Chache3": 16
+  },
+  "source_test_manifest_sha256": "5785e116b57c5f02185d0fd2fa6bdb5b7cd1ffc4af04cd736294c2bebe23c04d",
+  "dev_manifest_sha256": "56dd5c2e2e23990341b60f8e5734cddab22c374d2a594de7221443ef23139261",
+  "jobs": [
+    {
+      "id": "base_5shot",
+      "partition": "base",
+      "shot": 5,
+      "gpu": 0
+    },
+    {
+      "id": "all_5shot",
+      "partition": "all",
+      "shot": 5,
+      "gpu": 1
+    },
+    {
+      "id": "base_10shot",
+      "partition": "base",
+      "shot": 10,
+      "gpu": 2
+    },
+    {
+      "id": "all_10shot",
+      "partition": "all",
+      "shot": 10,
+      "gpu": 3
+    },
+    {
+      "id": "pretrained_5shot",
+      "partition": "pretrained",
+      "shot": 5,
+      "gpu": 4
+    },
+    {
+      "id": "pretrained_10shot",
+      "partition": "pretrained",
+      "shot": 10,
+      "gpu": 5
+    }
+  ]
+}

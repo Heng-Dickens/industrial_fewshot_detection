@@ -1,0 +1,101 @@
+{
+  "entries": [
+    {
+      "dataset": "chache_val100",
+      "relative_path": "s04_00004_0002338.jpg",
+      "preview": "previews/chache_val100_s04_00004_0002338.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "chache_val100",
+      "relative_path": "s04_00001_0000920.jpg",
+      "preview": "previews/chache_val100_s04_00001_0000920.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "chache_val100",
+      "relative_path": "s00_00000_0000082.jpg",
+      "preview": "previews/chache_val100_s00_00000_0000082.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "chache_val100",
+      "relative_path": "s02_00006_0003236.jpg",
+      "preview": "previews/chache_val100_s02_00006_0003236.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "chache_val300",
+      "relative_path": "s00_00008_0004195.jpg",
+      "preview": "previews/chache_val300_s00_00008_0004195.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "chache_val300",
+      "relative_path": "s02_00002_0001248.jpg",
+      "preview": "previews/chache_val300_s02_00002_0001248.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "chache_val300",
+      "relative_path": "s00_00008_0004264.jpg",
+      "preview": "previews/chache_val300_s00_00008_0004264.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "chache_val300",
+      "relative_path": "s00_00000_0000045.jpg",
+      "preview": "previews/chache_val300_s00_00000_0000045.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "diaowu_val100",
+      "relative_path": "s00_00043_0004302.jpg",
+      "preview": "previews/diaowu_val100_s00_00043_0004302.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "diaowu_val100",
+      "relative_path": "s00_00030_0003098.jpg",
+      "preview": "previews/diaowu_val100_s00_00030_0003098.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "diaowu_val100",
+      "relative_path": "s00_00013_0001389.jpg",
+      "preview": "previews/diaowu_val100_s00_00013_0001389.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "diaowu_val100",
+      "relative_path": "s00_00027_0002737.jpg",
+      "preview": "previews/diaowu_val100_s00_00027_0002737.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "diaowu_val300",
+      "relative_path": "s00_00034_0003460.jpg",
+      "preview": "previews/diaowu_val300_s00_00034_0003460.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "diaowu_val300",
+      "relative_path": "s00_00050_0005091.jpg",
+      "preview": "previews/diaowu_val300_s00_00050_0005091.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "diaowu_val300",
+      "relative_path": "s00_00014_0001466.jpg",
+      "preview": "previews/diaowu_val300_s00_00014_0001466.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    },
+    {
+      "dataset": "diaowu_val300",
+      "relative_path": "s00_00014_0001496.jpg",
+      "preview": "previews/diaowu_val300_s00_00014_0001496.jpg",
+      "selection": "fixed image-hash order; no outcome cherry-picking"
+    }
+  ],
+  "note": "GT only shown after evaluation; never sent to Qwen."
+}

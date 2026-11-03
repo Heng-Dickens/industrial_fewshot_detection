@@ -15,6 +15,7 @@ import time
 
 from run_wedetect_chache_prompts import ROOT, GROUP_NAMES, POINTS, cohort
 from run_pet_dino_shots import atomic_json
+from industrial_fewshot.comparison_layout import comparison_dir
 from industrial_fewshot.cache import digest, image_sha256
 from industrial_fewshot.config import load_config
 from industrial_fewshot.data.labelme import read_json, write_json
@@ -25,9 +26,9 @@ from industrial_fewshot.prompt_records import refresh_prompt_index
 from industrial_fewshot.result_layout import namespace_for_report
 from industrial_fewshot.runner import run
 
-DEFAULT_RUNTIME=ROOT/'outputs/runtime/aligned_baselines_20261027'
-PET_RUNTIME=ROOT/'outputs/runtime/pet_dino_shots_20261027'
-WE_RUNTIME=ROOT/'outputs/runtime/wedetect_chache_prompts_20261027'
+DEFAULT_RUNTIME=ROOT/'outputs/_shared/runtime/aligned_baselines_20261027'
+PET_RUNTIME=ROOT/'outputs/_shared/runtime/pet_dino_shots_20261027'
+WE_RUNTIME=ROOT/'outputs/_shared/runtime/wedetect_chache_prompts_20261027'
 PROTOCOL=('Frozen 300-image cohorts. YOLOE uses exactly the PET-DINO 1/5/10-shot supports, '
     'boxes and seed=0. GroundingDINO uses verbatim WeDetect Chinese prompts. Every class '
     'queries every image; class-labelled predictions are merged without cross-class NMS. '
@@ -38,7 +39,7 @@ MODEL_NAMES={'yoloe':'yoloe-v8l-seg','groundingdino':'grounding-dino-base'}
 
 def load_job(runtime,job,device=None):
     config=load_config(Path(job['config_file']))
-    config.update(prediction_cache_dir=runtime/'cache',prompt_index_root=ROOT/'outputs/runs',
+    config.update(prediction_cache_dir=runtime/'cache',prompt_index_root=ROOT/'outputs',
         result_layout=job['result_layout'],cache_search_dirs=[runtime/'cache'],reuse_predictions=False)
     if device:
         config['targets'][0]['config'][job['backend']]['device']=device
@@ -82,7 +83,7 @@ def prepare(runtime):
             text_groups=[(group,GROUP_NAMES[group],Path(we['runs'][group]['run_dir'])) for group in we['groups']]
         else:
             text_groups=[]
-            for number,directory in enumerate(sorted((ROOT/'outputs/runs/diaowu_val300').glob('*/wedetect_base_0shot')),1):
+            for number,directory in enumerate(sorted((ROOT/'outputs/WeDetect/experiments/diaowu_val300').glob('*/wedetect_base_0shot')),1):
                 if (directory/'run.json').is_file():
                     text_groups.append((f'prompt{number}',read_json(directory/'run.json')['targets'][0]['prompt_snapshot']['text'],directory))
             assert len(text_groups)==2, 'Expected the two saved diaowu WeDetect prompts'
@@ -123,7 +124,7 @@ def prepare(runtime):
 
 def add_experiment(runtime,plan,dataset,backend,variant,description,sources,baseline,shot,evaluation):
     scene=plan['datasets'][dataset]
-    method,layout=namespace_for_report(ROOT/'outputs/runs',dict(scene_name=dataset,image_count=300,
+    method,layout=namespace_for_report(ROOT/'outputs',dict(scene_name=dataset,image_count=300,
         image_dir=scene['image_dir'],ground_truth_dir=scene['ground_truth_dir'],
         dataset_manifest=scene['dataset_manifest'],dataset_sha256=scene['dataset_sha256'],
         targets=[dict(backend=backend,prompt_snapshot=s['expected_prompt']) for s in sources]),create=True)
@@ -162,7 +163,7 @@ def run_class(runtime,job_id,device):
         print('COMPLETE REUSE',job_id,flush=True); return
     destination=Path(job['run_dir'])
     if destination.exists():
-        archive=result_directory(ROOT/'outputs/archive/interrupted_runs'/runtime.name,job_id)
+        archive=result_directory(ROOT/'outputs/_shared/archive/history/interrupted_runs'/runtime.name,job_id)
         archive.parent.mkdir(parents=True,exist_ok=True); destination.rename(archive)
     report=asyncio.run(run(load_job(runtime,job,device),result_dir=destination,force=True))
     assert report['image_count']==300 and report['failed_request_count']==0 and report['reused_prediction_count']==0
@@ -225,7 +226,7 @@ def merge_and_verify(runtime,plan):
 
 
 def summarize(runtime,plan,rows):
-    comparison=ROOT/'outputs/comparisons'/runtime.name; comparison.mkdir(parents=True,exist_ok=True)
+    comparison=comparison_dir(runtime.name, project_root=ROOT); comparison.mkdir(parents=True,exist_ok=True)
     write_json(comparison/'comparison.json',dict(protocol=PROTOCOL,runs=rows))
     for method_dir in sorted({Path(e['run_dir']).parent for e in plan['experiments']}):
         selected=[row for row in rows if Path(row['run_dir']).parent==method_dir]
@@ -243,7 +244,7 @@ def summarize(runtime,plan,rows):
             '提示词逐字对齐，不作翻译。模型架构、预处理、分词器及特征聚合仍各自独立。']
         (method_dir/'experiment_results.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
         refresh_prompt_index(method_dir); refresh_prompt_index(method_dir.parent)
-    refresh_prompt_index(ROOT/'outputs/runs')
+    refresh_prompt_index(ROOT/'outputs')
     fields=['dataset','method','variant','mAP50','mAP50_95','precision','recall','baseline_AP50','run_dir','baseline_run_dir']
     with (comparison/'comparison.csv').open('w',newline='',encoding='utf-8-sig') as stream:
         writer=csv.DictWriter(stream,fieldnames=fields,extrasaction='ignore'); writer.writeheader();writer.writerows(rows)

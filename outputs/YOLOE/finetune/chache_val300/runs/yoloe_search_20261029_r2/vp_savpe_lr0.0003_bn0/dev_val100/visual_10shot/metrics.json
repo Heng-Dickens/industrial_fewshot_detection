@@ -1,0 +1,887 @@
+{
+  "evaluated_image_count": 100,
+  "settings": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.5,
+    "max_detections_per_image": 100,
+    "score_thresholds": [
+      0.5,
+      0.7
+    ]
+  },
+  "method": "Class-aware bbox, score-ranked greedy one-to-one matching, COCO-style 101-point AP, all areas, no crowd/ignore. AP uses all confidence scores; score_threshold affects only precision/recall/F1 and proxy loss. Classes without GT excluded from mAP.",
+  "confidence_source": "model_self_reported_not_calibrated",
+  "tp": 21,
+  "fp": 33,
+  "fn": 55,
+  "precision": 0.3888888888888889,
+  "recall": 0.27631578947368424,
+  "f1": 0.3230769230769231,
+  "mean_matched_iou": 0.8240120338901071,
+  "per_class": {
+    "Chache1": {
+      "ground_truth_count": 16,
+      "tp": 2,
+      "fp": 12,
+      "fn": 14,
+      "precision": 0.14285714285714285,
+      "recall": 0.125,
+      "f1": 0.13333333333333333,
+      "AP50": 0.12351190019562042,
+      "AP75": 0.0477893860107851,
+      "AP50_95": 0.06399418944163138,
+      "ap_by_iou": {
+        "0.5": 0.12351190019562042,
+        "0.55": 0.12262944544995368,
+        "0.6": 0.11869803201259328,
+        "0.65": 0.10404971885768648,
+        "0.7": 0.059051599310147536,
+        "0.75": 0.0477893860107851,
+        "0.8": 0.03397609533380802,
+        "0.85": 0.029225718003426868,
+        "0.9": 0.001009999242292407,
+        "0.95": 0.0
+      },
+      "f2": 0.1282051282051282
+    },
+    "Chache2": {
+      "ground_truth_count": 12,
+      "tp": 1,
+      "fp": 5,
+      "fn": 11,
+      "precision": 0.16666666666666666,
+      "recall": 0.08333333333333333,
+      "f1": 0.1111111111111111,
+      "AP50": 0.06939774887472414,
+      "AP75": 0.04278249551668543,
+      "AP50_95": 0.04327430696246298,
+      "ap_by_iou": {
+        "0.5": 0.06939774887472414,
+        "0.55": 0.06854220494911568,
+        "0.6": 0.06360828806453488,
+        "0.65": 0.060028602866559796,
+        "0.7": 0.04843681943708524,
+        "0.75": 0.04278249551668543,
+        "0.8": 0.03437029746015843,
+        "0.85": 0.03072512730725127,
+        "0.9": 0.01485148514851485,
+        "0.95": 0.0
+      },
+      "f2": 0.09259259259259257
+    },
+    "Chache3": {
+      "ground_truth_count": 16,
+      "tp": 4,
+      "fp": 5,
+      "fn": 12,
+      "precision": 0.4444444444444444,
+      "recall": 0.25,
+      "f1": 0.32,
+      "AP50": 0.2919068415919826,
+      "AP75": 0.12333588384928498,
+      "AP50_95": 0.15743502444277374,
+      "ap_by_iou": {
+        "0.5": 0.2919068415919826,
+        "0.55": 0.2864946412456157,
+        "0.6": 0.2864946412456157,
+        "0.65": 0.276671108196637,
+        "0.7": 0.18043172675844737,
+        "0.75": 0.12333588384928498,
+        "0.8": 0.12035203520352035,
+        "0.85": 0.008663366336633664,
+        "0.9": 0.0,
+        "0.95": 0.0
+      },
+      "f2": 0.27397260273972607
+    },
+    "Chache4": {
+      "ground_truth_count": 12,
+      "tp": 9,
+      "fp": 9,
+      "fn": 3,
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "AP50": 0.6359411953341084,
+      "AP75": 0.5050029580025669,
+      "AP50_95": 0.4606760251646912,
+      "ap_by_iou": {
+        "0.5": 0.6359411953341084,
+        "0.55": 0.6359411953341084,
+        "0.6": 0.6359411953341084,
+        "0.65": 0.6139372092212115,
+        "0.7": 0.568587561474482,
+        "0.75": 0.5050029580025669,
+        "0.8": 0.4947162150425568,
+        "0.85": 0.3627352208905105,
+        "0.9": 0.10248393260378673,
+        "0.95": 0.05147356840947254
+      },
+      "f2": 0.6818181818181818
+    },
+    "Qianyinche": {
+      "ground_truth_count": 20,
+      "tp": 5,
+      "fp": 2,
+      "fn": 15,
+      "precision": 0.7142857142857143,
+      "recall": 0.25,
+      "f1": 0.37037037037037035,
+      "AP50": 0.5787089435438337,
+      "AP75": 0.20736632486778075,
+      "AP50_95": 0.28730768145555363,
+      "ap_by_iou": {
+        "0.5": 0.5787089435438337,
+        "0.55": 0.4956861473226494,
+        "0.6": 0.49391177633716365,
+        "0.65": 0.40851426307547334,
+        "0.7": 0.40851426307547334,
+        "0.75": 0.20736632486778075,
+        "0.8": 0.12443450227375678,
+        "0.85": 0.09653465346534655,
+        "0.9": 0.0594059405940594,
+        "0.95": 0.0
+      },
+      "f2": 0.28735632183908044
+    }
+  },
+  "mAP50": 0.3398933259080538,
+  "mAP75": 0.1852554096494206,
+  "mAP50_95": 0.20253744549342256,
+  "loss": {
+    "type": "detection_proxy_loss",
+    "is_model_training_loss": false,
+    "total": 1.5234731754003592,
+    "components": {
+      "box_l1": 0.012689887653039297,
+      "box_iou": 0.1759879661098928,
+      "false_positive": 0.6111111111111112,
+      "false_negative": 0.7236842105263158
+    },
+    "matched_localization_pairs": 21,
+    "weights": {
+      "box_l1": 1.0,
+      "box_iou": 1.0,
+      "false_positive": 1.0,
+      "false_negative": 1.0
+    },
+    "definition": "Hungarian mean normalized xyxy L1 + mean (1-IoU) + FP/(TP+FP) + FN/(TP+FN); weighted sum. Localization pairing is class-aware and does not require an IoU threshold. No backpropagation."
+  },
+  "f2": 0.29329608938547486,
+  "coco": {
+    "engine": "pycocotools.COCOeval",
+    "iou_type": "bbox",
+    "stats": {
+      "AP": 0.20244035540366262,
+      "AP50": 0.33972830940640375,
+      "AP75": 0.18520040414887065,
+      "AP_small": -1.0,
+      "AP_medium": 0.16885473353736097,
+      "AP_large": 0.20241457771079527,
+      "AR1": 0.34558333333333335,
+      "AR10": 0.5079166666666667,
+      "AR100": 0.5772499999999999,
+      "AR_small": -1.0,
+      "AR_medium": 0.5583333333333333,
+      "AR_large": 0.5660539215686274
+    },
+    "summary": " Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.202\n Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.340\n Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.185\n Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000\n Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.169\n Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.202\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.346\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.508\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.577\n Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.558\n Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.566",
+    "per_class": {
+      "Chache1": {
+        "AP50": 0.12351190019562022,
+        "recall": 0.875,
+        "precision": 0.0015910898965791568,
+        "f2": 0.007898002933543946,
+        "tp": 14,
+        "fp": 8785,
+        "fn": 2
+      },
+      "Chache2": {
+        "AP50": 0.06939774887472427,
+        "recall": 1.0,
+        "precision": 0.0013723696248856359,
+        "f2": 0.006824385805277526,
+        "tp": 12,
+        "fp": 8732,
+        "fn": 0
+      },
+      "Chache3": {
+        "AP50": 0.29190684159198277,
+        "recall": 0.75,
+        "precision": 0.001487357461576599,
+        "f2": 0.0073782587309394985,
+        "tp": 12,
+        "fp": 8056,
+        "fn": 4
+      },
+      "Chache4": {
+        "AP50": 0.6359411953341082,
+        "recall": 1.0,
+        "precision": 0.0026115342763873774,
+        "f2": 0.012922679302175315,
+        "tp": 12,
+        "fp": 4583,
+        "fn": 0
+      },
+      "Qianyinche": {
+        "AP50": 0.5778838610355834,
+        "recall": 0.9,
+        "precision": 0.004653567735263702,
+        "f2": 0.022796352583586626,
+        "tp": 18,
+        "fp": 3850,
+        "fn": 2
+      }
+    },
+    "policy": "Official COCO bbox evaluation; area is bbox width*height in original pixels; IoU=0.50:0.95, maxDets=1/10/100, all prediction scores. LabelMe input has no crowd/ignore flags. Category AP/Recall are at IoU=0.50, maxDets=100; F2 uses final TP/FP precision and recall, not AP as precision."
+  },
+  "score_threshold_results": {
+    "0.5": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.5,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.5,
+          0.7
+        ]
+      },
+      "tp": 21,
+      "fp": 33,
+      "fn": 55,
+      "precision": 0.3888888888888889,
+      "recall": 0.27631578947368424,
+      "f2": 0.29329608938547486,
+      "per_class": {
+        "Chache1": {
+          "tp": 2,
+          "fp": 12,
+          "fn": 14,
+          "ground_truth_count": 16,
+          "precision": 0.14285714285714285,
+          "recall": 0.125,
+          "f2": 0.1282051282051282
+        },
+        "Chache2": {
+          "tp": 1,
+          "fp": 5,
+          "fn": 11,
+          "ground_truth_count": 12,
+          "precision": 0.16666666666666666,
+          "recall": 0.08333333333333333,
+          "f2": 0.09259259259259257
+        },
+        "Chache3": {
+          "tp": 4,
+          "fp": 5,
+          "fn": 12,
+          "ground_truth_count": 16,
+          "precision": 0.4444444444444444,
+          "recall": 0.25,
+          "f2": 0.27397260273972607
+        },
+        "Chache4": {
+          "tp": 9,
+          "fp": 9,
+          "fn": 3,
+          "ground_truth_count": 12,
+          "precision": 0.5,
+          "recall": 0.75,
+          "f2": 0.6818181818181818
+        },
+        "Qianyinche": {
+          "tp": 5,
+          "fp": 2,
+          "fn": 15,
+          "ground_truth_count": 20,
+          "precision": 0.7142857142857143,
+          "recall": 0.25,
+          "f2": 0.28735632183908044
+        }
+      }
+    },
+    "0.7": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.7,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.5,
+          0.7
+        ]
+      },
+      "tp": 13,
+      "fp": 10,
+      "fn": 63,
+      "precision": 0.5652173913043478,
+      "recall": 0.17105263157894737,
+      "f2": 0.19877675840978593,
+      "per_class": {
+        "Chache1": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 15,
+          "ground_truth_count": 16,
+          "precision": 0.25,
+          "recall": 0.0625,
+          "f2": 0.07352941176470588
+        },
+        "Chache2": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 12,
+          "ground_truth_count": 12,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0
+        },
+        "Chache3": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 14,
+          "ground_truth_count": 16,
+          "precision": 1.0,
+          "recall": 0.125,
+          "f2": 0.15151515151515152
+        },
+        "Chache4": {
+          "tp": 7,
+          "fp": 6,
+          "fn": 5,
+          "ground_truth_count": 12,
+          "precision": 0.5384615384615384,
+          "recall": 0.5833333333333334,
+          "f2": 0.5737704918032787
+        },
+        "Qianyinche": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 17,
+          "ground_truth_count": 20,
+          "precision": 1.0,
+          "recall": 0.15,
+          "f2": 0.18072289156626503
+        }
+      }
+    }
+  },
+  "evaluation_status": "complete",
+  "failed_request_count": 0,
+  "failure_policy": "Failed requests contribute no predictions (GT remains); metrics are marked incomplete.",
+  "image_accuracy": 0.32,
+  "correct_image_count": 32,
+  "incorrect_image_count": 68,
+  "failed_image_count": 0,
+  "incorrect_images": [
+    {
+      "relative_path": "s00_00000_0000010.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000016.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000037.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000050.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000066.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000082.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000090.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000450.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00008_0004080.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00008_0004083.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00008_0004134.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00008_0004137.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00008_0004140.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00008_0004167.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00008_0004172.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00008_0004310.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s01_00000_0000038.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s01_00000_0000149.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s01_00000_0000189.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s01_00000_0000229.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s01_00000_0000309.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s01_00000_0000349.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s01_00000_0000389.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s01_00000_0000468.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s02_00002_0001071.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s02_00002_0001075.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s02_00002_0001082.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s02_00002_0001086.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s02_00002_0001091.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s02_00002_0001295.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s02_00002_0001397.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s02_00002_0001499.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s02_00006_0003234.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "relative_path": "s02_00006_0003236.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s02_00006_0003237.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s02_00006_0003238.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s03_00000_0000032.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s03_00000_0000056.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s03_00000_0000083.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s03_00000_0000110.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s03_00000_0000137.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s03_00000_0000165.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s03_00000_0000200.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s03_00000_0000233.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s03_00000_0000330.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s03_00000_0000361.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s03_00000_0000393.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s03_00000_0000462.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s04_00001_0000500.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s04_00001_0000559.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s04_00001_0000617.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s04_00001_0000672.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "relative_path": "s04_00001_0000728.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 2,
+      "fn": 2
+    },
+    {
+      "relative_path": "s04_00001_0000790.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "relative_path": "s04_00001_0000851.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 2
+    },
+    {
+      "relative_path": "s04_00001_0000886.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s04_00001_0000920.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "relative_path": "s04_00001_0000925.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s04_00001_0000927.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s04_00001_0000928.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s04_00004_0002106.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "relative_path": "s04_00004_0002191.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s04_00004_0002280.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s04_00004_0002390.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s04_00004_0002394.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "relative_path": "s04_00004_0002434.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "relative_path": "s04_00004_0002467.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s04_00004_0002497.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 3,
+      "fn": 0
+    }
+  ],
+  "image_accuracy_policy": "All evaluated images form the denominator, including inference failures. Correct requires a successful request, class-aware one-to-one matches for every GT box and zero FP/FN at configured IoU/score/max-detection settings. An inference failure is always an incorrect image, even for empty GT.",
+  "ground_truth_image_count": 100,
+  "ground_truth_json_image_count": 100,
+  "assumed_negative_image_count": 0,
+  "unlabeled_image_count": 0,
+  "unlabeled_policy": "Infer all images. Missing GT follows the configured policy: negative uses empty GT; skip excludes from metrics; error stops before inference.",
+  "negative_image_count": 30,
+  "negative_false_positive_image_count": 4,
+  "negative_true_negative_image_count": 26,
+  "negative_failed_image_count": 0,
+  "negative_false_positive_rate": 0.13333333333333333,
+  "negative_error_image_count": 4,
+  "negative_error_rate": 0.13333333333333333,
+  "negative_false_positive_box_count": 4,
+  "negative_false_positive_images": [
+    {
+      "relative_path": "s01_00000_0000038.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s02_00002_0001295.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s02_00002_0001397.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s02_00002_0001499.jpg",
+      "false_positive_box_count": 1
+    }
+  ],
+  "negative_metric_policy": "Image-level FP rate at score_threshold, capped per class; denominator excludes failed negative images. Failures are not true negatives and mark evaluation incomplete.",
+  "negative_error_policy": "(Negative FP images + failed negative images) / all evaluated negative images. Every failed negative is an error and remains in the denominator."
+}

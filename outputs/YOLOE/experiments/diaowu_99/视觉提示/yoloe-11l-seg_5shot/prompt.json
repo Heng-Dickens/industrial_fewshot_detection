@@ -1,0 +1,39 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "yoloe",
+  "model": "D:\\Learn\\VLM\\industrial_fewshot_detection\\weights\\yoloe\\yoloe-11l-seg.pt",
+  "kind": "visual",
+  "text": null,
+  "text_sha256": null,
+  "text_source": "saved_run.backend",
+  "references": [
+    {
+      "sample_id": "positive/images/0000090.jpg"
+    },
+    {
+      "sample_id": "positive/images/0000189.jpg"
+    },
+    {
+      "sample_id": "positive/images/0001320.jpg"
+    },
+    {
+      "sample_id": "positive/images/0001352.jpg"
+    },
+    {
+      "sample_id": "positive/images/0003939.jpg"
+    }
+  ],
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "yoloe_visual",
+    "counts": {
+      "reference_examples": 5,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 5,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "09feecd0fbe8709b3d1f77e888e5b6d39f8ff75d2844c84654c6608c06c886bd"
+  },
+  "request_signature": "b2add608b09b20db795a6ba9c41096eea9596d2cfec69d82fc173b39dc2a5d89"
+}

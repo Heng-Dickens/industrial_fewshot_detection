@@ -1,0 +1,14 @@
+{
+  "exact_image_overlap": 0,
+  "shared_sequences": [
+    "s00_00000",
+    "s00_00008",
+    "s01_00000",
+    "s02_00002",
+    "s02_00006",
+    "s03_00000",
+    "s04_00001",
+    "s04_00004"
+  ],
+  "limitation": "Existing cohorts may share video sequences; no claim of sequence-independent generalization."
+}

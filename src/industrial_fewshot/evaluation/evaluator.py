@@ -172,7 +172,7 @@ def evaluate_saved_run(run_dir: Path, config_path: Path | None = None, dry_run: 
     save_text_report(run_dir, report)
     from industrial_fewshot.prompt_records import update_prompt_index
     from industrial_fewshot.paths import PROJECT_ROOT
-    default_root = PROJECT_ROOT / 'outputs/runs'
-    index_root = report.get('prompt_index_root') or (default_root if run_dir.is_relative_to(default_root) else run_dir.parent)
+    default_root = PROJECT_ROOT / 'outputs'
+    index_root = default_root if run_dir.is_relative_to(default_root) else resolve_location(Path(report.get('prompt_index_root') or run_dir.parent))
     update_prompt_index(Path(index_root))
     return report

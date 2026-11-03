@@ -7,9 +7,9 @@
 | 进入 Git | 单独准备，不进入 Git |
 |---|---|
 | `main.py`、`src/`（含全部文字 prompt） | `data/` 全部图片、标注、manifest、支持集 |
-| `configs/common/`、`configs/specific/` 的公共配置及示例 | `outputs/runtime/`、`outputs/environment_setup/`、缓存、日志、旧归档及根目录 `runs/` |
-| `outputs/runs/` 所有算法的报告、总表、指标、提示词和运行配置快照 | 逐图 `predictions*/`、`feedback/`、`records.jsonl`、含原始记录的 `summary.json` |
-| `outputs/comparisons/` 的专题报告、诊断摘要、索引和对比图 | 原始数据图片与完整逐图推理产物 |
+| `configs/common/`、`configs/specific/` 的公共配置及示例 | `outputs/_shared/runtime/`、`outputs/_shared/environment_setup/`、缓存、日志、旧归档及根目录 `runs/` |
+| `outputs/<方法>/experiments/` 所有算法的报告、总表、指标、提示词和运行配置快照 | 逐图 `predictions*/`、`feedback/`、`records.jsonl`、含原始记录的 `summary.json` |
+| `outputs/<方法>/comparisons/` 的专题报告、诊断摘要、索引和对比图 | 原始数据图片与完整逐图推理产物 |
 | `scripts/` 安装、下载、数据准备、推理和评估入口 | `weights/` 模型和语言编码器文件 |
 | `requirements*.txt`、`pyproject.toml` | `third_party/`，按固定 commit 在服务器重新导入 |
 | 测试、兼容工具、示例、操作文档 | `.venv*/`、`.planning/`、IDE 设置、临时文件 |
@@ -20,7 +20,7 @@
 结果规则适用于全部后端，包括 MLLM/Qwen、PET-DINO、GroundingDINO、WeDetect、YOLOE，以及按历史提示词版本保存的实验目录。JSON采用文件名允许列表：`metrics.json`、`run.json`、`config.resolved.json`、`prompt*.json`、`dataset.json`、`results_summary.json`、`method.json`、`experiment.json`、`experiment_results.json`。已有结果不会因修改 `.gitignore` 自动上传，仍需暂存、提交和推送：
 
 ```bash
-git add .gitignore outputs/README.md outputs/runs/ outputs/comparisons/
+git add .gitignore outputs/README.md outputs/<方法>/experiments/ outputs/<方法>/comparisons/
 git diff --cached --stat
 git commit -m "Sync results from all detector backends"
 git push origin main

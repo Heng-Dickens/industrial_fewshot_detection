@@ -1,0 +1,50 @@
+{
+  "protocol": "Frozen 300-image cohorts. YOLOE uses exactly the PET-DINO 1/5/10-shot supports, boxes and seed=0. GroundingDINO uses verbatim WeDetect Chinese prompts. Every class queries every image; class-labelled predictions are merged without cross-class NMS. Candidate floor=0.001, NMS IoU=0.7, maxDets=100/class, evaluation IoU=0.5 and score=0.5. Model-native preprocessing and feature aggregation are retained. Fresh inference; no training/API calls.",
+  "job": {
+    "id": "chache_val300_groundingdino_long_Chache1",
+    "experiment_id": "chache_val300_groundingdino_long",
+    "dataset": "chache_val300",
+    "backend": "groundingdino",
+    "target_id": "Chache1",
+    "label": "Chache1",
+    "shot": 0,
+    "config_file": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/aligned_baselines_20261027/configs/chache_val300_groundingdino_long_Chache1.local.json",
+    "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO/grounding-dino-base_0shot_prompt_v4/Chache1",
+    "result_layout": {
+      "root": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs",
+      "dataset_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300",
+      "dataset_name": "chache_val300",
+      "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+      "prompt_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO",
+      "prompt_version": "prompt_v4",
+      "prompt_identity": "01c5ce6d43208d41c6d0a55f6238718fccfe9eb640c5bcea9b766467e84664d3",
+      "method": "GroundingDINO",
+      "method_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO",
+      "prompt_registry_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO/.prompts/prompt_v4",
+      "model_name_suffix": "_prompt_v4"
+    },
+    "expected_prompt": {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "普通座驾叉车，驾驶位上方有护顶架，驾驶员坐着，前方有高门架和普通成对细长货叉；车身多为绿色或红色。",
+      "text_sha256": "419432b6ebdf416c6ca82cce6f08363d1345243ad565ee21810a277d2695a9d5",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "03a8b1bdf8a5a1e35c59442e464780edd53520c0324b3607b7196c192bb472f4"
+      },
+      "request_signature": "eca3aac2bbe75a1640f5d56792de903b950973771cc7fc19ac6a831c4e29cf46"
+    }
+  }
+}

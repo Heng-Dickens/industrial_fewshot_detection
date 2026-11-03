@@ -1,0 +1,127 @@
+{
+  "schema": "wedetect.multi_query_prompt.v1",
+  "prompts": {
+    "Chache1": "叉车",
+    "Chache2": "搬运车",
+    "Chache3": "堆高车",
+    "Chache4": "叉车",
+    "Qianyinche": "牵引车"
+  },
+  "snapshots": [
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "叉车",
+      "text_sha256": "5bed3fa8ff6e41b56639aeeb9a3be547b46368c11025db403525860e82ead737",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "f69bf74da6e829af8281f33d2a358d44f01c8503e3b6b76dc90b3e7cb31ed398"
+      },
+      "request_signature": "63b43249204228ff27e4abaa50d80e0bf26a3e240c4525e1b2ea7a6c759547d2"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "搬运车",
+      "text_sha256": "0d999bc48ea38b2b9527b9d9a907c231c7f504977baaee840c7e39eab76a703e",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "810c2501623dabd03b941a3125d71ee5c870c7c0dd44b33f81f102ba469c220b"
+      },
+      "request_signature": "a2c4e57085d55e5da4a920b2a941d376f770be37322472c4c89a8442a5b7e872"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "堆高车",
+      "text_sha256": "2bd73cffdaa064fb5a85dfb1cd14e5a5d8a86e38e4f634ad5c0384ae31119368",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "93587f93dac4e225081afa2da35aa444b16358550bc668117aa89c1f3bd93daa"
+      },
+      "request_signature": "87ba1e47e0d6d5fd5bd878c674bf363eec2d01937a39108936ef867a46b97184"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "叉车",
+      "text_sha256": "5bed3fa8ff6e41b56639aeeb9a3be547b46368c11025db403525860e82ead737",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "f69bf74da6e829af8281f33d2a358d44f01c8503e3b6b76dc90b3e7cb31ed398"
+      },
+      "request_signature": "ee02ece4e7a8de5f4a08b0393975c708a556c3aa55e2bdfe7f27e769ab55abca"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "牵引车",
+      "text_sha256": "24b27587b8d6e625dc4a42f0d4293dab02ec488e022152c41b12325703138883",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "64cfecaa633c7c3efdf8f4e612982d3c0fd047a207adf91dd5f8f667fe777ac0"
+      },
+      "request_signature": "8aed6a93e055b3dd8950ffd07f7adbfabd4b3d788501016b6ae7162ca9bbc8ee"
+    }
+  ]
+}

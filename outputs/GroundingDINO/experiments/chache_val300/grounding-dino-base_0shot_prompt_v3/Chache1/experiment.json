@@ -1,0 +1,50 @@
+{
+  "protocol": "Frozen 300-image cohorts. YOLOE uses exactly the PET-DINO 1/5/10-shot supports, boxes and seed=0. GroundingDINO uses verbatim WeDetect Chinese prompts. Every class queries every image; class-labelled predictions are merged without cross-class NMS. Candidate floor=0.001, NMS IoU=0.7, maxDets=100/class, evaluation IoU=0.5 and score=0.5. Model-native preprocessing and feature aggregation are retained. Fresh inference; no training/API calls.",
+  "job": {
+    "id": "chache_val300_groundingdino_phrases_Chache1",
+    "experiment_id": "chache_val300_groundingdino_phrases",
+    "dataset": "chache_val300",
+    "backend": "groundingdino",
+    "target_id": "Chache1",
+    "label": "Chache1",
+    "shot": 0,
+    "config_file": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/aligned_baselines_20261027/configs/chache_val300_groundingdino_phrases_Chache1.local.json",
+    "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO/grounding-dino-base_0shot_prompt_v3/Chache1",
+    "result_layout": {
+      "root": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs",
+      "dataset_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300",
+      "dataset_name": "chache_val300",
+      "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+      "prompt_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO",
+      "prompt_version": "prompt_v3",
+      "prompt_identity": "fa2f6c9d6160312ebc33fc09205e97c9f7e4b24746b961817db208a4eafa6705",
+      "method": "GroundingDINO",
+      "method_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO",
+      "prompt_registry_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO/.prompts/prompt_v3",
+      "model_name_suffix": "_prompt_v3"
+    },
+    "expected_prompt": {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "有护顶架和普通货叉的座驾叉车",
+      "text_sha256": "efe46512996bf1ec2b8913b05556007a0e6aba7af80efaaed366c862a2d680a8",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "41282aba5d3781ad85ebc062f3dc4b16cd7b72be8d1822b7daa9cbc8a25ff6ed"
+      },
+      "request_signature": "97e7272ceb922fc4625bb960807c46e195b0708da318996f3c012c2c6b589e27"
+    }
+  }
+}

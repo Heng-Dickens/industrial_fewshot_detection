@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "D:\\Learn\\VLM\\industrial_fewshot_detection\\weights\\grounding-dino-base",
+  "kind": "text",
+  "text": "a large hollow cylindrical load suspended from a yellow lifting hook by two taut slings spread to opposite sides, including the hook and slings.",
+  "text_sha256": "091262844b9fa3450a647b585a823ae0788df5b40a7c2016f239beb814f4f2d0",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "8ccd35ae9c28963b26dd1a1f7615e8255acc908e066537423b7b2c8fb0363636"
+  },
+  "request_signature": "1551ada5eac21e7eeda18007d99ed6cea7e3ce79ccbf1a0523231f51ca27c1c6"
+}

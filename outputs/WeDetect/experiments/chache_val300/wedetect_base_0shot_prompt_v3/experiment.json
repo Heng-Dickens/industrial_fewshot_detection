@@ -1,0 +1,20 @@
+{
+  "group": "phrases",
+  "description": "短描述",
+  "protocol": "Five independent single-class queries per image, combined class-aware evaluation. No cross-class NMS; 100 candidates/class. short intentionally shares 叉车 for Chache1/4.",
+  "comparison_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/wedetect_chache_prompts_20261027",
+  "class_configs": {
+    "Chache1": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/wedetect_chache_prompts_20261027/configs/phrases_Chache1.local.json",
+    "Chache2": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/wedetect_chache_prompts_20261027/configs/phrases_Chache2.local.json",
+    "Chache3": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/wedetect_chache_prompts_20261027/configs/phrases_Chache3.local.json",
+    "Chache4": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/wedetect_chache_prompts_20261027/configs/phrases_Chache4.local.json",
+    "Qianyinche": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/wedetect_chache_prompts_20261027/configs/phrases_Qianyinche.local.json"
+  },
+  "class_run_dirs": {
+    "Chache1": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v3/Chache1",
+    "Chache2": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v3/Chache2",
+    "Chache3": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v3/Chache3",
+    "Chache4": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v3/Chache4",
+    "Qianyinche": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v3/Qianyinche"
+  }
+}

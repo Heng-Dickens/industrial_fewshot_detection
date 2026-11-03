@@ -17,5 +17,5 @@ def main(root):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--root', type=Path, default=ROOT / 'outputs/runs/chache_val300')
+    parser.add_argument('--root', type=Path, default=ROOT / 'outputs/chache_val300')
     main(parser.parse_args().root)

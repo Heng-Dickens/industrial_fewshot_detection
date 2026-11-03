@@ -1,0 +1,2051 @@
+{
+  "stamp": "yoloe_v8l_10shot_qwen38_v1_20261030",
+  "candidate_floor": 0.01,
+  "model": "qwen3.8-27b",
+  "states": [
+    {
+      "dataset": "chache_val100",
+      "images": 100,
+      "source_candidates": 41060,
+      "pilot_status": "passed",
+      "pipeline_status": "passed",
+      "run": "outputs/OVD-MLLM/experiments/chache_val100/yoloe_v8l_10shot_qwen38_v1_20261030"
+    },
+    {
+      "dataset": "chache_val300",
+      "images": 300,
+      "source_candidates": 122211,
+      "pilot_status": "复用开发集验证",
+      "pipeline_status": "passed",
+      "run": "outputs/OVD-MLLM/experiments/chache_val300/yoloe_v8l_10shot_qwen38_v1_20261030"
+    },
+    {
+      "dataset": "diaowu_val100",
+      "images": 100,
+      "source_candidates": 9998,
+      "pilot_status": "passed",
+      "pipeline_status": "passed",
+      "run": "outputs/OVD-MLLM/experiments/diaowu_val100/yoloe_v8l_10shot_qwen38_v1_20261030"
+    },
+    {
+      "dataset": "diaowu_val300",
+      "images": 300,
+      "source_candidates": 30000,
+      "pilot_status": "复用开发集验证",
+      "pipeline_status": "passed",
+      "run": "outputs/OVD-MLLM/experiments/diaowu_val300/yoloe_v8l_10shot_qwen38_v1_20261030"
+    }
+  ],
+  "rows": [
+    {
+      "dataset": "chache_val100",
+      "split": "开发集",
+      "status": "passed",
+      "threshold": 0.001,
+      "mAP50": 0.3533708717502486,
+      "mAP75": 0.192013323066693,
+      "mAP50_95": 0.20959747799122788,
+      "AP85": 0.10981522096509717,
+      "AP90": 0.03334918196132641,
+      "AP95": 0.007480748074807484,
+      "AP_box20": 0.25307367666059305,
+      "precision": 0.26666666666666666,
+      "recall": 0.42105263157894735,
+      "f2": 0.3773584905660377,
+      "tp": 32,
+      "fp": 88,
+      "fn": 44,
+      "stage": "source",
+      "candidates": 41060,
+      "report": "outputs/OVD-MLLM/experiments/chache_val100/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 67,
+      "fp_score01": 13094,
+      "fn_score01": 9,
+      "precision_score01": 0.005090798571537118,
+      "recall_score01": 0.881578947368421,
+      "f2_score01": 0.024879316747122168
+    },
+    {
+      "dataset": "chache_val100",
+      "split": "开发集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.3532580756605131,
+      "mAP75": 0.192013323066693,
+      "mAP50_95": 0.2095670759304297,
+      "AP85": 0.10981522096509717,
+      "AP90": 0.03334918196132641,
+      "AP95": 0.007480748074807484,
+      "AP_box20": 0.25307367666059305,
+      "precision": 0.26666666666666666,
+      "recall": 0.42105263157894735,
+      "f2": 0.3773584905660377,
+      "tp": 32,
+      "fp": 88,
+      "fn": 44,
+      "stage": "baseline",
+      "candidates": 13161,
+      "report": "outputs/OVD-MLLM/experiments/chache_val100/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 67,
+      "fp_score01": 13094,
+      "fn_score01": 9,
+      "precision_score01": 0.005090798571537118,
+      "recall_score01": 0.881578947368421,
+      "f2_score01": 0.024879316747122168
+    },
+    {
+      "dataset": "chache_val100",
+      "split": "开发集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.5754462828593641,
+      "mAP75": 0.27904125861983353,
+      "mAP50_95": 0.3167232355799308,
+      "AP85": 0.1588405808906683,
+      "AP90": 0.04334433443344334,
+      "AP95": 0.011221122112211218,
+      "AP_box20": 0.3557052121909304,
+      "precision": 0.7894736842105263,
+      "recall": 0.39473684210526316,
+      "f2": 0.4385964912280702,
+      "tp": 30,
+      "fp": 8,
+      "fn": 46,
+      "stage": "filtered",
+      "candidates": 533,
+      "report": "outputs/OVD-MLLM/experiments/chache_val100/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 55,
+      "fp_score01": 478,
+      "fn_score01": 21,
+      "precision_score01": 0.10318949343339587,
+      "recall_score01": 0.7236842105263158,
+      "f2_score01": 0.32855436081242534,
+      "delta_AP50_pp": 22.218820719885095,
+      "delta_AP50_95_pp": 10.715615964950112,
+      "delta_recall_pp": -2.631578947368418,
+      "fp_removed": 80
+    },
+    {
+      "dataset": "chache_val100",
+      "split": "开发集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.5756466600399394,
+      "mAP75": 0.27904125861983353,
+      "mAP50_95": 0.31680810120935093,
+      "AP85": 0.1588405808906683,
+      "AP90": 0.04334433443344334,
+      "AP95": 0.011221122112211218,
+      "AP_box20": 0.3557995073347305,
+      "precision": 0.7894736842105263,
+      "recall": 0.39473684210526316,
+      "f2": 0.4385964912280702,
+      "tp": 30,
+      "fp": 8,
+      "fn": 46,
+      "stage": "deduplicated",
+      "candidates": 515,
+      "report": "outputs/OVD-MLLM/experiments/chache_val100/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 55,
+      "fp_score01": 460,
+      "fn_score01": 21,
+      "precision_score01": 0.10679611650485436,
+      "recall_score01": 0.7236842105263158,
+      "f2_score01": 0.3357753357753358,
+      "delta_AP50_pp": 22.23885843794263,
+      "delta_AP50_95_pp": 10.724102527892123,
+      "delta_recall_pp": -2.631578947368418,
+      "fp_removed": 80
+    },
+    {
+      "dataset": "chache_val100",
+      "split": "开发集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.5698942848389554,
+      "mAP75": 0.33140144907383,
+      "mAP50_95": 0.32325834349827154,
+      "AP85": 0.1406073289940501,
+      "AP90": 0.028771112405358186,
+      "AP95": 0.004469589816124468,
+      "AP_box20": 0.3560608393826087,
+      "precision": 0.7894736842105263,
+      "recall": 0.39473684210526316,
+      "f2": 0.4385964912280702,
+      "tp": 30,
+      "fp": 8,
+      "fn": 46,
+      "stage": "refined",
+      "candidates": 515,
+      "report": "outputs/OVD-MLLM/experiments/chache_val100/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 52,
+      "fp_score01": 463,
+      "fn_score01": 24,
+      "precision_score01": 0.10097087378640776,
+      "recall_score01": 0.6842105263157895,
+      "f2_score01": 0.31746031746031744
+    },
+    {
+      "dataset": "chache_val300",
+      "split": "历史固定测试集",
+      "status": "passed",
+      "threshold": 0.001,
+      "mAP50": 0.29003627370981017,
+      "mAP75": 0.1753812962184647,
+      "mAP50_95": 0.18043711577989616,
+      "AP85": 0.10935645124391732,
+      "AP90": 0.047031907513695084,
+      "AP95": 0.01154404233526801,
+      "AP_box20": 0.17887752164980303,
+      "precision": 0.2225705329153605,
+      "recall": 0.3776595744680851,
+      "f2": 0.33146591970121386,
+      "tp": 71,
+      "fp": 248,
+      "fn": 117,
+      "stage": "source",
+      "candidates": 122211,
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 172,
+      "fp_score01": 38080,
+      "fn_score01": 16,
+      "precision_score01": 0.004496496915193977,
+      "recall_score01": 0.9148936170212766,
+      "f2_score01": 0.022049020613270437
+    },
+    {
+      "dataset": "chache_val300",
+      "split": "历史固定测试集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.2898375033551083,
+      "mAP75": 0.17533189135162636,
+      "mAP50_95": 0.18034962295865378,
+      "AP85": 0.10935645124391732,
+      "AP90": 0.047031907513695084,
+      "AP95": 0.01154404233526801,
+      "AP_box20": 0.17880163454437872,
+      "precision": 0.2225705329153605,
+      "recall": 0.3776595744680851,
+      "f2": 0.33146591970121386,
+      "tp": 71,
+      "fp": 248,
+      "fn": 117,
+      "stage": "baseline",
+      "candidates": 38252,
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 172,
+      "fp_score01": 38080,
+      "fn_score01": 16,
+      "precision_score01": 0.004496496915193977,
+      "recall_score01": 0.9148936170212766,
+      "f2_score01": 0.022049020613270437
+    },
+    {
+      "dataset": "chache_val300",
+      "split": "历史固定测试集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.49314940443095956,
+      "mAP75": 0.271613114033355,
+      "mAP50_95": 0.2791988166515206,
+      "AP85": 0.16021692114722602,
+      "AP90": 0.07339333933393341,
+      "AP95": 0.008546117769671705,
+      "AP_box20": 0.2795672719637019,
+      "precision": 0.8,
+      "recall": 0.3191489361702128,
+      "f2": 0.36275695284159615,
+      "tp": 60,
+      "fp": 15,
+      "fn": 128,
+      "stage": "filtered",
+      "candidates": 1812,
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 128,
+      "fp_score01": 1684,
+      "fn_score01": 60,
+      "precision_score01": 0.0706401766004415,
+      "recall_score01": 0.6808510638297872,
+      "f2_score01": 0.249609984399376,
+      "delta_AP50_pp": 20.33119010758513,
+      "delta_AP50_95_pp": 9.88491936928668,
+      "delta_recall_pp": -5.851063829787234,
+      "fp_removed": 233
+    },
+    {
+      "dataset": "chache_val300",
+      "split": "历史固定测试集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.4938352545537249,
+      "mAP75": 0.27168481478645146,
+      "mAP50_95": 0.2793493765395422,
+      "AP85": 0.16021692114722602,
+      "AP90": 0.07339333933393341,
+      "AP95": 0.008546117769671705,
+      "AP_box20": 0.2796153476397235,
+      "precision": 0.8,
+      "recall": 0.3191489361702128,
+      "f2": 0.36275695284159615,
+      "tp": 60,
+      "fp": 15,
+      "fn": 128,
+      "stage": "deduplicated",
+      "candidates": 1766,
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 128,
+      "fp_score01": 1638,
+      "fn_score01": 60,
+      "precision_score01": 0.072480181200453,
+      "recall_score01": 0.6808510638297872,
+      "f2_score01": 0.2541699761715648,
+      "delta_AP50_pp": 20.399775119861662,
+      "delta_AP50_95_pp": 9.899975358088845,
+      "delta_recall_pp": -5.851063829787234,
+      "fp_removed": 233
+    },
+    {
+      "dataset": "chache_val300",
+      "split": "历史固定测试集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.5220039016630287,
+      "mAP75": 0.2518606266457909,
+      "mAP50_95": 0.2786288856288759,
+      "AP85": 0.14361587740376577,
+      "AP90": 0.08514059220100316,
+      "AP95": 0.010899520608995208,
+      "AP_box20": 0.2560078891590841,
+      "precision": 0.8,
+      "recall": 0.3191489361702128,
+      "f2": 0.36275695284159615,
+      "tp": 60,
+      "fp": 15,
+      "fn": 128,
+      "stage": "refined",
+      "candidates": 1766,
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 134,
+      "fp_score01": 1632,
+      "fn_score01": 54,
+      "precision_score01": 0.07587768969422423,
+      "recall_score01": 0.7127659574468085,
+      "f2_score01": 0.26608419380460685
+    },
+    {
+      "dataset": "diaowu_val100",
+      "split": "开发集",
+      "status": "passed",
+      "threshold": 0.001,
+      "mAP50": 0.7160724939691159,
+      "mAP75": 0.5127393963837863,
+      "mAP50_95": 0.4408957703263482,
+      "AP85": 0.22339788493876503,
+      "AP90": 0.10320973061765354,
+      "AP95": 0.0,
+      "AP_box20": 0.5741469767682392,
+      "precision": 0.7638888888888888,
+      "recall": 0.7333333333333333,
+      "f2": 0.7392473118279569,
+      "tp": 55,
+      "fp": 17,
+      "fn": 20,
+      "stage": "source",
+      "candidates": 9998,
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val100/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 69,
+      "fp_score01": 1765,
+      "fn_score01": 6,
+      "precision_score01": 0.0376226826608506,
+      "recall_score01": 0.92,
+      "f2_score01": 0.161668228678538
+    },
+    {
+      "dataset": "diaowu_val100",
+      "split": "开发集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.7158123183291745,
+      "mAP75": 0.5124214341682962,
+      "mAP50_95": 0.44065541299843847,
+      "AP85": 0.22339788493876503,
+      "AP90": 0.10320973061765354,
+      "AP95": 0.0,
+      "AP_box20": 0.573672028024299,
+      "precision": 0.7638888888888888,
+      "recall": 0.7333333333333333,
+      "f2": 0.7392473118279569,
+      "tp": 55,
+      "fp": 17,
+      "fn": 20,
+      "stage": "baseline",
+      "candidates": 1834,
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val100/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 69,
+      "fp_score01": 1765,
+      "fn_score01": 6,
+      "precision_score01": 0.0376226826608506,
+      "recall_score01": 0.92,
+      "f2_score01": 0.161668228678538
+    },
+    {
+      "dataset": "diaowu_val100",
+      "split": "开发集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.7572030185283487,
+      "mAP75": 0.5342196225699627,
+      "mAP50_95": 0.4548193598485737,
+      "AP85": 0.22858220983359795,
+      "AP90": 0.10767906222060332,
+      "AP95": 0.0,
+      "AP_box20": 0.5903367128640339,
+      "precision": 0.828125,
+      "recall": 0.7066666666666667,
+      "f2": 0.728021978021978,
+      "tp": 53,
+      "fp": 11,
+      "fn": 22,
+      "stage": "filtered",
+      "candidates": 121,
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val100/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 63,
+      "fp_score01": 58,
+      "fn_score01": 12,
+      "precision_score01": 0.5206611570247934,
+      "recall_score01": 0.84,
+      "f2_score01": 0.7482185273159145,
+      "delta_AP50_pp": 4.1390700199174235,
+      "delta_AP50_95_pp": 1.4163946850135223,
+      "delta_recall_pp": -2.6666666666666616,
+      "fp_removed": 6
+    },
+    {
+      "dataset": "diaowu_val100",
+      "split": "开发集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.7572030185283487,
+      "mAP75": 0.5342196225699627,
+      "mAP50_95": 0.4548193598485737,
+      "AP85": 0.22858220983359795,
+      "AP90": 0.10767906222060332,
+      "AP95": 0.0,
+      "AP_box20": 0.5903367128640339,
+      "precision": 0.828125,
+      "recall": 0.7066666666666667,
+      "f2": 0.728021978021978,
+      "tp": 53,
+      "fp": 11,
+      "fn": 22,
+      "stage": "deduplicated",
+      "candidates": 118,
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val100/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 63,
+      "fp_score01": 55,
+      "fn_score01": 12,
+      "precision_score01": 0.5338983050847458,
+      "recall_score01": 0.84,
+      "f2_score01": 0.7535885167464115,
+      "delta_AP50_pp": 4.1390700199174235,
+      "delta_AP50_95_pp": 1.4163946850135223,
+      "delta_recall_pp": -2.6666666666666616,
+      "fp_removed": 6
+    },
+    {
+      "dataset": "diaowu_val100",
+      "split": "开发集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.7341551940224144,
+      "mAP75": 0.5046794749692243,
+      "mAP50_95": 0.4582825906655434,
+      "AP85": 0.2438907382603414,
+      "AP90": 0.06173644391466174,
+      "AP95": 0.010073507350735072,
+      "AP_box20": 0.5349519990958864,
+      "precision": 0.8125,
+      "recall": 0.6933333333333334,
+      "f2": 0.7142857142857143,
+      "tp": 52,
+      "fp": 12,
+      "fn": 23,
+      "stage": "refined",
+      "candidates": 118,
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val100/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 63,
+      "fp_score01": 55,
+      "fn_score01": 12,
+      "precision_score01": 0.5338983050847458,
+      "recall_score01": 0.84,
+      "f2_score01": 0.7535885167464115
+    },
+    {
+      "dataset": "diaowu_val300",
+      "split": "历史固定测试集",
+      "status": "passed",
+      "threshold": 0.001,
+      "mAP50": 0.5595630443517717,
+      "mAP75": 0.3828147825958111,
+      "mAP50_95": 0.33762161849885686,
+      "AP85": 0.14152466652545292,
+      "AP90": 0.05478675784508959,
+      "AP95": 0.0040132654042103234,
+      "AP_box20": 0.3953332691033925,
+      "precision": 0.7420634920634921,
+      "recall": 0.5342857142857143,
+      "f2": 0.5659806295399515,
+      "tp": 187,
+      "fp": 65,
+      "fn": 163,
+      "stage": "source",
+      "candidates": 30000,
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val300/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 259,
+      "fp_score01": 5608,
+      "fn_score01": 91,
+      "precision_score01": 0.044145219021646497,
+      "recall_score01": 0.74,
+      "f2_score01": 0.1782028347323517
+    },
+    {
+      "dataset": "diaowu_val300",
+      "split": "历史固定测试集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.5582883258169203,
+      "mAP75": 0.3828147825958111,
+      "mAP50_95": 0.3372826841486051,
+      "AP85": 0.14152466652545292,
+      "AP90": 0.05478675784508959,
+      "AP95": 0.0040132654042103234,
+      "AP_box20": 0.3953332691033925,
+      "precision": 0.7420634920634921,
+      "recall": 0.5342857142857143,
+      "f2": 0.5659806295399515,
+      "tp": 187,
+      "fp": 65,
+      "fn": 163,
+      "stage": "baseline",
+      "candidates": 5867,
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val300/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 259,
+      "fp_score01": 5608,
+      "fn_score01": 91,
+      "precision_score01": 0.044145219021646497,
+      "recall_score01": 0.74,
+      "f2_score01": 0.1782028347323517
+    },
+    {
+      "dataset": "diaowu_val300",
+      "split": "历史固定测试集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.5745101457169006,
+      "mAP75": 0.36076983008146174,
+      "mAP50_95": 0.3320081726846371,
+      "AP85": 0.1326387325112339,
+      "AP90": 0.05306884704998194,
+      "AP95": 0.0040594059405940595,
+      "AP_box20": 0.37110324131437994,
+      "precision": 0.8511627906976744,
+      "recall": 0.5228571428571429,
+      "f2": 0.56656346749226,
+      "tp": 183,
+      "fp": 32,
+      "fn": 167,
+      "stage": "filtered",
+      "candidates": 367,
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val300/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 214,
+      "fp_score01": 153,
+      "fn_score01": 136,
+      "precision_score01": 0.5831062670299727,
+      "recall_score01": 0.6114285714285714,
+      "f2_score01": 0.6055461233729486,
+      "delta_AP50_pp": 1.6221819899980283,
+      "delta_AP50_95_pp": -0.5274511463968012,
+      "delta_recall_pp": -1.1428571428571344,
+      "fp_removed": 33
+    },
+    {
+      "dataset": "diaowu_val300",
+      "split": "历史固定测试集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.5745101457169006,
+      "mAP75": 0.36076983008146174,
+      "mAP50_95": 0.3320081726846371,
+      "AP85": 0.1326387325112339,
+      "AP90": 0.05306884704998194,
+      "AP95": 0.0040594059405940595,
+      "AP_box20": 0.37110324131437994,
+      "precision": 0.8511627906976744,
+      "recall": 0.5228571428571429,
+      "f2": 0.56656346749226,
+      "tp": 183,
+      "fp": 32,
+      "fn": 167,
+      "stage": "deduplicated",
+      "candidates": 367,
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val300/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 214,
+      "fp_score01": 153,
+      "fn_score01": 136,
+      "precision_score01": 0.5831062670299727,
+      "recall_score01": 0.6114285714285714,
+      "f2_score01": 0.6055461233729486,
+      "delta_AP50_pp": 1.6221819899980283,
+      "delta_AP50_95_pp": -0.5274511463968012,
+      "delta_recall_pp": -1.1428571428571344,
+      "fp_removed": 33
+    },
+    {
+      "dataset": "diaowu_val300",
+      "split": "历史固定测试集",
+      "status": "passed",
+      "threshold": 0.01,
+      "mAP50": 0.5835692956770057,
+      "mAP75": 0.40780908004644434,
+      "mAP50_95": 0.3643679837410585,
+      "AP85": 0.24476894851122238,
+      "AP90": 0.08538822047368635,
+      "AP95": 0.008017706526855387,
+      "AP_box20": 0.4431284860631954,
+      "precision": 0.8418604651162791,
+      "recall": 0.5171428571428571,
+      "f2": 0.5603715170278638,
+      "tp": 181,
+      "fp": 34,
+      "fn": 169,
+      "stage": "refined",
+      "candidates": 367,
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val300/yoloe_v8l_10shot_qwen38_v1_20261030/experiment_results.md",
+      "tp_score01": 218,
+      "fp_score01": 149,
+      "fn_score01": 132,
+      "precision_score01": 0.5940054495912807,
+      "recall_score01": 0.6228571428571429,
+      "f2_score01": 0.6168647425014149
+    }
+  ],
+  "costs": [
+    {
+      "dataset": "chache_val100",
+      "phase": "filter",
+      "requests": 4,
+      "cached": 826,
+      "recovered_cached": 0,
+      "failed": 0,
+      "retries": 0,
+      "input_tokens": 24390,
+      "output_tokens": 2816,
+      "seconds": 76.61185838701203,
+      "wall_seconds": 24.37241555703804
+    },
+    {
+      "dataset": "chache_val100",
+      "phase": "refine",
+      "requests": 3,
+      "cached": 76,
+      "recovered_cached": 0,
+      "failed": 0,
+      "retries": 0,
+      "input_tokens": 11763,
+      "output_tokens": 801,
+      "seconds": 20.449520613066852,
+      "wall_seconds": 8.052804304752499
+    },
+    {
+      "dataset": "chache_val300",
+      "phase": "filter",
+      "requests": 4,
+      "cached": 2424,
+      "recovered_cached": 0,
+      "failed": 0,
+      "retries": 1,
+      "input_tokens": 14906,
+      "output_tokens": 2771,
+      "seconds": 81.80779114551842,
+      "wall_seconds": 46.02624432975426
+    },
+    {
+      "dataset": "chache_val300",
+      "phase": "refine",
+      "requests": 3,
+      "cached": 225,
+      "recovered_cached": 0,
+      "failed": 0,
+      "retries": 0,
+      "input_tokens": 15660,
+      "output_tokens": 2099,
+      "seconds": 41.78111177450046,
+      "wall_seconds": 22.653855229262263
+    },
+    {
+      "dataset": "diaowu_val100",
+      "phase": "filter",
+      "requests": 0,
+      "cached": 132,
+      "recovered_cached": 0,
+      "failed": 0,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "seconds": 0.0,
+      "wall_seconds": 0.17434856109321117
+    },
+    {
+      "dataset": "diaowu_val100",
+      "phase": "refine",
+      "requests": 0,
+      "cached": 82,
+      "recovered_cached": 0,
+      "failed": 0,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "seconds": 0.0,
+      "wall_seconds": 0.04353572800755501
+    },
+    {
+      "dataset": "diaowu_val300",
+      "phase": "filter",
+      "requests": 4,
+      "cached": 445,
+      "recovered_cached": 0,
+      "failed": 0,
+      "retries": 0,
+      "input_tokens": 25859,
+      "output_tokens": 2444,
+      "seconds": 58.46952670905739,
+      "wall_seconds": 25.21956898411736
+    },
+    {
+      "dataset": "diaowu_val300",
+      "phase": "refine",
+      "requests": 3,
+      "cached": 254,
+      "recovered_cached": 0,
+      "failed": 0,
+      "retries": 0,
+      "input_tokens": 8531,
+      "output_tokens": 450,
+      "seconds": 16.717733127065003,
+      "wall_seconds": 9.259548958856612
+    }
+  ],
+  "cumulative_request_usage": [
+    {
+      "dataset": "chache_val100",
+      "phase": "filter",
+      "request_attempts": 862,
+      "known_input_tokens": 5264841,
+      "known_output_tokens": 629137,
+      "attempts_without_usage": 12
+    },
+    {
+      "dataset": "chache_val100",
+      "phase": "refine",
+      "request_attempts": 85,
+      "known_input_tokens": 357529,
+      "known_output_tokens": 35063,
+      "attempts_without_usage": 2
+    },
+    {
+      "dataset": "chache_val300",
+      "phase": "filter",
+      "request_attempts": 2441,
+      "known_input_tokens": 15193297,
+      "known_output_tokens": 1812958,
+      "attempts_without_usage": 14
+    },
+    {
+      "dataset": "chache_val300",
+      "phase": "refine",
+      "request_attempts": 234,
+      "known_input_tokens": 1060235,
+      "known_output_tokens": 112397,
+      "attempts_without_usage": 1
+    },
+    {
+      "dataset": "diaowu_val100",
+      "phase": "filter",
+      "request_attempts": 136,
+      "known_input_tokens": 794215,
+      "known_output_tokens": 101452,
+      "attempts_without_usage": 0
+    },
+    {
+      "dataset": "diaowu_val100",
+      "phase": "refine",
+      "request_attempts": 82,
+      "known_input_tokens": 219333,
+      "known_output_tokens": 9170,
+      "attempts_without_usage": 0
+    },
+    {
+      "dataset": "diaowu_val300",
+      "phase": "filter",
+      "request_attempts": 460,
+      "known_input_tokens": 2498605,
+      "known_output_tokens": 315389,
+      "attempts_without_usage": 11
+    },
+    {
+      "dataset": "diaowu_val300",
+      "phase": "refine",
+      "request_attempts": 263,
+      "known_input_tokens": 712892,
+      "known_output_tokens": 32330,
+      "attempts_without_usage": 1
+    }
+  ],
+  "deletion_audit": [
+    {
+      "baseline_tp": 67,
+      "baseline_fp": 13094,
+      "deleted_baseline_tp": 13,
+      "deleted_baseline_fp": 12615,
+      "deleted_correct_candidates": [
+        {
+          "relative_path": "s00_00000_0000037.jpg",
+          "candidate_id": "p0105",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000082.jpg",
+          "candidate_id": "p0107",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000090.jpg",
+          "candidate_id": "p0120",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004080.jpg",
+          "candidate_id": "p0083",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s00_00008_0004140.jpg",
+          "candidate_id": "p0100",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004167.jpg",
+          "candidate_id": "p0110",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004172.jpg",
+          "candidate_id": "p0101",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004310.jpg",
+          "candidate_id": "p0382",
+          "label": "Qianyinche"
+        },
+        {
+          "relative_path": "s02_00006_0003237.jpg",
+          "candidate_id": "p0001",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s03_00000_0000056.jpg",
+          "candidate_id": "p0167",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000110.jpg",
+          "candidate_id": "p0166",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000330.jpg",
+          "candidate_id": "p0203",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s04_00004_0002287.jpg",
+          "candidate_id": "p0296",
+          "label": "Chache4"
+        }
+      ],
+      "baseline_tp_deleted_rate": 0.19402985074626866,
+      "baseline_fp_deleted_rate": 0.9634183595539942,
+      "dataset": "chache_val100",
+      "stage": "filtered",
+      "net_tp_loss": 12
+    },
+    {
+      "baseline_tp": 67,
+      "baseline_fp": 13094,
+      "deleted_baseline_tp": 13,
+      "deleted_baseline_fp": 12633,
+      "deleted_correct_candidates": [
+        {
+          "relative_path": "s00_00000_0000037.jpg",
+          "candidate_id": "p0105",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000082.jpg",
+          "candidate_id": "p0107",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000090.jpg",
+          "candidate_id": "p0120",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004080.jpg",
+          "candidate_id": "p0083",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s00_00008_0004140.jpg",
+          "candidate_id": "p0100",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004167.jpg",
+          "candidate_id": "p0110",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004172.jpg",
+          "candidate_id": "p0101",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004310.jpg",
+          "candidate_id": "p0382",
+          "label": "Qianyinche"
+        },
+        {
+          "relative_path": "s02_00006_0003237.jpg",
+          "candidate_id": "p0001",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s03_00000_0000056.jpg",
+          "candidate_id": "p0167",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000110.jpg",
+          "candidate_id": "p0166",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000330.jpg",
+          "candidate_id": "p0203",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s04_00004_0002287.jpg",
+          "candidate_id": "p0296",
+          "label": "Chache4"
+        }
+      ],
+      "baseline_tp_deleted_rate": 0.19402985074626866,
+      "baseline_fp_deleted_rate": 0.9647930349778524,
+      "dataset": "chache_val100",
+      "stage": "deduplicated",
+      "net_tp_loss": 12
+    },
+    {
+      "baseline_tp": 172,
+      "baseline_fp": 38080,
+      "deleted_baseline_tp": 50,
+      "deleted_baseline_fp": 36390,
+      "deleted_correct_candidates": [
+        {
+          "relative_path": "s00_00000_0000009.jpg",
+          "candidate_id": "p0133",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000011.jpg",
+          "candidate_id": "p0112",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000015.jpg",
+          "candidate_id": "p0123",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000019.jpg",
+          "candidate_id": "p0109",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000036.jpg",
+          "candidate_id": "p0101",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000049.jpg",
+          "candidate_id": "p0100",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000052.jpg",
+          "candidate_id": "p0100",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000083.jpg",
+          "candidate_id": "p0107",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000085.jpg",
+          "candidate_id": "p0105",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000089.jpg",
+          "candidate_id": "p0101",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000091.jpg",
+          "candidate_id": "p0136",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000451.jpg",
+          "candidate_id": "p0014",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s00_00008_0004081.jpg",
+          "candidate_id": "p0012",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s00_00008_0004143.jpg",
+          "candidate_id": "p0116",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004164.jpg",
+          "candidate_id": "p0100",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004170.jpg",
+          "candidate_id": "p0100",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004173.jpg",
+          "candidate_id": "p0100",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004311.jpg",
+          "candidate_id": "p0000",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s00_00008_0004311.jpg",
+          "candidate_id": "p0378",
+          "label": "Qianyinche"
+        },
+        {
+          "relative_path": "s01_00000_0000029.jpg",
+          "candidate_id": "p0001",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s01_00000_0000324.jpg",
+          "candidate_id": "p0003",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s01_00000_0000342.jpg",
+          "candidate_id": "p0002",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s01_00000_0000375.jpg",
+          "candidate_id": "p0003",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s01_00000_0000377.jpg",
+          "candidate_id": "p0003",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s01_00000_0000403.jpg",
+          "candidate_id": "p0002",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s01_00000_0000490.jpg",
+          "candidate_id": "p0000",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s03_00000_0000058.jpg",
+          "candidate_id": "p0167",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000328.jpg",
+          "candidate_id": "p0201",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000337.jpg",
+          "candidate_id": "p0203",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000346.jpg",
+          "candidate_id": "p0203",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000356.jpg",
+          "candidate_id": "p0203",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000365.jpg",
+          "candidate_id": "p0205",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000366.jpg",
+          "candidate_id": "p0205",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000367.jpg",
+          "candidate_id": "p0203",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000369.jpg",
+          "candidate_id": "p0205",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000369.jpg",
+          "candidate_id": "p0206",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000381.jpg",
+          "candidate_id": "p0203",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000397.jpg",
+          "candidate_id": "p0200",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000413.jpg",
+          "candidate_id": "p0202",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000499.jpg",
+          "candidate_id": "p0201",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s04_00001_0000518.jpg",
+          "candidate_id": "p0326",
+          "label": "Qianyinche"
+        },
+        {
+          "relative_path": "s04_00001_0000620.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00001_0000625.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002281.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002284.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002288.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002392.jpg",
+          "candidate_id": "p0301",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002401.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002402.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002460.jpg",
+          "candidate_id": "p0350",
+          "label": "Qianyinche"
+        }
+      ],
+      "baseline_tp_deleted_rate": 0.29069767441860467,
+      "baseline_fp_deleted_rate": 0.9556197478991597,
+      "dataset": "chache_val300",
+      "stage": "filtered",
+      "net_tp_loss": 44
+    },
+    {
+      "baseline_tp": 172,
+      "baseline_fp": 38080,
+      "deleted_baseline_tp": 50,
+      "deleted_baseline_fp": 36436,
+      "deleted_correct_candidates": [
+        {
+          "relative_path": "s00_00000_0000009.jpg",
+          "candidate_id": "p0133",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000011.jpg",
+          "candidate_id": "p0112",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000015.jpg",
+          "candidate_id": "p0123",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000019.jpg",
+          "candidate_id": "p0109",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000036.jpg",
+          "candidate_id": "p0101",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000049.jpg",
+          "candidate_id": "p0100",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000052.jpg",
+          "candidate_id": "p0100",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000083.jpg",
+          "candidate_id": "p0107",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000085.jpg",
+          "candidate_id": "p0105",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000089.jpg",
+          "candidate_id": "p0101",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000091.jpg",
+          "candidate_id": "p0136",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00000_0000451.jpg",
+          "candidate_id": "p0014",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s00_00008_0004081.jpg",
+          "candidate_id": "p0012",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s00_00008_0004143.jpg",
+          "candidate_id": "p0116",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004164.jpg",
+          "candidate_id": "p0100",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004170.jpg",
+          "candidate_id": "p0100",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004173.jpg",
+          "candidate_id": "p0100",
+          "label": "Chache2"
+        },
+        {
+          "relative_path": "s00_00008_0004311.jpg",
+          "candidate_id": "p0000",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s00_00008_0004311.jpg",
+          "candidate_id": "p0378",
+          "label": "Qianyinche"
+        },
+        {
+          "relative_path": "s01_00000_0000029.jpg",
+          "candidate_id": "p0001",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s01_00000_0000324.jpg",
+          "candidate_id": "p0003",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s01_00000_0000342.jpg",
+          "candidate_id": "p0002",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s01_00000_0000375.jpg",
+          "candidate_id": "p0003",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s01_00000_0000377.jpg",
+          "candidate_id": "p0003",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s01_00000_0000403.jpg",
+          "candidate_id": "p0002",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s01_00000_0000490.jpg",
+          "candidate_id": "p0000",
+          "label": "Chache1"
+        },
+        {
+          "relative_path": "s03_00000_0000058.jpg",
+          "candidate_id": "p0167",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000328.jpg",
+          "candidate_id": "p0201",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000337.jpg",
+          "candidate_id": "p0203",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000346.jpg",
+          "candidate_id": "p0203",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000356.jpg",
+          "candidate_id": "p0203",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000365.jpg",
+          "candidate_id": "p0205",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000366.jpg",
+          "candidate_id": "p0205",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000367.jpg",
+          "candidate_id": "p0203",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000369.jpg",
+          "candidate_id": "p0205",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000369.jpg",
+          "candidate_id": "p0206",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000381.jpg",
+          "candidate_id": "p0203",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000397.jpg",
+          "candidate_id": "p0200",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000413.jpg",
+          "candidate_id": "p0202",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s03_00000_0000499.jpg",
+          "candidate_id": "p0201",
+          "label": "Chache3"
+        },
+        {
+          "relative_path": "s04_00001_0000518.jpg",
+          "candidate_id": "p0326",
+          "label": "Qianyinche"
+        },
+        {
+          "relative_path": "s04_00001_0000620.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00001_0000625.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002281.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002284.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002288.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002392.jpg",
+          "candidate_id": "p0301",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002401.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002402.jpg",
+          "candidate_id": "p0300",
+          "label": "Chache4"
+        },
+        {
+          "relative_path": "s04_00004_0002460.jpg",
+          "candidate_id": "p0350",
+          "label": "Qianyinche"
+        }
+      ],
+      "baseline_tp_deleted_rate": 0.29069767441860467,
+      "baseline_fp_deleted_rate": 0.956827731092437,
+      "dataset": "chache_val300",
+      "stage": "deduplicated",
+      "net_tp_loss": 44
+    },
+    {
+      "baseline_tp": 69,
+      "baseline_fp": 1765,
+      "deleted_baseline_tp": 6,
+      "deleted_baseline_fp": 1707,
+      "deleted_correct_candidates": [
+        {
+          "relative_path": "s00_00003_0000357.jpg",
+          "candidate_id": "p0000",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00003_0000388.jpg",
+          "candidate_id": "p0008",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00013_0001389.jpg",
+          "candidate_id": "p0000",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00025_0002587.jpg",
+          "candidate_id": "p0000",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00040_0004096.jpg",
+          "candidate_id": "p0003",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00053_0005384.jpg",
+          "candidate_id": "p0000",
+          "label": "hanging object"
+        }
+      ],
+      "baseline_tp_deleted_rate": 0.08695652173913043,
+      "baseline_fp_deleted_rate": 0.9671388101983003,
+      "dataset": "diaowu_val100",
+      "stage": "filtered",
+      "net_tp_loss": 6
+    },
+    {
+      "baseline_tp": 69,
+      "baseline_fp": 1765,
+      "deleted_baseline_tp": 6,
+      "deleted_baseline_fp": 1710,
+      "deleted_correct_candidates": [
+        {
+          "relative_path": "s00_00003_0000357.jpg",
+          "candidate_id": "p0000",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00003_0000388.jpg",
+          "candidate_id": "p0008",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00013_0001389.jpg",
+          "candidate_id": "p0000",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00025_0002587.jpg",
+          "candidate_id": "p0000",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00040_0004096.jpg",
+          "candidate_id": "p0003",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00053_0005384.jpg",
+          "candidate_id": "p0000",
+          "label": "hanging object"
+        }
+      ],
+      "baseline_tp_deleted_rate": 0.08695652173913043,
+      "baseline_fp_deleted_rate": 0.9688385269121813,
+      "dataset": "diaowu_val100",
+      "stage": "deduplicated",
+      "net_tp_loss": 6
+    },
+    {
+      "baseline_tp": 259,
+      "baseline_fp": 5608,
+      "deleted_baseline_tp": 45,
+      "deleted_baseline_fp": 5455,
+      "deleted_correct_candidates": [
+        {
+          "relative_path": "s00_00000_0000072.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00000_0000088.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001400.jpg",
+          "candidate_id": "p0002",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001412.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001416.jpg",
+          "candidate_id": "p0002",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001418.jpg",
+          "candidate_id": "p0008",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001425.jpg",
+          "candidate_id": "p0003",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001439.jpg",
+          "candidate_id": "p0015",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001447.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001452.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001453.jpg",
+          "candidate_id": "p0002",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001454.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001455.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001461.jpg",
+          "candidate_id": "p0002",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001463.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005037.jpg",
+          "candidate_id": "p0010",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005043.jpg",
+          "candidate_id": "p0011",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005049.jpg",
+          "candidate_id": "p0011",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005053.jpg",
+          "candidate_id": "p0008",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005064.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005066.jpg",
+          "candidate_id": "p0013",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005067.jpg",
+          "candidate_id": "p0004",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005068.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005069.jpg",
+          "candidate_id": "p0004",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005070.jpg",
+          "candidate_id": "p0015",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005071.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005090.jpg",
+          "candidate_id": "p0002",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005117.jpg",
+          "candidate_id": "p0008",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005123.jpg",
+          "candidate_id": "p0012",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005126.jpg",
+          "candidate_id": "p0014",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005127.jpg",
+          "candidate_id": "p0004",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005130.jpg",
+          "candidate_id": "p0009",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005132.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005132.jpg",
+          "candidate_id": "p0014",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005133.jpg",
+          "candidate_id": "p0013",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005134.jpg",
+          "candidate_id": "p0010",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005135.jpg",
+          "candidate_id": "p0019",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005137.jpg",
+          "candidate_id": "p0018",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005141.jpg",
+          "candidate_id": "p0018",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005143.jpg",
+          "candidate_id": "p0008",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005144.jpg",
+          "candidate_id": "p0017",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005146.jpg",
+          "candidate_id": "p0021",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005152.jpg",
+          "candidate_id": "p0010",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005153.jpg",
+          "candidate_id": "p0009",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005157.jpg",
+          "candidate_id": "p0007",
+          "label": "hanging object"
+        }
+      ],
+      "baseline_tp_deleted_rate": 0.17374517374517376,
+      "baseline_fp_deleted_rate": 0.9727175463623395,
+      "dataset": "diaowu_val300",
+      "stage": "filtered",
+      "net_tp_loss": 45
+    },
+    {
+      "baseline_tp": 259,
+      "baseline_fp": 5608,
+      "deleted_baseline_tp": 45,
+      "deleted_baseline_fp": 5455,
+      "deleted_correct_candidates": [
+        {
+          "relative_path": "s00_00000_0000072.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00000_0000088.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001400.jpg",
+          "candidate_id": "p0002",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001412.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001416.jpg",
+          "candidate_id": "p0002",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001418.jpg",
+          "candidate_id": "p0008",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001425.jpg",
+          "candidate_id": "p0003",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001439.jpg",
+          "candidate_id": "p0015",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001447.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001452.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001453.jpg",
+          "candidate_id": "p0002",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001454.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001455.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001461.jpg",
+          "candidate_id": "p0002",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00014_0001463.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005037.jpg",
+          "candidate_id": "p0010",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005043.jpg",
+          "candidate_id": "p0011",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005049.jpg",
+          "candidate_id": "p0011",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005053.jpg",
+          "candidate_id": "p0008",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005064.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005066.jpg",
+          "candidate_id": "p0013",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005067.jpg",
+          "candidate_id": "p0004",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005068.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005069.jpg",
+          "candidate_id": "p0004",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005070.jpg",
+          "candidate_id": "p0015",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005071.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00050_0005090.jpg",
+          "candidate_id": "p0002",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005117.jpg",
+          "candidate_id": "p0008",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005123.jpg",
+          "candidate_id": "p0012",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005126.jpg",
+          "candidate_id": "p0014",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005127.jpg",
+          "candidate_id": "p0004",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005130.jpg",
+          "candidate_id": "p0009",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005132.jpg",
+          "candidate_id": "p0001",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005132.jpg",
+          "candidate_id": "p0014",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005133.jpg",
+          "candidate_id": "p0013",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005134.jpg",
+          "candidate_id": "p0010",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005135.jpg",
+          "candidate_id": "p0019",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005137.jpg",
+          "candidate_id": "p0018",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005141.jpg",
+          "candidate_id": "p0018",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005143.jpg",
+          "candidate_id": "p0008",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005144.jpg",
+          "candidate_id": "p0017",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005146.jpg",
+          "candidate_id": "p0021",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005152.jpg",
+          "candidate_id": "p0010",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005153.jpg",
+          "candidate_id": "p0009",
+          "label": "hanging object"
+        },
+        {
+          "relative_path": "s00_00051_0005157.jpg",
+          "candidate_id": "p0007",
+          "label": "hanging object"
+        }
+      ],
+      "baseline_tp_deleted_rate": 0.17374517374517376,
+      "baseline_fp_deleted_rate": 0.9727175463623395,
+      "dataset": "diaowu_val300",
+      "stage": "deduplicated",
+      "net_tp_loss": 45
+    }
+  ]
+}

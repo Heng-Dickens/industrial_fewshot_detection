@@ -1,0 +1,7 @@
+# Preserve the 27B O+B+J prompt and completeness review for both other models.
+extends: diaowu_qwen27b_input_supplement.yaml
+experiment_suite:
+  positive_counts: [10]
+  positive_variants: [O+B+J]
+  include_prompt_only: false
+  negative_variants: [false]

@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+  "kind": "text",
+  "text": "有高门架的站驾式堆高车",
+  "text_sha256": "12a4965f7a3213032bb001f9d6ac8f24080ce0f071b1ea59e5138e36b8e07fb6",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "1a2fb7b50a3a76d592481b7fe4765355739f205810e28588dd4731671737c3ae"
+  },
+  "request_signature": "a015c2b74fe4f53b3acc7273ac5fa395ffabf8e334dc3e94d58caa79f43eb141"
+}

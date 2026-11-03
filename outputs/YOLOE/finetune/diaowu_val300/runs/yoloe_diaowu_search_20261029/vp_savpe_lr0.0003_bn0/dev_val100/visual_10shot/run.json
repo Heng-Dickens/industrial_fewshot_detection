@@ -1,0 +1,338 @@
+{
+  "schema": "industrial_fewshot.finetune_test.v1",
+  "scene_name": "diaowu_val100",
+  "method": "yoloe-vp",
+  "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/finetuning/diaowu_yoloe/yoloe_diaowu_search_20261029/vp_savpe_lr0.0003_bn0/dev_val100/visual_10shot",
+  "training_run": "/home/yuheng/Work/industrial_fewshot_detection/outputs/finetuning/diaowu_yoloe/yoloe_diaowu_search_20261029/vp_savpe_lr0.0003_bn0",
+  "training_shot_per_class": 10,
+  "prompt_shot_per_class": 10,
+  "split": "dev",
+  "pretrained_baseline": false,
+  "checkpoint": "/home/yuheng/Work/industrial_fewshot_detection/outputs/finetuning/diaowu_yoloe/yoloe_diaowu_search_20261029/vp_savpe_lr0.0003_bn0/weights/best.pt",
+  "weights_sha256": "07b470d54bc66e7799dcbd798b9ee83d1ca9be199ec3838768cac84d138d1a12",
+  "checkpoint_structure": {
+    "task": "detect",
+    "head": "YOLOEDetect",
+    "has_savpe": true,
+    "is_fused": false,
+    "names": [
+      "hanging object"
+    ]
+  },
+  "finetune_config_sha256": "73f6a1c228c91c24163db200dd3bf1b5fa8e618bafb319151f90e3743408cf84",
+  "preparation_sha256": "456f37d557d245fa5a4f6f511c53cc0119c31acad9b71fed071feb7bd4655a2c",
+  "source_sha256": "088e8a1aaa4e72f78a70982e546bff02c43a1a012f393fe8eb988617cfea7595",
+  "image_count": 100,
+  "image_dir": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/diaowu_val100/images",
+  "image_paths": [
+    "s00_00001_0000158.jpg",
+    "s00_00001_0000178.jpg",
+    "s00_00003_0000337.jpg",
+    "s00_00003_0000357.jpg",
+    "s00_00003_0000388.jpg",
+    "s00_00004_0000402.jpg",
+    "s00_00004_0000423.jpg",
+    "s00_00005_0000573.jpg",
+    "s00_00005_0000590.jpg",
+    "s00_00006_0000683.jpg",
+    "s00_00006_0000693.jpg",
+    "s00_00007_0000730.jpg",
+    "s00_00007_0000744.jpg",
+    "s00_00008_0000858.jpg",
+    "s00_00008_0000867.jpg",
+    "s00_00009_0000910.jpg",
+    "s00_00009_0000913.jpg",
+    "s00_00012_0001217.jpg",
+    "s00_00012_0001247.jpg",
+    "s00_00013_0001315.jpg",
+    "s00_00013_0001389.jpg",
+    "s00_00014_0001433.jpg",
+    "s00_00014_0001498.jpg",
+    "s00_00015_0001508.jpg",
+    "s00_00015_0001528.jpg",
+    "s00_00016_0001601.jpg",
+    "s00_00016_0001643.jpg",
+    "s00_00016_0001671.jpg",
+    "s00_00016_0001699.jpg",
+    "s00_00017_0001779.jpg",
+    "s00_00017_0001799.jpg",
+    "s00_00018_0001810.jpg",
+    "s00_00018_0001899.jpg",
+    "s00_00019_0001920.jpg",
+    "s00_00019_0001987.jpg",
+    "s00_00021_0002119.jpg",
+    "s00_00021_0002141.jpg",
+    "s00_00022_0002224.jpg",
+    "s00_00022_0002244.jpg",
+    "s00_00023_0002332.jpg",
+    "s00_00023_0002399.jpg",
+    "s00_00024_0002413.jpg",
+    "s00_00024_0002499.jpg",
+    "s00_00025_0002500.jpg",
+    "s00_00025_0002587.jpg",
+    "s00_00026_0002603.jpg",
+    "s00_00026_0002643.jpg",
+    "s00_00026_0002664.jpg",
+    "s00_00026_0002685.jpg",
+    "s00_00027_0002716.jpg",
+    "s00_00027_0002737.jpg",
+    "s00_00027_0002756.jpg",
+    "s00_00027_0002796.jpg",
+    "s00_00028_0002801.jpg",
+    "s00_00028_0002824.jpg",
+    "s00_00028_0002848.jpg",
+    "s00_00028_0002894.jpg",
+    "s00_00029_0002964.jpg",
+    "s00_00029_0002991.jpg",
+    "s00_00030_0003005.jpg",
+    "s00_00030_0003034.jpg",
+    "s00_00030_0003063.jpg",
+    "s00_00030_0003098.jpg",
+    "s00_00031_0003164.jpg",
+    "s00_00031_0003195.jpg",
+    "s00_00032_0003226.jpg",
+    "s00_00032_0003282.jpg",
+    "s00_00033_0003345.jpg",
+    "s00_00033_0003384.jpg",
+    "s00_00034_0003406.jpg",
+    "s00_00034_0003454.jpg",
+    "s00_00034_0003497.jpg",
+    "s00_00036_0003645.jpg",
+    "s00_00037_0003766.jpg",
+    "s00_00037_0003788.jpg",
+    "s00_00038_0003805.jpg",
+    "s00_00038_0003890.jpg",
+    "s00_00039_0003977.jpg",
+    "s00_00039_0003993.jpg",
+    "s00_00040_0004018.jpg",
+    "s00_00040_0004096.jpg",
+    "s00_00041_0004177.jpg",
+    "s00_00042_0004202.jpg",
+    "s00_00042_0004257.jpg",
+    "s00_00042_0004298.jpg",
+    "s00_00043_0004302.jpg",
+    "s00_00044_0004495.jpg",
+    "s00_00045_0004583.jpg",
+    "s00_00046_0004681.jpg",
+    "s00_00047_0004701.jpg",
+    "s00_00048_0004830.jpg",
+    "s00_00049_0004950.jpg",
+    "s00_00049_0004975.jpg",
+    "s00_00049_0004978.jpg",
+    "s00_00049_0004981.jpg",
+    "s00_00051_0005151.jpg",
+    "s00_00052_0005216.jpg",
+    "s00_00053_0005384.jpg",
+    "s00_00054_0005471.jpg",
+    "s00_00055_0005506.jpg"
+  ],
+  "ground_truth_dir": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/diaowu_val100/images",
+  "dataset_manifest": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/diaowu_val100/manifest.json",
+  "dataset_manifest_sha256": "9fc0afc51bd3a568e2b520db3c20fd57d1b243bb035cc16a404659d6cf8bea9c",
+  "dataset_sha256": "71de070a3d0733943b8ec4cadaea93bae33cd065ad6b7b0412bb448c6dedc148",
+  "evaluation": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.5,
+    "score_thresholds": [
+      0.5,
+      0.7
+    ],
+    "max_detections_per_image": 100
+  },
+  "targets": [
+    {
+      "id": "hanging object",
+      "backend": "yoloe",
+      "label": "hanging object"
+    }
+  ],
+  "inference": {
+    "source_dir": "/home/yuheng/Work/industrial_fewshot_detection/third_party/yoloe",
+    "weights": "/home/yuheng/Work/industrial_fewshot_detection/outputs/finetuning/diaowu_yoloe/yoloe_diaowu_search_20261029/vp_savpe_lr0.0003_bn0/weights/best.pt",
+    "device": "0",
+    "imgsz": 640,
+    "confidence": 0.001,
+    "nms_iou": 0.7,
+    "max_detections": 100,
+    "torch_threads": 4
+  },
+  "support_manifests": [
+    {
+      "path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/10shot/seed_0.json",
+      "sha256": "eb5859c59cbd47df162e5c70fed675b17d23bf5a0287a9150c9295f07ceda6b2"
+    }
+  ],
+  "references": {
+    "hanging object": [
+      {
+        "sample_id": "positive/images/0000090.jpg",
+        "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0000090.jpg",
+        "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/annotations/0000090.json",
+        "image_sha256": "8e565471c2e978ced9a8176db0c5543b860abb547bef73eed64837554ac72306",
+        "annotation_sha256": "fc2336bf466bc24f8db0eb3fbe113eb07ced3831c71ff02b747a6bbc41cfc381",
+        "bboxes": [
+          [
+            1377.75,
+            480.0,
+            1600.25,
+            880.0
+          ]
+        ]
+      },
+      {
+        "sample_id": "positive/images/0000189.jpg",
+        "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0000189.jpg",
+        "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/annotations/0000189.json",
+        "image_sha256": "19e0ecb2fe48c4ab19cc52a5056aeb7847e074c644da9920acdcf6f1eb00e758",
+        "annotation_sha256": "92e9fe82022643e4dc21f3ff129f24231bbe385234ecd97706401efbfbd886c3",
+        "bboxes": [
+          [
+            1189.0,
+            381.25,
+            1380.25,
+            710.0
+          ]
+        ]
+      },
+      {
+        "sample_id": "positive/images/0001320.jpg",
+        "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0001320.jpg",
+        "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/annotations/0001320.json",
+        "image_sha256": "e78769b05e4183ebfd01a72580e4d7eb36d01eb6ef94ef76908f6a6558e727e3",
+        "annotation_sha256": "e9c3be91ebd5679bf1457cd42faf95a3cae0cbb07f340a98d9d922a163ca9990",
+        "bboxes": [
+          [
+            1141.5,
+            385.0,
+            1484.0,
+            1011.25
+          ]
+        ]
+      },
+      {
+        "sample_id": "positive/images/0001352.jpg",
+        "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0001352.jpg",
+        "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/annotations/0001352.json",
+        "image_sha256": "82e0721671c75970c1a923250f82806fbc2e4d6c8732aedf3be4cbd561df4bac",
+        "annotation_sha256": "0a1774c8c730469bd857bdee9ec428a56a283c67ed225b968139881f8228ea39",
+        "bboxes": [
+          [
+            1036.5,
+            700.0,
+            1286.5,
+            1178.75
+          ]
+        ]
+      },
+      {
+        "sample_id": "positive/images/0003939.jpg",
+        "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0003939.jpg",
+        "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/annotations/0003939.json",
+        "image_sha256": "9c1fd9ddb73bcfcd991e861c4be46679278b440c6524f0642885cf5a4681cc15",
+        "annotation_sha256": "76876ac7257bf91accc760c267c2bab42e3e00443ecbe1b98c139e7cad7cefbc",
+        "bboxes": [
+          [
+            1757.75,
+            420.0,
+            1897.75,
+            697.5
+          ]
+        ]
+      },
+      {
+        "sample_id": "positive/images/0003992.jpg",
+        "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0003992.jpg",
+        "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/annotations/0003992.json",
+        "image_sha256": "9fb5be49fe83265f68bbea620935be83903c87645326ee1488cfc7e51c04bce0",
+        "annotation_sha256": "392272fcaa04b64edbf1aec2ff4743bc32869682e40d473db24287d7419ca8eb",
+        "bboxes": [
+          [
+            1471.5,
+            805.0,
+            1774.0,
+            1400.0
+          ]
+        ]
+      },
+      {
+        "sample_id": "positive/images/0005072.jpg",
+        "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0005072.jpg",
+        "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/annotations/0005072.json",
+        "image_sha256": "ca7d109f6001b3b46ed337780b3dde2dcd3d795ca090e662752f727166ae5443",
+        "annotation_sha256": "c484760b140497475abed81366c99c2d1910b7946c796eefb616931301b2497a",
+        "bboxes": [
+          [
+            1415.917808219178,
+            551.3698630136987,
+            1657.3561643835617,
+            991.4383561643837
+          ],
+          [
+            2299.4794520547944,
+            460.6164383561644,
+            2412.292682926829,
+            685.0
+          ]
+        ]
+      },
+      {
+        "sample_id": "positive/images/0001233.jpg",
+        "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0001233.jpg",
+        "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/annotations/0001233.json",
+        "image_sha256": "87a8458219d49dffd275cf10786023052797e14119e0565fbcc09ac19d14b928",
+        "annotation_sha256": "9790c465b41485494c921efbbb720e52209c5c66d4f559193cf8ba49c6add153",
+        "bboxes": [
+          [
+            1352.0,
+            432.0,
+            1586.0,
+            876.0
+          ]
+        ]
+      },
+      {
+        "sample_id": "positive/images/0002970.jpg",
+        "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0002970.jpg",
+        "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/annotations/0002970.json",
+        "image_sha256": "df76ecabcd3e0357d5b701b7fb18158554068950b0abd45ccc9adac28e46085f",
+        "annotation_sha256": "5d5556540d4adb85b48b5603f5a53d50ff1099d2e62911c0ff409363b9ec0ee3",
+        "bboxes": [
+          [
+            1186.4657534246574,
+            510.2739726027398,
+            1422.0487804878048,
+            998.4146341463415
+          ]
+        ]
+      },
+      {
+        "sample_id": "positive/images/0002578.jpg",
+        "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0002578.jpg",
+        "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/annotations/0002578.json",
+        "image_sha256": "33da52bf7936ad0c954c54c40f3aab7ba6c4cc61ed3bf16d840ec2fe4e78a97d",
+        "annotation_sha256": "5a737029832ca2dd9d995723277d5a67f8c45e3015e6f4f5f54737e33323cbbd",
+        "bboxes": [
+          [
+            1373.109589041096,
+            273.972602739726,
+            1623.109589041096,
+            700.3424657534247
+          ]
+        ]
+      }
+    ]
+  },
+  "protocol": "independent_single_class_queries",
+  "max_det_per_query": 100,
+  "status": "completed",
+  "requested_prompt_shots": [
+    10
+  ],
+  "prompt_shot_status": "supported",
+  "test_identity_sha256": "33a48c1b044ceda046ea2b2096114829bbfae3f82f40f75c674a85d3f510656b",
+  "success_request_count": 100,
+  "failed_request_count": 0,
+  "elapsed_seconds": 19.403261405881494,
+  "discarded_degenerate_count": 0,
+  "box_policy": "Clip to original image; discard zero-area clipped boxes; reject nonfinite predictions."
+}

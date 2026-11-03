@@ -1,0 +1,13 @@
+{
+  "extends": "../config.json",
+  "training": {
+    "epochs": 80,
+    "imgsz": 960,
+    "lr0": 0.0001,
+    "patience": 12,
+    "val_interval": 1,
+    "workers": 0,
+    "plots": false,
+    "save_period": -1
+  }
+}

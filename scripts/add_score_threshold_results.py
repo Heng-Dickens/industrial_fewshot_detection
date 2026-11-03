@@ -23,7 +23,7 @@ def main(argv=None):
     selection.add_argument('--all-runs', action='store_true')
     parser.add_argument('--report', type=Path, help='Save the batch summary as JSON')
     args = parser.parse_args(argv)
-    paths = list(completed_runs(PROJECT_ROOT / 'outputs/runs')) if args.all_runs else args.run_dir
+    paths = list(completed_runs(PROJECT_ROOT / 'outputs')) if args.all_runs else args.run_dir
     rows, failed = [], []
     for path in paths:
         try:

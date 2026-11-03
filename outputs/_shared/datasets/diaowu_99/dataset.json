@@ -1,0 +1,9 @@
+{
+  "identity": "65dcc186b3d1d8cc2de51f6ca992bd5b629be8c987a111692306d386d5f4a22a",
+  "name": "diaowu_99",
+  "image_count": 99,
+  "image_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+  "ground_truth_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+  "dataset_manifest": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\splits\\diaowu\\test.json",
+  "dataset_sha256": "65dcc186b3d1d8cc2de51f6ca992bd5b629be8c987a111692306d386d5f4a22a"
+}

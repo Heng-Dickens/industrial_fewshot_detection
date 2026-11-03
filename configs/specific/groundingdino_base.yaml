@@ -7,7 +7,7 @@ mode: train  # inference + evaluation; no training
 max_reference_examples: 0
 max_reference_crops: 0
 max_reference_negatives: 0
-output_dir: ../../outputs/runs
+output_dir: ../../outputs
 reuse_predictions: true
 groundingdino:
   checkpoint: ../../weights/grounding-dino-base

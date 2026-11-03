@@ -1,0 +1,46 @@
+{
+  "scene": "diaowu",
+  "shot": 10,
+  "support_seed": 0,
+  "dev_images": "data/raw/diaowu_val100/images",
+  "dev_manifest": "data/raw/diaowu_val100/manifest.json",
+  "dev_expected_images": 100,
+  "test_manifest": "data/raw/diaowu_val300/manifest.json",
+  "source_dir": "third_party/yoloe",
+  "weights": "weights/yoloe/yoloe-v8l-seg.pt",
+  "yolov8_weights": "weights/yolov8/yolov8l.pt",
+  "text_encoder": "weights/yoloe/mobileclip_blt.pt",
+  "data": "data/finetune/diaowu_10shot_val100/dataset.yaml",
+  "project": "outputs/YOLOE/finetune/diaowu_val300/runs",
+  "class_names": [
+    "hanging object"
+  ],
+  "text_prompts": [
+    "a large hollow cylindrical load suspended by a lifting hook and taut slings, including the connected lifting assembly"
+  ],
+  "training": {
+    "epochs": 100,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 0.1,
+    "weight_decay": 0.0005,
+    "patience": 10,
+    "workers": 2,
+    "seed": 0,
+    "amp": false,
+    "half": false,
+    "warmup_epochs": 0.0,
+    "mosaic": 0.0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "close_mosaic": 0,
+    "degrees": 0.0,
+    "translate": 0.05,
+    "scale": 0.1,
+    "fliplr": 0.0,
+    "flipud": 0.0,
+    "cache": false,
+    "deterministic": true
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "industrial_fewshot.dataset_summary.v1",
+  "dataset": {
+    "identity": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+    "name": "chache_val300",
+    "image_count": 300,
+    "image_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\chache_val300\\images",
+    "ground_truth_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\chache_val300\\images",
+    "dataset_manifest": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\chache_val300\\manifest.json",
+    "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b"
+  },
+  "manifest_available": true,
+  "class_ground_truth_counts": {
+    "Chache2": 30,
+    "Chache1": 40,
+    "Qianyinche": 48,
+    "Chache4": 30,
+    "Chache3": 40
+  },
+  "row_count": 1,
+  "counts": {
+    "完成": 1
+  },
+  "methods": {
+    "JSTY-YOLO（监督）": 1
+  },
+  "rows": [
+    {
+      "dataset": "chache_val300",
+      "method": "JSTY-YOLO（监督）",
+      "model": "jsty_chache_det5_960_1280_0_0_0_2_fp32",
+      "prompt_version": "",
+      "prompt_sha256": null,
+      "shot_per_class": 0,
+      "input": "监督检测·FP32 ONNX",
+      "negative_references": 0,
+      "reference_images": 0,
+      "seed": null,
+      "protocol": "",
+      "repeat": 1,
+      "AP50": 0.9368000094853286,
+      "AP75": 0.8253829481292343,
+      "AP50_95": 0.715315684209939,
+      "precision_0_5": 0.9064327485380117,
+      "recall_0_5": 0.824468085106383,
+      "f1_0_5": null,
+      "f2_0_5": 0.8396533044420369,
+      "tp_0_5": 155,
+      "fp_0_5": 16,
+      "fn_0_5": 33,
+      "precision_0_7": 0.9733333333333334,
+      "recall_0_7": 0.776595744680851,
+      "f1_0_7": null,
+      "f2_0_7": 0.8093126385809314,
+      "tp_0_7": 146,
+      "fp_0_7": 4,
+      "fn_0_7": 42,
+      "total_images": 300,
+      "evaluated_images": 300,
+      "success_images": 300,
+      "failed_images": 0,
+      "ground_truth_count": 188,
+      "classes": {
+        "Chache1": 40,
+        "Chache2": 30,
+        "Chache3": 40,
+        "Chache4": 30,
+        "Qianyinche": 48
+      },
+      "class_AP50": {
+        "Chache1": 0.9833370667383489,
+        "Chache2": 0.8093577214864343,
+        "Chache3": 0.8983773949868668,
+        "Chache4": 1.0,
+        "Qianyinche": 0.9929278642149928
+      },
+      "status": "完成",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "逐图内容核验",
+      "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+      "iou_threshold": 0.5,
+      "max_detections_per_image": 100,
+      "default_score_threshold": 0.5,
+      "review_enabled": false,
+      "review_fallback_count": 0,
+      "run_dir": "../../experiments/chache_val300/jsty_chache_det5_960_1280_0_0_0_2_fp32_val300_20261102",
+      "report": "../../experiments/chache_val300/jsty_chache_det5_960_1280_0_0_0_2_fp32_val300_20261102/evaluation.txt",
+      "prompt_file": "../../experiments/chache_val300/jsty_chache_det5_960_1280_0_0_0_2_fp32_val300_20261102/prompt.txt",
+      "metric_file": "../../experiments/chache_val300/jsty_chache_det5_960_1280_0_0_0_2_fp32_val300_20261102/metrics.json",
+      "component_runs": [],
+      "record_evidence": {
+        "record_count": 300,
+        "success_images": 300,
+        "failed_images": 0,
+        "success_requests": 300,
+        "duplicate_records": 0,
+        "invalid_records": 0,
+        "hash_mismatches": 0,
+        "review_fallback_count": 0,
+        "manifest_matches": true,
+        "errors": []
+      },
+      "notes": ""
+    }
+  ],
+  "coverage": {
+    "primary_runs": 1,
+    "component_runs": 0,
+    "metadata_directories": 1
+  },
+  "generated_at": "2026-11-03 19:40:31",
+  "method_folder": "JSTY-YOLO"
+}

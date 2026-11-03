@@ -1,0 +1,9 @@
+{
+  "identity": "71de070a3d0733943b8ec4cadaea93bae33cd065ad6b7b0412bb448c6dedc148",
+  "name": "diaowu_val100",
+  "image_count": 100,
+  "image_dir": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/diaowu_val100/images",
+  "ground_truth_dir": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/diaowu_val100/images",
+  "dataset_manifest": "/home/yuheng/Work/industrial_fewshot_detection/outputs/OVD-MLLM/experiments/diaowu_val100/yoloe_v8l_10shot_qwen38_v1_20261030/cohort.json",
+  "dataset_sha256": "71de070a3d0733943b8ec4cadaea93bae33cd065ad6b7b0412bb448c6dedc148"
+}

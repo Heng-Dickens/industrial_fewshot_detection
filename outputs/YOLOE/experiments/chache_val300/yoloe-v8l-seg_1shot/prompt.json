@@ -1,0 +1,189 @@
+{
+  "snapshots": [
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "yoloe",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/yoloe-v8l-seg.pt",
+      "kind": "visual",
+      "text": null,
+      "text_sha256": null,
+      "text_source": "not_a_text_prompt",
+      "references": [
+        {
+          "sample_id": "positive/images/s02_00006_0003239.jpg",
+          "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache1/positive/images/s02_00006_0003239.jpg",
+          "image_sha256": "4f9c0956200d55391ed13c368fdf448ce6ab20d60bffb610235d57d50770c41e",
+          "bboxes": [
+            [
+              1477.74998784,
+              486.25000639999996,
+              1846.49998848,
+              795.0000064000001
+            ]
+          ]
+        }
+      ],
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "yoloe_visual",
+        "counts": {
+          "reference_examples": 1,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 1,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "26d3ae553de29ae8670331f9c77c8fc146e9e1e08c3c056941f6be78b1945575"
+      },
+      "request_signature": "7bc04a2765355e3afe187668d41c26122204ffafbf3fb21d0e752c3be15d17ce"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "yoloe",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/yoloe-v8l-seg.pt",
+      "kind": "visual",
+      "text": null,
+      "text_sha256": null,
+      "text_source": "not_a_text_prompt",
+      "references": [
+        {
+          "sample_id": "positive/images/s00_00008_0004139.jpg",
+          "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache2/positive/images/s00_00008_0004139.jpg",
+          "image_sha256": "cdb00b0f7fcc65a4ad3d5e6fd34359ce2e7c8b414df0b84431eb563bd5f90cea",
+          "bboxes": [
+            [
+              318.4070784,
+              566.5486734,
+              494.36536320000005,
+              674.1618714000001
+            ]
+          ]
+        }
+      ],
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "yoloe_visual",
+        "counts": {
+          "reference_examples": 1,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 1,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "a75ab2cf346e33b491fb78f5a90b3b318ae9c4b8eefc07040bff823263db98e2"
+      },
+      "request_signature": "a7f68308380360e127e708695fc37ee15ba6f9d7e11c1c96247e931391488e8b"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "yoloe",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/yoloe-v8l-seg.pt",
+      "kind": "visual",
+      "text": null,
+      "text_sha256": null,
+      "text_source": "not_a_text_prompt",
+      "references": [
+        {
+          "sample_id": "positive/images/s04_00001_0000931.jpg",
+          "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000931.jpg",
+          "image_sha256": "8a7040490f961c54f56b60796f2bdb383c10dd4ee121ffe4e63c1504e83cc186",
+          "bboxes": [
+            [
+              542.4561504,
+              85.6140354,
+              712.2123936,
+              322.3008846
+            ]
+          ]
+        }
+      ],
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "yoloe_visual",
+        "counts": {
+          "reference_examples": 1,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 1,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "e03f0125e20610b37d62bf2ba884003fba32d69330a0e8c1b04a06d4b15bd889"
+      },
+      "request_signature": "a175d8fdd88c6927f28ed7a684dad4d5cbfbd31515fcac64b4d013517999b117"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "yoloe",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/yoloe-v8l-seg.pt",
+      "kind": "visual",
+      "text": null,
+      "text_sha256": null,
+      "text_source": "not_a_text_prompt",
+      "references": [
+        {
+          "sample_id": "positive/images/s02_00002_0001077.jpg",
+          "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache4/positive/images/s02_00002_0001077.jpg",
+          "image_sha256": "569220b6450f6c6f9899b646ac97421abb3f755df6750aa064018622999fee25",
+          "bboxes": [
+            [
+              1261.49999808,
+              410.0000044,
+              2136.49998912,
+              966.2500083999998
+            ]
+          ]
+        }
+      ],
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "yoloe_visual",
+        "counts": {
+          "reference_examples": 1,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 1,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "dbda15b6813fc0422f1441c4b3951454e4952b3256f22871e9e109f92bc2b8cf"
+      },
+      "request_signature": "93e244f7eff5b80559d224c73c152e44396e40d7f59e85001e33daa0f9bfc119"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "yoloe",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/yoloe-v8l-seg.pt",
+      "kind": "visual",
+      "text": null,
+      "text_sha256": null,
+      "text_source": "not_a_text_prompt",
+      "references": [
+        {
+          "sample_id": "positive/images/s04_00001_0000501.jpg",
+          "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Qianyinche/positive/images/s04_00001_0000501.jpg",
+          "image_sha256": "2b47afc3da3603a68ec6f3627262d54f21a5995cbab346568372c0e0f4ee4d37",
+          "bboxes": [
+            [
+              1059.9999936000002,
+              227.719296,
+              1200.35088,
+              396.14034960000004
+            ]
+          ]
+        }
+      ],
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "yoloe_visual",
+        "counts": {
+          "reference_examples": 1,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 1,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "0be8ad5ce19f8aa83b68fff932ecf247292300b26dfd5ceabe8ab3deefdafa73"
+      },
+      "request_signature": "1860b4b88beaea6184ad196ba106b90c2d1b32f514cc592b260bb24c624397cf"
+    }
+  ]
+}

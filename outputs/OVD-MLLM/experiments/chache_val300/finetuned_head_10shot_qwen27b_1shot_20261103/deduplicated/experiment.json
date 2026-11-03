@@ -1,0 +1,6 @@
+{
+  "method": "OVD-MLLM",
+  "dataset": "chache_val300",
+  "stage": "deduplicated",
+  "source_run": "outputs/YOLOE/finetune/chache_val300/runs/yoloe_search_20261029_r2/head_full_aug/test_val300/fixed_head"
+}

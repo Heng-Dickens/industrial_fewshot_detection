@@ -1,0 +1,80 @@
+{
+  "scene": "chache",
+  "shot": 10,
+  "support_seed": 0,
+  "dev_images": "data/finetune/novel_chache4_20261102/dev_base_only/images",
+  "dev_manifest": "data/finetune/novel_chache4_20261102/dev_base_only/manifest.json",
+  "dev_expected_images": 88,
+  "test_manifest": "data/raw/chache_val300/manifest.json",
+  "source_dir": "third_party/yoloe",
+  "weights": "weights/yoloe/yoloe-v8l-seg.pt",
+  "yolov8_weights": "weights/yolov8/yolov8l.pt",
+  "text_encoder": "weights/yoloe/mobileclip_blt.pt",
+  "data": "data/finetune/novel_chache4_20261102/base_10shot/dataset.yaml",
+  "project": "outputs/YOLOE/finetune/chache_val300/runs/novel_chache4_20261102",
+  "class_names": [
+    "Chache1",
+    "Chache2",
+    "Chache3",
+    "Qianyinche"
+  ],
+  "text_prompts": [
+    "a seated forklift with an overhead guard, a tall mast and two narrow forks",
+    "a low pallet truck with two long forks near the ground, without a tall mast or overhead guard",
+    "a compact stand-on stacker with a tall vertical mast and forks, without an overhead guard",
+    "a small seated industrial tow tractor without a lifting mast or forks"
+  ],
+  "training": {
+    "epochs": 100,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 0.1,
+    "weight_decay": 0.0005,
+    "patience": 10,
+    "workers": 0,
+    "seed": 0,
+    "amp": false,
+    "half": false,
+    "warmup_epochs": 0.0,
+    "mosaic": 0.0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "close_mosaic": 0,
+    "degrees": 0.0,
+    "translate": 0.05,
+    "scale": 0.1,
+    "fliplr": 0.0,
+    "flipud": 0.0,
+    "cache": false,
+    "deterministic": true,
+    "plots": false,
+    "save_period": -1,
+    "val_interval": 1
+  },
+  "class_protocol": {
+    "type": "heldout_visual_class_v1",
+    "base_classes": [
+      "Chache1",
+      "Chache2",
+      "Chache3",
+      "Qianyinche"
+    ],
+    "novel_classes": [
+      "Chache4"
+    ],
+    "training_partition": "base",
+    "validation_classes": [
+      "Chache1",
+      "Chache2",
+      "Chache3",
+      "Qianyinche"
+    ]
+  },
+  "adaptation": {
+    "scope": "full",
+    "protocol": "same_image",
+    "loss": "detection",
+    "freeze_savpe_bn_stats": true
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "dataset": "chache_val100",
+  "rows": [
+    {
+      "mAP50": 0.3533708717502486,
+      "mAP75": 0.192013323066693,
+      "mAP50_95": 0.20959747799122788,
+      "AP85": 0.10981522096509717,
+      "AP90": 0.03334918196132641,
+      "AP95": 0.007480748074807484,
+      "AP_box20": 0.25307367666059305,
+      "precision": 0.26666666666666666,
+      "recall": 0.42105263157894735,
+      "f2": 0.3773584905660377,
+      "tp": 32,
+      "fp": 88,
+      "fn": 44,
+      "stage": "source",
+      "candidates": 41060
+    },
+    {
+      "mAP50": 0.3532580756605131,
+      "mAP75": 0.192013323066693,
+      "mAP50_95": 0.2095670759304297,
+      "AP85": 0.10981522096509717,
+      "AP90": 0.03334918196132641,
+      "AP95": 0.007480748074807484,
+      "AP_box20": 0.25307367666059305,
+      "precision": 0.26666666666666666,
+      "recall": 0.42105263157894735,
+      "f2": 0.3773584905660377,
+      "tp": 32,
+      "fp": 88,
+      "fn": 44,
+      "stage": "baseline",
+      "candidates": 13161
+    },
+    {
+      "mAP50": 0.5754462828593641,
+      "mAP75": 0.27904125861983353,
+      "mAP50_95": 0.3167232355799308,
+      "AP85": 0.1588405808906683,
+      "AP90": 0.04334433443344334,
+      "AP95": 0.011221122112211218,
+      "AP_box20": 0.3557052121909304,
+      "precision": 0.7894736842105263,
+      "recall": 0.39473684210526316,
+      "f2": 0.4385964912280702,
+      "tp": 30,
+      "fp": 8,
+      "fn": 46,
+      "stage": "filtered",
+      "candidates": 533
+    },
+    {
+      "mAP50": 0.5756466600399394,
+      "mAP75": 0.27904125861983353,
+      "mAP50_95": 0.31680810120935093,
+      "AP85": 0.1588405808906683,
+      "AP90": 0.04334433443344334,
+      "AP95": 0.011221122112211218,
+      "AP_box20": 0.3557995073347305,
+      "precision": 0.7894736842105263,
+      "recall": 0.39473684210526316,
+      "f2": 0.4385964912280702,
+      "tp": 30,
+      "fp": 8,
+      "fn": 46,
+      "stage": "deduplicated",
+      "candidates": 515
+    },
+    {
+      "mAP50": 0.5698942848389554,
+      "mAP75": 0.33140144907383,
+      "mAP50_95": 0.32325834349827154,
+      "AP85": 0.1406073289940501,
+      "AP90": 0.028771112405358186,
+      "AP95": 0.004469589816124468,
+      "AP_box20": 0.3560608393826087,
+      "precision": 0.7894736842105263,
+      "recall": 0.39473684210526316,
+      "f2": 0.4385964912280702,
+      "tp": 30,
+      "fp": 8,
+      "fn": 46,
+      "stage": "refined",
+      "candidates": 515
+    }
+  ],
+  "audit": {
+    "selection": {
+      "threshold": 0.01,
+      "limit": 500,
+      "candidates": 13161,
+      "recall50": 0.881578947368421,
+      "recall85": 0.2894736842105263,
+      "box20_coverage": 0.6710526315789473,
+      "lost_recall50": 0.013157894736842105,
+      "selection_policy": "user_fixed_floor",
+      "criterion": "User fixed score>=0.01; no additional global truncation beyond source 100/class (500 total). Dev recall loss is reported, not optimized away.",
+      "source_sha256": "adc640c20306ba49b9b9a4ed24e8919f67449a8add83cf1a172c42ff4c57cf5d"
+    },
+    "split_audit": {
+      "exact_image_overlap": 0,
+      "shared_sequences": [
+        "s00_00000",
+        "s00_00008",
+        "s01_00000",
+        "s02_00002",
+        "s02_00006",
+        "s03_00000",
+        "s04_00001",
+        "s04_00004"
+      ],
+      "limitation": "Existing cohorts may share video sequences; no claim of sequence-independent generalization."
+    },
+    "filter_accounting": {
+      "requests": 4,
+      "cached": 826,
+      "recovered_cached": 0,
+      "failed": 0,
+      "retries": 0,
+      "input_tokens": 24390,
+      "output_tokens": 2816,
+      "seconds": 76.61185838701203,
+      "wall_seconds": 24.37241555703804
+    },
+    "decisions": {
+      "remove": 12628,
+      "uncertain": 249,
+      "keep": 284
+    },
+    "duplicate_edges": 18,
+    "invariant_check": "passed: retained coordinates/classes/scores/order unchanged",
+    "refine_accounting": {
+      "requests": 3,
+      "cached": 76,
+      "recovered_cached": 0,
+      "failed": 0,
+      "retries": 0,
+      "input_tokens": 11763,
+      "output_tokens": 801,
+      "seconds": 20.449520613066852,
+      "wall_seconds": 8.052804304752499
+    },
+    "refined_boxes": 213
+  }
+}

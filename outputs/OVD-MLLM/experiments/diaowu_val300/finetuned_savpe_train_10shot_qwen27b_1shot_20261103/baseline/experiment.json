@@ -1,0 +1,6 @@
+{
+  "method": "OVD-MLLM",
+  "dataset": "diaowu_val300",
+  "stage": "baseline",
+  "source_run": "outputs/YOLOE/finetune/diaowu_val300/runs/yoloe_diaowu_search_20261029/vp_full_lr0.0001/test_val300/visual_10shot"
+}

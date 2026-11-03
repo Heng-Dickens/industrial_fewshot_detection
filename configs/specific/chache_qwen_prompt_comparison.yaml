@@ -40,7 +40,7 @@ experiment_suite:
   exclude_reference_overlap: true
 ablation:
   enabled: false
-output_dir: ../../outputs/runs
+output_dir: ../../outputs
 results_layout: true
 reuse_predictions: true
 cache_version: chache_multiclass_prompt_v1

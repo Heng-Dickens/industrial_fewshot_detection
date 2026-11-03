@@ -1,0 +1,8 @@
+# Preserve the original v1 prompt and completeness review on the frozen 300 images.
+extends: diaowu_qwen27b_prompt_5shot.yaml
+concurrency: 2
+experiment_suite:
+  positive_counts: [5, 10]
+  positive_variants: [O+B, O+C, O+J, O+B+J, O+C+J, O+C+B, O+C+B+J]
+  include_prompt_only: false
+  negative_variants: [false]

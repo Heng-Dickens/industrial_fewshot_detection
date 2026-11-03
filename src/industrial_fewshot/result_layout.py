@@ -12,8 +12,9 @@ from .data.labelme import read_json, write_json
 from .outputs import safe_name
 from .paths import PROJECT_ROOT
 from .prompt_records import capture_prompt
+from .output_layout import method_name
 
-RUNS_ROOT = PROJECT_ROOT / 'outputs/runs'
+RUNS_ROOT = PROJECT_ROOT / 'outputs'
 
 
 @contextmanager
@@ -79,22 +80,21 @@ def _namespace_for_report(root: Path, report: dict, *, create=False) -> tuple[Pa
     # Keep dataset names explicit while retaining the familiar val300 identifier.
     dataset_name = scene if str(count) in scene else f'{scene}_{count}'
     identity = report['dataset_sha256']
-    if root.is_dir():
-        for marker in sorted(root.glob('*/dataset.json')):
+    method_first = root.resolve() == RUNS_ROOT.resolve()
+    registry_root = root / '_shared/datasets' if method_first else root
+    if registry_root.is_dir():
+        for marker in sorted(registry_root.glob('*/dataset.json')):
             if read_json(marker).get('identity') == identity:
                 dataset_name = marker.parent.name
                 break
-    if root.is_dir():
-        for marker in sorted(root.glob('*/dataset.json')):
-            if read_json(marker).get('identity') == identity:
-                dataset_name = marker.parent.name
-                break
-    dataset_dir = _namespace(root, dataset_name, 'dataset.json', identity,
+    dataset_dir = _namespace(registry_root, dataset_name, 'dataset.json', identity,
         {'name': dataset_name, 'image_count': count, 'image_dir': report['image_dir'],
          'ground_truth_dir': report['ground_truth_dir'], 'dataset_manifest': manifest,
          'dataset_sha256': identity}, create=create)
     snapshots = [target['prompt_snapshot'] for target in report['targets']]
     backends = {target['backend'] for target in report['targets']}
+    method = method_name(next(iter(backends))) if len(backends) == 1 else 'Mixed'
+    method_dataset = root / method / 'experiments' / dataset_dir.name if method_first else dataset_dir
     if backends == {'yoloe'} or (backends == {'pet_dino'} and all(s['kind'] == 'visual' for s in snapshots)):
         family = '视觉提示'
     elif backends == {'yolo_onnx'}:
@@ -119,7 +119,8 @@ def _namespace_for_report(root: Path, report: dict, *, create=False) -> tuple[Pa
     if backends in ({'pet_dino'}, {'yoloe'}) and family == '视觉提示':
         backend = next(iter(backends))
         method = {'pet_dino': 'PET-DINO', 'yoloe': 'YOLOE'}[backend]
-        prompt_dir = _namespace(dataset_dir, method, 'method.json', digest({'backend': backend}),
+        prompt_dir = _namespace(method_dataset.parent if method_first else dataset_dir,
+            method_dataset.name if method_first else method, 'method.json', digest({'backend': backend}),
             {'name': method, 'backend': backend}, create=create)
         version = family
         extra = {'method': method, 'method_dir': str(prompt_dir)}
@@ -128,7 +129,8 @@ def _namespace_for_report(root: Path, report: dict, *, create=False) -> tuple[Pa
         # reserves versions independently of model weights and repeat numbers.
         backend = next(iter(backends))
         method = {'wedetect': 'WeDetect', 'groundingdino': 'GroundingDINO'}[backend]
-        prompt_dir = _namespace(dataset_dir, method, 'method.json', digest({'backend': backend}),
+        prompt_dir = _namespace(method_dataset.parent if method_first else dataset_dir,
+            method_dataset.name if method_first else method, 'method.json', digest({'backend': backend}),
             {'name': method, 'backend': backend}, create=create)
         registry = _namespace(prompt_dir / '.prompts', 'prompt', 'prompt_version.json',
             prompt_identity, prompt_payload, create=create, version=True)
@@ -136,7 +138,7 @@ def _namespace_for_report(root: Path, report: dict, *, create=False) -> tuple[Pa
         extra = {'method': method, 'method_dir': str(prompt_dir),
                  'prompt_registry_dir': str(registry), 'model_name_suffix': f'_{version}'}
     else:
-        prompt_dir = _namespace(dataset_dir, family, 'prompt_version.json', prompt_identity,
+        prompt_dir = _namespace(method_dataset, family, 'prompt_version.json', prompt_identity,
             prompt_payload, create=create, version=family not in {'视觉提示', '监督检测'})
         version = prompt_dir.name
     return prompt_dir, {'root': str(root), 'dataset_dir': str(dataset_dir), 'dataset_name': dataset_dir.name,

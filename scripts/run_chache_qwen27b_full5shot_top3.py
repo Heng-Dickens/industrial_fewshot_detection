@@ -32,7 +32,7 @@ from industrial_fewshot.runtime import run_async
 from run_chache_expanded_shots import verify_group as verify_existing
 
 CONFIG = ROOT/'configs/specific/chache_qwen27b_full5shot_top3.yaml'
-RUNTIME = ROOT/'outputs/runtime/chache_qwen27b_full5shot_top3'
+RUNTIME = ROOT/'outputs/_shared/runtime/chache_qwen27b_full5shot_top3'
 STATE = RUNTIME/'status.json'
 STOP = RUNTIME/'STOP'
 DATASET = 'bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b'
@@ -94,10 +94,10 @@ def batch_lock():
 
 
 def archive_partial(source, directory):
-    parent = ROOT/'outputs/archive/interrupted_runs/chache_val300/full5shot_top3'/directory.name
+    parent = ROOT/'outputs/_shared/archive/history/interrupted_runs/chache_val300/full5shot_top3'/directory.name
     destination = parent/(source.name+'_'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ'))
     assert source.resolve().is_relative_to(directory.resolve())
-    assert destination.resolve().is_relative_to((ROOT/'outputs/archive/interrupted_runs/chache_val300').resolve())
+    assert destination.resolve().is_relative_to((ROOT/'outputs/_shared/archive/history/interrupted_runs/chache_val300').resolve())
     if os.name != 'nt':
         if any(p.is_symlink() for p in [source,*source.rglob('*')]): raise ValueError('Reparse/symlink in partial run')
         parent.mkdir(parents=True,exist_ok=True); source.rename(destination); return

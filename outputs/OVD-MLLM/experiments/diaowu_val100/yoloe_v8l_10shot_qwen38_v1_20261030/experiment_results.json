@@ -1,0 +1,149 @@
+{
+  "dataset": "diaowu_val100",
+  "rows": [
+    {
+      "mAP50": 0.7160724939691159,
+      "mAP75": 0.5127393963837863,
+      "mAP50_95": 0.4408957703263482,
+      "AP85": 0.22339788493876503,
+      "AP90": 0.10320973061765354,
+      "AP95": 0.0,
+      "AP_box20": 0.5741469767682392,
+      "precision": 0.7638888888888888,
+      "recall": 0.7333333333333333,
+      "f2": 0.7392473118279569,
+      "tp": 55,
+      "fp": 17,
+      "fn": 20,
+      "stage": "source",
+      "candidates": 9998
+    },
+    {
+      "mAP50": 0.7158123183291745,
+      "mAP75": 0.5124214341682962,
+      "mAP50_95": 0.44065541299843847,
+      "AP85": 0.22339788493876503,
+      "AP90": 0.10320973061765354,
+      "AP95": 0.0,
+      "AP_box20": 0.573672028024299,
+      "precision": 0.7638888888888888,
+      "recall": 0.7333333333333333,
+      "f2": 0.7392473118279569,
+      "tp": 55,
+      "fp": 17,
+      "fn": 20,
+      "stage": "baseline",
+      "candidates": 1834
+    },
+    {
+      "mAP50": 0.7572030185283487,
+      "mAP75": 0.5342196225699627,
+      "mAP50_95": 0.4548193598485737,
+      "AP85": 0.22858220983359795,
+      "AP90": 0.10767906222060332,
+      "AP95": 0.0,
+      "AP_box20": 0.5903367128640339,
+      "precision": 0.828125,
+      "recall": 0.7066666666666667,
+      "f2": 0.728021978021978,
+      "tp": 53,
+      "fp": 11,
+      "fn": 22,
+      "stage": "filtered",
+      "candidates": 121
+    },
+    {
+      "mAP50": 0.7572030185283487,
+      "mAP75": 0.5342196225699627,
+      "mAP50_95": 0.4548193598485737,
+      "AP85": 0.22858220983359795,
+      "AP90": 0.10767906222060332,
+      "AP95": 0.0,
+      "AP_box20": 0.5903367128640339,
+      "precision": 0.828125,
+      "recall": 0.7066666666666667,
+      "f2": 0.728021978021978,
+      "tp": 53,
+      "fp": 11,
+      "fn": 22,
+      "stage": "deduplicated",
+      "candidates": 118
+    },
+    {
+      "mAP50": 0.7341551940224144,
+      "mAP75": 0.5046794749692243,
+      "mAP50_95": 0.4582825906655434,
+      "AP85": 0.2438907382603414,
+      "AP90": 0.06173644391466174,
+      "AP95": 0.010073507350735072,
+      "AP_box20": 0.5349519990958864,
+      "precision": 0.8125,
+      "recall": 0.6933333333333334,
+      "f2": 0.7142857142857143,
+      "tp": 52,
+      "fp": 12,
+      "fn": 23,
+      "stage": "refined",
+      "candidates": 118
+    }
+  ],
+  "audit": {
+    "selection": {
+      "threshold": 0.01,
+      "limit": 500,
+      "candidates": 1834,
+      "recall50": 0.92,
+      "recall85": 0.41333333333333333,
+      "box20_coverage": 0.7733333333333333,
+      "lost_recall50": 0.02666666666666667,
+      "selection_policy": "user_fixed_floor",
+      "criterion": "User fixed score>=0.01; no additional global truncation beyond source 100/class (500 total). Dev recall loss is reported, not optimized away.",
+      "source_sha256": "1354912c4f3a976fb589dc0401a18a87dbef759ce1f60f0605a586d7a8b218f0"
+    },
+    "split_audit": {
+      "exact_image_overlap": 0,
+      "shared_sequences": [
+        "s00_00014",
+        "s00_00016",
+        "s00_00026",
+        "s00_00027",
+        "s00_00028",
+        "s00_00030",
+        "s00_00034",
+        "s00_00042",
+        "s00_00051"
+      ],
+      "limitation": "Existing cohorts may share video sequences; no claim of sequence-independent generalization."
+    },
+    "filter_accounting": {
+      "requests": 0,
+      "cached": 132,
+      "recovered_cached": 0,
+      "failed": 0,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "seconds": 0.0,
+      "wall_seconds": 0.17434856109321117
+    },
+    "decisions": {
+      "keep": 111,
+      "remove": 1713,
+      "uncertain": 10
+    },
+    "duplicate_edges": 3,
+    "invariant_check": "passed: retained coordinates/classes/scores/order unchanged",
+    "refine_accounting": {
+      "requests": 0,
+      "cached": 82,
+      "recovered_cached": 0,
+      "failed": 0,
+      "retries": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "seconds": 0.0,
+      "wall_seconds": 0.04353572800755501
+    },
+    "refined_boxes": 85
+  }
+}

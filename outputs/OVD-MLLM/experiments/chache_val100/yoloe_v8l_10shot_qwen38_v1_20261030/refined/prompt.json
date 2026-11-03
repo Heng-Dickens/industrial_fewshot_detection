@@ -1,0 +1,17 @@
+{
+  "text": "你是工业目标边界复核员。以下候选已经完成目标确认与去重。\n本轮固定候选集合、类别和分数，只允许修正同一目标的边界；不得删框、补框、改类。\n结合无标记原图、编号框整图、上下文裁图和类别参考，紧贴目标的可见整体边界。\n车辆按参考标注包含对应门架、货叉/专用属具等部件，避免邻近人员和背景；\n吊物按参考标注包含被吊起物及相连吊装组件，不能只框吊索，不能擅自猜测遮挡边界。\n坐标统一是【整张原图】归一化0~1000的[x1,y1,x2,y2]，绝不是裁图坐标。\n无法可靠改进时action=keep且bbox_1000=null；否则action=refine并给出坐标。\n逐个requested_ids完整返回，不输出额外编号。只输出JSON：\n{\"reviews\":[{\"candidate_id\":\"编号\",\"action\":\"keep/refine\",\"bbox_1000\":null,\n\"reason\":\"不超过30字的边界依据\"}]}。\n",
+  "text_sha256": "06ee842cad7f2de4442fd480193ec38ca2c1e2554c871de137af92feca24cc12",
+  "model": {
+    "model": "qwen3.8-27b",
+    "base_url": "http://127.0.0.1:15721/v1",
+    "proxy_request_model": "qwen3.8-27b",
+    "api_protocol": "anthropic_messages",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "max_tokens": 8192,
+    "stream": false,
+    "enable_thinking": false
+  },
+  "reference_shot_per_class": 1,
+  "input_protocol": "original+overlay24px+context1.5.crop640.v2"
+}

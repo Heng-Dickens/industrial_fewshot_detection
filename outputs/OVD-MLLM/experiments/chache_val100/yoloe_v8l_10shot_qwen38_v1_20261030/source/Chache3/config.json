@@ -1,0 +1,163 @@
+{
+  "schema": "ovd_mllm.yoloe.v1",
+  "scene": "chache",
+  "label": "Chache3",
+  "positive_count": 10,
+  "weights_sha256": "14e9c146f7f7efa0bfea8c5f82952c9f95fb1f9c3bf0f18b3727b76624f9d746",
+  "adapter_sha256": "6a53cce01794327b65d5d48922a5a8e4feb417f17f7156e71bf88526579bbbe1",
+  "references": [
+    {
+      "sample_id": "positive/images/s04_00001_0000931.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000931.jpg",
+      "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/annotations/s04_00001_0000931.json",
+      "bboxes": [
+        [
+          542.4561504,
+          85.6140354,
+          712.2123936,
+          322.3008846
+        ]
+      ],
+      "image_sha256": "8a7040490f961c54f56b60796f2bdb383c10dd4ee121ffe4e63c1504e83cc186"
+    },
+    {
+      "sample_id": "positive/images/s03_00000_0000035.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s03_00000_0000035.jpg",
+      "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/annotations/s03_00000_0000035.json",
+      "bboxes": [
+        [
+          1038.3281663999999,
+          254.00082600000002,
+          1215.7522176000002,
+          432.0353916
+        ]
+      ],
+      "image_sha256": "4ea5b221cee161f477d5fe95e363cbf27c36cf0a4b449da6f0f9f9e6410b5078"
+    },
+    {
+      "sample_id": "positive/images/s03_00000_0000464.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s03_00000_0000464.jpg",
+      "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/annotations/s03_00000_0000464.json",
+      "bboxes": [
+        [
+          1366.1947008,
+          382.47787439999996,
+          1467.9646080000002,
+          580.7079648
+        ]
+      ],
+      "image_sha256": "a68fc6258a433352275d64b42ba3fc1178664ed55e516fe1c5fa11262d456340"
+    },
+    {
+      "sample_id": "positive/images/s04_00001_0000926.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000926.jpg",
+      "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/annotations/s04_00001_0000926.json",
+      "bboxes": [
+        [
+          528.421056,
+          175.9649076,
+          686.3157888,
+          500.5263132
+        ]
+      ],
+      "image_sha256": "31a0384eb4b5cd60917abb99adaaaaab5659aa50683c1b4d2a99ba3b682c4778"
+    },
+    {
+      "sample_id": "positive/images/s04_00001_0000924.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000924.jpg",
+      "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/annotations/s04_00001_0000924.json",
+      "bboxes": [
+        [
+          451.2280608000001,
+          231.22807560000004,
+          665.263152,
+          636.4912284
+        ]
+      ],
+      "image_sha256": "aa6e2cb3926c5ee6b3fa17663c8ee7017c398da3d3312e3d567bd150d9446db7"
+    },
+    {
+      "sample_id": "positive/images/s04_00001_0000921.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000921.jpg",
+      "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/annotations/s04_00001_0000921.json",
+      "bboxes": [
+        [
+          260.8771872,
+          375.08771520000005,
+          581.9298143999999,
+          1003.1578920000001
+        ]
+      ],
+      "image_sha256": "ecdc2879559ce7a9095f789d5d8993d679a4d7c63d20aea76da554b6cefa9920"
+    },
+    {
+      "sample_id": "positive/images/s03_00000_0000166.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s03_00000_0000166.jpg",
+      "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/annotations/s03_00000_0000166.json",
+      "bboxes": [
+        [
+          1066.6832736,
+          606.217338,
+          1237.8760992,
+          1025.8407108000001
+        ]
+      ],
+      "image_sha256": "16a34b998a1aadd76368e101879b817ceac8c92d77c176806f58c3d2ae2fc43f"
+    },
+    {
+      "sample_id": "positive/images/s03_00000_0000101.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s03_00000_0000101.jpg",
+      "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/annotations/s03_00000_0000101.json",
+      "bboxes": [
+        [
+          1049.3805407999998,
+          270.0884952,
+          1229.0265504,
+          439.11504
+        ]
+      ],
+      "image_sha256": "17fd09449ef5e24a8e0e060b59561de4dc9127ee52dffcd6551cdd43fa1f1837"
+    },
+    {
+      "sample_id": "positive/images/s03_00000_0000329.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s03_00000_0000329.jpg",
+      "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/annotations/s03_00000_0000329.json",
+      "bboxes": [
+        [
+          1017.5221248000001,
+          483.362829,
+          1173.2743295999999,
+          601.9469045999999
+        ]
+      ],
+      "image_sha256": "8b376e75d6c1189cccec8324863d34b2c51202f0767f63d9a636115de9030f68"
+    },
+    {
+      "sample_id": "positive/images/s04_00001_0000922.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000922.jpg",
+      "json_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/annotations/s04_00001_0000922.json",
+      "bboxes": [
+        [
+          345.9649056,
+          316.31578920000004,
+          610.8771936,
+          849.6491219999999
+        ]
+      ],
+      "image_sha256": "f1749a15fbc5692a1f6138324d41756fb2eb1fc4a11a89e94f3dbb6877fc8e3d"
+    }
+  ],
+  "settings": {
+    "source_dir": "/home/yuheng/Work/industrial_fewshot_detection/third_party/yoloe",
+    "weights": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/yoloe-v8l-seg.pt",
+    "positive_count": 10,
+    "selection_seed": 0,
+    "imgsz": 640,
+    "confidence": 0.001,
+    "nms_iou": 0.7,
+    "max_detections": 100,
+    "aggregation": "normalized_mean",
+    "exclude_reference_overlap": true,
+    "torch_threads": 4
+  }
+}

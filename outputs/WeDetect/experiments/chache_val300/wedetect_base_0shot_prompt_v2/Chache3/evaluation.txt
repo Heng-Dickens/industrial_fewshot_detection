@@ -1,0 +1,55 @@
+
+chache_wedetect_names_Chache3
+【提示词记录】
+WeDetect 文字 prompt：站驾式堆高车
+输入快照：prompt.json；具体记录位于本次结果目录。
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.056
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.126
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.045
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.059
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.227
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.360
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.453
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.453
+
++----------+------+--------+-----+
+| category | AP   | Recall | F2  |
++----------+------+--------+-----+
+| Chache3  | 12.6 | 85.0   | 4.6 |
++----------+------+--------+-----+
+| mean     | 12.6 | 85.0   | 4.6 |
++----------+------+--------+-----+
+COCO categories: AP50 / Recall50; F2 from TP/FP at IoU=0.50, maxDets=100, all scores.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.5, maxDets=100
++---------+-----+------+-----+-----------+--------+-----+-------+
+| class   | tps | dets | gts | precision | recall | F2  | error |
++---------+-----+------+-----+-----------+--------+-----+-------+
+| Chache3 | 2   | 13   | 40  | 15.4      | 5.0    | 5.8 | 0.85  |
++---------+-----+------+-----+-----------+--------+-----+-------+
+| mean    | 2   | 13   | 40  | 15.4      | 5.0    | 5.8 | 0.85  |
++---------+-----+------+-----+-----------+--------+-----+-------+
+TP=2 | FP=11 | FN=38
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.7, maxDets=100
++---------+-----+------+-----+-----------+--------+-----+-------+
+| class   | tps | dets | gts | precision | recall | F2  | error |
++---------+-----+------+-----+-----------+--------+-----+-------+
+| Chache3 | 1   | 5    | 40  | 20.0      | 2.5    | 3.0 | 0.80  |
++---------+-----+------+-----+-----------+--------+-----+-------+
+| mean    | 1   | 5    | 40  | 20.0      | 2.5    | 3.0 | 0.80  |
++---------+-----+------+-----+-----------+--------+-----+-------+
+TP=1 | FP=4 | FN=39
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+Score thresholds filter output boxes and P/R/F2 counts; COCO AP/AR above uses all saved scores.
+Status: complete | images: 300 | failed requests: 0 | image accuracy: 84.0% | proxy loss: 1.9030
+
+Results: /home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v2/Chache3

@@ -1,0 +1,2 @@
+﻿result,training_shot_per_class,prompt_shot_per_class,mAP50,mAP50_95,precision,recall,f2,tp,fp,fn
+fixed_head,10,,0.8001355382147928,0.6958955437276985,0.8192090395480226,0.7712765957446809,0.7804090419806244,145,32,43

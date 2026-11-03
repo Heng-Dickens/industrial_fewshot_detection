@@ -1,0 +1,12 @@
+{
+  "extends": "../config.json",
+  "training": {
+    "epochs": 50,
+    "lr0": 0.00001,
+    "patience": 10,
+    "val_interval": 1
+  },
+  "adaptation": {
+    "freeze_savpe_bn_stats": false
+  }
+}

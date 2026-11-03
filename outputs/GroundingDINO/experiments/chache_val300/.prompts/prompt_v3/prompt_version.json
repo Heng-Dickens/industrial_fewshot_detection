@@ -1,0 +1,34 @@
+{
+  "identity": "fa2f6c9d6160312ebc33fc09205e97c9f7e4b24746b961817db208a4eafa6705",
+  "family": "文字提示",
+  "description": "本次实际输入，完整文字及复核模板见各运行目录的 prompt.txt / review_template.txt。",
+  "prompts": [
+    {
+      "text": "有护顶架和普通货叉的座驾叉车",
+      "review_template": ""
+    },
+    {
+      "text": "无门架的低位双叉搬运车",
+      "review_template": ""
+    },
+    {
+      "text": "有高门架的站驾式堆高车",
+      "review_template": ""
+    },
+    {
+      "text": "装有黄色大型属具的叉车",
+      "review_template": ""
+    },
+    {
+      "text": "没有门架和货叉的座驾牵引车",
+      "review_template": ""
+    }
+  ],
+  "text_sha256": [
+    "efe46512996bf1ec2b8913b05556007a0e6aba7af80efaaed366c862a2d680a8",
+    "198adb68a9cb2ce60f3218a0dd996abb6747bc61d433afdaf727ed7ada6a861a",
+    "12a4965f7a3213032bb001f9d6ac8f24080ce0f071b1ea59e5138e36b8e07fb6",
+    "46f5eaca090181a1a354685df1a7339c5f3ee1e366ed1e6a42686bbb8351f48f",
+    "1e1a10c311165fd694129d5f2137b5c957c2cf673ad98f2cedd05531a8951c2a"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "paths": {
+    "source_dir": "/home/yuheng/Work/industrial_fewshot_detection/third_party/yoloe",
+    "weights": "/home/yuheng/Work/industrial_fewshot_detection/weights/yolov8/yolov8l.pt",
+    "text_encoder": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/mobileclip_blt.pt",
+    "data": "/home/yuheng/Work/industrial_fewshot_detection/data/finetune/diaowu_10shot_val100/dataset.yaml",
+    "project": "/home/yuheng/Work/industrial_fewshot_detection/outputs/finetuning/diaowu_yoloe/yoloe_diaowu_search_20261029"
+  },
+  "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/finetuning/diaowu_yoloe/yoloe_diaowu_search_20261029/baseline_yolov8",
+  "method": "yolov8",
+  "strategy": "full",
+  "scene": "diaowu",
+  "shot_per_class": 10,
+  "dev_images": "data/raw/diaowu_val100/images",
+  "dev_manifest": "data/raw/diaowu_val100/manifest.json",
+  "test_manifest": "data/raw/diaowu_val300/manifest.json",
+  "class_names": [
+    "hanging object"
+  ],
+  "text_prompts": [
+    "a large hollow cylindrical load suspended by a lifting hook and taut slings, including the connected lifting assembly"
+  ],
+  "device": "0",
+  "cuda_visible_devices": "2",
+  "batch": 8,
+  "training": {
+    "epochs": 100,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 0.1,
+    "weight_decay": 0.0005,
+    "patience": 10,
+    "workers": 0,
+    "seed": 0,
+    "amp": false,
+    "half": false,
+    "warmup_epochs": 0.0,
+    "mosaic": 0.0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "close_mosaic": 0,
+    "degrees": 0.0,
+    "translate": 0.05,
+    "scale": 0.1,
+    "fliplr": 0.0,
+    "flipud": 0.0,
+    "cache": false,
+    "deterministic": true,
+    "val_interval": 1,
+    "plots": false,
+    "save_period": -1
+  },
+  "adaptation": {},
+  "execute": true,
+  "freeze": [],
+  "source": {
+    "repository": "https://github.com/THU-MIG/yoloe",
+    "revision": "40cd606cabdbe2b566d6f14a6b162c89206e9a1b",
+    "archive_sha256": "bec9d01917b2b96764b84c1338a4e72604e3890acecf9005ebc22c485d9951db",
+    "local_modifications": []
+  },
+  "input_sha256": {
+    "weights": "64c9115303f6a25575f82200d1b22ec409fa6bd7d08d0313884fc20d919478cd",
+    "data": "06abd76ee1da2d640696cdd2a019b920d78a9f7e0123e873e694c69950e3272f"
+  },
+  "preparation_sha256": "456f37d557d245fa5a4f6f511c53cc0119c31acad9b71fed071feb7bd4655a2c",
+  "dev_manifest_sha256": "9fc0afc51bd3a568e2b520db3c20fd57d1b243bb035cc16a404659d6cf8bea9c",
+  "test_manifest_sha256": "a08fafed2e4319640ad1f0ec30a1db97b6aa6fcd539090b600d3907830176ba6",
+  "nbs": 8,
+  "status": "completed",
+  "note": "New FP32 warm start; not resume. Independent dev for checkpoint selection.",
+  "visual_training_protocol": null,
+  "trainable_parameter_count": 43630595
+}

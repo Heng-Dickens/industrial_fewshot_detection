@@ -28,7 +28,7 @@
       "description": "模具车间内符合吊物标注规则的被吊物本体及应纳入框选的组件"
     }
   ],
-  "output_dir": "../../outputs/runs",
+  "output_dir": "../../outputs",
   "output_suffix": "_groundingdino_annotations",
   "reuse_predictions": true,
   "cache_version": "v1",

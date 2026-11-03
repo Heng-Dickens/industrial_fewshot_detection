@@ -23,4 +23,4 @@ pet_dino:
 evaluation:
   score_threshold: 0.5
   score_thresholds: [0.5, 0.7]
-output_dir: ../../outputs/runs
+output_dir: ../../outputs

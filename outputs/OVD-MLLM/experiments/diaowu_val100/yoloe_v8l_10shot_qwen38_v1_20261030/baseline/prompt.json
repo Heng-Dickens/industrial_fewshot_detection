@@ -1,0 +1,17 @@
+{
+  "text": "",
+  "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "model": {
+    "model": "qwen3.8-27b",
+    "base_url": "http://127.0.0.1:15721/v1",
+    "proxy_request_model": "qwen3.8-27b",
+    "api_protocol": "anthropic_messages",
+    "temperature": 0.1,
+    "top_p": 0.9,
+    "max_tokens": 8192,
+    "stream": false,
+    "enable_thinking": false
+  },
+  "reference_shot_per_class": 0,
+  "input_protocol": "original+overlay24px+context1.5.crop640.v2"
+}

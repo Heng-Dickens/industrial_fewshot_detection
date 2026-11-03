@@ -2,7 +2,7 @@
 
 No training or API calls. Each class uses the existing adapter, then predictions
 are merged for class-aware evaluation. Reports use --output; model results use
-outputs/runs/<dataset>/WeDetect/<model-shot-prompt>, with auxiliary files in runtime.
+outputs/<dataset>/WeDetect/<model-shot-prompt>, with auxiliary files in runtime.
 """
 from __future__ import annotations
 
@@ -20,6 +20,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
+from industrial_fewshot.comparison_layout import comparison_dir
 from industrial_fewshot.cache import digest, image_sha256
 from industrial_fewshot.configuration import load_document
 from industrial_fewshot.data.labelme import load_evaluation_truth, read_json, write_json
@@ -32,7 +33,8 @@ GROUP_NAMES = {'short':'简短类别词', 'names':'具体类别名', 'phrases':'
 
 
 def runtime_dir(output):
-    return ROOT / 'outputs/runtime' / output.name
+    experiment_id = 'wedetect_chache_prompts_20261027' if output.resolve() == comparison_dir('wedetect_chache_prompts_20261027').resolve() else output.name
+    return ROOT / 'outputs/_shared/runtime' / experiment_id
 
 
 def read_plan(output):
@@ -69,7 +71,7 @@ def reserve_runs(output, plan):
                       dataset_manifest=str(manifest_path), dataset_sha256=canonical,
                       targets=[dict(backend='wedetect', prompt_snapshot=dict(kind='text', text=prompts[label],
                                                                             review_template='')) for label in LABELS])
-        namespace, layout = namespace_for_report(ROOT / 'outputs/runs', report, create=True)
+        namespace, layout = namespace_for_report(ROOT / 'outputs', report, create=True)
         marker = Path(layout['prompt_registry_dir']) / 'prompt_version.json'
         version = read_json(marker)
         version.update(description=f'WeDetect 五类特种车辆：{GROUP_NAMES[group]}；每类独立查询后合并评估。',
@@ -154,9 +156,9 @@ def prepare(output):
                           dataset=dict(manifest_file=str(manifest_path)),
                           reference_image_dir=None, support_manifest_dir=None,
                           max_reference_examples=0, max_reference_crops=0, max_reference_negatives=0,
-                          output_dir=str(ROOT / 'outputs/runs'), results_layout=False, reuse_predictions=True,
+                          output_dir=str(ROOT / 'outputs'), results_layout=False, reuse_predictions=True,
                           prediction_cache_dir=str(runtime / 'cache'),
-                          cache_search_dirs=[str(runtime / 'cache_legacy'), str(ROOT / 'outputs/runs/chache_val300')],
+                          cache_search_dirs=[str(runtime / 'cache_legacy'), str(ROOT / 'outputs/WeDetect/experiments/chache_val300')],
                           evaluation=dict(iou_threshold=.5, score_threshold=.5,
                                           score_thresholds=[.5, .7], max_detections_per_image=100),
                           wedetect=dict(source_dir=str(ROOT / 'third_party/wedetect'),
@@ -196,7 +198,7 @@ def run_group(output, group, device):
             config = load_config(runtime_dir(output) / 'configs' / f'{group}_{label}.local.json')
             config.update(prediction_cache_dir=runtime_dir(output) / 'cache',
                           cache_search_dirs=[*config['cache_search_dirs'], runtime_dir(output) / 'cache_legacy',
-                                             ROOT / 'outputs/runs/chache_val300'])
+                                             ROOT / 'outputs/WeDetect/experiments/chache_val300'])
             config['targets'][0]['config']['wedetect']['device'] = device
             config['resolved_config']['wedetect']['device'] = device
             destination = group_dir / label
@@ -229,7 +231,7 @@ def run_group(output, group, device):
               'dataset_sha256': plan['dataset_sha256'], 'dataset_manifest': plan['dataset_manifest'],
               'dataset_manifest_sha256': image_sha256(Path(plan['dataset_manifest'])),
               'result_layout': plan['runs'][group]['result_layout'], 'output_dir': str(merged.parent),
-              'prompt_index_root': str(ROOT / 'outputs/runs'), 'protocol': plan['protocol']}
+              'prompt_index_root': str(ROOT / 'outputs'), 'protocol': plan['protocol']}
     write_json(merged / 'run.json', {k: v for k, v in report.items() if k != 'metrics'})
     write_json(merged / 'metrics.json', metrics)
     write_json(merged / 'summary.json', report)
@@ -245,7 +247,7 @@ def run_group(output, group, device):
         class_configs={label:str(runtime_dir(output)/'configs'/f'{group}_{label}.local.json') for label in LABELS},
         class_run_dirs=completed))
     from industrial_fewshot.prompt_records import refresh_prompt_index
-    for root in (ROOT / 'outputs/runs', merged.parent.parent, merged.parent):
+    for root in (ROOT / 'outputs', merged.parent.parent, merged.parent):
         refresh_prompt_index(root)
     refresh_method_results(merged.parent)
     print(f'GROUP COMPLETE {group}: mAP50={metrics["mAP50"]:.6f}, mAP50_95={metrics["mAP50_95"]:.6f}', flush=True)
@@ -292,7 +294,7 @@ def diagnose_diaowu(output):
     _, _, items = cohort('diaowu_val300')
     item_map = {r['relative_path']: r for r in items}
     rows = []
-    for directory in sorted((ROOT / 'outputs/runs/diaowu_val300').glob('*/wedetect_base_0shot')):
+    for directory in sorted((ROOT / 'outputs/WeDetect/experiments/diaowu_val300').glob('*/wedetect_base_0shot')):
         records = [json.loads(line) for line in (directory / 'records.jsonl').read_text().splitlines() if line]
         assert len(records) == len(items)
         assert all(r['image_sha256'] == item_map[r['relative_path']]['image_sha256'] for r in records)
@@ -430,8 +432,8 @@ def summarize(output):
     lines += ['', '提示词长度和措辞同时变化，因此不能将差异全部归因于长度；原始长描述还包含颜色、姿态、否定条件及不同类别名。']
     lines += ['', 'AP 使用全部已保存候选分数，P/R 取指定阈值。降阈值只能恢复低分框，不能直接修复很低的 AP。',
               '画框对比：`previews/`，绿色为 GT，红色为预测。每组均有固定 0.5 和该组验证集最佳 F1 阈值的相同图片。',
-              '完整结果位于 `outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_vN/`，'
-              '其下 Chache1～Qianyinche 为分类明细；准备文件、缓存和日志位于 `outputs/runtime/`。', '',
+              '完整结果位于 `outputs/WeDetect/experiments/chache_val300/wedetect_base_0shot_prompt_vN/`，'
+              '其下 Chache1～Qianyinche 为分类明细；准备文件、缓存和日志位于 `outputs/_shared/runtime/`。', '',
               '## 运行目录', '']
     for group in results:
         relative = combined_dir(output, group).relative_to(ROOT)
@@ -464,8 +466,8 @@ def main():
     parser.add_argument('--phase', choices=['prepare', 'group', 'run-all', 'complete', 'summarize', 'status'], required=True)
     parser.add_argument('--group', choices=['short', 'names', 'phrases', 'long'])
     parser.add_argument('--device', default='cuda:0')
-    parser.add_argument('--output', type=Path, default=ROOT / 'outputs/comparisons/wedetect_chache_prompts_20261027',
-                        help='Comparison report directory; model results are stored under outputs/runs')
+    parser.add_argument('--output', type=Path, default=comparison_dir('wedetect_chache_prompts_20261027'),
+                        help='Comparison report directory; model results are stored under outputs')
     args = parser.parse_args()
     output = args.output.expanduser().resolve()
     output.mkdir(parents=True, exist_ok=True)

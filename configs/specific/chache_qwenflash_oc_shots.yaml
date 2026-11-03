@@ -1,0 +1,6 @@
+# 补齐Flash的O+C，与现有v2 27B的1/5/10shot对齐。
+extends: chache_qwenflash_expanded_shots.yaml
+concurrency: 2
+cache_version: qwenflash_val300_visual_supplement_v1
+experiment_suite:
+  positive_variants: [O+C]

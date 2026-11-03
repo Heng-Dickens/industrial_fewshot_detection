@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "conditions": 6,
+  "successful_requests": 9000,
+  "identical_paired_references": true,
+  "train_dev_test_hash_disjoint": true,
+  "label_projection_consistent": true,
+  "checks": [
+    {
+      "id": "base_5shot",
+      "verified_requests": 1500,
+      "records_sha256": "50890b87d0aed4d09129a51fb28fe3eb3218fdaea882202d8282c1fe73bb13ef",
+      "weights_sha256": "25192f0805ce19fb186df2160bb5ec38eac1a22c3b0774623c31d6acb912b5f4",
+      "novel_gt_count": 30,
+      "train_class_count": 4,
+      "excluded_novel_training_supervision": true
+    },
+    {
+      "id": "all_5shot",
+      "verified_requests": 1500,
+      "records_sha256": "9129620cca3f91c7463e708a277aa907cb339be8906045ac534275ef07597719",
+      "weights_sha256": "897337c32d0ba3dbeb38612bedfae3d2ba3f38a2fe54f3fd2b890dfa395e05f7",
+      "novel_gt_count": 30,
+      "train_class_count": 5,
+      "excluded_novel_training_supervision": false
+    },
+    {
+      "id": "base_10shot",
+      "verified_requests": 1500,
+      "records_sha256": "6c6e408b8886d2de75799adfc14f35918ce1ab0a08de6e206adba8ebd24b86ff",
+      "weights_sha256": "9312a8a656a3385b6e87d41e5e2a7021fe1325c404a86da2ff03ca59fbc75c81",
+      "novel_gt_count": 30,
+      "train_class_count": 4,
+      "excluded_novel_training_supervision": true
+    },
+    {
+      "id": "all_10shot",
+      "verified_requests": 1500,
+      "records_sha256": "09b13b81066b951060038f8bbddbe10702c9959c37f4bdb1614deef7a3b925e7",
+      "weights_sha256": "7fbb91881ddcfce2ea541555453450a4710a45cdfb3b3d24c01bcb7965cf7cfa",
+      "novel_gt_count": 30,
+      "train_class_count": 5,
+      "excluded_novel_training_supervision": false
+    },
+    {
+      "id": "pretrained_5shot",
+      "verified_requests": 1500,
+      "records_sha256": "3aeb37d6b4434dc291b13c88a76f1ccea5aeae036ee7df0d5a6e7856ca4c5f5c",
+      "weights_sha256": "14e9c146f7f7efa0bfea8c5f82952c9f95fb1f9c3bf0f18b3727b76624f9d746",
+      "novel_gt_count": 30,
+      "train_class_count": 0,
+      "excluded_novel_training_supervision": true
+    },
+    {
+      "id": "pretrained_10shot",
+      "verified_requests": 1500,
+      "records_sha256": "89e88ac4eec34fc7955e29079d95444d2bc324d77f844573da94d878d575ea03",
+      "weights_sha256": "14e9c146f7f7efa0bfea8c5f82952c9f95fb1f9c3bf0f18b3727b76624f9d746",
+      "novel_gt_count": 30,
+      "train_class_count": 0,
+      "excluded_novel_training_supervision": true
+    }
+  ]
+}

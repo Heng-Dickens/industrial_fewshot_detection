@@ -1,0 +1,89 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "pet_dino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/pet_dino/pet_dino_swin_t.pth",
+  "kind": "visual",
+  "text": null,
+  "text_sha256": null,
+  "text_source": "support_images_and_boxes",
+  "references": [
+    {
+      "sample_id": "positive/images/s04_00001_0000931.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000931.jpg",
+      "image_sha256": "8a7040490f961c54f56b60796f2bdb383c10dd4ee121ffe4e63c1504e83cc186",
+      "bboxes": [
+        [
+          542.4561504,
+          85.6140354,
+          712.2123936,
+          322.3008846
+        ]
+      ]
+    },
+    {
+      "sample_id": "positive/images/s03_00000_0000035.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s03_00000_0000035.jpg",
+      "image_sha256": "4ea5b221cee161f477d5fe95e363cbf27c36cf0a4b449da6f0f9f9e6410b5078",
+      "bboxes": [
+        [
+          1038.3281663999999,
+          254.00082600000002,
+          1215.7522176000002,
+          432.0353916
+        ]
+      ]
+    },
+    {
+      "sample_id": "positive/images/s03_00000_0000464.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s03_00000_0000464.jpg",
+      "image_sha256": "a68fc6258a433352275d64b42ba3fc1178664ed55e516fe1c5fa11262d456340",
+      "bboxes": [
+        [
+          1366.1947008,
+          382.47787439999996,
+          1467.9646080000002,
+          580.7079648
+        ]
+      ]
+    },
+    {
+      "sample_id": "positive/images/s04_00001_0000926.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000926.jpg",
+      "image_sha256": "31a0384eb4b5cd60917abb99adaaaaab5659aa50683c1b4d2a99ba3b682c4778",
+      "bboxes": [
+        [
+          528.421056,
+          175.9649076,
+          686.3157888,
+          500.5263132
+        ]
+      ]
+    },
+    {
+      "sample_id": "positive/images/s04_00001_0000924.jpg",
+      "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000924.jpg",
+      "image_sha256": "aa6e2cb3926c5ee6b3fa17663c8ee7017c398da3d3312e3d567bd150d9446db7",
+      "bboxes": [
+        [
+          451.2280608000001,
+          231.22807560000004,
+          665.263152,
+          636.4912284
+        ]
+      ]
+    }
+  ],
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "pet_dino",
+    "counts": {
+      "reference_examples": 5,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 5,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "fa12cc3d18a65828397558a493859d327bb7c47e9b8ff106998f0705c8fe5dfc"
+  },
+  "request_signature": "2c75fa73a932fe696bd718daa1e38e8f53de29c2b0fa4001d1a828edf55784b6"
+}

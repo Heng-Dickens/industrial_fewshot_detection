@@ -5,6 +5,7 @@ import copy
 import hashlib
 import json
 import logging
+import os
 from pathlib import Path
 import uuid
 
@@ -53,6 +54,13 @@ def capture_prompt(target: dict) -> dict:
 
 def recover_prompt(directory: Path, target: dict) -> dict:
     """Recover history from its own saved evidence, without loading current config."""
+    saved = directory / 'prompt.json'
+    if target.get('backend') == 'OVD-MLLM' and saved.is_file():
+        value = json.loads(saved.read_text(encoding='utf-8-sig'))
+        text = value.get('text', '')
+        if hashlib.sha256(text.encode('utf-8')).hexdigest() != value.get('text_sha256'):
+            raise ValueError(f'提示词快照校验失败: {directory}')
+        return _snapshot('OVD-MLLM', target.get('model', ''), text, 'saved_prompt.json')
     if target.get('prompt_snapshot'):
         snapshot = copy.deepcopy(target['prompt_snapshot'])
         if snapshot['kind'] in {'text', 'text_visual'}:
@@ -171,6 +179,11 @@ def _atomic_text(path: Path, text: str):
 
 def refresh_prompt_index(root: Path) -> list[dict]:
     root = Path(root).resolve()
+    from .paths import PROJECT_ROOT
+    outputs = PROJECT_ROOT / 'outputs'
+    destination = (root / '_shared/indexes' if root == outputs else
+                   root / 'comparisons' if root.parent == outputs else root)
+    destination.mkdir(parents=True, exist_ok=True)
     rows = []
     for directory, report in _runs(root):
         metrics_path = directory / 'metrics.json'
@@ -181,11 +194,14 @@ def refresh_prompt_index(root: Path) -> list[dict]:
             rows.append(dict(run_dir=directory.relative_to(root).as_posix(), target_id=target['id'],
                 backend=target.get('backend', 'generic'), model=target.get('model', 'unknown'), prompt=snapshot,
                 request_signature=target.get('request_signature'),
-                prompt_file=(target_dir / 'prompt.txt').relative_to(root).as_posix(),
+                prompt_file=(target_dir / ('prompt.txt' if (target_dir / 'prompt.txt').is_file() else 'prompt.json')).relative_to(root).as_posix(),
                 AP50=metrics.get('mAP50'), AP50_95=metrics.get('mAP50_95'),
                 precision=metrics.get('precision'), recall=metrics.get('recall'),
                 score_threshold=metrics.get('settings', report.get('evaluation', {})).get('score_threshold'),
                 status=metrics.get('evaluation_status', 'not_available')))
+    for row in rows:
+        for key in ('run_dir', 'prompt_file'):
+            row[key] = os.path.relpath(root / row[key], destination)
     lines = ['# 提示词与结果对照', '',
              '每行对应一个已保存的运行。文字取自该次运行的快照或历史文件，不读取当前 YAML。',
              'AP 使用保存的全部候选分数；Precision / Recall 使用表中评估阈值。不同数据、参考材料和阈值应结合各次记录解读。', '',
@@ -200,13 +216,13 @@ def refresh_prompt_index(root: Path) -> list[dict]:
         preview = (text[:limit] + ('…' if len(text) > limit else '')).replace('|', '\\|')
         preview = preview or ('历史文本缺失，无法恢复' if snapshot['kind'] == 'unknown' else '不使用文字提示')
         relative = row['run_dir']
-        result_link = (Path(relative) / ('evaluation.txt' if (root / relative / 'evaluation.txt').is_file() else 'run.json')).as_posix()
+        result_link = (Path(relative) / ('evaluation.txt' if (destination / relative / 'evaluation.txt').is_file() else 'run.json')).as_posix()
         lines.append(f"| [{relative or '.'}]({result_link}) | {kinds[snapshot['kind']]} | {preview} | "
                      f"{percent(row['AP50'])} | {percent(row['AP50_95'])} | "
                      f"{percent(row['precision'])} / {percent(row['recall'])} | {row['score_threshold']} | {row['status']} | "
                      f"[prompt.txt]({row['prompt_file']}) |")
-    _atomic_text(root / INDEX_NAME, '\n'.join(lines) + '\n')
-    _atomic_text(root / 'prompt_results.json', json.dumps({'schema': 'industrial_fewshot.prompt_results.v1', 'runs': rows}, ensure_ascii=False, indent=2) + '\n')
+    _atomic_text(destination / INDEX_NAME, '\n'.join(lines) + '\n')
+    _atomic_text(destination / 'prompt_results.json', json.dumps({'schema': 'industrial_fewshot.prompt_results.v1', 'runs': rows}, ensure_ascii=False, indent=2) + '\n')
     return rows
 
 

@@ -1,0 +1,47 @@
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.422
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.581
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.474
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.422
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.727
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.833
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.833
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.833
+
++----------+------+--------+-----+
+| category | AP   | Recall | F2  |
++----------+------+--------+-----+
+| Chache4  | 58.1 | 100.0  | 4.8 |
++----------+------+--------+-----+
+| mean     | 58.1 | 100.0  | 4.8 |
++----------+------+--------+-----+
+COCO categories: AP50 / Recall50; F2 from TP/FP at IoU=0.50, maxDets=100, all scores.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.5, maxDets=100
++---------+-----+------+-----+-----------+--------+------+-------+
+| class   | tps | dets | gts | precision | recall | F2   | error |
++---------+-----+------+-----+-----------+--------+------+-------+
+| Chache4 | 18  | 41   | 30  | 43.9      | 60.0   | 55.9 | 0.56  |
++---------+-----+------+-----+-----------+--------+------+-------+
+| mean    | 18  | 41   | 30  | 43.9      | 60.0   | 55.9 | 0.56  |
++---------+-----+------+-----+-----------+--------+------+-------+
+TP=18 | FP=23 | FN=12
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.7, maxDets=100
++---------+-----+------+-----+-----------+--------+------+-------+
+| class   | tps | dets | gts | precision | recall | F2   | error |
++---------+-----+------+-----+-----------+--------+------+-------+
+| Chache4 | 18  | 32   | 30  | 56.2      | 60.0   | 59.2 | 0.44  |
++---------+-----+------+-----+-----------+--------+------+-------+
+| mean    | 18  | 32   | 30  | 56.2      | 60.0   | 59.2 | 0.44  |
++---------+-----+------+-----+-----------+--------+------+-------+
+TP=18 | FP=14 | FN=12
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+Score thresholds filter output boxes and P/R/F2 counts; COCO AP/AR above uses all saved scores.
+Status: complete | images: 300 | failed requests: 0 | image accuracy: 88.7% | proxy loss: 1.1386

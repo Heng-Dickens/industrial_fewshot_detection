@@ -1,0 +1,55 @@
+
+mold_workshop_hanging_object_yoloe
+【提示词记录】
+YOLOE：视觉提示，无文字 prompt。
+输入快照：prompt.json；具体记录位于本次结果目录。
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.319
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.605
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.334
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.319
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.389
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.442
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.451
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.451
+
++----------------+------+--------+-----+
+| category       | AP   | Recall | F2  |
++----------------+------+--------+-----+
+| hanging object | 60.5 | 87.3   | 2.4 |
++----------------+------+--------+-----+
+| mean           | 60.5 | 87.3   | 2.4 |
++----------------+------+--------+-----+
+COCO categories: AP50 / Recall50; F2 from TP/FP at IoU=0.50, maxDets=100, all scores.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.5, maxDets=100
++----------------+-----+------+-----+-----------+--------+------+-------+
+| class          | tps | dets | gts | precision | recall | F2   | error |
++----------------+-----+------+-----+-----------+--------+------+-------+
+| hanging object | 31  | 41   | 55  | 75.6      | 56.4   | 59.4 | 0.24  |
++----------------+-----+------+-----+-----------+--------+------+-------+
+| mean           | 31  | 41   | 55  | 75.6      | 56.4   | 59.4 | 0.24  |
++----------------+-----+------+-----+-----------+--------+------+-------+
+TP=31 | FP=10 | FN=24
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.7, maxDets=100
++----------------+-----+------+-----+-----------+--------+------+-------+
+| class          | tps | dets | gts | precision | recall | F2   | error |
++----------------+-----+------+-----+-----------+--------+------+-------+
+| hanging object | 27  | 33   | 55  | 81.8      | 49.1   | 53.4 | 0.18  |
++----------------+-----+------+-----+-----------+--------+------+-------+
+| mean           | 27  | 33   | 55  | 81.8      | 49.1   | 53.4 | 0.18  |
++----------------+-----+------+-----+-----------+--------+------+-------+
+TP=27 | FP=6 | FN=28
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+Score thresholds filter output boxes and P/R/F2 counts; COCO AP/AR above uses all saved scores.
+Status: complete | images: 99 | failed requests: 0 | image accuracy: 66.7% | proxy loss: 0.9202
+
+Results: D:\Learn\VLM\industrial_fewshot_detection\outputs\runs\diaowu_99\视觉提示\yoloe-11l-seg_10shot

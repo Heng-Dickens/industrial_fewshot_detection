@@ -1,0 +1,1 @@
+No text or visual prompts. Supervised custom-network FP32 ONNX detector.

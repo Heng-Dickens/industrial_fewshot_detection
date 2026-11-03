@@ -1,0 +1,9 @@
+# Complete only missing/incomplete entries through run_qwen27b_input_supplement.py.
+# Preserve the existing expanded-v2 prompt, generation settings and success cache.
+extends: chache_qwen27b_full5shot_top3.yaml
+concurrency: 2
+experiment_suite:
+  positive_counts: [5, 10]
+  positive_variants: [O+B, O+C, O+J, O+B+J, O+C+J, O+C+B, O+C+B+J]
+  include_prompt_only: false
+  negative_variants: [false]

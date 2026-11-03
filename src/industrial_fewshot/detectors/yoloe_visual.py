@@ -136,13 +136,18 @@ class YOLOERunner:
         if loaded and not Path(loaded.__file__).resolve().is_relative_to(source):
             raise RuntimeError("当前进程已导入其它 ultralytics，请在新进程运行本项目 main.py")
         sys.path.insert(0, str(source))
+        # Cross-image fine-tuning checkpoints reference vp_trainer.CrossImageYOLOEModel.
+        # Make the same local class available through main.py as through evaluate.py.
+        support_trainer = PROJECT_ROOT / "outputs/YOLOE/finetune/scripts/common"
+        if support_trainer.is_dir() and str(support_trainer) not in sys.path:
+            sys.path.insert(1, str(support_trainer))
         os.environ.setdefault("YOLO_AUTOINSTALL", "false")
-        os.environ.setdefault("YOLO_CONFIG_DIR", str(PROJECT_ROOT / "outputs/runs/runtime/yoloe_settings"))
+        os.environ.setdefault("YOLO_CONFIG_DIR", str(PROJECT_ROOT / "outputs/_shared/runtime/yoloe_settings"))
         try:
             import numpy as np
             import torch
             from ultralytics import YOLOE
-            from ultralytics.models.yolo.yoloe.predict_vp import YOLOEVPSegPredictor
+            from ultralytics.models.yolo.yoloe.predict_vp import YOLOEVPSegPredictor, YOLOEVPDetectPredictor
         except ImportError as exc:
             raise RuntimeError("YOLOE 依赖未就绪，请使用 Python 3.10/3.11 环境并按 docs/YOLOE_GUIDE.md 安装。"
                                f" 原因: {exc}") from exc
@@ -150,6 +155,10 @@ class YOLOERunner:
         torch.set_num_threads(self.settings["torch_threads"])
         self.model = YOLOE(str(weights))
         self.model.model.eval()
+        head = self.model.model.model[-1]
+        if not hasattr(head, "savpe") or getattr(head, "is_fused", False):
+            raise ValueError("该权重是已融合的固定检测头，不能使用视觉参考图；请使用保留 SAVPE 的 yoloe-vp 权重。")
+        vp_predictor = YOLOEVPSegPredictor if self.model.task == "segment" else YOLOEVPDetectPredictor
         self.setup_seconds = time.perf_counter() - started
         started = time.perf_counter()
         prototypes = []
@@ -161,7 +170,7 @@ class YOLOERunner:
             self.model.predict(self._image(data), prompts={
                 "bboxes": np.asarray(example["bboxes"], dtype=np.float32),
                 "cls": np.zeros(len(example["bboxes"]), dtype=np.int64)},
-                predictor=YOLOEVPSegPredictor, return_vpe=True, **self._predict_args())
+                predictor=vp_predictor, return_vpe=True, **self._predict_args())
             embedding = self.model.predictor.vpe.detach()
             if embedding.ndim != 3 or tuple(embedding.shape[:2]) != (1, 1):
                 raise ValueError(f"YOLOE 单类参考特征形状异常: {tuple(embedding.shape)}")
@@ -181,7 +190,10 @@ class YOLOERunner:
 
     def _predict_args(self):
         s = self.settings
-        return dict(device=s["device"], imgsz=s["imgsz"], conf=s["confidence"], iou=s["nms_iou"],
+        # A string device makes pinned select_device overwrite CUDA_VISIBLE_DEVICES.
+        # torch.device preserves the caller's visible-device mapping before CUDA init.
+        device = self.torch.device(f"cuda:{s['device']}" if str(s['device']).isdigit() else s['device'])
+        return dict(device=device, imgsz=s["imgsz"], conf=s["confidence"], iou=s["nms_iou"],
                     max_det=s["max_detections"], half=False, rect=False, verbose=False,
                     save=False, save_txt=False, save_crop=False, show=False)
 
@@ -199,6 +211,7 @@ class YOLOERunner:
             raise ValueError(f"YOLOE 返回了 {len(results)} 个结果，应为 1 个")
         boxes = results[0].boxes
         objects = []
+        discarded = 0
         if boxes is not None:
             for box, score, cls in zip(boxes.xyxy.cpu().tolist(), boxes.conf.cpu().tolist(), boxes.cls.cpu().tolist()):
                 if cls != 0:
@@ -209,13 +222,16 @@ class YOLOERunner:
                 clipped = [max(0.0, min(width, x1)), max(0.0, min(height, y1)),
                            max(0.0, min(width, x2)), max(0.0, min(height, y2))]
                 if clipped[0] >= clipped[2] or clipped[1] >= clipped[3]:
-                    raise ValueError("YOLOE 输出退化框")
+                    discarded += 1
+                    continue
                 objects.append({"label": self.config["labels"][0]["name"],
                                 "bbox_pixels_xyxy": clipped, "confidence": score})
         payload = {"annotation_status": "annotated" if objects else "no_target",
                    "reason_code": "target_detected" if objects else "no_target",
                    "reason": "YOLOE 视觉参考检测", "target_count": len(objects), "objects": objects}
-        return validate_pixel_prediction(payload, {self.config["labels"][0]["name"]}, width, height)
+        checked = validate_pixel_prediction(payload, {self.config["labels"][0]["name"]}, width, height)
+        checked['discarded_degenerate_count'] = discarded
+        return checked
 
     async def close(self):
         self.model = None

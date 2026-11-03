@@ -1,0 +1,9 @@
+{
+  "savpe_initial_sha256": "ac21f6c1e85e01d4e7427c15ea7fccfcca84c372f690cc37a7d731ff82fc20f0",
+  "monitored_parameter": "model.0.conv.weight",
+  "nonzero_gradient_batches": 6,
+  "savpe_final_sha256": "ac21f6c1e85e01d4e7427c15ea7fccfcca84c372f690cc37a7d731ff82fc20f0",
+  "savpe_ema_sha256": "ac21f6c1e85e01d4e7427c15ea7fccfcca84c372f690cc37a7d731ff82fc20f0",
+  "savpe_unchanged": true,
+  "other_parameter_updated": true
+}

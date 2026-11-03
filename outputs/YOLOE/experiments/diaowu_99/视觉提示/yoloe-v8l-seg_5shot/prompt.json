@@ -1,0 +1,89 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "yoloe",
+  "model": "D:\\Learn\\VLM\\industrial_fewshot_detection\\weights\\yoloe\\yoloe-v8l-seg.pt",
+  "kind": "visual",
+  "text": null,
+  "text_sha256": null,
+  "text_source": "not_a_text_prompt",
+  "references": [
+    {
+      "sample_id": "positive/images/0000090.jpg",
+      "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0000090.jpg",
+      "image_sha256": "8e565471c2e978ced9a8176db0c5543b860abb547bef73eed64837554ac72306",
+      "bboxes": [
+        [
+          1377.75,
+          480.0,
+          1600.25,
+          880.0
+        ]
+      ]
+    },
+    {
+      "sample_id": "positive/images/0000189.jpg",
+      "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0000189.jpg",
+      "image_sha256": "19e0ecb2fe48c4ab19cc52a5056aeb7847e074c644da9920acdcf6f1eb00e758",
+      "bboxes": [
+        [
+          1189.0,
+          381.25,
+          1380.25,
+          710.0
+        ]
+      ]
+    },
+    {
+      "sample_id": "positive/images/0001320.jpg",
+      "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0001320.jpg",
+      "image_sha256": "e78769b05e4183ebfd01a72580e4d7eb36d01eb6ef94ef76908f6a6558e727e3",
+      "bboxes": [
+        [
+          1141.5,
+          385.0,
+          1484.0,
+          1011.25
+        ]
+      ]
+    },
+    {
+      "sample_id": "positive/images/0001352.jpg",
+      "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0001352.jpg",
+      "image_sha256": "82e0721671c75970c1a923250f82806fbc2e4d6c8732aedf3be4cbd561df4bac",
+      "bboxes": [
+        [
+          1036.5,
+          700.0,
+          1286.5,
+          1178.75
+        ]
+      ]
+    },
+    {
+      "sample_id": "positive/images/0003939.jpg",
+      "image_path": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references\\positive\\images\\0003939.jpg",
+      "image_sha256": "9c1fd9ddb73bcfcd991e861c4be46679278b440c6524f0642885cf5a4681cc15",
+      "bboxes": [
+        [
+          1757.75,
+          420.0,
+          1897.75,
+          697.5
+        ]
+      ]
+    }
+  ],
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "yoloe_visual",
+    "counts": {
+      "reference_examples": 5,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 5,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "09feecd0fbe8709b3d1f77e888e5b6d39f8ff75d2844c84654c6608c06c886bd"
+  },
+  "request_signature": "1cf2e3a5ed6df5b444cb248b07db10668680225f55d3611b3eb1031cad77dc16"
+}

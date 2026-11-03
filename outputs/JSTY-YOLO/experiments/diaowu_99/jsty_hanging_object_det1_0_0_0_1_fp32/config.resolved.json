@@ -1,0 +1,85 @@
+{
+  "scene_name": "diaowu",
+  "task_id": "diaowu",
+  "labels": [
+    {
+      "name": "hanging object",
+      "description": "正在被吊具吊运的大型中空圆柱状吊物及其吊具组成的完整吊装组件"
+    }
+  ],
+  "dataset": {
+    "image_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+    "ground_truth_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+    "recursive": true,
+    "missing_ground_truth": "negative",
+    "manifest_file": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\splits\\diaowu\\test.json"
+  },
+  "reference_image_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references",
+  "support_manifest_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\supports\\diaowu",
+  "preparation": {
+    "prepared_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu",
+    "splits_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\splits\\diaowu",
+    "supports_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\supports\\diaowu",
+    "support_counts": [
+      1,
+      5,
+      10,
+      25
+    ],
+    "support_seeds": [
+      0
+    ],
+    "split_seed": 0,
+    "group_by": "parent",
+    "split_ratios": {
+      "train": 0,
+      "val": 0,
+      "test": 1
+    }
+  },
+  "evaluation": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.5,
+    "max_detections_per_image": 100,
+    "loss_weights": {
+      "box_l1": 1.0,
+      "box_iou": 1.0,
+      "false_positive": 1.0,
+      "false_negative": 1.0
+    }
+  },
+  "backend": "yolo_onnx",
+  "mode": "train",
+  "require_box_reason": false,
+  "reuse_predictions": true,
+  "cache_version": "v1",
+  "max_reference_examples": 0,
+  "max_reference_crops": 0,
+  "max_reference_negatives": 0,
+  "yolo_onnx": {
+    "weights": "D:\\Learn\\VLM\\industrial_fewshot_detection\\weights\\jsty_hanging_object\\jsty_hanging_object_det1_0_0_0_1_fp32.onnx",
+    "input_size": [
+      960,
+      1280
+    ],
+    "class_names": [
+      "hanging object"
+    ],
+    "target_class_id": 0,
+    "strides": [
+      8,
+      16,
+      32
+    ],
+    "reg_max": 16,
+    "confidence": 0.5,
+    "nms_iou": 0.7,
+    "max_detections": 300,
+    "intra_op_threads": 4,
+    "providers": [
+      "CPUExecutionProvider"
+    ],
+    "exclude_reference_overlap": true
+  },
+  "output_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\outputs\\runs"
+}

@@ -1,0 +1,119 @@
+{
+  "snapshots": [
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "叉车",
+      "text_sha256": "5bed3fa8ff6e41b56639aeeb9a3be547b46368c11025db403525860e82ead737",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "13eef708fb598f17b2ed4dceaac936af527458b78db4d768176861a93aec9884"
+      },
+      "request_signature": "efb90deb5cab316a314d5dfea411dbc628907454a00d64eec21610a29d5a3afb"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "搬运车",
+      "text_sha256": "0d999bc48ea38b2b9527b9d9a907c231c7f504977baaee840c7e39eab76a703e",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "0a172be61e2993584693ec09409d5a82aadc57302cfe2f6068da035a9c378c30"
+      },
+      "request_signature": "05a4988fccad2601c579f3415a967c02016f64ddb3d8a2258906821279d20a06"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "堆高车",
+      "text_sha256": "2bd73cffdaa064fb5a85dfb1cd14e5a5d8a86e38e4f634ad5c0384ae31119368",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "55a4d77c4fd5667890c561110f9510d7b09abd56ce0d5a6c445e78ee10b0039e"
+      },
+      "request_signature": "4c4e28f1c744e5c54e9713736021741184f56c69ddad6e0a39573c6a183f0654"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "叉车",
+      "text_sha256": "5bed3fa8ff6e41b56639aeeb9a3be547b46368c11025db403525860e82ead737",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "13eef708fb598f17b2ed4dceaac936af527458b78db4d768176861a93aec9884"
+      },
+      "request_signature": "68fc21f4f11c9c5007290786f9a6fec263b5b3be62e6d858951a233f850e09f0"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "groundingdino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+      "kind": "text",
+      "text": "牵引车",
+      "text_sha256": "24b27587b8d6e625dc4a42f0d4293dab02ec488e022152c41b12325703138883",
+      "text_source": "groundingdino.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "ovd_text",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "29e56e12fa218566786fc23b77ea79548898b3a4da1e40ebdd7f07fe02445139"
+      },
+      "request_signature": "11e3dae21a73227b61b26927abad9268e2dac1eb48d9aafe90360fe9bd7027c0"
+    }
+  ]
+}

@@ -155,7 +155,7 @@ def run_step(step, args, root=ROOT):
             print(f'Keeping installed PyTorch {probe.stdout.strip()}; --torch-build applies to fresh installs.', flush=True)
             return
     env = {**os.environ, 'PYTHONIOENCODING':'utf-8', 'HF_ENDPOINT':args.weights_endpoint,
-           'YOLO_AUTOINSTALL':'false', 'YOLO_CONFIG_DIR':str(root/'outputs/runtime/yoloe_settings')}
+           'YOLO_AUTOINSTALL':'false', 'YOLO_CONFIG_DIR':str(root/'outputs/_shared/runtime/yoloe_settings')}
     result = subprocess.run(step.argv, cwd=root, env=env)
     if result.returncode:
         if step.kind == 'mmcv':

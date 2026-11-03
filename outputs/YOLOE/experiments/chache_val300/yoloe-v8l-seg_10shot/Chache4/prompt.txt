@@ -1,0 +1,13 @@
+输入类型：YOLOE 视觉提示，无文字 prompt。
+模型使用参考原图及其目标框生成视觉原型；本文件仅说明输入方式，不作为模型文字输入。
+参考样本数：10
+- positive/images/s02_00002_0001077.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache4/positive/images/s02_00002_0001077.jpg
+- positive/images/s02_00002_0001092.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache4/positive/images/s02_00002_0001092.jpg
+- positive/images/s04_00004_0002399.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache4/positive/images/s04_00004_0002399.jpg
+- positive/images/s02_00002_0001073.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache4/positive/images/s02_00002_0001073.jpg
+- positive/images/s02_00002_0001069.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache4/positive/images/s02_00002_0001069.jpg
+- positive/images/s02_00002_0001085.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache4/positive/images/s02_00002_0001085.jpg
+- positive/images/s04_00004_0002397.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache4/positive/images/s04_00004_0002397.jpg
+- positive/images/s04_00004_0002276.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache4/positive/images/s04_00004_0002276.jpg
+- positive/images/s04_00004_0002278.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache4/positive/images/s04_00004_0002278.jpg
+- positive/images/s04_00004_0002400.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache4/positive/images/s04_00004_0002400.jpg

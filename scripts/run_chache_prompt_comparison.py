@@ -15,7 +15,7 @@ from industrial_fewshot.experiments import run_ablation
 from industrial_fewshot.labels import all_label_names
 from industrial_fewshot.runtime import run_async
 
-RUNTIME = ROOT/'outputs/runtime/chache_prompt_comparison'
+RUNTIME = ROOT/'outputs/_shared/runtime/chache_prompt_comparison'
 STATE = RUNTIME/'status.json'
 JOBS = [('v1_short', ROOT/'configs/specific/chache_qwen_prompt_comparison.yaml'),
         ('v2_expanded', ROOT/'configs/specific/chache_qwen_prompt_comparison_expanded.yaml')]
@@ -72,7 +72,7 @@ def comparison_document(state):
         text.extend(['','分数阈值0.7的精确率、召回率、F2及类别表也保存在各组evaluation.txt与metrics.json；AP使用完整置信度排序。',
             '此比较每组仅运行一次，变化反映本次固定样本和随机采样条件下的结果，不能单凭一轮认定统计显著性。'])
     if state.get('error'):text.extend(['',f"当前未完成：{state['error']}"])
-    output=ROOT/'outputs/runs/chache_val300/prompt_comparison.md'
+    output=ROOT/'outputs/Qwen/comparisons/chache_val300/prompt_comparison.md'
     output.parent.mkdir(parents=True,exist_ok=True)
     output.write_text('\n'.join(text)+'\n',encoding='utf-8')
 
@@ -137,7 +137,7 @@ async def execute(dry_run=False):
             raise
         write_json(STATE,state);comparison_document(state)
     state.update(status='complete',updated=now());state.pop('error',None);write_json(STATE,state);comparison_document(state)
-    print('COMPLETE: '+str(ROOT/'outputs/runs/chache_val300/prompt_comparison.md'))
+    print('COMPLETE: '+str(ROOT/'outputs/Qwen/comparisons/chache_val300/prompt_comparison.md'))
 
 
 if __name__=='__main__':

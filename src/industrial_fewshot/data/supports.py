@@ -169,7 +169,8 @@ class ReferencePool:
             rows = pinned.get(key, [])
             ids = [row['sample_id'] for row in rows]
             available = {row['sample_id']: row for row in pool}
-            if (len(ids) != count or len(set(ids)) != len(ids) or required > len(ids)
+            if ((key == 'positive_samples' and len(ids) != count)
+                    or len(set(ids)) != len(ids) or required > len(ids)
                     or any(sample_id not in available for sample_id in ids)):
                 raise ValueError(f'Explicit support selection is invalid: {key}')
             selected.append([available[sample_id] for sample_id in ids[:required]])

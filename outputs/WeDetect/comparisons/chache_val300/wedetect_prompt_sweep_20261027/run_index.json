@@ -1,0 +1,70 @@
+{
+  "runs": {
+    "short": {
+      "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v1",
+      "result_layout": {
+        "root": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs",
+        "dataset_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300",
+        "dataset_name": "chache_val300",
+        "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+        "prompt_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect",
+        "prompt_version": "prompt_v1",
+        "prompt_identity": "5aaf2dc772f034cc06d5f9763535dadd3665d807ba9096a601129780f4ccfcbf",
+        "method": "WeDetect",
+        "method_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect",
+        "prompt_registry_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/.prompts/prompt_v1",
+        "model_name_suffix": "_prompt_v1"
+      }
+    },
+    "names": {
+      "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v2",
+      "result_layout": {
+        "root": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs",
+        "dataset_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300",
+        "dataset_name": "chache_val300",
+        "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+        "prompt_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect",
+        "prompt_version": "prompt_v2",
+        "prompt_identity": "ad05f9da84748990dba98dd7fad257762df603330252df1edc74fc5e302df151",
+        "method": "WeDetect",
+        "method_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect",
+        "prompt_registry_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/.prompts/prompt_v2",
+        "model_name_suffix": "_prompt_v2"
+      }
+    },
+    "phrases": {
+      "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v3",
+      "result_layout": {
+        "root": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs",
+        "dataset_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300",
+        "dataset_name": "chache_val300",
+        "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+        "prompt_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect",
+        "prompt_version": "prompt_v3",
+        "prompt_identity": "fa2f6c9d6160312ebc33fc09205e97c9f7e4b24746b961817db208a4eafa6705",
+        "method": "WeDetect",
+        "method_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect",
+        "prompt_registry_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/.prompts/prompt_v3",
+        "model_name_suffix": "_prompt_v3"
+      }
+    },
+    "long": {
+      "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v4",
+      "result_layout": {
+        "root": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs",
+        "dataset_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300",
+        "dataset_name": "chache_val300",
+        "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+        "prompt_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect",
+        "prompt_version": "prompt_v4",
+        "prompt_identity": "01c5ce6d43208d41c6d0a55f6238718fccfe9eb640c5bcea9b766467e84664d3",
+        "method": "WeDetect",
+        "method_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect",
+        "prompt_registry_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/.prompts/prompt_v4",
+        "model_name_suffix": "_prompt_v4"
+      }
+    }
+  },
+  "runtime_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/wedetect_chache_prompts_20261027",
+  "migration": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/wedetect_chache_prompts_20261027/method_layout_migration.json"
+}

@@ -1,0 +1,17 @@
+{
+  "extends": "../config.json",
+  "training": {
+    "epochs": 60,
+    "lr0": 0.0001,
+    "patience": 12,
+    "val_interval": 1,
+    "workers": 0,
+    "plots": false,
+    "save_period": -1
+  },
+  "adaptation": {
+    "scope": "full",
+    "loss": "detection",
+    "freeze_savpe_bn_stats": true
+  }
+}

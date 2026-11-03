@@ -8,6 +8,7 @@ from pathlib import Path
 import shutil
 
 from run_wedetect_chache_prompts import ROOT, LABELS, GROUP_NAMES, reserve_runs, runtime_dir
+from industrial_fewshot.comparison_layout import comparison_dir
 from industrial_fewshot.cache import digest, image_sha256
 from industrial_fewshot.data.labelme import read_json, write_json
 from industrial_fewshot.prompt_records import refresh_prompt_index
@@ -92,7 +93,7 @@ def migrate(output, finalize=False):
             assert len(records) == (1500 if name == 'combined' else 300)
             assert all(r['status'] == 'success' for r in records)
     plan = reserve_runs(output,plan)
-    archive = ROOT/'outputs/archive/interrupted_runs'/output.name
+    archive = ROOT/'outputs/_shared/archive/history/interrupted_runs'/output.name
     moves = {}
     operations = []
     for group,source_dirs in sources.items():
@@ -175,14 +176,14 @@ def migrate(output, finalize=False):
         all_configs={label:str(runtime/'configs'/f'{group}_{label}.local.json') for label in LABELS}
         for label in LABELS:
             config_path=Path(all_configs[label]); config=read_json(config_path)
-            config.update(output_dir=str(ROOT/'outputs/runs'),prediction_cache_dir=str(runtime/'cache'),
+            config.update(output_dir=str(ROOT/'outputs'),prediction_cache_dir=str(runtime/'cache'),
                           cache_search_dirs=[str(runtime/'cache_legacy'),str(directory)])
             save(config_path,config)
         for subdirectory,label in [(directory,None),*[(directory/l,l) for l in LABELS]]:
             for filename in ('run.json','summary.json'):
                 path=subdirectory/filename; report=read_json(path)
                 report.update(run_dir=str(subdirectory),output_dir=str(subdirectory.parent),
-                              prompt_index_root=str(ROOT/'outputs/runs'),result_layout=layout)
+                              prompt_index_root=str(ROOT/'outputs'),result_layout=layout)
                 if label is None:
                     report.update(scene_name='chache_val300',dataset_sha256=plan['dataset_sha256'],
                         dataset_manifest=plan['dataset_manifest'],
@@ -193,7 +194,7 @@ def migrate(output, finalize=False):
                 save(path,report)
             if label:
                 path=subdirectory/'config.resolved.json'; config=read_json(path)
-                config.update(output_dir=str(ROOT/'outputs/runs'),prediction_cache_dir=str(runtime/'cache'),
+                config.update(output_dir=str(ROOT/'outputs'),prediction_cache_dir=str(runtime/'cache'),
                               cache_search_dirs=[str(runtime/'cache_legacy'),str(directory)])
                 save(path,config)
         write_json(directory/'experiment.json',dict(group=group,description=GROUP_NAMES[group],protocol=plan['protocol'],
@@ -207,15 +208,15 @@ def migrate(output, finalize=False):
     save(output/'comparison.json',comparison)
     report_path=output/'report.md'; text=report_path.read_text()
     text=text.replace('完整逐图预测、指标及运行配置在各组的类目录和 `combined/`。',
-        '逐图预测、指标和提示词位于 `outputs/runs/chache_val300/文字提示_vN/wedetect_base_0shot/`；'
-        '模型目录下的 Chache1～Qianyinche 为分类明细。准备文件、缓存和日志位于 `outputs/runtime/`。')
+        '逐图预测、指标和提示词位于 `outputs/chache_val300/文字提示_vN/wedetect_base_0shot/`；'
+        '模型目录下的 Chache1～Qianyinche 为分类明细。准备文件、缓存和日志位于 `outputs/_shared/runtime/`。')
     text+='\n## 运行目录\n\n'
     for group,r in plan['runs'].items():
         directory=Path(r['run_dir'])
         text+=f'- {group}（{GROUP_NAMES[group]}）：[{directory.relative_to(ROOT)}]({directory})\n'
     save(report_path,text)
     write_json(output/'run_index.json',dict(runs=plan['runs'],runtime_dir=str(runtime),migration=str(migration_path)))
-    for root in [ROOT/'outputs/runs',ROOT/'outputs/runs/chache_val300',
+    for root in [ROOT/'outputs',ROOT/'outputs/chache_val300',
                  *[Path(r['run_dir']).parent for r in plan['runs'].values()]]:
         refresh_prompt_index(root)
     verify(manifest)
@@ -225,7 +226,7 @@ def migrate(output, finalize=False):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output',type=Path,default=ROOT/'outputs/comparisons/wedetect_chache_prompts_20261027')
+    parser.add_argument('--output',type=Path,default=comparison_dir('wedetect_chache_prompts_20261027'))
     parser.add_argument('--apply',action='store_true',required=True)
     parser.add_argument('--finalize',action='store_true',help='Verify an already moved layout before marking it complete')
     args=parser.parse_args()

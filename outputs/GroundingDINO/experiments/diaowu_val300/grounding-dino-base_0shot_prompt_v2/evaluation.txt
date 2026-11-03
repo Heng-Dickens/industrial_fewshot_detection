@@ -1,0 +1,55 @@
+
+diaowu_val300
+【提示词记录】
+GroundingDINO 文字 prompt：被吊起的圆筒吊物
+输入快照：prompt.json；具体记录位于本次结果目录。
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.005
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.010
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.006
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.006
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.061
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.447
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.447
+
++----------------+-----+--------+-----+
+| category       | AP  | Recall | F2  |
++----------------+-----+--------+-----+
+| hanging object | 1.0 | 77.4   | 4.3 |
++----------------+-----+--------+-----+
+| mean           | 1.0 | 77.4   | 4.3 |
++----------------+-----+--------+-----+
+COCO categories: AP50 / Recall50; F2 from TP/FP at IoU=0.50, maxDets=100, all scores.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.5, maxDets=100
++----------------+-----+------+-----+-----------+--------+-----+-------+
+| class          | tps | dets | gts | precision | recall | F2  | error |
++----------------+-----+------+-----+-----------+--------+-----+-------+
+| hanging object | 0   | 0    | 350 | 0.0       | 0.0    | 0.0 | 0.00  |
++----------------+-----+------+-----+-----------+--------+-----+-------+
+| mean           | 0   | 0    | 350 | 0.0       | 0.0    | 0.0 | 0.00  |
++----------------+-----+------+-----+-----------+--------+-----+-------+
+TP=0 | FP=0 | FN=350
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.7, maxDets=100
++----------------+-----+------+-----+-----------+--------+-----+-------+
+| class          | tps | dets | gts | precision | recall | F2  | error |
++----------------+-----+------+-----+-----------+--------+-----+-------+
+| hanging object | 0   | 0    | 350 | 0.0       | 0.0    | 0.0 | 0.00  |
++----------------+-----+------+-----+-----------+--------+-----+-------+
+| mean           | 0   | 0    | 350 | 0.0       | 0.0    | 0.0 | 0.00  |
++----------------+-----+------+-----+-----------+--------+-----+-------+
+TP=0 | FP=0 | FN=350
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+Score thresholds filter output boxes and P/R/F2 counts; COCO AP/AR above uses all saved scores.
+Status: complete | images: 300 | failed requests: 0 | image accuracy: 30.0% | proxy loss: 1.0000
+
+Results: /home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/GroundingDINO/grounding-dino-base_0shot_prompt_v2

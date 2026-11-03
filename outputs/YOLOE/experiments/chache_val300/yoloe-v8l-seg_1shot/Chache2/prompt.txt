@@ -1,0 +1,4 @@
+输入类型：YOLOE 视觉提示，无文字 prompt。
+模型使用参考原图及其目标框生成视觉原型；本文件仅说明输入方式，不作为模型文字输入。
+参考样本数：1
+- positive/images/s00_00008_0004139.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache2/positive/images/s00_00008_0004139.jpg

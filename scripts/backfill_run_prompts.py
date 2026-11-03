@@ -12,7 +12,7 @@ from industrial_fewshot.prompt_records import backfill_prompts
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--runs-root', type=Path, default=ROOT / 'outputs/runs')
+    parser.add_argument('--runs-root', type=Path, default=ROOT / 'outputs')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args(argv)
     plans = backfill_prompts(args.runs_root, dry_run=args.dry_run)

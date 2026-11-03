@@ -1,0 +1,13 @@
+输入类型：PET-DINO 视觉提示，无文字 prompt。
+模型使用参考原图及其目标框生成视觉原型；本文件仅说明输入方式，不作为模型文字输入。
+参考样本数：10
+- positive/images/s04_00001_0000931.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000931.jpg
+- positive/images/s03_00000_0000035.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s03_00000_0000035.jpg
+- positive/images/s03_00000_0000464.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s03_00000_0000464.jpg
+- positive/images/s04_00001_0000926.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000926.jpg
+- positive/images/s04_00001_0000924.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000924.jpg
+- positive/images/s04_00001_0000921.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000921.jpg
+- positive/images/s03_00000_0000166.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s03_00000_0000166.jpg
+- positive/images/s03_00000_0000101.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s03_00000_0000101.jpg
+- positive/images/s03_00000_0000329.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s03_00000_0000329.jpg
+- positive/images/s04_00001_0000922.jpg | /home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3/positive/images/s04_00001_0000922.jpg

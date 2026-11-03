@@ -1,0 +1,7 @@
+{
+  "method": "OVD-MLLM",
+  "dataset": "diaowu_val300",
+  "stage": "baseline",
+  "source_run": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/OVD-MLLM/yoloe_v8l_10shot_qwen38_v1_20261030",
+  "protocol": "Frozen original scores/classes; paired candidate filtering/dedup/refinement."
+}

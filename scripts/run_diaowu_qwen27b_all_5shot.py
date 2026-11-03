@@ -29,10 +29,10 @@ from industrial_fewshot.runner import inspect_dataset, run
 from industrial_fewshot.runtime import run_async
 
 CONFIG = ROOT / 'configs/specific/diaowu_qwen27b_all_5shot.yaml'
-RUNTIME = ROOT / 'outputs/runtime/diaowu_qwen27b_all_5shot'
+RUNTIME = ROOT / 'outputs/_shared/runtime/diaowu_qwen27b_all_5shot'
 STATE = RUNTIME / 'status.json'
 STOP = RUNTIME / 'STOP'
-BASELINE = ROOT / 'outputs/runtime/diaowu_qwen27b_prompt_5shot/status.json'
+BASELINE = ROOT / 'outputs/_shared/runtime/diaowu_qwen27b_prompt_5shot/status.json'
 DATASET = '470b98531e4a34810e7ee42bf250e39c97480e42427c3d84152e29e4d368f3fc'
 
 
@@ -95,7 +95,7 @@ def save_reports(state, directory, template):
 
 def archive_partial(source, directory):
     """Use native PowerShell, validating both absolute boundaries before a directory move."""
-    parent = ROOT / 'outputs/archive/interrupted_runs/diaowu_val300/all_5shot'
+    parent = ROOT / 'outputs/_shared/archive/history/interrupted_runs/diaowu_val300/all_5shot'
     destination = parent / (source.name + '_' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ'))
     script = r'''
 $source = (Resolve-Path -LiteralPath $env:IFS_SOURCE -ErrorAction Stop).Path

@@ -2,7 +2,7 @@
 
 结果现在按测试数据集及真实提示词版本分组，见 [结果目录说明](RESULT_LAYOUT.md)。每个版本的 `prompt_version.json` 保存完整文字、复核模板、指纹及说明；主文字或复核规则改变会自动使用另一版本目录，旧指标仍对应旧提示词。
 
-直接打开 outputs/runs/prompt_results.md（本地路径 `../../outputs/runs/prompt_results.md`），即可按结果目录查看实际文字摘要、AP50、AP50:95、评估阈值、Precision／Recall及运行状态。表内链接指向该次运行自己的 `prompt.txt` 和评估报告；完整结构化索引为 prompt_results.json（本地路径 `../../outputs/runs/prompt_results.json`）。新运行完成、缓存复用导出和单独补算指标后会更新索引。
+直接打开 outputs/_shared/indexes/prompt_results.md（本地路径 `../../outputs/_shared/indexes/prompt_results.md`），即可按结果目录查看实际文字摘要、AP50、AP50:95、评估阈值、Precision／Recall及运行状态。表内链接指向该次运行自己的 `prompt.txt` 和评估报告；完整结构化索引为 prompt_results.json（本地路径 `../../outputs/_shared/indexes/prompt_results.json`）。新运行完成、缓存复用导出和单独补算指标后会更新索引。
 
 ## 每次运行保存什么
 
@@ -23,7 +23,7 @@ MLLM 的 `prompt.txt` 保存主文字规则，参考图、参考标注JSON及每
 | 运行 | 实际文字 | AP50 | AP50:95 |
 |---|---|---:|---:|
 | 第一轮（旧目录未保留，数值见历史对比） | hanging industrial mold. suspended object. | 3.20% | 2.48% |
-| 精简描述，当前保留记录（本地路径 `../../outputs/runs/diaowu_99/文字提示_v1/grounding-dino-tiny_0shot/prompt.txt`） | a large hollow cylindrical load suspended from a yellow lifting hook by two taut slings spread to opposite sides, including the hook and slings. | 5.33% | 3.03% |
+| 精简描述，当前保留记录（本地路径 `../../outputs/GroundingDINO/experiments/diaowu_99/文字提示_v1/grounding-dino-tiny_0shot/prompt.txt`） | a large hollow cylindrical load suspended from a yellow lifting hook by two taut slings spread to opposite sides, including the hook and slings. | 5.33% | 3.03% |
 
 旧轮数值见 历史结构化对比（本地路径 `../../outputs/reports/groundingdino_prompt_comparison_20261022.json`）。不要仅凭目录后缀推断 prompt；以该目录的 `prompt.json` 为准。
 

@@ -193,8 +193,8 @@ async def run_ablation(config: dict, dry_run: bool = False, limit: int | None = 
         if interrupted_groups:
             from .paths import PROJECT_ROOT
             index_root = Path(config.get('prompt_index_root', config['output_dir']))
-            archive_root = (PROJECT_ROOT / 'outputs/archive/interrupted_runs'
-                            if index_root.is_relative_to(PROJECT_ROOT / 'outputs/runs') else index_root / '.interrupted')
+            archive_root = (PROJECT_ROOT / 'outputs/_shared/archive/history/interrupted_runs'
+                            if index_root.is_relative_to(PROJECT_ROOT / 'outputs') else index_root / '.interrupted')
             for source in interrupted_groups:
                 if not source.resolve().is_relative_to(Path(resume).resolve()):
                     raise ValueError('未完成分组不在指定恢复目录内')

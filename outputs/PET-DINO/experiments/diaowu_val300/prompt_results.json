@@ -1,0 +1,333 @@
+{
+  "schema": "industrial_fewshot.prompt_results.v1",
+  "runs": [
+    {
+      "run_dir": "pet_dino_swin_t_10shot",
+      "target_id": "diaowu",
+      "backend": "pet_dino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/pet_dino/pet_dino_swin_t.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "pet_dino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/pet_dino/pet_dino_swin_t.pth",
+        "kind": "visual",
+        "text": null,
+        "text_sha256": null,
+        "text_source": "support_images_and_boxes",
+        "references": [
+          {
+            "sample_id": "positive/images/0000090.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0000090.jpg",
+            "image_sha256": "8e565471c2e978ced9a8176db0c5543b860abb547bef73eed64837554ac72306",
+            "bboxes": [
+              [
+                1377.75,
+                480.0,
+                1600.25,
+                880.0
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0000189.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0000189.jpg",
+            "image_sha256": "19e0ecb2fe48c4ab19cc52a5056aeb7847e074c644da9920acdcf6f1eb00e758",
+            "bboxes": [
+              [
+                1189.0,
+                381.25,
+                1380.25,
+                710.0
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0001320.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0001320.jpg",
+            "image_sha256": "e78769b05e4183ebfd01a72580e4d7eb36d01eb6ef94ef76908f6a6558e727e3",
+            "bboxes": [
+              [
+                1141.5,
+                385.0,
+                1484.0,
+                1011.25
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0001352.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0001352.jpg",
+            "image_sha256": "82e0721671c75970c1a923250f82806fbc2e4d6c8732aedf3be4cbd561df4bac",
+            "bboxes": [
+              [
+                1036.5,
+                700.0,
+                1286.5,
+                1178.75
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0003939.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0003939.jpg",
+            "image_sha256": "9c1fd9ddb73bcfcd991e861c4be46679278b440c6524f0642885cf5a4681cc15",
+            "bboxes": [
+              [
+                1757.75,
+                420.0,
+                1897.75,
+                697.5
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0003992.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0003992.jpg",
+            "image_sha256": "9fb5be49fe83265f68bbea620935be83903c87645326ee1488cfc7e51c04bce0",
+            "bboxes": [
+              [
+                1471.5,
+                805.0,
+                1774.0,
+                1400.0
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0005072.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0005072.jpg",
+            "image_sha256": "ca7d109f6001b3b46ed337780b3dde2dcd3d795ca090e662752f727166ae5443",
+            "bboxes": [
+              [
+                1415.917808219178,
+                551.3698630136987,
+                1657.3561643835617,
+                991.4383561643837
+              ],
+              [
+                2299.4794520547944,
+                460.6164383561644,
+                2412.292682926829,
+                685.0
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0001233.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0001233.jpg",
+            "image_sha256": "87a8458219d49dffd275cf10786023052797e14119e0565fbcc09ac19d14b928",
+            "bboxes": [
+              [
+                1352.0,
+                432.0,
+                1586.0,
+                876.0
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0002970.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0002970.jpg",
+            "image_sha256": "df76ecabcd3e0357d5b701b7fb18158554068950b0abd45ccc9adac28e46085f",
+            "bboxes": [
+              [
+                1186.4657534246574,
+                510.2739726027398,
+                1422.0487804878048,
+                998.4146341463415
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0002578.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0002578.jpg",
+            "image_sha256": "33da52bf7936ad0c954c54c40f3aab7ba6c4cc61ed3bf16d840ec2fe4e78a97d",
+            "bboxes": [
+              [
+                1373.109589041096,
+                273.972602739726,
+                1623.109589041096,
+                700.3424657534247
+              ]
+            ]
+          }
+        ],
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "pet_dino",
+          "counts": {
+            "reference_examples": 10,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 10,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "cae16056884ba254a80ffe226aedaef60f2398adef4622565efbe3bea7bf3e98"
+        },
+        "request_signature": "6ef4f3727292da01df56fa3d8ede4bd55340bb249c56d64d34636b63f77a7992"
+      },
+      "request_signature": "6ef4f3727292da01df56fa3d8ede4bd55340bb249c56d64d34636b63f77a7992",
+      "prompt_file": "pet_dino_swin_t_10shot/prompt.txt",
+      "AP50": 0.15168766594178668,
+      "AP50_95": 0.09108472785701568,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "pet_dino_swin_t_1shot",
+      "target_id": "diaowu",
+      "backend": "pet_dino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/pet_dino/pet_dino_swin_t.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "pet_dino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/pet_dino/pet_dino_swin_t.pth",
+        "kind": "visual",
+        "text": null,
+        "text_sha256": null,
+        "text_source": "support_images_and_boxes",
+        "references": [
+          {
+            "sample_id": "positive/images/0000090.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0000090.jpg",
+            "image_sha256": "8e565471c2e978ced9a8176db0c5543b860abb547bef73eed64837554ac72306",
+            "bboxes": [
+              [
+                1377.75,
+                480.0,
+                1600.25,
+                880.0
+              ]
+            ]
+          }
+        ],
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "pet_dino",
+          "counts": {
+            "reference_examples": 1,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 1,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "589d0191b7b2185eccc486e9d2513b843e6bbd7fb147b98a8ae979b93b3de316"
+        },
+        "request_signature": "cc23098928ecae5e0106fb5ae4b8a689679a17969c8f33257e98d65563b1fb5c"
+      },
+      "request_signature": "cc23098928ecae5e0106fb5ae4b8a689679a17969c8f33257e98d65563b1fb5c",
+      "prompt_file": "pet_dino_swin_t_1shot/prompt.txt",
+      "AP50": 0.1899607768509276,
+      "AP50_95": 0.13223645717434768,
+      "precision": 1.0,
+      "recall": 0.022857142857142857,
+      "score_threshold": 0.5,
+      "status": "complete"
+    },
+    {
+      "run_dir": "pet_dino_swin_t_5shot",
+      "target_id": "diaowu",
+      "backend": "pet_dino",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/pet_dino/pet_dino_swin_t.pth",
+      "prompt": {
+        "schema": "industrial_fewshot.prompt.v1",
+        "backend": "pet_dino",
+        "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/pet_dino/pet_dino_swin_t.pth",
+        "kind": "visual",
+        "text": null,
+        "text_sha256": null,
+        "text_source": "support_images_and_boxes",
+        "references": [
+          {
+            "sample_id": "positive/images/0000090.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0000090.jpg",
+            "image_sha256": "8e565471c2e978ced9a8176db0c5543b860abb547bef73eed64837554ac72306",
+            "bboxes": [
+              [
+                1377.75,
+                480.0,
+                1600.25,
+                880.0
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0000189.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0000189.jpg",
+            "image_sha256": "19e0ecb2fe48c4ab19cc52a5056aeb7847e074c644da9920acdcf6f1eb00e758",
+            "bboxes": [
+              [
+                1189.0,
+                381.25,
+                1380.25,
+                710.0
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0001320.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0001320.jpg",
+            "image_sha256": "e78769b05e4183ebfd01a72580e4d7eb36d01eb6ef94ef76908f6a6558e727e3",
+            "bboxes": [
+              [
+                1141.5,
+                385.0,
+                1484.0,
+                1011.25
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0001352.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0001352.jpg",
+            "image_sha256": "82e0721671c75970c1a923250f82806fbc2e4d6c8732aedf3be4cbd561df4bac",
+            "bboxes": [
+              [
+                1036.5,
+                700.0,
+                1286.5,
+                1178.75
+              ]
+            ]
+          },
+          {
+            "sample_id": "positive/images/0003939.jpg",
+            "image_path": "/home/yuheng/Work/industrial_fewshot_detection/data/references/diaowu/positive/images/0003939.jpg",
+            "image_sha256": "9c1fd9ddb73bcfcd991e861c4be46679278b440c6524f0642885cf5a4681cc15",
+            "bboxes": [
+              [
+                1757.75,
+                420.0,
+                1897.75,
+                697.5
+              ]
+            ]
+          }
+        ],
+        "review_template": "",
+        "reference_inputs": {
+          "mode": "pet_dino",
+          "counts": {
+            "reference_examples": 5,
+            "reference_crops": 0,
+            "reference_negatives": 0,
+            "reference_originals": 5,
+            "reference_boxed_images": 0
+          },
+          "manifest_sha256": "bfe46e68ed41bc1a4a5cd255dc57995c54d3d814599bc1a225f29921102a1a40"
+        },
+        "request_signature": "8e4de4d671bebb159873afec428c94f91cbd1a4321d74d70a52a9621215ccbd9"
+      },
+      "request_signature": "8e4de4d671bebb159873afec428c94f91cbd1a4321d74d70a52a9621215ccbd9",
+      "prompt_file": "pet_dino_swin_t_5shot/prompt.txt",
+      "AP50": 0.1000659819867979,
+      "AP50_95": 0.055714365609075736,
+      "precision": 0.0,
+      "recall": 0.0,
+      "score_threshold": 0.5,
+      "status": "complete"
+    }
+  ]
+}

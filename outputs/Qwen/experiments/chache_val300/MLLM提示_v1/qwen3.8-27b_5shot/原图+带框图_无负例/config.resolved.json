@@ -1,0 +1,92 @@
+{
+  "scene_name": "chache_val300",
+  "task_id": "chache",
+  "labels": [
+    {
+      "name": "Chache1",
+      "description": "普通座驾叉车，驾驶位上方有护顶架，驾驶员坐着，前方有高门架和普通成对细长货叉；车身多为绿色或红色。"
+    },
+    {
+      "name": "Chache2",
+      "description": "低位搬运车，车体小而低，驾驶员站着，前方伸出贴近地面的长双叉，无高起升门架和护顶架。"
+    },
+    {
+      "name": "Chache3",
+      "description": "紧凑起重机车，车体较小，驾驶员站着，前方有明显竖直高门架及下部货叉，无驾驶位护顶架。"
+    },
+    {
+      "name": "Chache4",
+      "description": "带大型专用属具的座驾叉车，驾驶员坐着，带护顶架和粗壮门架，前端装有醒目的黄色宽大搬运属具；车身通常为橙色。"
+    },
+    {
+      "name": "Qianyinche",
+      "description": "单座位牵引车，车体低矮紧凑、外形圆润，带座椅和靠背，驾驶员坐着，无起升门架和成对货叉；车身通常为绿色。"
+    }
+  ],
+  "dataset": {
+    "image_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\chache_val300\\images",
+    "ground_truth_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\chache_val300\\images",
+    "recursive": false,
+    "missing_ground_truth": "error",
+    "manifest_file": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\chache_val300\\manifest.json"
+  },
+  "evaluation": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.5,
+    "score_thresholds": [
+      0.5,
+      0.7
+    ],
+    "max_detections_per_image": 100
+  },
+  "model": "qwen3.8-27b",
+  "base_url": "http://127.0.0.1:15721/v1",
+  "api_protocol": "anthropic_messages",
+  "api_key_env": "VLLM_API_KEY",
+  "api_key": "<redacted>",
+  "backend": "generic",
+  "mode": "train",
+  "prompt_file": "D:\\Learn\\VLM\\industrial_fewshot_detection\\src\\industrial_fewshot\\prompts\\templates\\chache_v1_short.txt",
+  "reference_image_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\supports\\chache",
+  "support_manifest_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\supports\\chache",
+  "reference_per_class": true,
+  "reference_mode": "text_only",
+  "max_reference_examples": 0,
+  "max_reference_crops": 0,
+  "max_reference_negatives": 0,
+  "concurrency": 2,
+  "max_attempts": 2,
+  "retry_delay_seconds": 2,
+  "timeout_seconds": 180,
+  "max_tokens": 8192,
+  "temperature": 0.1,
+  "top_p": 0.9,
+  "enable_thinking": false,
+  "stream": false,
+  "structured_output_mode": "json_object",
+  "enable_completeness_review": false,
+  "require_suspension_evidence": false,
+  "require_box_reason": true,
+  "experiment_suite": {
+    "enabled": true,
+    "include_prompt_only": true,
+    "positive_counts": [
+      5
+    ],
+    "negative_variants": [
+      false
+    ],
+    "positive_variants": [
+      "O+B"
+    ],
+    "selection_seed": 0,
+    "exclude_reference_overlap": true
+  },
+  "ablation": {
+    "enabled": false
+  },
+  "output_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\outputs\\runs",
+  "results_layout": true,
+  "reuse_predictions": true,
+  "cache_version": "chache_multiclass_prompt_v1"
+}

@@ -1,0 +1,11 @@
+{
+  "requests": 3,
+  "cached": 76,
+  "recovered_cached": 0,
+  "failed": 0,
+  "retries": 0,
+  "input_tokens": 11763,
+  "output_tokens": 801,
+  "seconds": 20.449520613066852,
+  "wall_seconds": 8.052804304752499
+}

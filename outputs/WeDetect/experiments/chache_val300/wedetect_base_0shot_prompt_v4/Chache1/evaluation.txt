@@ -1,0 +1,55 @@
+
+chache_wedetect_long_Chache1
+【提示词记录】
+WeDetect 文字 prompt：普通座驾叉车，驾驶位上方有护顶架，驾驶员坐着，前方有高门架和普通成对细长货叉；车身多为绿色或红色。
+输入快照：prompt.json；具体记录位于本次结果目录。
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.135
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.186
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.162
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.135
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.517
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.580
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.580
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.580
+
++----------+------+--------+-----+
+| category | AP   | Recall | F2  |
++----------+------+--------+-----+
+| Chache1  | 18.6 | 75.0   | 4.5 |
++----------+------+--------+-----+
+| mean     | 18.6 | 75.0   | 4.5 |
++----------+------+--------+-----+
+COCO categories: AP50 / Recall50; F2 from TP/FP at IoU=0.50, maxDets=100, all scores.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.5, maxDets=100
++---------+-----+------+-----+-----------+--------+------+-------+
+| class   | tps | dets | gts | precision | recall | F2   | error |
++---------+-----+------+-----+-----------+--------+------+-------+
+| Chache1 | 5   | 26   | 40  | 19.2      | 12.5   | 13.4 | 0.81  |
++---------+-----+------+-----+-----------+--------+------+-------+
+| mean    | 5   | 26   | 40  | 19.2      | 12.5   | 13.4 | 0.81  |
++---------+-----+------+-----+-----------+--------+------+-------+
+TP=5 | FP=21 | FN=35
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.7, maxDets=100
++---------+-----+------+-----+-----------+--------+-----+-------+
+| class   | tps | dets | gts | precision | recall | F2  | error |
++---------+-----+------+-----+-----------+--------+-----+-------+
+| Chache1 | 2   | 7    | 40  | 28.6      | 5.0    | 6.0 | 0.71  |
++---------+-----+------+-----+-----------+--------+-----+-------+
+| mean    | 2   | 7    | 40  | 28.6      | 5.0    | 6.0 | 0.71  |
++---------+-----+------+-----+-----------+--------+-----+-------+
+TP=2 | FP=5 | FN=38
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+Score thresholds filter output boxes and P/R/F2 counts; COCO AP/AR above uses all saved scores.
+Status: complete | images: 300 | failed requests: 0 | image accuracy: 82.0% | proxy loss: 1.8296
+
+Results: /home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_v4/Chache1

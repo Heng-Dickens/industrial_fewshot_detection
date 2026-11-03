@@ -56,7 +56,7 @@
 .\.venv-yoloe\Scripts\python.exe scripts/run_chache_prompt_comparison.py --dry-run
 ```
 
-进度保存在`outputs/runtime/chache_prompt_comparison/status.json`，逐图完成情况见各结果目录的`records.jsonl`。结果按`outputs/runs/chache_val300/MLLM提示_vN/qwen3.8-27b_5shot/<输入组合>`保存，每组直接包含prompt.txt、metrics.json、evaluation.txt、反馈和预测。跨版本对比写入`outputs/runs/chache_val300/prompt_comparison.md`。分数阈值0.5、0.7的统计同时保留；AP使用完整置信度排序。
+进度保存在`outputs/_shared/runtime/chache_prompt_comparison/status.json`，逐图完成情况见各结果目录的`records.jsonl`。结果按`outputs/<方法>/experiments/chache_val300/MLLM提示_vN/qwen3.8-27b_5shot/<输入组合>`保存，每组直接包含prompt.txt、metrics.json、evaluation.txt、反馈和预测。跨版本对比写入`outputs/Qwen/comparisons/chache_val300/prompt_comparison.md`。分数阈值0.5、0.7的统计同时保留；AP使用完整置信度排序。
 
 ## 加长版的模型与shot对比
 
@@ -68,7 +68,7 @@
 .\.venv-yoloe\Scripts\python.exe scripts/run_chache_expanded_shots.py
 ```
 
-加`--dry-run`可检查六组计划。进度和日志位于`outputs/runtime/chache_expanded_shots/status.json`、`launcher.log`；汇总为`outputs/runs/chache_val300/qwen_expanded_shot_comparison.md`。结果继续按`MLLM提示_v2/<模型>_<shot>shot/原图+带框图_无负例`保存，不重跑纯文字组。收到与请求模型名称不符的响应时停止该模型实验，其他可用模型继续完成。
+加`--dry-run`可检查六组计划。进度和日志位于`outputs/_shared/runtime/chache_expanded_shots/status.json`、`launcher.log`；汇总为`outputs/Qwen/comparisons/chache_val300/qwen_expanded_shot_comparison.md`。结果继续按`MLLM提示_v2/<模型>_<shot>shot/原图+带框图_无负例`保存，不重跑纯文字组。收到与请求模型名称不符的响应时停止该模型实验，其他可用模型继续完成。
 
 当前CC Switch默认模型为Max，直接请求`qwen3.8-flash`会被映射为Max。Flash配置通过本项目的`proxy_request_model: claude-sonnet-4-6`选中当前供应商的Sonnet→Flash映射；请求路由名和实际要求的模型名分开保存。实际响应仍严格要求为`qwen3.8-flash`，收到Max会拒绝；不修改CC Switch全局配置。27B不使用这个别名。
 
@@ -78,4 +78,4 @@
 .\.venv-yoloe\Scripts\python.exe scripts/run_chache_expanded_shots.py --model qwen3.8-flash --concurrency 1
 ```
 
-此时进度为`outputs/runtime/chache_expanded_shots/qwen3.8-flash/status.json`，阶段报告为`outputs/runs/chache_val300/qwen3.8-flash_expanded_shot_progress.md`。不同模型可以分别运行；同一个模型不要同时启动两个批次。各进程结束后再运行不带`--model`的命令，会验证并引用已完成的六组结果，统一更新总表。
+此时进度为`outputs/_shared/runtime/chache_expanded_shots/qwen3.8-flash/status.json`，阶段报告为`outputs/Qwen/comparisons/chache_val300/qwen3.8-flash_expanded_shot_progress.md`。不同模型可以分别运行；同一个模型不要同时启动两个批次。各进程结束后再运行不带`--model`的命令，会验证并引用已完成的六组结果，统一更新总表。

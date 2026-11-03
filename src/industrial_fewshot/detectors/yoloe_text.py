@@ -76,7 +76,7 @@ class YOLOETextRunner(YOLOERunner):
             raise RuntimeError('当前进程已导入其他 ultralytics，请在新进程运行 main.py')
         sys.path.insert(0, str(source))
         os.environ.setdefault('YOLO_AUTOINSTALL', 'false')
-        os.environ.setdefault('YOLO_CONFIG_DIR', str(PROJECT_ROOT / 'outputs/runs/runtime/yoloe_settings'))
+        os.environ.setdefault('YOLO_CONFIG_DIR', str(PROJECT_ROOT / 'outputs/_shared/runtime/yoloe_settings'))
         try:
             import numpy as np
             import torch

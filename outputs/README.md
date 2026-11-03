@@ -1,32 +1,43 @@
 # 实验结果导航
 
-按数据集打开总表。各算法、shot、提示词、参考输入组合和重复运行均在同一张表中；CSV适合筛选与跨机器比较。
+[全局代表方案与最终结论](FINAL_COMPARISON.md) · [按子任务比较](_shared/comparisons/final_results/README.md)
 
-| 数据集 | 图片数 | 实验数 | 算法 | 总表 | CSV |
-|---|---:|---:|---|---|---|
-| chache_val300 | 300 | 36 | GroundingDINO、MLLM、PET-DINO、WeDetect、YOLOE | [打开](runs/chache_val300/results_summary.md) | [下载](runs/chache_val300/results_summary.csv) |
-| diaowu_99 | 99 | 45 | MLLM | [打开](runs/diaowu_99/results_summary.md) | [下载](runs/diaowu_99/results_summary.csv) |
-| diaowu_val300 | 300 | 33 | GroundingDINO、MLLM、PET-DINO、WeDetect、YOLOE | [打开](runs/diaowu_val300/results_summary.md) | [下载](runs/diaowu_val300/results_summary.csv) |
+按方法查看实验；每个方法的结果、比较文档和复现脚本放在同一目录。微调位于该方法的 finetune/。
 
-框误差专题统一查看 [AP85/90/95 与四项误差≤20%总体表](comparisons/iou85_box20_20261028/README.md)，其中包含全部实验及各方法最佳配置，无需另查最佳实验副本。
+| 方法 | 实验结果与比较 | 微调 |
+|---|---|---|
+| GroundingDINO | [GroundingDINO](GroundingDINO/README.md) | — |
+| JSTY-YOLO | [JSTY-YOLO](JSTY-YOLO/README.md) | — |
+| OVD-MLLM | [OVD-MLLM](OVD-MLLM/README.md) | — |
+| PET-DINO | [PET-DINO](PET-DINO/README.md) | — |
+| Qwen | [Qwen](Qwen/README.md) | — |
+| WeDetect | [WeDetect](WeDetect/README.md) | — |
+| YOLOE | [YOLOE](YOLOE/README.md) | [微调](YOLOE/finetune/README.md) |
+
+## 按队列的原始索引
+
+| 数据集 | 全方法结果 |
+|---|---|
+| chache_val100 | [总表](_shared/datasets/chache_val100/results_summary.md) |
+| chache_val300 | [总表](_shared/datasets/chache_val300/results_summary.md) |
+| diaowu_99 | [总表](_shared/datasets/diaowu_99/results_summary.md) |
+| diaowu_val100 | [总表](_shared/datasets/diaowu_val100/results_summary.md) |
+| diaowu_val300 | [总表](_shared/datasets/diaowu_val300/results_summary.md) |
+
+[全部运行明细（完整保留）](ALL_RESULTS.md) · [完整CSV指标](ALL_RESULTS.csv)
+
+[YOLOv8与YOLOE：两场景5shot训练及测试推理对照](YOLOE/finetune/5SHOT_COMPARISON.md)
 
 ```text
 outputs/
-  README.md                         # 当前导航
-  runs/<数据集>/
-    dataset.json                    # 数据版本身份
-    results_summary.md/csv/json      # 该数据集全部实验的统一总表
-    <算法或提示词版本>/<实验>/        # 原始运行、指标、预测与prompt
-  comparisons/<专题>/               # 跨算法/shot/提示词的专题分析及对比图
-  runtime/                          # 运行配置、清单副本、缓存和日志
-  environment_setup/                # 环境验证日志
-  archive/                          # 中断、旧布局及总表覆盖前的原文件快照
+  <方法>/
+    README.md
+    experiments/<数据集>/<实验>/
+    comparisons/<数据集或专题>/
+    scripts/
+    finetune/<数据集>/runs/与comparisons/
+  _shared/  # 跨方法数据身份、总表、缓存、日志、环境与历史归档
 ```
 
-原始运行路径保持稳定，专题分析继续保留；总表通过相对链接组织它们。历史总表覆盖前的原字节保存在 `archive/summary_snapshots/<数据集>/<SHA256>/`。不把旧总表或单类子运行当成新实验重复统计。
-
-目录迁移完成后的一次性备份和已被正式记录覆盖的本地检测缓存已清理。`runtime` 保留运行配置、支持集、迁移记录和验证报告；正式逐图预测及 MLLM 成功缓存保留。
-
-更新全部数据集：`python scripts/summarize_results.py`。
-仅更新一个数据集：`python scripts/summarize_results.py --dataset chache_val300`。
-即使其他机器只有已同步的报告和元数据，也能生成表格；缺少逐图记录时会明确标注核验限制。
+原始指标、逐图预测、权重及请求回答保留；历史路径通过迁移清单解析。
+更新导航与各方法总表：`python scripts/summarize_results.py`。

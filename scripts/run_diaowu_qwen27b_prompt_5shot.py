@@ -15,7 +15,7 @@ from industrial_fewshot.experiments import run_ablation
 from industrial_fewshot.runtime import run_async
 
 CONFIG = ROOT / 'configs/specific/diaowu_qwen27b_prompt_5shot.yaml'
-RUNTIME = ROOT / 'outputs/runtime/diaowu_qwen27b_prompt_5shot'
+RUNTIME = ROOT / 'outputs/_shared/runtime/diaowu_qwen27b_prompt_5shot'
 STATE = RUNTIME / 'status.json'
 DATASET = '470b98531e4a34810e7ee42bf250e39c97480e42427c3d84152e29e4d368f3fc'
 

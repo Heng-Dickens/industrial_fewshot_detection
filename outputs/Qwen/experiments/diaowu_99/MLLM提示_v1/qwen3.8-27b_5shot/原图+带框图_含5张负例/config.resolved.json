@@ -1,0 +1,121 @@
+{
+  "model": "qwen3.8-27b",
+  "base_url": "http://127.0.0.1:15721/v1",
+  "api_protocol": "anthropic_messages",
+  "api_key_env": "VLLM_API_KEY",
+  "api_key": "<redacted>",
+  "concurrency": 4,
+  "max_attempts": 3,
+  "retry_delay_seconds": 2,
+  "timeout_seconds": 180,
+  "max_tokens": 8192,
+  "temperature": 0.1,
+  "top_p": 0.9,
+  "enable_thinking": false,
+  "stream": false,
+  "structured_output_mode": "json_object",
+  "enable_completeness_review": true,
+  "require_suspension_evidence": true,
+  "scene_name": "diaowu",
+  "task_id": "diaowu",
+  "backend": "diaowu",
+  "mode": "train",
+  "labels": [
+    {
+      "name": "hanging object",
+      "description": "正在被吊具吊运的大型中空圆柱状吊物及其吊具组成的完整吊装组件"
+    }
+  ],
+  "dataset": {
+    "image_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+    "ground_truth_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+    "recursive": true,
+    "missing_ground_truth": "negative",
+    "manifest_file": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\splits\\diaowu\\test.json"
+  },
+  "image_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+  "reference_image_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references",
+  "support_manifest_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\supports\\diaowu",
+  "prompt_file": "D:\\Learn\\VLM\\industrial_fewshot_detection\\src\\industrial_fewshot\\prompts\\templates\\diaowu.txt",
+  "review_prompt_file": "D:\\Learn\\VLM\\industrial_fewshot_detection\\src\\industrial_fewshot\\prompts\\templates\\review.txt",
+  "reference_mode": "text_only",
+  "max_reference_examples": 6,
+  "max_reference_crops": 6,
+  "max_reference_negatives": 0,
+  "extra_instruction": "",
+  "extensions": [
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".bmp",
+    ".webp"
+  ],
+  "experiment_suite": {
+    "enabled": true,
+    "include_prompt_only": true,
+    "positive_counts": [
+      5
+    ],
+    "negative_variants": [
+      false,
+      true
+    ],
+    "positive_variants": [
+      "O+J",
+      "O+C",
+      "O+B",
+      "O+C+J",
+      "O+B+J",
+      "O+C+B",
+      "O+C+B+J"
+    ],
+    "selection_seed": 0,
+    "exclude_reference_overlap": true
+  },
+  "ablation": {
+    "enabled": false,
+    "modes": [
+      "text_only",
+      "text_json",
+      "text_crops",
+      "text_json_crops"
+    ]
+  },
+  "evaluation": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.0,
+    "max_detections_per_image": 100,
+    "loss_weights": {
+      "box_l1": 1.0,
+      "box_iou": 1.0,
+      "false_positive": 1.0,
+      "false_negative": 1.0
+    }
+  },
+  "output_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\outputs\\runs",
+  "output_suffix": "_annotations",
+  "reuse_predictions": true,
+  "cache_version": "v1",
+  "missing_ground_truth": "negative",
+  "preparation": {
+    "prepared_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu",
+    "splits_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\splits\\diaowu",
+    "supports_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\supports\\diaowu",
+    "support_counts": [
+      1,
+      5,
+      10,
+      25
+    ],
+    "support_seeds": [
+      0
+    ],
+    "split_seed": 0,
+    "group_by": "parent",
+    "split_ratios": {
+      "train": 0,
+      "val": 0,
+      "test": 1
+    }
+  }
+}

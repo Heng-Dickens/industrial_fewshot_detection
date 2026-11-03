@@ -70,7 +70,7 @@ weights/pet_dino/bert-base-uncased/...
 weights/wedetect/wedetect_base.pth
 weights/wedetect/xlm-roberta-base/...
 
-outputs/runs/diaowu_val300/
+outputs/<方法>/experiments/diaowu_val300/
   视觉提示/pet_dino_swin_t_5shot/
   文字提示_vN/pet_dino_swin_t_0shot/
   文字提示_vM/wedetect_base_0shot/

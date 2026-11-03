@@ -1,0 +1,50 @@
+{
+  "protocol": "Frozen 300-image cohorts. YOLOE uses exactly the PET-DINO 1/5/10-shot supports, boxes and seed=0. GroundingDINO uses verbatim WeDetect Chinese prompts. Every class queries every image; class-labelled predictions are merged without cross-class NMS. Candidate floor=0.001, NMS IoU=0.7, maxDets=100/class, evaluation IoU=0.5 and score=0.5. Model-native preprocessing and feature aggregation are retained. Fresh inference; no training/API calls.",
+  "job": {
+    "id": "chache_val300_groundingdino_long_Chache3",
+    "experiment_id": "chache_val300_groundingdino_long",
+    "dataset": "chache_val300",
+    "backend": "groundingdino",
+    "target_id": "Chache3",
+    "label": "Chache3",
+    "shot": 0,
+    "config_file": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/aligned_baselines_20261027/configs/chache_val300_groundingdino_long_Chache3.local.json",
+    "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO/grounding-dino-base_0shot_prompt_v4/Chache3",
+    "result_layout": {
+      "root": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs",
+      "dataset_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300",
+      "dataset_name": "chache_val300",
+      "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+      "prompt_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO",
+      "prompt_version": "prompt_v4",
+      "prompt_identity": "01c5ce6d43208d41c6d0a55f6238718fccfe9eb640c5bcea9b766467e84664d3",
+      "method": "GroundingDINO",
+      "method_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO",
+      "prompt_registry_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO/.prompts/prompt_v4",
+      "model_name_suffix": "_prompt_v4"
+    },
+    "expected_prompt": {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "紧凑起重机车，车体较小，驾驶员站着，前方有明显竖直高门架及下部货叉，无驾驶位护顶架。",
+      "text_sha256": "d302c6d86231383600e372c615b079ccf248e80738c8981b371c05cc5f062ba7",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "0816dac5449b61b276b8f73ebec9cbb06a76c014a4944c975491d45dbbf72d77"
+      },
+      "request_signature": "3442a290c341f149fb2ebf250f3e1634ee26d0e8144ed80557c4967b4a20546d"
+    }
+  }
+}

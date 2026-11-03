@@ -14,6 +14,7 @@ import sys
 import time
 
 from run_wedetect_chache_prompts import ROOT, cohort, POINTS
+from industrial_fewshot.comparison_layout import comparison_dir
 from industrial_fewshot.cache import digest, image_sha256
 from industrial_fewshot.config import load_config
 from industrial_fewshot.data.labelme import read_json, write_json
@@ -25,7 +26,7 @@ from industrial_fewshot.runner import run
 
 DATASETS = ('diaowu_val300', 'chache_val300')
 SHOTS = (1, 5, 10)
-DEFAULT_RUNTIME = ROOT/'outputs/runtime/pet_dino_shots_20261027'
+DEFAULT_RUNTIME = ROOT/'outputs/_shared/runtime/pet_dino_shots_20261027'
 PROTOCOL = ('PET-DINO Swin-T Visual-G, seed=0, frozen nested supports per class; '
     'average the official per-support visual embeddings. Each class independently queries '
     'all 300 images, including negatives. Merge class-labelled predictions without cross-class NMS. '
@@ -45,10 +46,10 @@ def key(dataset, shot, label):
 
 def configuration(runtime, job):
     config=load_config(Path(job['config_file']))
-    config.update(prediction_cache_dir=runtime/'cache', prompt_index_root=ROOT/'outputs/runs',
+    config.update(prediction_cache_dir=runtime/'cache', prompt_index_root=ROOT/'outputs',
         result_layout=job['result_layout'],
-        cache_search_dirs=[runtime/'cache', ROOT/'outputs/runs',
-                           ROOT/'outputs/runtime/pet_dino_smoke_20261027'])
+        cache_search_dirs=[runtime/'cache', ROOT/'outputs',
+                           ROOT/'outputs/_shared/runtime/pet_dino_smoke_20261027'])
     return config
 
 
@@ -68,7 +69,7 @@ def prepare(runtime):
         else:
             write_json(manifest,full)
         labels=raw['labels']
-        method,layout=namespace_for_report(ROOT/'outputs/runs',dict(scene_name=dataset,
+        method,layout=namespace_for_report(ROOT/'outputs',dict(scene_name=dataset,
             image_count=300,image_dir=raw['dataset']['image_dir'],ground_truth_dir=raw['dataset']['ground_truth_dir'],
             dataset_manifest=str(manifest),dataset_sha256=identity,
             targets=[dict(backend='pet_dino',prompt_snapshot=dict(kind='visual',text=None)) for _ in labels]),create=True)
@@ -162,7 +163,7 @@ def run_class(runtime, job_id, device):
     destination=Path(job['run_dir'])
     if destination.exists():
         # Successful records are also stored in the fingerprinted runtime cache.
-        archive=ROOT/'outputs/archive/interrupted_runs'/runtime.name/job_id
+        archive=ROOT/'outputs/_shared/archive/history/interrupted_runs'/runtime.name/job_id
         count=1
         while archive.exists():
             count+=1
@@ -245,8 +246,8 @@ def summarize(runtime, plan):
         (method/'experiment_results.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
         refresh_prompt_index(method)
         refresh_prompt_index(method.parent)
-    refresh_prompt_index(ROOT/'outputs/runs')
-    comparison=ROOT/'outputs/comparisons'/runtime.name
+    refresh_prompt_index(ROOT/'outputs')
+    comparison=comparison_dir(runtime.name, project_root=ROOT)
     comparison.mkdir(parents=True,exist_ok=True)
     write_json(comparison/'comparison.json',dict(protocol=PROTOCOL,runs=rows))
     fields=['dataset','shot_per_class','image_count','mAP50','mAP50_95','precision','recall','failures','run_dir']

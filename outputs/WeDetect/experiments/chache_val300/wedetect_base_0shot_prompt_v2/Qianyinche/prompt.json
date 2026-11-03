@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "wedetect",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+  "kind": "text",
+  "text": "电动牵引车",
+  "text_sha256": "864f8a0ec3b44b95157d4757da02f5eb9214a912a3396338460b98d161dd8ea2",
+  "text_source": "wedetect.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "wedetect",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "e0b103fd1a7f3df39b6b61fcb5a51c248b84ff801b2e96ddff5c0b2b5fa84d38"
+  },
+  "request_signature": "557141c3a4a71f2d72b235152c0b85379bd1c4ff7b0038a799c6b5f6c6e19f00"
+}

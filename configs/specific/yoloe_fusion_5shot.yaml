@@ -7,7 +7,7 @@ mode: train  # inference + evaluation; no training or weight updates
 max_reference_examples: 0  # generic MLLM input counts; YOLOE shot count is below
 max_reference_crops: 0
 max_reference_negatives: 0
-output_dir: ../../outputs/runs
+output_dir: ../../outputs
 reuse_predictions: true
 yoloe_fusion:
   source_dir: ../../third_party/yoloe

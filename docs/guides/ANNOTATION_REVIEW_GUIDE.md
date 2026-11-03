@@ -1,6 +1,6 @@
 # 用 VLM 纠正已有 LabelMe 标注
 
-程序：[review_existing_annotations.py](../../tool/review_existing_annotations.py)
+程序：[review_existing_annotations.py](../../tools/review_existing_annotations.py)
 
 当前配置：[Chache_cannotation_review_config.json](../../configs/specific/Chache_cannotation_review_config.json)
 类别参考图：data/references/chache/review/（本地路径 `../../data/references/chache/review/`）

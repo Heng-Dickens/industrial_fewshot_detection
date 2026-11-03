@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "all_images_evaluated": 300,
+  "stages": 5,
+  "retained_fields_verified": true,
+  "refinement_candidate_set_fixed": true,
+  "failed_requests": 0,
+  "identity": "f827989a3f13d4b1e1e709a7694308c74fe1fda3287516a640131ab1fa4c132a"
+}

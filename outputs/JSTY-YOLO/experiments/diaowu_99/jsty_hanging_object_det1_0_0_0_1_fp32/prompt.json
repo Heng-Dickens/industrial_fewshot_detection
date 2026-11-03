@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "yolo_onnx",
+  "model": "D:\\Learn\\VLM\\industrial_fewshot_detection\\weights\\jsty_hanging_object\\jsty_hanging_object_det1_0_0_0_1_fp32.onnx",
+  "kind": "none",
+  "text": null,
+  "text_sha256": null,
+  "text_source": "saved_run.backend",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "supervised_onnx",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "f70d31564df2704e9fcd859d078f999c462a145aaf5da847d662cda8f95ac495"
+  },
+  "request_signature": "b61adb874b130d0b181c2cb2314d14e5681228021b38503697f1948ddbfc99d4"
+}

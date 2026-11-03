@@ -14,6 +14,7 @@ import hashlib
 import io
 import json
 import math
+import os
 from pathlib import Path
 import sys
 from urllib.parse import quote
@@ -21,6 +22,7 @@ from zoneinfo import ZoneInfo
 
 PROJECT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT / 'src'))
+from industrial_fewshot.comparison_layout import comparison_dir
 from industrial_fewshot.evaluation.detection_metrics import _curve, box_iou
 
 IOU_LEVELS = (0.85, 0.90, 0.95)
@@ -260,7 +262,7 @@ def load_records(directory, run, components, project):
         return summary['annotations'], [summary_path]
     if components:
         records, files = [], []
-        dataset_root = project / 'outputs/runs' / directory.relative_to(project / 'outputs/runs').parts[0]
+        dataset_root = project / 'outputs/_shared/datasets' / run['scene_name']
         for relative in components:
             child_dir = dataset_root / relative
             child_run = read(child_dir / 'run.json')
@@ -359,7 +361,7 @@ def restore_saved_geometry(data, previous, allow_unverified=False):
         old = prior.get((row['dataset'], row['run_dir']))
         if row.get('score_thresholds') or not old or not old.get('score_thresholds'):
             continue
-        keys = [f"outputs/runs/{row['dataset']}/{row['run_dir']}/{name}"
+        keys = [f"outputs/{row['dataset']}/{row['run_dir']}/{name}"
                 for name in ('metrics.json', 'run.json')]
         matching_sources = all(data['source_sha256'].get(k) and
             data['source_sha256'][k] == previous.get('source_sha256', {}).get(k) for k in keys)
@@ -387,7 +389,7 @@ def restore_saved_geometry(data, previous, allow_unverified=False):
     return restored
 
 
-def markdown(data):
+def markdown(data, destination=None, outputs=None):
     title = '# OVD 最佳实验：AP85 与框几何误差 20%' if data.get('ovd_best') else '# AP85 与框几何误差 20% 统计'
     lines = [title, '',
              f"生成时间：{data['generated_at']}（北京时间）。读取 {len(data['rows'])} 组独立实验，保留各数据集和原状态。", '',
@@ -415,7 +417,7 @@ def markdown(data):
                   '| # | 方法/模型 | prompt / shot / 输入 / 负例 | AP85% | AP90% | AP95% | AP85:95% | 四项≤20% AP% | score≥0.5 四项≤20% | score≥0.7 四项≤20% | 状态 |',
                   '|---:|---|---|---:|---:|---:|---:|---:|---|---|---|']
         for row in rows:
-            path = quote('../../runs/' + dataset + '/' + row['run_dir'] + '/' + row['detail_file'], safe='/')
+            path = quote(os.path.relpath(Path(outputs)/'_shared/datasets'/dataset/row['run_dir']/row['detail_file'],destination),safe='/') if destination is not None and outputs is not None else quote('../../runs/' + dataset + '/' + row['run_dir'] + '/' + row['detail_file'],safe='/')
             description = f"{row['prompt_version']} / {row['shot_per_class']}shot / {row['input']} / {row['negative_references']}负"
             status = row['original_status'] + ('；缺坐标' if row['geometry_status'] != '可计算' else '')
             if row.get('geometry_statistics_source'):
@@ -465,7 +467,7 @@ def analyze(outputs, destination, datasets=None, tolerance=0.2, ovd_best=False):
             key = path.relative_to(project).as_posix() if path.is_relative_to(project) else str(path)
             sources[key] = sha256(path)
 
-    summaries = sorted((outputs / 'runs').glob('*/results_summary.json'))
+    summaries = sorted((outputs / '_shared/datasets').glob('*/results_summary.json'))
     known = {p.parent.name for p in summaries}
     if set(datasets or []) - known:
         raise ValueError('Unknown datasets: ' + ', '.join(sorted(set(datasets) - known)))
@@ -613,7 +615,7 @@ def analyze(outputs, destination, datasets=None, tolerance=0.2, ovd_best=False):
     for filename, records in (('ap_summary.csv', ap_rows), ('class_ap.csv', class_rows),
                               ('confidence_thresholds.csv', operating_rows), ('confidence_bins.csv', bin_rows)):
         (destination / filename).write_bytes(csv_data(records))
-    (destination / 'README.md').write_text(markdown(data), encoding='utf-8')
+    (destination / 'README.md').write_text(markdown(data,destination,outputs), encoding='utf-8')
     return data
 
 
@@ -624,7 +626,6 @@ if __name__ == '__main__':
     parser.add_argument('--dataset', action='append')
     parser.add_argument('--ovd-best', action='store_true', help='Keep the best eligible AP85 run per OVD method/dataset.')
     args = parser.parse_args()
-    destination = args.destination or PROJECT / ('outputs/comparisons/ovd_best_iou85_box20_20261028'
-                                                if args.ovd_best else 'outputs/comparisons/iou85_box20_20261028')
+    destination = args.destination or comparison_dir('ovd_best_iou85_box20_20261028' if args.ovd_best else 'iou85_box20_20261028', category='localization')
     result = analyze(args.outputs, destination, args.dataset, ovd_best=args.ovd_best)
     print('Wrote ' + str(destination) + '; ' + str(len(result['rows'])) + ' experiments')

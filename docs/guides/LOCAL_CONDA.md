@@ -13,15 +13,15 @@
 2026-10-26 本机验证结果：四个环境的 `pip check`、模型接口导入，以及 8 张 TITAN V
 的 CUDA 矩阵运算/NMS 均通过；PET-DINO 的 MMCV deformable attention 在全部 8 张 GPU
 上执行通过。项目现有测试共 353 项，352 项通过、1 项跳过。环境初次检查记录位于
-`outputs/environment_setup/*-runtime-check.log` 和 `outputs/environment_setup/project-tests.log`。
+`outputs/_shared/environment_setup/*-runtime-check.log` 和 `outputs/_shared/environment_setup/project-tests.log`。
 随后下载了 PET-DINO Swin-T 和 WeDetect Base 官方权重及语言文件；两个检测权重均通过
 官方 SHA256 校验，两个模型均通过离线实际加载检查。检查记录位于
-`outputs/environment_setup/{pet_dino,wedetect}-model-load.log`。
+`outputs/_shared/environment_setup/{pet_dino,wedetect}-model-load.log`。
 
 2026-10-27：PET-DINO 文字模式和 5-shot Visual-G 均通过本机 GPU 真实单图推理，
 每种模式成功 1 张、失败 0 张、缓存复用 0 张。5-shot 使用冻结清单的五张独立参考图。
-结果位于 `outputs/runtime/pet_dino_smoke_20261027/{text,5shot}/`，日志位于
-`outputs/environment_setup/pet-dino-{text,5shot}-smoke.log`。这只是运行验证；该张图在
+结果位于 `outputs/_shared/runtime/pet_dino_smoke_20261027/{text,5shot}/`，日志位于
+`outputs/_shared/environment_setup/pet-dino-{text,5shot}-smoke.log`。这只是运行验证；该张图在
 0.5 阈值下两种模式均漏检，不能据此判断完整数据集效果。WeDetect 也已完成五类特种车辆对比。
 
 PET-DINO 已准备好本机配置 `configs/specific/pet_dino_5shot.local.yaml` 和
@@ -47,13 +47,13 @@ python scripts/run_pet_dino_shots.py --phase status
 ```
 
 默认使用 8 张 GPU；可通过 `--devices cuda:0,cuda:1` 限定。六组结果分布在
-`outputs/runs/{diaowu_val300,chache_val300}/PET-DINO/`；chache 的 shot 数为每类数量。
+`outputs/<方法>/experiments/{diaowu_val300,chache_val300}/PET-DINO/`；chache 的 shot 数为每类数量。
 原始支持清单保持不变，本机派生清单仅覆盖路径，并校验原有样本 ID、图像及标注哈希。
 重复运行同一计划会跳过已完成任务，部分成功记录按输入指纹复用。
 
 2026-10-27 完整批次已完成：两个场景各 300 张，chache 覆盖全部五类；六组实验、
 18 项单类任务、5400 条成功记录，失败数为 0。最终数据/支持数量/输出链接核验保存在
-`outputs/runtime/pet_dino_shots_20261027/verification.json`。
+`outputs/_shared/runtime/pet_dino_shots_20261027/verification.json`。
 
 ## 环境检查（不需要权重、数据或 API Key）
 
@@ -74,7 +74,7 @@ python -m unittest discover -s tests -t . -q
 
 单独检查某个模型：`python scripts/setup_conda_linux.py --verify --backend pet_dino`。
 可选后端为 `yoloe`、`groundingdino`、`pet_dino`、`wedetect`。
-检查日志和实际安装版本位于 `outputs/environment_setup/`；安装过程查看
+检查日志和实际安装版本位于 `outputs/_shared/environment_setup/`；安装过程查看
 `python scripts/setup_conda_linux.py --status`。
 
 ## 实际模型推理前的准备

@@ -1,0 +1,7 @@
+{
+  "source_weights_sha256": "14e9c146f7f7efa0bfea8c5f82952c9f95fb1f9c3bf0f18b3727b76624f9d746",
+  "checked_tensor": "model.0.conv.weight",
+  "pretrained_tensor_equal": true,
+  "tensor_sha256": "a9bedfdc7b94eba89a746c9f38c7ff8b4630e0f9960a7218b6619d8874a5291d",
+  "device": "cuda:0"
+}

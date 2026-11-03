@@ -1,0 +1,2 @@
+﻿result,training_shot_per_class,prompt_shot_per_class,mAP50,mAP50_95,precision,recall,f2,tp,fp,fn
+visual_10shot,10,10,0.7664199192178996,0.5496582022271745,0.8809523809523809,0.49333333333333335,0.5409356725146199,37,5,38

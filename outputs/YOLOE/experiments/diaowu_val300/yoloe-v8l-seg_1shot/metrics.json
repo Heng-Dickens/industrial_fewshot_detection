@@ -1,0 +1,2008 @@
+{
+  "evaluated_image_count": 300,
+  "settings": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.5,
+    "max_detections_per_image": 100,
+    "score_thresholds": [
+      0.001,
+      0.002,
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "loss_weights": {
+      "box_l1": 1.0,
+      "box_iou": 1.0,
+      "false_positive": 1.0,
+      "false_negative": 1.0
+    }
+  },
+  "method": "Class-aware bbox, score-ranked greedy one-to-one matching, COCO-style 101-point AP, all areas, no crowd/ignore. AP uses all confidence scores; score_threshold affects only precision/recall/F1 and proxy loss. Classes without GT excluded from mAP.",
+  "confidence_source": "model_self_reported_not_calibrated",
+  "tp": 151,
+  "fp": 28,
+  "fn": 199,
+  "precision": 0.8435754189944135,
+  "recall": 0.43142857142857144,
+  "f1": 0.5708884688090737,
+  "mean_matched_iou": 0.8177111541242037,
+  "per_class": {
+    "hanging object": {
+      "ground_truth_count": 350,
+      "tp": 151,
+      "fp": 28,
+      "fn": 199,
+      "precision": 0.8435754189944135,
+      "recall": 0.43142857142857144,
+      "f1": 0.5708884688090737,
+      "AP50": 0.5303463351834642,
+      "AP75": 0.3701162031027681,
+      "AP50_95": 0.3255727733363881,
+      "ap_by_iou": {
+        "0.5": 0.5303463351834642,
+        "0.55": 0.5183538481381653,
+        "0.6": 0.5018056238580001,
+        "0.65": 0.4541888349796567,
+        "0.7": 0.41710793460009526,
+        "0.75": 0.3701162031027681,
+        "0.8": 0.24053402693220516,
+        "0.85": 0.15557118687575885,
+        "0.9": 0.06136268151134173,
+        "0.95": 0.006341058182425629
+      },
+      "f2": 0.47815072830905636
+    }
+  },
+  "mAP50": 0.5303463351834642,
+  "mAP75": 0.3701162031027681,
+  "mAP50_95": 0.3255727733363881,
+  "loss": {
+    "type": "detection_proxy_loss",
+    "is_model_training_loss": false,
+    "total": 0.9520943853670052,
+    "components": {
+      "box_l1": 0.017792110662314207,
+      "box_iou": 0.20930626512767572,
+      "false_positive": 0.1564245810055866,
+      "false_negative": 0.5685714285714286
+    },
+    "matched_localization_pairs": 158,
+    "weights": {
+      "box_l1": 1.0,
+      "box_iou": 1.0,
+      "false_positive": 1.0,
+      "false_negative": 1.0
+    },
+    "definition": "Hungarian mean normalized xyxy L1 + mean (1-IoU) + FP/(TP+FP) + FN/(TP+FN); weighted sum. Localization pairing is class-aware and does not require an IoU threshold. No backpropagation."
+  },
+  "f2": 0.47815072830905636,
+  "coco": {
+    "engine": "pycocotools.COCOeval",
+    "iou_type": "bbox",
+    "stats": {
+      "AP": 0.3255726749068873,
+      "AP50": 0.5303453508884556,
+      "AP75": 0.370116203102768,
+      "AP_small": -1.0,
+      "AP_medium": -1.0,
+      "AP_large": 0.3256297114531737,
+      "AR1": 0.3571428571428571,
+      "AR10": 0.4111428571428572,
+      "AR100": 0.44114285714285717,
+      "AR_small": -1.0,
+      "AR_medium": -1.0,
+      "AR_large": 0.44114285714285717
+    },
+    "summary": " Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.326\n Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.530\n Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.370\n Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000\n Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000\n Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.326\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.357\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.411\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441\n Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000\n Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = -1.000\n Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.441",
+    "per_class": {
+      "hanging object": {
+        "AP50": 0.5303453508884556,
+        "recall": 0.7257142857142858,
+        "precision": 0.01612800812750016,
+        "f2": 0.07405679631465392,
+        "tp": 254,
+        "fp": 15495,
+        "fn": 96
+      }
+    },
+    "policy": "Official COCO bbox evaluation; area is bbox width*height in original pixels; IoU=0.50:0.95, maxDets=1/10/100, all prediction scores. LabelMe input has no crowd/ignore flags. Category AP/Recall are at IoU=0.50, maxDets=100; F2 uses final TP/FP precision and recall, not AP as precision."
+  },
+  "score_threshold_results": {
+    "0.001": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.001,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.001,
+          0.002,
+          0.005,
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.7
+        ],
+        "loss_weights": {
+          "box_l1": 1.0,
+          "box_iou": 1.0,
+          "false_positive": 1.0,
+          "false_negative": 1.0
+        }
+      },
+      "tp": 254,
+      "fp": 15495,
+      "fn": 96,
+      "precision": 0.01612800812750016,
+      "recall": 0.7257142857142858,
+      "f2": 0.07405679631465392,
+      "per_class": {
+        "hanging object": {
+          "tp": 254,
+          "fp": 15495,
+          "fn": 96,
+          "ground_truth_count": 350,
+          "precision": 0.01612800812750016,
+          "recall": 0.7257142857142858,
+          "f2": 0.07405679631465392
+        }
+      }
+    },
+    "0.002": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.002,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.001,
+          0.002,
+          0.005,
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.7
+        ],
+        "loss_weights": {
+          "box_l1": 1.0,
+          "box_iou": 1.0,
+          "false_positive": 1.0,
+          "false_negative": 1.0
+        }
+      },
+      "tp": 238,
+      "fp": 8636,
+      "fn": 112,
+      "precision": 0.02681992337164751,
+      "recall": 0.68,
+      "f2": 0.1158263577963792,
+      "per_class": {
+        "hanging object": {
+          "tp": 238,
+          "fp": 8636,
+          "fn": 112,
+          "ground_truth_count": 350,
+          "precision": 0.02681992337164751,
+          "recall": 0.68,
+          "f2": 0.1158263577963792
+        }
+      }
+    },
+    "0.005": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.005,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.001,
+          0.002,
+          0.005,
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.7
+        ],
+        "loss_weights": {
+          "box_l1": 1.0,
+          "box_iou": 1.0,
+          "false_positive": 1.0,
+          "false_negative": 1.0
+        }
+      },
+      "tp": 224,
+      "fp": 3362,
+      "fn": 126,
+      "precision": 0.06246514221974345,
+      "recall": 0.64,
+      "f2": 0.22462896109105493,
+      "per_class": {
+        "hanging object": {
+          "tp": 224,
+          "fp": 3362,
+          "fn": 126,
+          "ground_truth_count": 350,
+          "precision": 0.06246514221974345,
+          "recall": 0.64,
+          "f2": 0.22462896109105493
+        }
+      }
+    },
+    "0.01": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.01,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.001,
+          0.002,
+          0.005,
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.7
+        ],
+        "loss_weights": {
+          "box_l1": 1.0,
+          "box_iou": 1.0,
+          "false_positive": 1.0,
+          "false_negative": 1.0
+        }
+      },
+      "tp": 216,
+      "fp": 1455,
+      "fn": 134,
+      "precision": 0.12926391382405744,
+      "recall": 0.6171428571428571,
+      "f2": 0.3516769781830023,
+      "per_class": {
+        "hanging object": {
+          "tp": 216,
+          "fp": 1455,
+          "fn": 134,
+          "ground_truth_count": 350,
+          "precision": 0.12926391382405744,
+          "recall": 0.6171428571428571,
+          "f2": 0.3516769781830023
+        }
+      }
+    },
+    "0.02": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.02,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.001,
+          0.002,
+          0.005,
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.7
+        ],
+        "loss_weights": {
+          "box_l1": 1.0,
+          "box_iou": 1.0,
+          "false_positive": 1.0,
+          "false_negative": 1.0
+        }
+      },
+      "tp": 213,
+      "fp": 697,
+      "fn": 137,
+      "precision": 0.23406593406593407,
+      "recall": 0.6085714285714285,
+      "f2": 0.4610389610389611,
+      "per_class": {
+        "hanging object": {
+          "tp": 213,
+          "fp": 697,
+          "fn": 137,
+          "ground_truth_count": 350,
+          "precision": 0.23406593406593407,
+          "recall": 0.6085714285714285,
+          "f2": 0.4610389610389611
+        }
+      }
+    },
+    "0.05": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.05,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.001,
+          0.002,
+          0.005,
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.7
+        ],
+        "loss_weights": {
+          "box_l1": 1.0,
+          "box_iou": 1.0,
+          "false_positive": 1.0,
+          "false_negative": 1.0
+        }
+      },
+      "tp": 207,
+      "fp": 264,
+      "fn": 143,
+      "precision": 0.4394904458598726,
+      "recall": 0.5914285714285714,
+      "f2": 0.5531801175841796,
+      "per_class": {
+        "hanging object": {
+          "tp": 207,
+          "fp": 264,
+          "fn": 143,
+          "ground_truth_count": 350,
+          "precision": 0.4394904458598726,
+          "recall": 0.5914285714285714,
+          "f2": 0.5531801175841796
+        }
+      }
+    },
+    "0.1": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.1,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.001,
+          0.002,
+          0.005,
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.7
+        ],
+        "loss_weights": {
+          "box_l1": 1.0,
+          "box_iou": 1.0,
+          "false_positive": 1.0,
+          "false_negative": 1.0
+        }
+      },
+      "tp": 200,
+      "fp": 168,
+      "fn": 150,
+      "precision": 0.5434782608695652,
+      "recall": 0.5714285714285714,
+      "f2": 0.5656108597285069,
+      "per_class": {
+        "hanging object": {
+          "tp": 200,
+          "fp": 168,
+          "fn": 150,
+          "ground_truth_count": 350,
+          "precision": 0.5434782608695652,
+          "recall": 0.5714285714285714,
+          "f2": 0.5656108597285069
+        }
+      }
+    },
+    "0.2": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.2,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.001,
+          0.002,
+          0.005,
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.7
+        ],
+        "loss_weights": {
+          "box_l1": 1.0,
+          "box_iou": 1.0,
+          "false_positive": 1.0,
+          "false_negative": 1.0
+        }
+      },
+      "tp": 185,
+      "fp": 82,
+      "fn": 165,
+      "precision": 0.6928838951310862,
+      "recall": 0.5285714285714286,
+      "f2": 0.5548890221955609,
+      "per_class": {
+        "hanging object": {
+          "tp": 185,
+          "fp": 82,
+          "fn": 165,
+          "ground_truth_count": 350,
+          "precision": 0.6928838951310862,
+          "recall": 0.5285714285714286,
+          "f2": 0.5548890221955609
+        }
+      }
+    },
+    "0.3": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.3,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.001,
+          0.002,
+          0.005,
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.7
+        ],
+        "loss_weights": {
+          "box_l1": 1.0,
+          "box_iou": 1.0,
+          "false_positive": 1.0,
+          "false_negative": 1.0
+        }
+      },
+      "tp": 169,
+      "fp": 55,
+      "fn": 181,
+      "precision": 0.7544642857142857,
+      "recall": 0.4828571428571429,
+      "f2": 0.520320197044335,
+      "per_class": {
+        "hanging object": {
+          "tp": 169,
+          "fp": 55,
+          "fn": 181,
+          "ground_truth_count": 350,
+          "precision": 0.7544642857142857,
+          "recall": 0.4828571428571429,
+          "f2": 0.520320197044335
+        }
+      }
+    },
+    "0.5": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.5,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.001,
+          0.002,
+          0.005,
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.7
+        ],
+        "loss_weights": {
+          "box_l1": 1.0,
+          "box_iou": 1.0,
+          "false_positive": 1.0,
+          "false_negative": 1.0
+        }
+      },
+      "tp": 151,
+      "fp": 28,
+      "fn": 199,
+      "precision": 0.8435754189944135,
+      "recall": 0.43142857142857144,
+      "f2": 0.47815072830905636,
+      "per_class": {
+        "hanging object": {
+          "tp": 151,
+          "fp": 28,
+          "fn": 199,
+          "ground_truth_count": 350,
+          "precision": 0.8435754189944135,
+          "recall": 0.43142857142857144,
+          "f2": 0.47815072830905636
+        }
+      }
+    },
+    "0.7": {
+      "settings": {
+        "iou_threshold": 0.5,
+        "score_threshold": 0.7,
+        "max_detections_per_image": 100,
+        "score_thresholds": [
+          0.001,
+          0.002,
+          0.005,
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.7
+        ],
+        "loss_weights": {
+          "box_l1": 1.0,
+          "box_iou": 1.0,
+          "false_positive": 1.0,
+          "false_negative": 1.0
+        }
+      },
+      "tp": 122,
+      "fp": 14,
+      "fn": 228,
+      "precision": 0.8970588235294118,
+      "recall": 0.3485714285714286,
+      "f2": 0.39713541666666663,
+      "per_class": {
+        "hanging object": {
+          "tp": 122,
+          "fp": 14,
+          "fn": 228,
+          "ground_truth_count": 350,
+          "precision": 0.8970588235294118,
+          "recall": 0.3485714285714286,
+          "f2": 0.39713541666666663
+        }
+      }
+    }
+  },
+  "evaluation_status": "complete",
+  "failed_request_count": 0,
+  "failure_policy": "Failed requests contribute no predictions (GT remains); metrics are marked incomplete.",
+  "image_accuracy": 0.36333333333333334,
+  "correct_image_count": 109,
+  "incorrect_image_count": 191,
+  "failed_image_count": 0,
+  "incorrect_images": [
+    {
+      "relative_path": "s00_00000_0000049.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000058.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000067.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000070.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000072.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000073.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000074.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000075.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000078.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00000_0000079.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00000_0000082.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00000_0000084.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00000_0000087.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00000_0000088.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00000_0000092.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00014_0001400.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00014_0001403.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001405.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00014_0001407.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001410.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001412.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00014_0001414.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00014_0001416.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00014_0001418.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00014_0001420.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00014_0001421.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00014_0001422.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001425.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00014_0001427.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001435.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001437.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001439.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001446.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001447.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001448.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001449.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001450.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001451.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001452.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001453.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001454.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001455.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001456.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001457.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001458.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001461.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001462.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001463.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001464.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001465.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001469.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001470.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001471.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001472.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001474.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00014_0001483.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001485.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001486.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00014_0001489.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00014_0001490.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001492.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001494.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001496.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00014_0001499.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00027_0002760.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00027_0002770.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00027_0002780.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00027_0002790.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00028_0002819.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00028_0002826.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00028_0002853.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00028_0002865.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 2,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00028_0002876.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00030_0003004.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00030_0003020.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00034_0003410.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    {
+      "relative_path": "s00_00050_0005000.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005001.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005035.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005036.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005037.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00050_0005038.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005039.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00050_0005040.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005041.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005042.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005043.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005044.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005045.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005046.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005047.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005048.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005049.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00050_0005050.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00050_0005051.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005052.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00050_0005053.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00050_0005064.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005065.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005066.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005067.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00050_0005068.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005069.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005070.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005071.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005073.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005074.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005075.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005076.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005077.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005078.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005079.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005080.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005081.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005082.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005083.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005084.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005085.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005086.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005087.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005088.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005089.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005090.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005091.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005092.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005093.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005094.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00050_0005095.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005096.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005097.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005098.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00050_0005099.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005100.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005101.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005103.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005104.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005105.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005106.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005107.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005108.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005109.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00051_0005110.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00051_0005112.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00051_0005113.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005114.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005116.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005117.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005118.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005119.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005121.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005122.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005123.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005124.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005125.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005126.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00051_0005127.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005128.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005129.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00051_0005130.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00051_0005131.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005132.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00051_0005133.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005134.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005135.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005136.jpg",
+      "reason": "detection_error",
+      "tp": 0,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "relative_path": "s00_00051_0005137.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005138.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005139.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005140.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005141.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005142.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005143.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005144.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005145.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005146.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005147.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005148.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005149.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005150.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005152.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005153.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005154.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005155.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005156.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005157.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005158.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005159.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 1,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005188.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005189.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005190.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    {
+      "relative_path": "s00_00051_0005191.jpg",
+      "reason": "detection_error",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    }
+  ],
+  "image_accuracy_policy": "All evaluated images form the denominator, including inference failures. Correct requires a successful request, class-aware one-to-one matches for every GT box and zero FP/FN at configured IoU/score/max-detection settings. An inference failure is always an incorrect image, even for empty GT.",
+  "ground_truth_image_count": 300,
+  "ground_truth_json_image_count": 300,
+  "assumed_negative_image_count": 0,
+  "unlabeled_image_count": 0,
+  "unlabeled_policy": "Infer all images. Missing GT follows the configured policy: negative uses empty GT; skip excludes from metrics; error stops before inference.",
+  "negative_image_count": 90,
+  "negative_false_positive_image_count": 13,
+  "negative_true_negative_image_count": 77,
+  "negative_failed_image_count": 0,
+  "negative_false_positive_rate": 0.14444444444444443,
+  "negative_error_image_count": 13,
+  "negative_error_rate": 0.14444444444444443,
+  "negative_false_positive_box_count": 15,
+  "negative_false_positive_images": [
+    {
+      "relative_path": "s00_00014_0001474.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s00_00027_0002760.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s00_00027_0002770.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s00_00027_0002780.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s00_00027_0002790.jpg",
+      "false_positive_box_count": 2
+    },
+    {
+      "relative_path": "s00_00028_0002819.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s00_00028_0002826.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s00_00028_0002853.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s00_00028_0002865.jpg",
+      "false_positive_box_count": 2
+    },
+    {
+      "relative_path": "s00_00028_0002876.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s00_00030_0003004.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s00_00030_0003020.jpg",
+      "false_positive_box_count": 1
+    },
+    {
+      "relative_path": "s00_00034_0003410.jpg",
+      "false_positive_box_count": 1
+    }
+  ],
+  "negative_metric_policy": "Image-level FP rate at score_threshold, capped per class; denominator excludes failed negative images. Failures are not true negatives and mark evaluation incomplete.",
+  "negative_error_policy": "(Negative FP images + failed negative images) / all evaluated negative images. Every failed negative is an error and remains in the denominator."
+}

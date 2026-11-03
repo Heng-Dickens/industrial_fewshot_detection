@@ -1,0 +1,158 @@
+{
+  "protocol": {
+    "training_shot": 5,
+    "support_seed": 0,
+    "training_seed": 0,
+    "imgsz": 640,
+    "batch": 4,
+    "epochs": 100,
+    "patience": 10,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "fp32": true,
+    "dev_images": 100,
+    "test_images": 300,
+    "confidence_floor": 0.001,
+    "nms_iou": 0.7,
+    "metric_iou": 0.5,
+    "operating_score": 0.5,
+    "max_detections_per_class": 100,
+    "vp": {
+      "scope": "full",
+      "protocol": "same_image",
+      "savpe_trainable": true,
+      "savpe_bn_running_stats_frozen": true,
+      "inference_shot": 5
+    }
+  },
+  "results": [
+    {
+      "scene": "diaowu",
+      "method": "yolov8-untrained",
+      "method_display": "YOLOv8-L改目标分类输出、不训练",
+      "training_shot_per_class": 0,
+      "inference_shot_per_class": null,
+      "mAP50": 0.0031218812093693604,
+      "mAP50_95": 0.0014859295075246516,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f2": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 350,
+      "source": "outputs/YOLOE/finetune/diaowu_val300/runs/yolo_5shot_20261102/yolov8-untrained/test_val300/fixed_head",
+      "metrics_sha256": "372d51db01e831b341626e0d00c714efb105cce09dc1bfa288b73eabf2d08ec8",
+      "dataset_sha256": "8a15a2b51d367c9a94f3747241a04143b193347be14c7276c53866809b26c0af",
+      "weights_sha256": "8a13ccab659fc504672fe836d727b231f112c3a189b909a500a762d2124ff1c1"
+    },
+    {
+      "scene": "diaowu",
+      "method": "yolov8",
+      "method_display": "YOLOv8-L 5shot微调",
+      "training_shot_per_class": 5,
+      "inference_shot_per_class": null,
+      "mAP50": 0.3965006118926225,
+      "mAP50_95": 0.26713869675481267,
+      "precision": 0.7878787878787878,
+      "recall": 0.37142857142857144,
+      "f2": 0.41533546325878595,
+      "tp": 130,
+      "fp": 35,
+      "fn": 220,
+      "source": "outputs/YOLOE/finetune/diaowu_val300/runs/yolo_5shot_20261102/yolov8/test_val300/fixed_head",
+      "metrics_sha256": "7370a22e36396f30734915fb43b8855437eadc8f5967b0a707caed400daf9ed7",
+      "dataset_sha256": "8a15a2b51d367c9a94f3747241a04143b193347be14c7276c53866809b26c0af",
+      "weights_sha256": "9c7406043515a1c87d8b8d6a0a965db367b474a9480d04770717bc89bbfb3399"
+    },
+    {
+      "scene": "diaowu",
+      "method": "yoloe-head",
+      "method_display": "YOLOE固定头 5shot微调",
+      "training_shot_per_class": 5,
+      "inference_shot_per_class": null,
+      "mAP50": 0.6086789606044457,
+      "mAP50_95": 0.44926707779370956,
+      "precision": 0.8859649122807017,
+      "recall": 0.5771428571428572,
+      "f2": 0.6203931203931204,
+      "tp": 202,
+      "fp": 26,
+      "fn": 148,
+      "source": "outputs/YOLOE/finetune/diaowu_val300/runs/yolo_5shot_20261102/yoloe-head/test_val300/fixed_head",
+      "metrics_sha256": "f1c75a927fa258caf7d5257b7c18e86dd3a83e7257adeef9ac4eabb6b869c8b2",
+      "dataset_sha256": "8a15a2b51d367c9a94f3747241a04143b193347be14c7276c53866809b26c0af",
+      "weights_sha256": "df7602ba1e51532bd10a0db37641574a4397d479a005c1f3b5bfa18799643bc5"
+    },
+    {
+      "scene": "diaowu",
+      "method": "yoloe-vp",
+      "method_display": "YOLOE保留并训练SAVPE 5shot微调",
+      "training_shot_per_class": 5,
+      "inference_shot_per_class": 5,
+      "mAP50": 0.5971403280410229,
+      "mAP50_95": 0.43266362602321473,
+      "precision": 0.9424460431654677,
+      "recall": 0.3742857142857143,
+      "f2": 0.42560103963612733,
+      "tp": 131,
+      "fp": 8,
+      "fn": 219,
+      "source": "outputs/YOLOE/finetune/diaowu_val300/runs/yolo_5shot_20261102/yoloe-vp/test_val300/visual_5shot",
+      "metrics_sha256": "e757e6fca3e4f92fdc49b12590d164b0227b0f83d2551c6c0419a6b1d30534ce",
+      "dataset_sha256": "8a15a2b51d367c9a94f3747241a04143b193347be14c7276c53866809b26c0af",
+      "weights_sha256": "eca8397b6791d7226b9d6814dd33659f31e7bf75e3405abb818ef29d36fce345"
+    },
+    {
+      "scene": "diaowu",
+      "method": "yoloe-original",
+      "method_display": "原始YOLOE视觉提示",
+      "training_shot_per_class": 0,
+      "inference_shot_per_class": 5,
+      "mAP50": 0.548099512607689,
+      "mAP50_95": 0.3316943315029114,
+      "precision": 0.777292576419214,
+      "recall": 0.5085714285714286,
+      "f2": 0.5463474524248005,
+      "tp": 178,
+      "fp": 51,
+      "fn": 172,
+      "source": "outputs/YOLOE/experiments/diaowu_val300/yoloe-v8l-seg_5shot",
+      "metrics_sha256": "724f383efa040dcf87f2d6739805aac3c802fb454c3cf43b06d59abadb8e9994",
+      "dataset_sha256": "470b98531e4a34810e7ee42bf250e39c97480e42427c3d84152e29e4d368f3fc",
+      "weights_sha256": null
+    }
+  ],
+  "checkpoint_verification": {
+    "diaowu_yolov8": {
+      "backbone_weights_changed": true,
+      "weights_sha256": "9c7406043515a1c87d8b8d6a0a965db367b474a9480d04770717bc89bbfb3399",
+      "savpe_present": false
+    },
+    "diaowu_yoloe-head": {
+      "backbone_weights_changed": true,
+      "weights_sha256": "df7602ba1e51532bd10a0db37641574a4397d479a005c1f3b5bfa18799643bc5",
+      "savpe_present": false
+    },
+    "diaowu_yoloe-vp": {
+      "backbone_weights_changed": true,
+      "weights_sha256": "eca8397b6791d7226b9d6814dd33659f31e7bf75e3405abb818ef29d36fce345",
+      "savpe_present": true,
+      "savpe_weights_changed": true,
+      "savpe_changed_parameter_count": 38
+    },
+    "diaowu_yolov8-untrained": {
+      "transferred_tensor_count": 589,
+      "all_transferred_tensors_equal": true,
+      "new_classification_tensors": [
+        "model.22.cv3.0.2.weight",
+        "model.22.cv3.0.2.bias",
+        "model.22.cv3.1.2.weight",
+        "model.22.cv3.1.2.bias",
+        "model.22.cv3.2.2.weight",
+        "model.22.cv3.2.2.bias"
+      ],
+      "seed": 0,
+      "checkpoint_sha256": "8a13ccab659fc504672fe836d727b231f112c3a189b909a500a762d2124ff1c1"
+    }
+  }
+}

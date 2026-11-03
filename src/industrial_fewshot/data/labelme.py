@@ -11,6 +11,8 @@ MISSING_GT_POLICIES = {"skip", "error", "negative"}
 
 
 def read_json(path: Path) -> dict:
+    from industrial_fewshot.paths import resolve_location
+    path = resolve_location(Path(path))
     value = json.loads(path.read_text(encoding="utf-8-sig"))
     if not isinstance(value, dict):
         raise ValueError(f"JSON 顶层必须是 object: {path}")

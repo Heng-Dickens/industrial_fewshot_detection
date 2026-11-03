@@ -1,6 +1,6 @@
 # Full existing-method benchmark on the same 300 images; explicitly excludes qwen3.8-max.
 dataset_config: ../common/diaowu_val300.yaml
-output_root: ../../outputs/runs/diaowu_val300
+output_root: ../../outputs/diaowu_val300
 evaluation:
   iou_threshold: 0.5
   score_threshold: 0.5

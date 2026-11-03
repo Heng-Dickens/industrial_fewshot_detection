@@ -15,7 +15,7 @@ def main():
     root = Path(__file__).resolve().parents[1]
     os.environ.update(HF_HUB_OFFLINE='1', TRANSFORMERS_OFFLINE='1',
                       YOLO_AUTOINSTALL='false',
-                      YOLO_CONFIG_DIR=str(root / 'outputs/runtime/yoloe_settings'))
+                      YOLO_CONFIG_DIR=str(root / 'outputs/_shared/runtime/yoloe_settings'))
     print(f'Checking {args.backend}: {sys.executable}', flush=True)
     errors = import_checks(args.backend, 'text')
     if errors:

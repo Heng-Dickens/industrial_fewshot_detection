@@ -3,6 +3,7 @@ from pathlib import Path
 from PIL import Image
 from .labelme import load_evaluation_truth, read_json
 from industrial_fewshot.labels import all_label_names
+from industrial_fewshot.paths import resolve_location
 
 def inspect_dataset(config: dict, limit: int | None = None) -> list[dict]:
     if limit is not None and limit < 1:
@@ -15,7 +16,7 @@ def inspect_dataset(config: dict, limit: int | None = None) -> list[dict]:
     frozen = {}
     if config.get("dataset_manifest"):
         manifest = read_json(Path(config["dataset_manifest"]))
-        if manifest.get("schema") != "industrial_fewshot.split.v1" or Path(manifest["image_root"]).resolve() != root.resolve():
+        if manifest.get("schema") != "industrial_fewshot.split.v1" or resolve_location(Path(manifest["image_root"])) != root.resolve():
             raise ValueError("数据划分清单的格式或图片根目录不匹配")
         frozen = {row["relative_path"]: row for row in manifest["samples"]}
         if len(frozen) != len(manifest["samples"]):

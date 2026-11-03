@@ -1,0 +1,633 @@
+{
+  "schema": "industrial_fewshot.method_layout.v1",
+  "moves": {
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val100/OVD-MLLM": "/home/yuheng/Work/industrial_fewshot_detection/outputs/OVD-MLLM/experiments/chache_val100",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO": "/home/yuheng/Work/industrial_fewshot_detection/outputs/GroundingDINO/experiments/chache_val300",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/MLLM提示_v1": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/experiments/chache_val300/MLLM提示_v1",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/MLLM提示_v2": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/experiments/chache_val300/MLLM提示_v2",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/OVD-MLLM": "/home/yuheng/Work/industrial_fewshot_detection/outputs/OVD-MLLM/experiments/chache_val300",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/PET-DINO": "/home/yuheng/Work/industrial_fewshot_detection/outputs/PET-DINO/experiments/chache_val300",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/chache_val300/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/WeDetect": "/home/yuheng/Work/industrial_fewshot_detection/outputs/WeDetect/experiments/chache_val300",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/YOLOE": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/experiments/chache_val300",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/dataset.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/chache_val300/dataset.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/prompt_comparison.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/comparisons/chache_val300/prompt_comparison.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/prompt_results.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/chache_val300/prompt_results.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/prompt_results.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/chache_val300/prompt_results.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/qwen27b_expanded_full5shot_top3.csv": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/comparisons/chache_val300/qwen27b_expanded_full5shot_top3.csv",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/qwen27b_expanded_full5shot_top3.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/comparisons/chache_val300/qwen27b_expanded_full5shot_top3.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/qwen3.8-flash_expanded_shot_progress.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/comparisons/chache_val300/qwen3.8-flash_expanded_shot_progress.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/qwen_expanded_shot_comparison.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/comparisons/chache_val300/qwen_expanded_shot_comparison.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/results_summary.csv": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/chache_val300/results_summary.csv",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/results_summary.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/chache_val300/results_summary.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/results_summary.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/chache_val300/results_summary.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/MLLM提示_v1": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/experiments/diaowu_99/MLLM提示_v1",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_99/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/dataset.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_99/dataset.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/prompt_results.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_99/prompt_results.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/prompt_results.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_99/prompt_results.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/results_summary.csv": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_99/results_summary.csv",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/results_summary.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_99/results_summary.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/results_summary.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_99/results_summary.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/文字提示_v1/yoloe-11l-seg_5shot_裁剪图0.75+文字0.25": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/experiments/diaowu_99/文字提示_v1/yoloe-11l-seg_5shot_裁剪图0.75+文字0.25",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/文字提示_v1/grounding-dino-base_0shot": "/home/yuheng/Work/industrial_fewshot_detection/outputs/GroundingDINO/experiments/diaowu_99/文字提示_v1/grounding-dino-base_0shot",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/文字提示_v1/grounding-dino-tiny_0shot": "/home/yuheng/Work/industrial_fewshot_detection/outputs/GroundingDINO/experiments/diaowu_99/文字提示_v1/grounding-dino-tiny_0shot",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/文字提示_v1/prompt_results.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/registries/diaowu_99/文字提示_v1/prompt_results.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/文字提示_v1/prompt_version.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/registries/diaowu_99/文字提示_v1/prompt_version.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/文字提示_v1/yoloe-11l-seg_0shot": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/experiments/diaowu_99/文字提示_v1/yoloe-11l-seg_0shot",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/文字提示_v1/prompt_results.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/registries/diaowu_99/文字提示_v1/prompt_results.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/监督检测": "/home/yuheng/Work/industrial_fewshot_detection/outputs/JSTY-YOLO/experiments/diaowu_99",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_99/视觉提示": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/experiments/diaowu_99/视觉提示",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val100/OVD-MLLM": "/home/yuheng/Work/industrial_fewshot_detection/outputs/OVD-MLLM/experiments/diaowu_val100",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/GroundingDINO": "/home/yuheng/Work/industrial_fewshot_detection/outputs/GroundingDINO/experiments/diaowu_val300",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/MLLM提示_v1": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/experiments/diaowu_val300/MLLM提示_v1",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/OVD-MLLM": "/home/yuheng/Work/industrial_fewshot_detection/outputs/OVD-MLLM/experiments/diaowu_val300",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/PET-DINO": "/home/yuheng/Work/industrial_fewshot_detection/outputs/PET-DINO/experiments/diaowu_val300",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_val300/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/YOLOE": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/experiments/diaowu_val300",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/dataset.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_val300/dataset.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/prompt_results.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_val300/prompt_results.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/prompt_results.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_val300/prompt_results.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/qwen27b_prompt_5shot_comparison.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/comparisons/diaowu_val300/qwen27b_prompt_5shot_comparison.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/qwen27b_visual_shot_comparison.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/comparisons/diaowu_val300/qwen27b_visual_shot_comparison.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/results_summary.csv": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_val300/results_summary.csv",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/results_summary.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_val300/results_summary.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/results_summary.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_val300/results_summary.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/text_result_sanity_check.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/datasets/diaowu_val300/text_result_sanity_check.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/文字提示_v1": "/home/yuheng/Work/industrial_fewshot_detection/outputs/WeDetect/experiments/diaowu_val300/文字提示_v1",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/文字提示_v2": "/home/yuheng/Work/industrial_fewshot_detection/outputs/WeDetect/experiments/diaowu_val300/文字提示_v2",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/finetuning/chache_yoloe": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/chache_val300/runs",
+    "/home/yuheng/Work/industrial_fewshot_detection/examples/yoloe_finetune_chache": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/scripts/chache",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/finetuning/chache_val300/yoloe_search_20261029": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/chache_val300/comparisons/yoloe_search_20261029",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/finetuning/diaowu_yoloe": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/diaowu_val300/runs",
+    "/home/yuheng/Work/industrial_fewshot_detection/examples/yoloe_finetune_diaowu": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/scripts/diaowu",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/finetuning/diaowu_val300/yoloe_search_20261029": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/diaowu_val300/comparisons/yoloe_search_20261029",
+    "/home/yuheng/Work/industrial_fewshot_detection/examples/yoloe_finetune_common": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/scripts/common",
+    "/home/yuheng/Work/industrial_fewshot_detection/examples/FINETUNING.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/examples/ovd_mllm_filtering": "/home/yuheng/Work/industrial_fewshot_detection/outputs/OVD-MLLM/scripts",
+    "/home/yuheng/Work/industrial_fewshot_detection/examples/chat_image.py": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/scripts/chat_image.py",
+    "/home/yuheng/Work/industrial_fewshot_detection/examples/chat_qwen38_image.py": "/home/yuheng/Work/industrial_fewshot_detection/outputs/Qwen/scripts/chat_qwen38_image.py",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/fewshot/cross_dataset/yoloe_qwen_filtering_20261030": "/home/yuheng/Work/industrial_fewshot_detection/outputs/OVD-MLLM/comparisons/yoloe_qwen_filtering_20261030",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/fewshot/cross_dataset/pet_dino_shot_sweep_20261027": "/home/yuheng/Work/industrial_fewshot_detection/outputs/PET-DINO/comparisons/pet_dino_shot_sweep_20261027",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/fewshot/chache_val300/wedetect_prompt_sweep_20261027": "/home/yuheng/Work/industrial_fewshot_detection/outputs/WeDetect/comparisons/chache_val300/wedetect_prompt_sweep_20261027",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/fewshot/cross_dataset/aligned_baselines_20261027": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/comparisons/aligned_baselines_20261027",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/localization/cross_dataset/iou85_box20_20261028": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/comparisons/iou85_box20_20261028",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/archive": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/archive/comparisons",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/archive": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/archive/history",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/runtime",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/environment_setup": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/environment_setup",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/.inference_cache": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/cache/inference",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/runtime": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/legacy_run_runtime",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/.layout.lock": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/archive/layout_indexes/runs/.layout.lock",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/archive/layout_indexes/runs/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/prompt_results.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/archive/layout_indexes/runs/prompt_results.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/prompt_results.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/archive/layout_indexes/runs/prompt_results.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/MIGRATION.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/archive/layout_indexes/comparisons/MIGRATION.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/archive/layout_indexes/comparisons/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/directory_index.csv": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/archive/layout_indexes/comparisons/directory_index.csv",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/migration_20261030.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/archive/layout_indexes/comparisons/migration_20261030.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/verification_20261030.json": "/home/yuheng/Work/industrial_fewshot_detection/outputs/_shared/archive/layout_indexes/comparisons/verification_20261030.json",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/fewshot/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/fewshot/cross_dataset/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/fewshot/chache_val300/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/localization/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/localization/cross_dataset/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/finetuning/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/finetuning/chache_val300/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/chache_val300/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/comparisons/finetuning/diaowu_val300/README.md": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/diaowu_val300/README.md",
+    "/home/yuheng/Work/industrial_fewshot_detection/outputs/ONNX": "/home/yuheng/Work/industrial_fewshot_detection/outputs/JSTY-YOLO"
+  },
+  "artifacts": [
+    {
+      "old": "outputs/comparisons/fewshot/chache_val300/wedetect_prompt_sweep_20261027",
+      "new": "outputs/WeDetect/comparisons/chache_val300/wedetect_prompt_sweep_20261027",
+      "files": 16,
+      "bytes": 10604384
+    },
+    {
+      "old": "outputs/comparisons/fewshot/cross_dataset/yoloe_qwen_filtering_20261030",
+      "new": "outputs/OVD-MLLM/comparisons/yoloe_qwen_filtering_20261030",
+      "files": 20,
+      "bytes": 13716068
+    },
+    {
+      "old": "outputs/comparisons/fewshot/cross_dataset/pet_dino_shot_sweep_20261027",
+      "new": "outputs/PET-DINO/comparisons/pet_dino_shot_sweep_20261027",
+      "files": 6,
+      "bytes": 596777
+    },
+    {
+      "old": "outputs/comparisons/fewshot/cross_dataset/aligned_baselines_20261027",
+      "new": "outputs/_shared/comparisons/aligned_baselines_20261027",
+      "files": 3,
+      "bytes": 45825
+    },
+    {
+      "old": "outputs/comparisons/localization/cross_dataset/iou85_box20_20261028",
+      "new": "outputs/_shared/comparisons/iou85_box20_20261028",
+      "files": 6,
+      "bytes": 4906845
+    },
+    {
+      "old": "outputs/runs/chache_val300/qwen3.8-flash_expanded_shot_progress.md",
+      "new": "outputs/Qwen/comparisons/chache_val300/qwen3.8-flash_expanded_shot_progress.md",
+      "files": 1,
+      "bytes": 2601
+    },
+    {
+      "old": "outputs/comparisons/finetuning/chache_val300/yoloe_search_20261029",
+      "new": "outputs/YOLOE/finetune/chache_val300/comparisons/yoloe_search_20261029",
+      "files": 7,
+      "bytes": 989616
+    },
+    {
+      "old": "outputs/comparisons/finetuning/diaowu_val300/yoloe_search_20261029",
+      "new": "outputs/YOLOE/finetune/diaowu_val300/comparisons/yoloe_search_20261029",
+      "files": 7,
+      "bytes": 874104
+    },
+    {
+      "old": "outputs/runs/diaowu_99/文字提示_v1/yoloe-11l-seg_5shot_裁剪图0.75+文字0.25",
+      "new": "outputs/YOLOE/experiments/diaowu_99/文字提示_v1/yoloe-11l-seg_5shot_裁剪图0.75+文字0.25",
+      "files": 7,
+      "bytes": 44235
+    },
+    {
+      "old": "outputs/runs/chache_val300/qwen27b_expanded_full5shot_top3.csv",
+      "new": "outputs/Qwen/comparisons/chache_val300/qwen27b_expanded_full5shot_top3.csv",
+      "files": 1,
+      "bytes": 6803
+    },
+    {
+      "old": "outputs/runs/chache_val300/qwen27b_expanded_full5shot_top3.md",
+      "new": "outputs/Qwen/comparisons/chache_val300/qwen27b_expanded_full5shot_top3.md",
+      "files": 1,
+      "bytes": 2686
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/qwen27b_prompt_5shot_comparison.md",
+      "new": "outputs/Qwen/comparisons/diaowu_val300/qwen27b_prompt_5shot_comparison.md",
+      "files": 1,
+      "bytes": 1522
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/qwen27b_visual_shot_comparison.md",
+      "new": "outputs/Qwen/comparisons/diaowu_val300/qwen27b_visual_shot_comparison.md",
+      "files": 1,
+      "bytes": 2535
+    },
+    {
+      "old": "outputs/runs/chache_val300/qwen_expanded_shot_comparison.md",
+      "new": "outputs/Qwen/comparisons/chache_val300/qwen_expanded_shot_comparison.md",
+      "files": 1,
+      "bytes": 7983
+    },
+    {
+      "old": "outputs/runs/diaowu_99/文字提示_v1/grounding-dino-base_0shot",
+      "new": "outputs/GroundingDINO/experiments/diaowu_99/文字提示_v1/grounding-dino-base_0shot",
+      "files": 7,
+      "bytes": 38191
+    },
+    {
+      "old": "outputs/runs/diaowu_99/文字提示_v1/grounding-dino-tiny_0shot",
+      "new": "outputs/GroundingDINO/experiments/diaowu_99/文字提示_v1/grounding-dino-tiny_0shot",
+      "files": 7,
+      "bytes": 26808
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/text_result_sanity_check.md",
+      "new": "outputs/_shared/datasets/diaowu_val300/text_result_sanity_check.md",
+      "files": 1,
+      "bytes": 2637
+    },
+    {
+      "old": "outputs/runs/diaowu_99/文字提示_v1/prompt_results.json",
+      "new": "outputs/_shared/registries/diaowu_99/文字提示_v1/prompt_results.json",
+      "files": 1,
+      "bytes": 14132
+    },
+    {
+      "old": "outputs/runs/diaowu_99/文字提示_v1/prompt_version.json",
+      "new": "outputs/_shared/registries/diaowu_99/文字提示_v1/prompt_version.json",
+      "files": 1,
+      "bytes": 555
+    },
+    {
+      "old": "outputs/runs/diaowu_99/文字提示_v1/yoloe-11l-seg_0shot",
+      "new": "outputs/YOLOE/experiments/diaowu_99/文字提示_v1/yoloe-11l-seg_0shot",
+      "files": 7,
+      "bytes": 29424
+    },
+    {
+      "old": "outputs/runs/diaowu_99/文字提示_v1/prompt_results.md",
+      "new": "outputs/_shared/registries/diaowu_99/文字提示_v1/prompt_results.md",
+      "files": 1,
+      "bytes": 1840
+    },
+    {
+      "old": "outputs/runs/chache_val300/prompt_comparison.md",
+      "new": "outputs/Qwen/comparisons/chache_val300/prompt_comparison.md",
+      "files": 1,
+      "bytes": 10306
+    },
+    {
+      "old": "outputs/runs/chache_val300/results_summary.json",
+      "new": "outputs/_shared/datasets/chache_val300/results_summary.json",
+      "files": 1,
+      "bytes": 112119
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/results_summary.json",
+      "new": "outputs/_shared/datasets/diaowu_val300/results_summary.json",
+      "files": 1,
+      "bytes": 87573
+    },
+    {
+      "old": "outputs/runs/chache_val300/prompt_results.json",
+      "new": "outputs/_shared/datasets/chache_val300/prompt_results.json",
+      "files": 1,
+      "bytes": 204751
+    },
+    {
+      "old": "outputs/runs/chache_val300/results_summary.csv",
+      "new": "outputs/_shared/datasets/chache_val300/results_summary.csv",
+      "files": 1,
+      "bytes": 36650
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/prompt_results.json",
+      "new": "outputs/_shared/datasets/diaowu_val300/prompt_results.json",
+      "files": 1,
+      "bytes": 250897
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/results_summary.csv",
+      "new": "outputs/_shared/datasets/diaowu_val300/results_summary.csv",
+      "files": 1,
+      "bytes": 28860
+    },
+    {
+      "old": "outputs/comparisons/verification_20261030.json",
+      "new": "outputs/_shared/archive/layout_indexes/comparisons/verification_20261030.json",
+      "files": 1,
+      "bytes": 540
+    },
+    {
+      "old": "outputs/runs/chache_val300/results_summary.md",
+      "new": "outputs/_shared/datasets/chache_val300/results_summary.md",
+      "files": 1,
+      "bytes": 23842
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/results_summary.md",
+      "new": "outputs/_shared/datasets/diaowu_val300/results_summary.md",
+      "files": 1,
+      "bytes": 23560
+    },
+    {
+      "old": "outputs/runs/chache_val300/prompt_results.md",
+      "new": "outputs/_shared/datasets/chache_val300/prompt_results.md",
+      "files": 1,
+      "bytes": 11036
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/prompt_results.md",
+      "new": "outputs/_shared/datasets/diaowu_val300/prompt_results.md",
+      "files": 1,
+      "bytes": 11433
+    },
+    {
+      "old": "outputs/runs/diaowu_99/results_summary.json",
+      "new": "outputs/_shared/datasets/diaowu_99/results_summary.json",
+      "files": 1,
+      "bytes": 98979
+    },
+    {
+      "old": "outputs/comparisons/migration_20261030.json",
+      "new": "outputs/_shared/archive/layout_indexes/comparisons/migration_20261030.json",
+      "files": 1,
+      "bytes": 152857
+    },
+    {
+      "old": "outputs/runs/diaowu_99/prompt_results.json",
+      "new": "outputs/_shared/datasets/diaowu_99/prompt_results.json",
+      "files": 1,
+      "bytes": 567239
+    },
+    {
+      "old": "outputs/runs/diaowu_99/results_summary.csv",
+      "new": "outputs/_shared/datasets/diaowu_99/results_summary.csv",
+      "files": 1,
+      "bytes": 35003
+    },
+    {
+      "old": "outputs/runs/diaowu_99/results_summary.md",
+      "new": "outputs/_shared/datasets/diaowu_99/results_summary.md",
+      "files": 1,
+      "bytes": 34650
+    },
+    {
+      "old": "outputs/runs/chache_val300/GroundingDINO",
+      "new": "outputs/GroundingDINO/experiments/chache_val300",
+      "files": 78241,
+      "bytes": 2041767408
+    },
+    {
+      "old": "outputs/runs/diaowu_99/prompt_results.md",
+      "new": "outputs/_shared/datasets/diaowu_99/prompt_results.md",
+      "files": 1,
+      "bytes": 26650
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/GroundingDINO",
+      "new": "outputs/GroundingDINO/experiments/diaowu_val300",
+      "files": 2427,
+      "bytes": 80904094
+    },
+    {
+      "old": "outputs/runs/chache_val300/dataset.json",
+      "new": "outputs/_shared/datasets/chache_val300/dataset.json",
+      "files": 1,
+      "bytes": 533
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/dataset.json",
+      "new": "outputs/_shared/datasets/diaowu_val300/dataset.json",
+      "files": 1,
+      "bytes": 533
+    },
+    {
+      "old": "outputs/comparisons/directory_index.csv",
+      "new": "outputs/_shared/archive/layout_indexes/comparisons/directory_index.csv",
+      "files": 1,
+      "bytes": 1702
+    },
+    {
+      "old": "outputs/runs/chache_val300/MLLM提示_v1",
+      "new": "outputs/Qwen/experiments/chache_val300/MLLM提示_v1",
+      "files": 19,
+      "bytes": 164124
+    },
+    {
+      "old": "outputs/runs/chache_val300/MLLM提示_v2",
+      "new": "outputs/Qwen/experiments/chache_val300/MLLM提示_v2",
+      "files": 155,
+      "bytes": 1812613
+    },
+    {
+      "old": "outputs/runs/chache_val300/README.md",
+      "new": "outputs/_shared/datasets/chache_val300/README.md",
+      "files": 1,
+      "bytes": 1195
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/MLLM提示_v1",
+      "new": "outputs/Qwen/experiments/diaowu_val300/MLLM提示_v1",
+      "files": 173,
+      "bytes": 2315358
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/README.md",
+      "new": "outputs/_shared/datasets/diaowu_val300/README.md",
+      "files": 1,
+      "bytes": 1291
+    },
+    {
+      "old": "outputs/runs/chache_val100/OVD-MLLM",
+      "new": "outputs/OVD-MLLM/experiments/chache_val100",
+      "files": 58,
+      "bytes": 38384890
+    },
+    {
+      "old": "outputs/runs/chache_val300/OVD-MLLM",
+      "new": "outputs/OVD-MLLM/experiments/chache_val300",
+      "files": 56,
+      "bytes": 113476772
+    },
+    {
+      "old": "outputs/runs/chache_val300/PET-DINO",
+      "new": "outputs/PET-DINO/experiments/chache_val300",
+      "files": 58679,
+      "bytes": 1412308340
+    },
+    {
+      "old": "outputs/runs/chache_val300/WeDetect",
+      "new": "outputs/WeDetect/experiments/chache_val300",
+      "files": 24225,
+      "bytes": 141226615
+    },
+    {
+      "old": "outputs/runs/diaowu_99/dataset.json",
+      "new": "outputs/_shared/datasets/diaowu_99/dataset.json",
+      "files": 1,
+      "bytes": 520
+    },
+    {
+      "old": "outputs/runs/diaowu_val100/OVD-MLLM",
+      "new": "outputs/OVD-MLLM/experiments/diaowu_val100",
+      "files": 50,
+      "bytes": 9327499
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/OVD-MLLM",
+      "new": "outputs/OVD-MLLM/experiments/diaowu_val300",
+      "files": 48,
+      "bytes": 27781059
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/PET-DINO",
+      "new": "outputs/PET-DINO/experiments/diaowu_val300",
+      "files": 11735,
+      "bytes": 289256023
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/文字提示_v1",
+      "new": "outputs/WeDetect/experiments/diaowu_val300/文字提示_v1",
+      "files": 1212,
+      "bytes": 1908022
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/文字提示_v2",
+      "new": "outputs/WeDetect/experiments/diaowu_val300/文字提示_v2",
+      "files": 1212,
+      "bytes": 2162264
+    },
+    {
+      "old": "outputs/runs/chache_val300/YOLOE",
+      "new": "outputs/YOLOE/experiments/chache_val300",
+      "files": 58679,
+      "bytes": 919746728
+    },
+    {
+      "old": "outputs/runs/diaowu_99/MLLM提示_v1",
+      "new": "outputs/Qwen/experiments/diaowu_99/MLLM提示_v1",
+      "files": 328,
+      "bytes": 2825170
+    },
+    {
+      "old": "outputs/runs/diaowu_99/README.md",
+      "new": "outputs/_shared/datasets/diaowu_99/README.md",
+      "files": 1,
+      "bytes": 609
+    },
+    {
+      "old": "outputs/runs/diaowu_val300/YOLOE",
+      "new": "outputs/YOLOE/experiments/diaowu_val300",
+      "files": 11735,
+      "bytes": 181464919
+    },
+    {
+      "old": "outputs/runs/prompt_results.json",
+      "new": "outputs/_shared/archive/layout_indexes/runs/prompt_results.json",
+      "files": 1,
+      "bytes": 224859
+    },
+    {
+      "old": "outputs/comparisons/MIGRATION.md",
+      "new": "outputs/_shared/archive/layout_indexes/comparisons/MIGRATION.md",
+      "files": 1,
+      "bytes": 2769
+    },
+    {
+      "old": "outputs/finetuning/chache_yoloe",
+      "new": "outputs/YOLOE/finetune/chache_val300/runs",
+      "files": 1114,
+      "bytes": 15668769653
+    },
+    {
+      "old": "outputs/finetuning/diaowu_yoloe",
+      "new": "outputs/YOLOE/finetune/diaowu_val300/runs",
+      "files": 1055,
+      "bytes": 15544863617
+    },
+    {
+      "old": "examples/yoloe_finetune_chache",
+      "new": "outputs/YOLOE/finetune/scripts/chache",
+      "files": 15,
+      "bytes": 22771
+    },
+    {
+      "old": "examples/yoloe_finetune_diaowu",
+      "new": "outputs/YOLOE/finetune/scripts/diaowu",
+      "files": 7,
+      "bytes": 12012
+    },
+    {
+      "old": "examples/yoloe_finetune_common",
+      "new": "outputs/YOLOE/finetune/scripts/common",
+      "files": 15,
+      "bytes": 171326
+    },
+    {
+      "old": "outputs/runs/prompt_results.md",
+      "new": "outputs/_shared/archive/layout_indexes/runs/prompt_results.md",
+      "files": 1,
+      "bytes": 25474
+    },
+    {
+      "old": "examples/chat_qwen38_image.py",
+      "new": "outputs/Qwen/scripts/chat_qwen38_image.py",
+      "files": 1,
+      "bytes": 3066
+    },
+    {
+      "old": "outputs/runs/.inference_cache",
+      "new": "outputs/_shared/cache/inference",
+      "files": 1200,
+      "bytes": 1416687
+    },
+    {
+      "old": "outputs/comparisons/README.md",
+      "new": "outputs/_shared/archive/layout_indexes/comparisons/README.md",
+      "files": 1,
+      "bytes": 4955
+    },
+    {
+      "old": "outputs/runs/diaowu_99/监督检测",
+      "new": "outputs/JSTY-YOLO/experiments/diaowu_99",
+      "files": 10,
+      "bytes": 25992
+    },
+    {
+      "old": "outputs/runs/diaowu_99/视觉提示",
+      "new": "outputs/YOLOE/experiments/diaowu_99/视觉提示",
+      "files": 80,
+      "bytes": 500906
+    },
+    {
+      "old": "examples/ovd_mllm_filtering",
+      "new": "outputs/OVD-MLLM/scripts",
+      "files": 5,
+      "bytes": 83325
+    },
+    {
+      "old": "outputs/comparisons/archive",
+      "new": "outputs/_shared/archive/comparisons",
+      "files": 6,
+      "bytes": 28484
+    },
+    {
+      "old": "outputs/environment_setup",
+      "new": "outputs/_shared/environment_setup",
+      "files": 40,
+      "bytes": 711054
+    },
+    {
+      "old": "outputs/runs/.layout.lock",
+      "new": "outputs/_shared/archive/layout_indexes/runs/.layout.lock",
+      "files": 1,
+      "bytes": 1
+    },
+    {
+      "old": "examples/FINETUNING.md",
+      "new": "outputs/YOLOE/finetune/README.md",
+      "files": 1,
+      "bytes": 2999
+    },
+    {
+      "old": "examples/chat_image.py",
+      "new": "outputs/Qwen/scripts/chat_image.py",
+      "files": 1,
+      "bytes": 1683
+    },
+    {
+      "old": "outputs/runs/README.md",
+      "new": "outputs/_shared/archive/layout_indexes/runs/README.md",
+      "files": 1,
+      "bytes": 1759
+    },
+    {
+      "old": "outputs/runs/runtime",
+      "new": "outputs/_shared/legacy_run_runtime",
+      "files": 1,
+      "bytes": 545
+    },
+    {
+      "old": "outputs/archive",
+      "new": "outputs/_shared/archive/history",
+      "files": 2279,
+      "bytes": 7652822
+    },
+    {
+      "old": "outputs/runtime",
+      "new": "outputs/_shared/runtime",
+      "files": 5787,
+      "bytes": 231299478
+    }
+  ],
+  "verified": "Same inode, byte length and modification time for every moved file before documentation edits.",
+  "removed_redundant_indexes": [
+    "outputs/comparisons/fewshot/README.md",
+    "outputs/comparisons/fewshot/cross_dataset/README.md",
+    "outputs/comparisons/fewshot/chache_val300/README.md",
+    "outputs/comparisons/localization/README.md",
+    "outputs/comparisons/localization/cross_dataset/README.md",
+    "outputs/comparisons/finetuning/README.md",
+    "outputs/comparisons/finetuning/chache_val300/README.md",
+    "outputs/comparisons/finetuning/diaowu_val300/README.md"
+  ],
+  "status": "complete",
+  "removed_tests": true,
+  "validation": "layout_verification.json",
+  "method_naming_correction": "ONNX is a model format; the historical JSTY supervised detector is named JSTY-YOLO."
+}

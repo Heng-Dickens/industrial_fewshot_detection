@@ -1,4 +1,27 @@
-# JSTY 吊物监督检测模型
+# JSTY 自定义监督检测模型
+
+## 2026-11-02：两个300张测试集的FP32 ONNX重评
+
+本轮分别使用`weights/jsty_special_vehicle/jsty_chache_det5_960_1280_0_0_0_2_fp32.onnx`和`weights/jsty_hanging_object/jsty_hanging_object_det1_0_0_0_1_fp32.onnx`，与对应的300张固定测试图逐一核对图像哈希和GT后，全量重新推理，未复用旧99张预测。
+
+[全部算法及微调设置大表](../outputs/ALL_RESULTS.md) · [完整CSV](../outputs/ALL_RESULTS.csv) · [叉车原始评估](../outputs/JSTY-YOLO/experiments/chache_val300/jsty_chache_det5_960_1280_0_0_0_2_fp32_val300_20261102/evaluation.txt) · [吊物原始评估](../outputs/JSTY-YOLO/experiments/diaowu_val300/jsty_hanging_object_det1_0_0_0_1_fp32_val300_20261102/evaluation.txt)
+
+实际类别按ONNX元数据及原始输出通道验证：叉车为5类（69通道），吊物为1类（65通道）；部署配置里的num_classes数值不同，不直接用作原始logit通道数。
+
+输入固定为高960、宽1280，RGB /255、双线性缩放、居中补114；ONNX Runtime CPUExecutionProvider、4线程。每图只执行一次ONNX前向，再对全部目标类解码；每个anchor取模型最大得分类别，DFL16、类别内NMS IoU=0.7，每类保留100框。候选下限0.001，工作点score≥0.5/0.7、匹配IoU=0.5。全部负图和GT留在分母。
+
+原始训练快照及数据量未绑定在此次导入的权重中；表内标记为自定义网络监督训练，不将其记成0shot，训练预算与本项目fewshot微调分别解释。
+
+重跑时选择新的输出目录，已有结果不会覆盖：
+
+```bash
+python scripts/run_jsty_val300.py --scene chache --execute --output /新的叉车结果目录
+python scripts/run_jsty_val300.py --scene diaowu --execute --output /新的吊物结果目录
+python scripts/summarize_all_algorithms.py
+```
+
+## 以下为此前吊物模型的导入与99张历史评估记录
+
 
 原目录 `D:\Work\JSTongYong\result\hanging_object_det1_0_0_0_1` 的7个模型及配套文件已移入项目 weights/jsty_hanging_object（本地路径 `../weights/jsty_hanging_object`）。迁移前后逐文件 SHA256 一致，来源、大小及哈希保存于 IMPORT.manifest.json（本地路径 `../weights/jsty_hanging_object/IMPORT.manifest.json`）。3.5GB 的验证数据压缩包仍在原目录。
 
@@ -47,7 +70,7 @@
 
 默认使用 `configs/common/diaowu.yaml` 中的99张固定查询图。参考目录仅用于执行共同测试集的内容去重规则，原图、框标注、文字参考和待测真值均不会作为模型提示。`train` 仍表示推理加评估，不更新权重；`--mode test` 表示仅推理及导出。
 
-结果直接保存在 `outputs/runs/diaowu_99/监督检测/jsty_hanging_object_det1_0_0_0_1_fp32_监督检测/`，重复运行使用同级 `_第2次` 后缀。目录内有 `evaluation.txt`、`metrics.json`、`run.json`、`summary.json`、`config.resolved.json`、`records.jsonl`、逐图 `predictions/` 与 `feedback/`。终端输出共同的 COCO AP/AR、分类表与 VOC 风格统计表。反馈包含框及分数，逐框自然语言依据标记为不支持。
+结果直接保存在 `outputs/JSTY-YOLO/experiments/diaowu_99/jsty_hanging_object_det1_0_0_0_1_fp32_监督检测/`，重复运行使用同级 `_第2次` 后缀。目录内有 `evaluation.txt`、`metrics.json`、`run.json`、`summary.json`、`config.resolved.json`、`records.jsonl`、逐图 `predictions/` 与 `feedback/`。终端输出共同的 COCO AP/AR、分类表与 VOC 风格统计表。反馈包含框及分数，逐框自然语言依据标记为不支持。
 
 修改模型文件、解码参数、推理阈值或图像会使对应缓存失效；仅修改评估阈值会复用框并重新计算指标。修改部署存档 Python 不会改变实际参数，需编辑当前模型 YAML。只对原部署存档做修改不会改变当前推理。
 
@@ -60,8 +83,8 @@
 已有结果可交给相同的 `evaluate`、比较及可视化工具，无需再次加载 ONNX：
 
 ```powershell
-python main.py evaluate outputs/runs/diaowu_99/监督检测/jsty_hanging_object_det1_0_0_0_1_fp32_监督检测
-python scripts/compare_models.py --run outputs/runs/diaowu_99/监督检测/jsty_hanging_object_det1_0_0_0_1_fp32_监督检测 --run outputs/runs/diaowu_99/视觉提示/yoloe-v8s-seg_5shot --output-dir outputs/comparisons/jsty_vs_yoloe
+python main.py evaluate outputs/JSTY-YOLO/experiments/diaowu_99/jsty_hanging_object_det1_0_0_0_1_fp32_监督检测
+python scripts/compare_models.py --run outputs/JSTY-YOLO/experiments/diaowu_99/jsty_hanging_object_det1_0_0_0_1_fp32_监督检测 --run outputs/YOLOE/experiments/diaowu_99/视觉提示/yoloe-v8s-seg_5shot --output-dir outputs/<方法>/comparisons/fewshot/diaowu_99/jsty_vs_yoloe_20261030
 ```
 
 比较程序会在同一图片、真值及评估阈值上重算工作点指标；运行时记录的原始工作点可以不同。查看比较报告中的实际 `evaluation`，避免把重新评估的数值与原表混用。

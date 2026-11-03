@@ -1,0 +1,2233 @@
+{
+  "schema": "industrial_fewshot.split.v1",
+  "split": "val",
+  "image_root": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/diaowu_val100/images",
+  "ground_truth_root": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\diaowu_val100\\images",
+  "dataset_sha256": "71de070a3d0733943b8ec4cadaea93bae33cd065ad6b7b0412bb448c6dedc148",
+  "samples": [
+    {
+      "relative_path": "s00_00001_0000158.jpg",
+      "sequence": "s00_00001",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "067d9521f8351e4f8a188287cc23909223ffdb12af785f0cecd0f080d2a4e7b9",
+      "annotation_sha256": "634fa548b7f0a9c6664ed7c4641c3993a29e5073e4924afd7668f972070182f1",
+      "yolo_label_sha256": "cab7274e82e8ab904e74e881abe4ba3e86d92f4ffeb813025fd35f66570ea44b",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1769.3859348198969,
+            554.0308747855918,
+            2024.960548885077,
+            943.3962264150944
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00001\\0000158.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00001\\0000158.json",
+      "source_annotation_sha256": "78db9eeb3a2f8a507908f3697c6790c70d88af891c38fcdb53e7790e497f7f59"
+    },
+    {
+      "relative_path": "s00_00001_0000178.jpg",
+      "sequence": "s00_00001",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "adc67e69bdd7052d90afcbee581ce092f5ba9f956cdcba6e9fe95e8e8c7ae6f9",
+      "annotation_sha256": "b4e2fe2108b2bca8ba1b9b84f06ae8c65c30c4ef994074807336e64e5b374d00",
+      "yolo_label_sha256": "3d3aae8ddadd58b021e5a0fdf5c5ce5f4db0ebce249556ed5cc3e490aa3c7482",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1414.3259005145796,
+            284.7341337907376,
+            1719.6097560975609,
+            845.9756097560976
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00001\\0000178.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00001\\0000178.json",
+      "source_annotation_sha256": "f57a7862257ac36aa6f037f33ff8312c8b4dcbd3fcab197297515aa130edc669"
+    },
+    {
+      "relative_path": "s00_00003_0000337.jpg",
+      "sequence": "s00_00003",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "52a4511e94d12c2ddbc6f39d08320c233be604c942927bd22fa6f87bfb9be170",
+      "annotation_sha256": "7c7769c6af588051c7776b7fcbe16e3359939c136e43ca31cfa9cdbc8e53abd2",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00003\\0000337.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00003\\0000337.json",
+      "source_annotation_sha256": "579bcbebe117aaddc6cd5230d7b2e82d1881daf6f4c256d04866e8ced56d1e18"
+    },
+    {
+      "relative_path": "s00_00003_0000357.jpg",
+      "sequence": "s00_00003",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "069dc531ba943ab54ffb237909d5e5aef4de7a1a3f1e2a08fa024a8173a98468",
+      "annotation_sha256": "eb5a1eb02c169a173230ca4d85b589862f79175f8f54fd787547938c0ef0bb74",
+      "yolo_label_sha256": "4706e51126062bef451b83aa8704e4322fafdaec5364dee227c469b945e8c9ce",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1767.6706689536877,
+            579.7598627787307,
+            1992.370497427101,
+            1027.4442538593482
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00003\\0000357.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00003\\0000357.json",
+      "source_annotation_sha256": "594b37e7cfef1a2fbbb8ff16b655d246e36b18561a8edc0ec398a7a5679acd80"
+    },
+    {
+      "relative_path": "s00_00003_0000388.jpg",
+      "sequence": "s00_00003",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "e23953e9eaa2b87ac5efe60c8018fb0c1411ccca670c1bc3a6b98e1391bc7515",
+      "annotation_sha256": "7b5ea03ef0e0c5694d9814860076fc8cbb73db919dca9d05e1b9dbb38a8e9a61",
+      "yolo_label_sha256": "f1f874962ce52297d7760b5501954e687f61a6c99fc7723d96387b1fbb46d10c",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1855.1492281303601,
+            620.9262435677531,
+            2095.286449399657,
+            1106.3464837049744
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00003\\0000388.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00003\\0000388.json",
+      "source_annotation_sha256": "c6be8528d9cdd2d9b300535103dcfed6e8ae070357739f59b338a102de0498df"
+    },
+    {
+      "relative_path": "s00_00004_0000402.jpg",
+      "sequence": "s00_00004",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "96fc55df1bfcd86382b7911bf1a3e5dbc558264397c24c50af8babef2085ac63",
+      "annotation_sha256": "fdfb5aae8de97ee228b8938713e05da35d1a453863e9762e97b6ec4ac8652f60",
+      "yolo_label_sha256": "94292ce8475cc9f4eced05528ef83a76a9077459c0b6019d54ab1a0eac301878",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1373.1595197255574,
+            584.9056603773586,
+            1620.157804459691,
+            1017.1526586620927
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00004\\0000402.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00004\\0000402.json",
+      "source_annotation_sha256": "ceaf7b213dde239719d5188563c6cf9bbc412baddbfa7bbb93e515dd33e37cab"
+    },
+    {
+      "relative_path": "s00_00004_0000423.jpg",
+      "sequence": "s00_00004",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "cec59827a82e05e6ead2974dd8e666c717d664ceab58a9b332d311da3fcf7510",
+      "annotation_sha256": "e3797f0ca941f8301479ad88f642803460616c06337249730bac2af050551b77",
+      "yolo_label_sha256": "e541cd5d6ac6d6aa08f16dad0261a4e463a87646e5cfa4fd306a103cbbb697fc",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            813.9828473413378,
+            271.01200686106347,
+            1133.0222984562606,
+            831.9039451114924
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00004\\0000423.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00004\\0000423.json",
+      "source_annotation_sha256": "528aa5fc9ce8f8bd4b87dc4f71a66618b8947604d1dbb49f4b683644c6c93c16"
+    },
+    {
+      "relative_path": "s00_00005_0000573.jpg",
+      "sequence": "s00_00005",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "a2b7338ab325d416cdaf34153fb4c11f105fdd1453596cde3afff09099710979",
+      "annotation_sha256": "d0e24553d497b093eecb258e1de35a121c9b8512ccc7f0f2552e532d0c74b16d",
+      "yolo_label_sha256": "9d27479aa39dda2815e26f2bb4fb6e093c24abbc4d7b96ea96554035f0059685",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1319.98627787307,
+            586.6209262435677,
+            1561.8387650085763,
+            986.277873070326
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00005\\0000573.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00005\\0000573.json",
+      "source_annotation_sha256": "b09d450569d9e0b8ec57867efb8093220c7bfb696aa30cbda17eec58d4ba7d0a"
+    },
+    {
+      "relative_path": "s00_00005_0000590.jpg",
+      "sequence": "s00_00005",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "4ebd8235d52e82b0d488f52f1ff53313179239d68d6363620cf19463b2373312",
+      "annotation_sha256": "63fbf4ca26c6ed0a23367242bb138fec2a08fad7e9c49b06493e09f7377f8134",
+      "yolo_label_sha256": "1b93ca530f63bf3369c4492caa4664758b8f61c40a6d2de77dbaa42c360822f5",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            720.0,
+            312.0,
+            1007.8078902229845,
+            842.1955403087479
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00005\\0000590.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00005\\0000590.json",
+      "source_annotation_sha256": "b51de4c23137745828446b0c5925a34d53566ebdfc92554092eb8c368463e3a2"
+    },
+    {
+      "relative_path": "s00_00006_0000683.jpg",
+      "sequence": "s00_00006",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "5c76669c8b9778574911624b796d9cf1be792d91047859827941b1902f09a96e",
+      "annotation_sha256": "9c758b2aa49fdb595ed7a95252920331c642c95a4989f160917d707fae4501f1",
+      "yolo_label_sha256": "eab23f3eea175120ac8332bee138accfc6e70cd2bbe8a94a68cbb545735f445c",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            783.1080617495711,
+            303.6020583190395,
+            1162.181818181818,
+            1063.4648370497428
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00006\\0000683.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00006\\0000683.json",
+      "source_annotation_sha256": "267117146aaeacc562262c33bf245ab4eeec9d8702ff89b8c607d6d9b84b530d"
+    },
+    {
+      "relative_path": "s00_00006_0000693.jpg",
+      "sequence": "s00_00006",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "2fa68b52e99b40d69549d4537f7dd4908a452cc1ef89a7901f4d4d3341d1ec65",
+      "annotation_sha256": "9d817a32b62a89c8c2ed6ace473c2cc3567a9988abddf3acf98904958b1955c9",
+      "yolo_label_sha256": "2e6a3d9b554da525216738dd0477d9b04035d5af2fe3965eb856edbb64a52ffa",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1206.7787307032588,
+            758.147512864494,
+            1481.221269296741,
+            1281.303602058319
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00006\\0000693.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00006\\0000693.json",
+      "source_annotation_sha256": "037b1c20c485d8ef2e49cbb97a92a1ab2fcfe739a92b4802f4c7d428f337376c"
+    },
+    {
+      "relative_path": "s00_00007_0000730.jpg",
+      "sequence": "s00_00007",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "2a97de39e53a5b2ec9bde0c83fae14101b703e69c52c4deea98062427708ae8e",
+      "annotation_sha256": "4cda289e191d3596c084daff21dadfd50f7cee6588f6dfa8c6361fda7855fa2f",
+      "yolo_label_sha256": "b90ad186cab59c0b4f5f5edc2bdd136c1c946d093dde6eae8c543c31fb417c37",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            477.79073756432234,
+            382.5042881646655,
+            753.0,
+            956.0
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00007\\0000730.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00007\\0000730.json",
+      "source_annotation_sha256": "e8f18401e69cadf996d705ac2788f7327874e17352540df4708f6a5ae4ec087f"
+    },
+    {
+      "relative_path": "s00_00007_0000744.jpg",
+      "sequence": "s00_00007",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "a6d148838f0ab32cf1adb29ba6134ad12dcc2f7946d56f1d730e2562609bfd4e",
+      "annotation_sha256": "9d98cecbe54c1752795972f5016630c9d772be9b26facf104591485fb0f332c4",
+      "yolo_label_sha256": "53382306087564f5c5b59643b6e4db7c8473cace25cad8b1eb27c126e2c26316",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1489.7975986277872,
+            680.9605488850773,
+            1743.656946826758,
+            1157.8044596912523
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00007\\0000744.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00007\\0000744.json",
+      "source_annotation_sha256": "096026f11dc8b23d28882b87f1d8d4e6afef7f6dccbc436662c546d812904731"
+    },
+    {
+      "relative_path": "s00_00008_0000858.jpg",
+      "sequence": "s00_00008",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "31df64dfda377e739df3fa4d5d69166e3b79ebed7c776e86d4589c6769daa58e",
+      "annotation_sha256": "8f77fc9d44da5ce8a323c51cfd2e5d02904bef94357e7821b374355983a91a7e",
+      "yolo_label_sha256": "c1b8b12938239d800461ea72656162def8e0cad64e41aca10820f77f52dc5f9a",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1481.221269296741,
+            588.336192109777,
+            1740.2264150943395,
+            1106.3464837049744
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00008\\0000858.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00008\\0000858.json",
+      "source_annotation_sha256": "4c987d34e193415d261aa734ade7f146b60341d271722be10a1540f429ef75a7"
+    },
+    {
+      "relative_path": "s00_00008_0000867.jpg",
+      "sequence": "s00_00008",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "1198df38bd3abfbc7f9c2c1a4cd75e9d855b8ec5e1a753516d94a62b9258a1ff",
+      "annotation_sha256": "168c5159c3fd3f0798029ad66b7e69c64fd7e68b9e5deb28024eb46ee16a4014",
+      "yolo_label_sha256": "6964208ab171b049ad15ffdbd43f61614e3262825e3be9f401b21042c14671b4",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1333.7084048027443,
+            658.6620926243568,
+            1563.5540308747854,
+            1056.6037735849056
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00008\\0000867.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00008\\0000867.json",
+      "source_annotation_sha256": "d31f7c626655765b54b22b2a56edc92c6cee8758b6cbf2950000806c3550c376"
+    },
+    {
+      "relative_path": "s00_00009_0000910.jpg",
+      "sequence": "s00_00009",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "a563dba459686f967051119a86d7c91f8c86c2788011c99ddb488018f90e0678",
+      "annotation_sha256": "4d8273bc084938a0f0c77ca0632fd242ca3902c5fd5a7cbe4751e8d96bfb0bf8",
+      "yolo_label_sha256": "a2360aeff6279e50f19aa62b31fa9aea4dadf57f4d864a3e49de2aa929b5a6f5",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1205.3013698630136,
+            773.9726027397261,
+            1482.6986301369861,
+            1275.6849315068494
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00009\\0000910.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00009\\0000910.json",
+      "source_annotation_sha256": "f99351e0e01de42c5348e34db52abf77b12bd4774b083ecf8389db003c0c390e"
+    },
+    {
+      "relative_path": "s00_00009_0000913.jpg",
+      "sequence": "s00_00009",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "1cd68dd3b7e0ea5308b94182613e5d8dfc7b35c756c6d002a659060da883b487",
+      "annotation_sha256": "8d743192f1da2a7a9b5e5aa231ef9079848b8731bb25219561711fb92bc254dc",
+      "yolo_label_sha256": "163188b45361fd2dce865b470492c45e52cd53c277e1ecf3c838fc10416dea9c",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1207.013698630137,
+            667.8082191780823,
+            1498.109589041096,
+            1251.7123287671234
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00009\\0000913.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00009\\0000913.json",
+      "source_annotation_sha256": "8cca57009a79d5c4a1e965b53a15f40036b2a9e8739843abf41034cebc412b00"
+    },
+    {
+      "relative_path": "s00_00012_0001217.jpg",
+      "sequence": "s00_00012",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "3f588403695dd84be3573e9e775fa4000b4da5ecf873e16b472ab9a37e404fa9",
+      "annotation_sha256": "1a5a52e6cc872d50bb4ceec95cb9054965ac813ff37b0b092919c5bd64012133",
+      "yolo_label_sha256": "ba2924453ffdcce57c9446a0baf5ebea6c90dce019a3f49d17023a55a63bc6c6",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1340.5694682675814,
+            617.4957118353345,
+            1563.5540308747854,
+            1049.7427101200688
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00012\\0001217.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00012\\0001217.json",
+      "source_annotation_sha256": "fb22ca10a3be38fdfa77df9815bd62075c46aeaa2918320ddcf0c3a1e97a7899"
+    },
+    {
+      "relative_path": "s00_00012_0001247.jpg",
+      "sequence": "s00_00012",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "043dff43dbe5a60de78b16567903660123de4a0af3fb251368805b819227cf12",
+      "annotation_sha256": "3c1013241f1a5c7468ffc2a50889d129f9b1f5d593242c64a5fa70ee357c399d",
+      "yolo_label_sha256": "fe7ad2ed1716eb53bda6b0f114505caf4795a63c01fcb1cd3fd0bbe9e33b024b",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            368.0,
+            380.0,
+            769.0,
+            1125.0
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00012\\0001247.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00012\\0001247.json",
+      "source_annotation_sha256": "5b47d37b56673b029d73ce35735b9dd4644a89dafaddfb8eff065ce6df45379e"
+    },
+    {
+      "relative_path": "s00_00013_0001315.jpg",
+      "sequence": "s00_00013",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "4a339480a0307feb49ec7f33ed9bac50d45610b9468a965517f6b5d1b3b215b3",
+      "annotation_sha256": "d19e5cbf8c7c40d3b0bc69c63c6089500500a574faced5b39c592d05c59db3c8",
+      "yolo_label_sha256": "c2751417e40b5cf50a4e6a15e5fc53de756952351ceb9a2e48322c857eecd435",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            554.9777015437392,
+            324.1852487135506,
+            925.7073170731708,
+            1027.6829268292684
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00013\\0001315.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00013\\0001315.json",
+      "source_annotation_sha256": "d2aa3f9c2aade0d77a6c6bbf4c0e82614cdee29e78f36d6ae3e104bc55ea7859"
+    },
+    {
+      "relative_path": "s00_00013_0001389.jpg",
+      "sequence": "s00_00013",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "6c818a3e051a5030d9ff67c646eca9eac8ba1e5e74b4d8bc447627120f192b5c",
+      "annotation_sha256": "a026a709376437fb57031ad716b6b4e8520bf212484ebf26d2a72926e16f5621",
+      "yolo_label_sha256": "fc0d2f123a9aa268c6adfe7545e0092273f0b9fb13b6abfa811d14fba7afd6f6",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1035.2521440823325,
+            696.3979416809606,
+            1278.1463414634147,
+            1183.780487804878
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00013\\0001389.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00013\\0001389.json",
+      "source_annotation_sha256": "f98c3a118449ca5a41fbf8e9f0589f1631aaa8312621bcb10ba08f03d7586679"
+    },
+    {
+      "relative_path": "s00_00014_0001433.jpg",
+      "sequence": "s00_00014",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "6787088757de480af270229f06c82648c31b94a4ad45b70e0df9a7501f8c1617",
+      "annotation_sha256": "ccf16f16b879ca9fe027bf257878e57ef961d9578e2fe4d12608561870939fc5",
+      "yolo_label_sha256": "22e64fa47e86b9c9d2e4f23cc3070a83136e6f6cd7c59580c9b9340527ca72c0",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            2306,
+            370,
+            2421,
+            632
+          ]
+        },
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1154,
+            613,
+            1508,
+            1248
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00014_0001433.jpg",
+      "source_image_id": 133
+    },
+    {
+      "relative_path": "s00_00014_0001498.jpg",
+      "sequence": "s00_00014",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "29e55abeddecaa1b7a07080b49f9453dd6e8857a6704c70c51689f2e5e57c911",
+      "annotation_sha256": "f46c9fcbb7983ce92ae1ead8e913febf129427f56e1561052f4001f02aab7d5d",
+      "yolo_label_sha256": "0c21db1703529009b80a4868563f3355458b775dae93010a9d5e3981e85abed2",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1244,
+            353,
+            1518,
+            876
+          ]
+        },
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            2249,
+            466,
+            2374,
+            754
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00014_0001498.jpg",
+      "source_image_id": 198
+    },
+    {
+      "relative_path": "s00_00015_0001508.jpg",
+      "sequence": "s00_00015",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "6a6727d8b34ab7ed070dece446931ef166c24cfaeec0e4e4754c1ebcbc03e8c1",
+      "annotation_sha256": "1af8097f99bb76f68dad29ac792ee8093e1d67dc5d2190ea60ad5782662cb834",
+      "yolo_label_sha256": "9859d2daa5cc64f308ce0e4a003b410297b51ba745372cb2334414aa8bd23e87",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1449.6465085198797,
+            505.37086535248926,
+            1758.6341463414635,
+            1116.7073170731708
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00015\\0001508.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00015\\0001508.json",
+      "source_annotation_sha256": "70f457ff264bc3501585b88c3fcfa651e37a6155fc073a7245ad1d624c44c39f"
+    },
+    {
+      "relative_path": "s00_00015_0001528.jpg",
+      "sequence": "s00_00015",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "a15556f6554c087d99d373dad13d9d36d90c6aadfd6280652107037aecfbebb5",
+      "annotation_sha256": "f22f2a51b181ca73e67077e22fa1d4fbf2d2cefb44173022ed170a53bf893b96",
+      "yolo_label_sha256": "66030028295a61fae0e3ab88aaf1876b54a362bd48f89b5f8224dbfd28d98ddc",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1855.986301369863,
+            544.5205479452055,
+            2128.246575342466,
+            1065.068493150685
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00015\\0001528.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00015\\0001528.json",
+      "source_annotation_sha256": "b442a8cd31c59324d4f4ed9e4cf7cf86c5dab9805e24bce2bc22159fc8f1d435"
+    },
+    {
+      "relative_path": "s00_00016_0001601.jpg",
+      "sequence": "s00_00016",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "49ee5fcb6872204dc27f67af21a363645bb63cd8f684e47ce3b7f906f33db265",
+      "annotation_sha256": "856638f01b3aaf126875eae37e99d7df4c598ca2231cbcd87aa816f3f846d369",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00016_0001601.jpg",
+      "source_image_id": 201
+    },
+    {
+      "relative_path": "s00_00016_0001643.jpg",
+      "sequence": "s00_00016",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "e9d3189217b49431f61465687425ccebbc84fd4719bae43432135e86eb627cd1",
+      "annotation_sha256": "7851cb349076062fb26d69e3cd9ae20df9c819ea29713a8dc996b8e7d2f95068",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00016_0001643.jpg",
+      "source_image_id": 243
+    },
+    {
+      "relative_path": "s00_00016_0001671.jpg",
+      "sequence": "s00_00016",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "69f4c538089064c9c2ca1bbafa0a8795b1cca7d093de0defa235030a8717d8a3",
+      "annotation_sha256": "4e50f6eff8bc48dbe5cab9601cde3cc27a50b1531af07c26025720e9a380cff6",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00016_0001671.jpg",
+      "source_image_id": 271
+    },
+    {
+      "relative_path": "s00_00016_0001699.jpg",
+      "sequence": "s00_00016",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "76963de90687146c735405e45d71c6739c5ee2459e38dd1e5abc415a27095bf5",
+      "annotation_sha256": "d80fb52e9c8b0b3749f836285a249c6bace31a9a6028fd4a7992816be0291ff3",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00016_0001699.jpg",
+      "source_image_id": 299
+    },
+    {
+      "relative_path": "s00_00017_0001779.jpg",
+      "sequence": "s00_00017",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "308ca8f6f7baddef375ad510ad8765460bcaad9b90d3e4913c063e38f9ebfe04",
+      "annotation_sha256": "c50ed5855d21dcb459535e6750614618c55307942b7587e4aa8b24629cb90b7a",
+      "yolo_label_sha256": "b071ac872989edfd600689f7c5c041d7ecec9a8c950fb4c4fe9bf292d7d80314",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            785.7808219178082,
+            297.94520547945206,
+            1184.7534246575342,
+            1018.8356164383563
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00017\\0001779.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00017\\0001779.json",
+      "source_annotation_sha256": "2b02fdd8a5afb99842f0ae4a1f123d957e3e345c7ec9297ec77e0ac09c86d138"
+    },
+    {
+      "relative_path": "s00_00017_0001799.jpg",
+      "sequence": "s00_00017",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "d42c31f86fdf39cb5982cf24261b7916fdc0aa9182776bb3a5c00a130de04f85",
+      "annotation_sha256": "f458e041aad5800359d20f862f67b3d8a4681ac2a6c55009d8aa049a677f0922",
+      "yolo_label_sha256": "6816a45c2e2ba7a38a2bafeffc8945eebfb2abbb598206ffcf714ed0a828be24",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1108.9181423321081,
+            717.699632475777,
+            1373.2682926829268,
+            1150.8536585365853
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00017\\0001799.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00017\\0001799.json",
+      "source_annotation_sha256": "667beca725fd9856317ac680874832cb119464a51b85b9b281ce144be10aabf0"
+    },
+    {
+      "relative_path": "s00_00018_0001810.jpg",
+      "sequence": "s00_00018",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "632738ff607c4a8ce132dea5069ecd67d84a1c0a9275565263bc67ddc2f63b2b",
+      "annotation_sha256": "a1a72ebc1f2de95546e2ac1715b27de9636a229955696e445107ee79c6b46bb5",
+      "yolo_label_sha256": "66ce8fdfe079d4d43fc8574ccad3ad749d9cc300f24a227ace5b9f2c5f395f8e",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1094.0,
+            714.041095890411,
+            1386.808219178082,
+            1159.2465753424658
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00018\\0001810.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00018\\0001810.json",
+      "source_annotation_sha256": "55562dd7cc7958e90a56c5c602bbf300f56aeee63af4214f5f30e95972d810c4"
+    },
+    {
+      "relative_path": "s00_00018_0001899.jpg",
+      "sequence": "s00_00018",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "170551937ade7f3e6db2919362526fcb31842ba1728789b13a01d81586c6eec0",
+      "annotation_sha256": "2760c24c3cf52801c37a61179def3985f1a9bf990fe09ad5bcc3c77929af176c",
+      "yolo_label_sha256": "a83d33faf848a8a8937ca3f2e8c7cf0c1f30b3ee0e342617b98ad5a44a4115ff",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1107.6986301369861,
+            714.041095890411,
+            1372.0487804878048,
+            1152.0731707317073
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00018\\0001899.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00018\\0001899.json",
+      "source_annotation_sha256": "fb007a96b05b8de716a46540a5494182b4766803402801dc321bd02af4baa33d"
+    },
+    {
+      "relative_path": "s00_00019_0001920.jpg",
+      "sequence": "s00_00019",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "2cb060550acfaf83712d0205f6d57bf79f7c65a59d3133dfab0a1592f3316495",
+      "annotation_sha256": "a23b53f8ebbd01709e6120e04448957e79c792f7f426ae4f8f0765ef7e64c286",
+      "yolo_label_sha256": "e743a9f66f22c83eabfc1eaf9da09971a350956b9df690c262f61029aa87ba71",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1104.2739726027396,
+            715.7534246575343,
+            1381.6712328767123,
+            1155.8219178082193
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00019\\0001920.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00019\\0001920.json",
+      "source_annotation_sha256": "5a4b7f94d99e9c8b2c14b6c3a2b25268faab75cbab78837aac34a3c2cf55a976"
+    },
+    {
+      "relative_path": "s00_00019_0001987.jpg",
+      "sequence": "s00_00019",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "8393d6e4a500da67ad94a94a09fcb66b250e824333c636af72c6f76d9a2948af",
+      "annotation_sha256": "4c6119c2306c12120f97a729648ca9d4ece8f5e5c5cd6ff0d035a4e8d3ba9ff5",
+      "yolo_label_sha256": "75947f71ed423882dc840d4cea257257ef9d2aef47ce87e866e88721de6f126c",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1544.3424657534247,
+            508.56164383561645,
+            1768.3902439024391,
+            964.2682926829268
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00019\\0001987.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00019\\0001987.json",
+      "source_annotation_sha256": "c98f5357cf99c7da90d2a564e0c6efdd1ed51c6ba5ea77598bd182143b8e5ab2"
+    },
+    {
+      "relative_path": "s00_00021_0002119.jpg",
+      "sequence": "s00_00021",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "dd781778b7f8ed5a439c42c2f2c20bd570c3274eef32c807ae08459297fb894e",
+      "annotation_sha256": "3196aa2dbb83e032bcb2e595b5661e288d9fff6bb5af36db7cbc7a0d69cdeb1e",
+      "yolo_label_sha256": "90fb61da47631c88af288647ed7cc9eddebb186d2aa90c977448e9f5fd33b19b",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1434.7534246575342,
+            585.6164383561644,
+            1661.0731707317073,
+            1033.780487804878
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00021\\0002119.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00021\\0002119.json",
+      "source_annotation_sha256": "176186145a00c351aaa3e882f8a4ec5d3f4f892f040734303e6efddc54bcee9a"
+    },
+    {
+      "relative_path": "s00_00021_0002141.jpg",
+      "sequence": "s00_00021",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "bca405fbeed67e0e4aa17b343c7ee38f847650ce9ec57c9cf98b2c0d7b17d4af",
+      "annotation_sha256": "0cf24886101c2c373bb64782aaaa3228df2f2b33b23b07ccd157cd0a539c7125",
+      "yolo_label_sha256": "451ad7c45708bc9373245de894c65bbd12999fd1d65fb3cf3fb1817289deab29",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            302.904109589041,
+            474.3150684931507,
+            614.7317073170733,
+            1141.0975609756097
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00021\\0002141.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00021\\0002141.json",
+      "source_annotation_sha256": "7f180041b2e96c97819d15f4b6c539eb16f4f2a35a764fc89375c61de833a563"
+    },
+    {
+      "relative_path": "s00_00022_0002224.jpg",
+      "sequence": "s00_00022",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "8b3f59c73f689af57ed4b8dde1cffe52978938bc68a38c59c23350b0ff20b283",
+      "annotation_sha256": "0ded4abd397b107ad5e3876dd11090d1fde0b279b7f0d0d5bafcddd10b02da6f",
+      "yolo_label_sha256": "be3d54c2d9f6bfb005e3b969b9ddb83dd3c42af8f70f9c86852c0dac0f9dc057",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1308.0410958904108,
+            532.5342465753425,
+            1509.8536585365855,
+            938.6585365853659
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00022\\0002224.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00022\\0002224.json",
+      "source_annotation_sha256": "e6055818c322e437109f1ed6c38745fa5b6bcf29e447e67459d6f672d8fd3bd4"
+    },
+    {
+      "relative_path": "s00_00022_0002244.jpg",
+      "sequence": "s00_00022",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "fb719a4477be3e1095e64807c88f80e702485a4593c66d91542c34ab84188576",
+      "annotation_sha256": "6810d4b9b1dc6c8cd16f0e7a07f6c1560e3f39bbf159624d0baa2b2ec69a3adb",
+      "yolo_label_sha256": "a4d629a59ebfb17359f6fc8cdd1084e4279c8f53bcf86de946daf838e88ec26f",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            251.5342465753424,
+            511.98630136986304,
+            617.1707317073171,
+            1233.780487804878
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00022\\0002244.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00022\\0002244.json",
+      "source_annotation_sha256": "a355ce3f8414037b713bacfcab98e1f65804302872dd8621b63d61ea1ed1a2f0"
+    },
+    {
+      "relative_path": "s00_00023_0002332.jpg",
+      "sequence": "s00_00023",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "2cdb50ea7bff84a887fae7eb889f09a4a812c0aaae7a966c60ca3cd6f296a053",
+      "annotation_sha256": "1a607e0899a5ae0fb166c89c96461b4707c5fa4e3221527aa14280865be81a50",
+      "yolo_label_sha256": "8347fd237cab2f2ade32bdfb03fb40aad47f731040a6a895126e003511c99be4",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            537.4680922151688,
+            335.0985633144003,
+            903.7560975609757,
+            1030.1219512195123
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00023\\0002332.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00023\\0002332.json",
+      "source_annotation_sha256": "de15f968e25a2922e8fd2c7df8273c472b042bb6ce69f6caa694dca711f975d1"
+    },
+    {
+      "relative_path": "s00_00023_0002399.jpg",
+      "sequence": "s00_00023",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "32f2bb0a876874f2407edb325a7aa262439b6f816d1f7951a194290be97d60c0",
+      "annotation_sha256": "8ece4b065c139bd04c5ac95ebfa3fab9d9c5c37d24dd073830a005183b7ffa69",
+      "yolo_label_sha256": "0cb6deaa50922310d1294074e2f475c67dd78e7cc6a9207f12242913b284400f",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1324.4878048780488,
+            649.6341463414635,
+            1589.1219512195123,
+            1139.878048780488
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00023\\0002399.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00023\\0002399.json",
+      "source_annotation_sha256": "e912a087b35062c69fb7900c6061387a888512dfab78f54478bdeaceca559e43"
+    },
+    {
+      "relative_path": "s00_00024_0002413.jpg",
+      "sequence": "s00_00024",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "78ef946ad29ea6d6c6d280ddff4037e94c77af9e8f1f3b7af8f076bc3f9c494f",
+      "annotation_sha256": "40c373e8fb97c4d6aa5cc374340640d36fbdaa6cc15f0f350c7301a00b0f612d",
+      "yolo_label_sha256": "09ff8b19b4c9e5d8526d13d97597bcad090510e760ea49d69f6ad2e29648e74c",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            552.9041095890411,
+            349.3150684931507,
+            901.3170731707318,
+            998.4146341463415
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00024\\0002413.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00024\\0002413.json",
+      "source_annotation_sha256": "b6a9775347e20d16586c7702c2991d8a16a4289574cfc8615338df31c528a96c"
+    },
+    {
+      "relative_path": "s00_00024_0002499.jpg",
+      "sequence": "s00_00024",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "6f84a4c2b7d9325459a635aaddedd7243318b0464d00f5673abc9866e5219f36",
+      "annotation_sha256": "23c8d87767f2f4ae9520b86bafba9d98693cf0f235b717f1ca57d02ede1c610d",
+      "yolo_label_sha256": "c6f7560f38c70abd0255886ba2e25aa6d45c66c6c1093cd848e4775ab8e7e046",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1020.8376211159374,
+            279.8362846642166,
+            1333.0243902439024,
+            919.1463414634146
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00024\\0002499.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00024\\0002499.json",
+      "source_annotation_sha256": "9c4e6b6b742cf78e21d40dc6820a9f1827fb01249b575ef466a3d3c610ae7170"
+    },
+    {
+      "relative_path": "s00_00025_0002500.jpg",
+      "sequence": "s00_00025",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "cbff847d4a4357ced31ce1fd23f73e975cff8662d2999d27d9e5f66adfed6e23",
+      "annotation_sha256": "a615e5cf5d07874dc1ad3b7b4b90db6f132ecf62a7d38011a8a274cb0cd3a4b5",
+      "yolo_label_sha256": "774d5efec347dbb03d2c436b62eab9f77a1bc820c3956257e948226bd0a5693c",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            831.2619445372535,
+            321.89274974941543,
+            1181.8048780487804,
+            1041.09756097561
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00025\\0002500.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00025\\0002500.json",
+      "source_annotation_sha256": "be1e5a70e0551c902bfa132ea44e7aaa89e02ff6331b7b05ee274c836373bb42"
+    },
+    {
+      "relative_path": "s00_00025_0002587.jpg",
+      "sequence": "s00_00025",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "a42254f5140ffd97550ac01db1b49f89135de2374f366658cfa4a7c24152bc60",
+      "annotation_sha256": "b95a37f6fe27f8bb42f65c3cfadd0068c4a3614ed296e4b667a26de805af7473",
+      "yolo_label_sha256": "ea702e993acaac714eacaa426dbc695023bef9ab44bef505276add6b28cb14cb",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            22.082191780821848,
+            554.7945205479452,
+            296.4390243902441,
+            1116.7073170731708
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00025\\0002587.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00025\\0002587.json",
+      "source_annotation_sha256": "35b673c4e0e6e69ee4a61634872ce9a264e7a3e759873ee1d28d7ec07feb0218"
+    },
+    {
+      "relative_path": "s00_00026_0002603.jpg",
+      "sequence": "s00_00026",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "e98af9c40b3e82d0fbfa1a6e73a9cb9194e13a803600e1ec672ff0a411471a73",
+      "annotation_sha256": "b91e9786ab27621eaa583bea4155c913595932b1b758dfed11e6c173f79b10be",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00026_0002603.jpg",
+      "source_image_id": 303
+    },
+    {
+      "relative_path": "s00_00026_0002643.jpg",
+      "sequence": "s00_00026",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "3b8966832a04b7075a99a2aa95e13ea347160dd05e5739c7fcde31f856228fa6",
+      "annotation_sha256": "7f274920c4044493ddfcebe32ec916ce8d665a9414d09f4343bf159f40cc6ec1",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00026_0002643.jpg",
+      "source_image_id": 343
+    },
+    {
+      "relative_path": "s00_00026_0002664.jpg",
+      "sequence": "s00_00026",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "986e66c164b30eed5def029cd62c3639ee42bfcbf447e4eb5970f18709f03f11",
+      "annotation_sha256": "e4114b0bab9b5d6b14e37ca072f35d795f520a8ef0b82977affa7a9507b7a6fc",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00026_0002664.jpg",
+      "source_image_id": 364
+    },
+    {
+      "relative_path": "s00_00026_0002685.jpg",
+      "sequence": "s00_00026",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "fde1100e0e128d90da2e56ba13af02f4e5c8d3d59af1c8a5545e050e5f744c66",
+      "annotation_sha256": "798d2f68b5391714b0127309cd966e7b96f5d8b1d163ca38bc485f59b8b84d57",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00026_0002685.jpg",
+      "source_image_id": 385
+    },
+    {
+      "relative_path": "s00_00027_0002716.jpg",
+      "sequence": "s00_00027",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "99f4c89116cdcef611a621cdc45f57a14e92a57b68b1099ff945e47578eaeb04",
+      "annotation_sha256": "85e57b68f92b5b6f23c54b8b9c37d141bdb6fc3d8571a6dc44be8c4457014684",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00027_0002716.jpg",
+      "source_image_id": 416
+    },
+    {
+      "relative_path": "s00_00027_0002737.jpg",
+      "sequence": "s00_00027",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "605d5bd229a752d26255a22ae288afd68248e45b1d5301b274c5fff0618f567e",
+      "annotation_sha256": "8500a23f872d9c6472f0289c6ddb9fd4a03037d674cd914fe72f4d98c9af5acd",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00027_0002737.jpg",
+      "source_image_id": 437
+    },
+    {
+      "relative_path": "s00_00027_0002756.jpg",
+      "sequence": "s00_00027",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "e81bce603909fc9eea63ff5e9aab244270f2024444371c914da13ddca4787fdf",
+      "annotation_sha256": "2e6f7e3dff1b345a8393894999a6a0a5ff6699a85612564843e35eec514e3db6",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00027_0002756.jpg",
+      "source_image_id": 456
+    },
+    {
+      "relative_path": "s00_00027_0002796.jpg",
+      "sequence": "s00_00027",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "0ed25996e65b0290e8bb685d957883722b5ec5317a6599da9d3b7020b55bb9df",
+      "annotation_sha256": "e841b015211e7d46e2f5f5da0bba0c0ab3d7f6a03add487dd3e2935c8ee95494",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00027_0002796.jpg",
+      "source_image_id": 496
+    },
+    {
+      "relative_path": "s00_00028_0002801.jpg",
+      "sequence": "s00_00028",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "06c2fb1158213dbd002ba92b79d2c5941b63bed52fc75d378110a995b685eb15",
+      "annotation_sha256": "e448896b27ed0737fee1217267e2cdeb95cfd3fcc417c96a7fed51df487ab9f1",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00028_0002801.jpg",
+      "source_image_id": 501
+    },
+    {
+      "relative_path": "s00_00028_0002824.jpg",
+      "sequence": "s00_00028",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "3b3ed28732df2257d5e31d06120a3c7800574517aaca828cd2099b418f1220cd",
+      "annotation_sha256": "3ce3e6f2c131f37d21ccd6bdf7a1d8813ed22a23220e8da106bfc6fd3864a33b",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00028_0002824.jpg",
+      "source_image_id": 524
+    },
+    {
+      "relative_path": "s00_00028_0002848.jpg",
+      "sequence": "s00_00028",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "39a9074649e46deca633c880e4a02f86c275699e8f22ae8b591302ccd6a453a5",
+      "annotation_sha256": "cf8ad879254387cfac598bf5ed6b7fbad3fba11c170126d70ec93cd3bcc7e00b",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00028_0002848.jpg",
+      "source_image_id": 548
+    },
+    {
+      "relative_path": "s00_00028_0002894.jpg",
+      "sequence": "s00_00028",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "a0ee2de849b01869090f55d9523586245c3c03cbbd4fb6a8ca93bdb1809f23d3",
+      "annotation_sha256": "483d6f6737c357a59d3f32b39321801ae767a6df04e1f98df69b04191a36d09f",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00028_0002894.jpg",
+      "source_image_id": 594
+    },
+    {
+      "relative_path": "s00_00029_0002964.jpg",
+      "sequence": "s00_00029",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "76a32391e9e333cde9bc9ca48a1a9bba0ad764219a26ce6499bf09ed96d03eb9",
+      "annotation_sha256": "727ddf326ba5b5e04a1eba0410896b4a6a380adcd4a95b19d3868e9eea281ada",
+      "yolo_label_sha256": "6f6b413e9f61ab7bf5ba78f1079a652860e1e07b3f7d064efe3d1675fdb11a3c",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1201.876712328767,
+            696.9178082191781,
+            1434.7534246575342,
+            1109.5890410958905
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00029\\0002964.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00029\\0002964.json",
+      "source_annotation_sha256": "dc6a4a4a33c1435627e6ba19f4ac8a8acce317a940117d97ed4fbeed96fc7c7f"
+    },
+    {
+      "relative_path": "s00_00029_0002991.jpg",
+      "sequence": "s00_00029",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "ff25bdc4178eeb4a079083c0a241cd7d7cea6328f8caff1587c4e6b2e6b86c0b",
+      "annotation_sha256": "4b448095dc21c593a8e56167fd34d90479b219ff7ca74e5e5567cfc0b97c0aaf",
+      "yolo_label_sha256": "f2a3ae837e7cead023e637d0903995214c1d5cadb6344dbe7267434a84e6f2cf",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1336.8917474106247,
+            565.3023722018044,
+            1598.878048780488,
+            1133.780487804878
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00029\\0002991.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00029\\0002991.json",
+      "source_annotation_sha256": "0d34a6fd77bedf9b84bf272de272ec4d183ec8ad50b5d88e8e23f6d0964bfe31"
+    },
+    {
+      "relative_path": "s00_00030_0003005.jpg",
+      "sequence": "s00_00030",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "c58ce1bb29eae117388963a0e45f6683ed8607e71b9c1e4ae0220f0fca2a0758",
+      "annotation_sha256": "e55a4a23ff3d4e4e88e643c668175b0927ca829608d8ccf1a90e5591fbeb3ea0",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00030_0003005.jpg",
+      "source_image_id": 605
+    },
+    {
+      "relative_path": "s00_00030_0003034.jpg",
+      "sequence": "s00_00030",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "8caa00cf630d8027bf79780f7a7d31dbc09311a06bf6746cc5ef8595c06154bc",
+      "annotation_sha256": "09da1aa53b1c5bc1eb56d8c6a8f07563245421c739f39ebb6cc7b98fb6ef7cdc",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00030_0003034.jpg",
+      "source_image_id": 634
+    },
+    {
+      "relative_path": "s00_00030_0003063.jpg",
+      "sequence": "s00_00030",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "411bbd19c0b77de5a7a5eb798d74b73f2aca079c8c26300469568f2fc48c404e",
+      "annotation_sha256": "c030a54b1fadb7078a7bb013d1e5e821724119c317778e85e80dd25ab0b2a5d7",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00030_0003063.jpg",
+      "source_image_id": 663
+    },
+    {
+      "relative_path": "s00_00030_0003098.jpg",
+      "sequence": "s00_00030",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "73e194080d971e429753675d3fffe8f5c0b2a60e0861cd531ad6e6913b9303d3",
+      "annotation_sha256": "100f4112d6e0eb65cc228a51913b473606763887f8fb57ba78651a6fad5b8716",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00030_0003098.jpg",
+      "source_image_id": 698
+    },
+    {
+      "relative_path": "s00_00031_0003164.jpg",
+      "sequence": "s00_00031",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "882bb670b39534f90b30807a211de7451f65c0de4a585ed3c499f6e0c5fe7043",
+      "annotation_sha256": "90d00727de449e942d910986e25906367d2124ac4b29004dda87e040a34334ac",
+      "yolo_label_sha256": "57ce6b7698bce1ba3c849bc392fc53568cd93457e50a8df18767dc40a4f71d74",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1337.1506849315067,
+            683.2191780821918,
+            1609.4109589041095,
+            1220.890410958904
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00031\\0003164.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00031\\0003164.json",
+      "source_annotation_sha256": "75bf0a1dc610180d0552c8ad4125167bafc79aa2dfde26daf0d0df4b59b30f73"
+    },
+    {
+      "relative_path": "s00_00031_0003195.jpg",
+      "sequence": "s00_00031",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "66339601d602aed38b7c89f75a64393756d4c15c13b6d5affa143fce57aa636c",
+      "annotation_sha256": "b457c1a0dd75a20e2516390a23d610beb6749110716f038230da13f984fabbce",
+      "yolo_label_sha256": "b6f132eefd7bf9d46ebac30aa920b0bf29a6f86d354aa6152a096e21076e5645",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            2088.8630136986303,
+            532.5342465753425,
+            2287.4931506849316,
+            970.8904109589042
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00031\\0003195.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00031\\0003195.json",
+      "source_annotation_sha256": "5640a96abadd307b5a1a6179f9f2d4e4c1b35497df9f3b7511ddb4b82e9ef78e"
+    },
+    {
+      "relative_path": "s00_00032_0003226.jpg",
+      "sequence": "s00_00032",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "cfb56f1ae59fe38fae1a0bb8323f3321be51af88c95904e982f3303e5c79bfb9",
+      "annotation_sha256": "6c471764913b16585dfe686b6a044a0ffe665d562e1759508d2d4c8df7d74afb",
+      "yolo_label_sha256": "c9ccb555b46d52a92895fd46f3f2a05b4f7dc96ed925f679e7f9a80c810324cc",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1297.7671232876712,
+            674.6575342465754,
+            1566.6027397260273,
+            1208.9041095890411
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00032\\0003226.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00032\\0003226.json",
+      "source_annotation_sha256": "29b8999673cf23f8b31946336df8b4565168af5d31670ff88bc0f341b9259e9b"
+    },
+    {
+      "relative_path": "s00_00032_0003282.jpg",
+      "sequence": "s00_00032",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "1750b77f23402e6e2fbdaef58f643335743743f61f2c3214765c8962c58a4e87",
+      "annotation_sha256": "6a869b48cc5bab9e9d46f0097301b0173bc02d65a1ae431dc5d7ca658c15bb05",
+      "yolo_label_sha256": "0f16bf01ed5aeea78ff5d8daa7a830a3ab535e7cb5534b40c27a0bfd49121025",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1203.5890410958903,
+            635.2739726027397,
+            1438.1780821917807,
+            1090.7534246575344
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00032\\0003282.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00032\\0003282.json",
+      "source_annotation_sha256": "fc781dfc96014668355b7baee4d3992a96fbc8eca578a0c63521b1ed29fc9124"
+    },
+    {
+      "relative_path": "s00_00033_0003345.jpg",
+      "sequence": "s00_00033",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "8eef38bff2f7e6221b61040a0bd0334457db7ee55ad422e3f536ef18296553bc",
+      "annotation_sha256": "e7ce12b55bb0fb941688aa89e5b842c4d96d9e29cdf8035260d1b4b645e6162c",
+      "yolo_label_sha256": "d6c40926d97703a3b71bcba74259b4fe633e990a1a6084ddf2c7d21ccccc3476",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1910.7808219178082,
+            570.2054794520549,
+            2157.3561643835615,
+            1018.8356164383563
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00033\\0003345.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00033\\0003345.json",
+      "source_annotation_sha256": "4efd57d5cb41e40b1d5e1fcc09067fadc1df78bef6342073563ac264507224d8"
+    },
+    {
+      "relative_path": "s00_00033_0003384.jpg",
+      "sequence": "s00_00033",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "4fca41cd2f968ebdd893e53f708a912be8cc23371188f03a846cd0e41517f234",
+      "annotation_sha256": "1dd42c324bd066ea5c441ebba2b04c016512babdb25c53c0de8a8d531e866eec",
+      "yolo_label_sha256": "ed716d498d6fecbf894e0323dbde3e0e9ca3415b64639612c14f424ee63e367a",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1272.0821917808219,
+            568.4931506849315,
+            1561.0731707317073,
+            1137.439024390244
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00033\\0003384.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00033\\0003384.json",
+      "source_annotation_sha256": "a5117f4c512596d9edca5f1380d709d02b0292d5302e5129d7fc238039ea9ba1"
+    },
+    {
+      "relative_path": "s00_00034_0003406.jpg",
+      "sequence": "s00_00034",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "e1210822ffe89d7b638ad0589ce87f34f835a3b984f172fe8f1c9337f6db4685",
+      "annotation_sha256": "6b1ac098d595d90eef5af8924282ac3ce163ea0b36c61cd92896e59debff2432",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00034_0003406.jpg",
+      "source_image_id": 706
+    },
+    {
+      "relative_path": "s00_00034_0003454.jpg",
+      "sequence": "s00_00034",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "79922d4ba3800c471834cc4d4091910b289bf9023b46859251ade3d1ca5a7ba4",
+      "annotation_sha256": "9e9095fa7e4e3d941056ea902b7f0d7e581744344ac02359ed5f920c07237e5c",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00034_0003454.jpg",
+      "source_image_id": 754
+    },
+    {
+      "relative_path": "s00_00034_0003497.jpg",
+      "sequence": "s00_00034",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "d16cde6b0ec8e351921dc3dc02aa704b625644e614cf90b625957bbb2c45e686",
+      "annotation_sha256": "95aa80a643baa2d8fb9528a8a306a39038fe2123781b5ba7d6513c1516203966",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00034_0003497.jpg",
+      "source_image_id": 797
+    },
+    {
+      "relative_path": "s00_00036_0003645.jpg",
+      "sequence": "s00_00036",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "a872a6d01c9f1f45fc2d2502b3d142436d51cdc35abcf6269a436fdd88adfbd3",
+      "annotation_sha256": "079453e56d2919d953d9dd6d4d70cae3b2dec5fa96ba0f96c12380c0ac94b7cc",
+      "yolo_label_sha256": "9275b6525afc1295aa6a6eaa1485b40d5f92f0d23e57d78a9c1dbc6691f2ec54",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1315.9512195121952,
+            578.9024390243903,
+            1576.9268292682927,
+            1054.5121951219512
+          ]
+        },
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            2391.560975609756,
+            525.2439024390245,
+            2501.5342465753424,
+            761.9863013698631
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00036\\0003645.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00036\\0003645.json",
+      "source_annotation_sha256": "d29c5a2ca43b243281904906a46d176a3f7dcfd0f32da3529d38cd5527fcd95f"
+    },
+    {
+      "relative_path": "s00_00037_0003766.jpg",
+      "sequence": "s00_00037",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "ca4e9e6a3ea8a4c6d15fba97ca4438dfd853bfee760c393018932dc799c3a561",
+      "annotation_sha256": "0989eb53fe171bd9b974a538c6eb96a75864a606fca51312b8aecaee8f39d321",
+      "yolo_label_sha256": "0fb5d001e9ff77e2545bc9a606e5771a41381056cfdbb7e0efab36f2bbd44218",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1123.109589041096,
+            618.1506849315069,
+            1371.3972602739725,
+            1035.9589041095892
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00037\\0003766.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00037\\0003766.json",
+      "source_annotation_sha256": "5b79be4b7c5573e8c084b1a8ab58b51e3da32da5bf759d94eaab35ba3cc5db67"
+    },
+    {
+      "relative_path": "s00_00037_0003788.jpg",
+      "sequence": "s00_00037",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "2578ee48981346a1aed6089769fa4f2af3bc529ed824edc346d4e6cd9f794f0b",
+      "annotation_sha256": "8706c763c2fdc01e648f05404dfe04b25c5da41bca4fe907ce2ce5c74c8301e5",
+      "yolo_label_sha256": "1c3e3fd6039ba9c3d74e1eb1ce7a4495b9fd7b3e59322e506dba2e4e4e3792d7",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1105.986301369863,
+            431.5068493150685,
+            1371.3972602739725,
+            902.3972602739726
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00037\\0003788.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00037\\0003788.json",
+      "source_annotation_sha256": "18af7ae9e1d6c0f8a9d9fc366730b6ebe9349d41e6c6a64ca08804eb997af4b3"
+    },
+    {
+      "relative_path": "s00_00038_0003805.jpg",
+      "sequence": "s00_00038",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "abb0e38fad0d71bf87f7d42dd3a0ffcdc646742c625d3a915bfd26b7d16a6dec",
+      "annotation_sha256": "23bedbec178a817f36aaedce27391de71a2d5210217461c557667ea20b866a84",
+      "yolo_label_sha256": "62877b9c845118cc9601e9f85f36804ecd10b925f92794eae080f08465937f9e",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1277.2191780821918,
+            614.7260273972603,
+            1571.7397260273972,
+            1166.0958904109589
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00038\\0003805.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00038\\0003805.json",
+      "source_annotation_sha256": "58c50000b1624ebc604b6b79e92ae72c9c774916009817bab0b45a959503ed8f"
+    },
+    {
+      "relative_path": "s00_00038_0003890.jpg",
+      "sequence": "s00_00038",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "3f588b535592b3fd13feeba59bfc28e94a0cd3243585826749afdb5819695a03",
+      "annotation_sha256": "14571429677567ab2da2b2c02018c60a57c7a0881354735dde93598f22d980c4",
+      "yolo_label_sha256": "b1d37eb86af9b5954ad3e3587b9045c15b808b2b3fc40c69cae1da1f18f82951",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1641.945205479452,
+            602.7397260273973,
+            1876.5342465753424,
+            986.3013698630137
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00038\\0003890.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00038\\0003890.json",
+      "source_annotation_sha256": "30c353435714a74495936621aa3010c17e3d24d20e3405fb8867bb0a1ef6a7f2"
+    },
+    {
+      "relative_path": "s00_00039_0003977.jpg",
+      "sequence": "s00_00039",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "688568f5f2796069db0da067707afa0b51369c346ce10ac57410dcdd552d4df4",
+      "annotation_sha256": "d4ca789a91f33ff98f8cae58630c4edd7d6a59abd0b0c929e89255c30a55bded",
+      "yolo_label_sha256": "43bbee70c1181b4566ff27b931793466a3a6944f599a6f6ca8f2dcc43fa14dcd",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1530.6438356164383,
+            621.5753424657535,
+            1761.8082191780823,
+            1102.7397260273974
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00039\\0003977.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00039\\0003977.json",
+      "source_annotation_sha256": "e71619e093c5c76d8cb527d0d6b40cf792d997e139db1390732c85b038b1bab9"
+    },
+    {
+      "relative_path": "s00_00039_0003993.jpg",
+      "sequence": "s00_00039",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "540cc5ba627f8d6537903c4e16ed61e7909fad3488cbc1cc198d26345972f472",
+      "annotation_sha256": "82cf5c376724e6066d38fbdd7d16a2e59d9bfe98c0496cd7cf39496ac02d70c6",
+      "yolo_label_sha256": "74db5006da2ca037c7e978831c4d3dfadcaffa42319fb53dfbc30c8639bba751",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1480.986301369863,
+            772.2602739726028,
+            1784.0684931506848,
+            1356.164383561644
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00039\\0003993.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00039\\0003993.json",
+      "source_annotation_sha256": "e2b16371a563edd93cc682dc2a53753b9965e23c574b291498866f404a1fa56d"
+    },
+    {
+      "relative_path": "s00_00040_0004018.jpg",
+      "sequence": "s00_00040",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "67d79be187a2c803a15fcde35a3472f79d7958583539c61b5b08a9d8261ecd37",
+      "annotation_sha256": "406f238d25bf1b352c64555554d39066cb0012882e0de43583b0b9bcb6b79f5c",
+      "yolo_label_sha256": "a48fabb3f623d21df444189a18792bc33082aebee76aa231af193bf98530bd1d",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1539.2054794520548,
+            643.8356164383562,
+            1763.5205479452054,
+            1101.027397260274
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00040\\0004018.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00040\\0004018.json",
+      "source_annotation_sha256": "6b5cca384f42a825883a6a412b7820c9dd00c29f2c2cc0f058b37a5c1d82ae7a"
+    },
+    {
+      "relative_path": "s00_00040_0004096.jpg",
+      "sequence": "s00_00040",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "13177fd516a9603dafb706fd8b973e95c42513522647a9fbb756bad3b8ae9974",
+      "annotation_sha256": "c35b7eabf1ad2cf0288fc0cec7e0179e1956626bf9b8d357538a0a8a3aafb965",
+      "yolo_label_sha256": "9d96b832c0e8663b49d8473418be11c0bd93e0955240286b0e328d283964d328",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            965.5753424657535,
+            239.72602739726028,
+            1320.0273972602738,
+            847.6027397260275
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00040\\0004096.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00040\\0004096.json",
+      "source_annotation_sha256": "e3ce4048be61c24c2f4292fff3a05174e53b340e423fcd686468bb672fbfde90"
+    },
+    {
+      "relative_path": "s00_00041_0004177.jpg",
+      "sequence": "s00_00041",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "8121db92b1207923bc71698e05a1137c5f4b4828a7357bfe743d7abf5960e2a9",
+      "annotation_sha256": "21cfffa3accfa18a135f84d512f01071281cf74e6a40247fdc55b10e20411e5c",
+      "yolo_label_sha256": "73ee984722c410859b11fafd45f360229dd5ed074681fa08b9055ae8f14de185",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1217.2876712328766,
+            383.56164383561645,
+            1511.808219178082,
+            890.4109589041096
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00041\\0004177.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00041\\0004177.json",
+      "source_annotation_sha256": "75a688693a9f0d078f4e60550667926ed605160b02850cb63ef4c62cb3f56c3d"
+    },
+    {
+      "relative_path": "s00_00042_0004202.jpg",
+      "sequence": "s00_00042",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "33bdd3f69718e1f4bb5ffb7cb6a71e3f6f9bdfa727f48786d61080a2ae516f01",
+      "annotation_sha256": "4fd5d8f74aff5806698b1c22b2be868c582404787291d6824c1c444a0bd9e11d",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00042_0004202.jpg",
+      "source_image_id": 802
+    },
+    {
+      "relative_path": "s00_00042_0004257.jpg",
+      "sequence": "s00_00042",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "9e8899ac2837f2effcbacbd4349924a2fff45f02061d38809bd88fa5740c76af",
+      "annotation_sha256": "9edf05f6c859b29e4e29e35ec169e81f33ca3bf1ab6537eef5573a697a282b9f",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00042_0004257.jpg",
+      "source_image_id": 857
+    },
+    {
+      "relative_path": "s00_00042_0004298.jpg",
+      "sequence": "s00_00042",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "35816a927d8afa717aa564e0a913429ff4d49451050bdc51772d8826f87ec515",
+      "annotation_sha256": "54a8c9b255e7602319a01f4f933b850019c9304f8cb210d19857ac1c8bcb59bc",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00042_0004298.jpg",
+      "source_image_id": 898
+    },
+    {
+      "relative_path": "s00_00043_0004302.jpg",
+      "sequence": "s00_00043",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "0a335aef6af0859e53ddd99783c08b93593736d5785574c04cfc99471f5dd31b",
+      "annotation_sha256": "a206fdb688bd60deff7309435d67bc06920eb42def5e9a26e06ca33483b6d46a",
+      "yolo_label_sha256": "9804f7d0af59ad586f6f74754b70fd316a0cc34dbf2bb4d7fbbd9af9e544aeca",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1064.890410958904,
+            582.1917808219179,
+            1361.123287671233,
+            1131.8493150684933
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00043\\0004302.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00043\\0004302.json",
+      "source_annotation_sha256": "94f9371a6b3ae4c0de64214035758d07eac1a764f2a3c6f6167063eac8584e7d"
+    },
+    {
+      "relative_path": "s00_00044_0004495.jpg",
+      "sequence": "s00_00044",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "3eef2e250bccf290fafd94dc87a67bbd94b52b58e731ca1894a6076192851c5c",
+      "annotation_sha256": "45d6f628dfd4aa778b2d14b21648f6600af638a6be70257c72e5a1eed617ac80",
+      "yolo_label_sha256": "8dafad8989ffca2bc95a3a2f19953ed6fc13c8f281894948a0621d41d341fb66",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1306.3287671232877,
+            636.9863013698631,
+            1559.7534246575342,
+            1010.2739726027398
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00044\\0004495.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00044\\0004495.json",
+      "source_annotation_sha256": "8996e5737e1470647ead6de1a7b4b519ea9f5d8e4628b6011fe5b29782a4343d"
+    },
+    {
+      "relative_path": "s00_00045_0004583.jpg",
+      "sequence": "s00_00045",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "7aef87545cbc2b88bd1aa82a98cd61fa0c67f581ff6298ecfba7c531c407fedf",
+      "annotation_sha256": "2031840f26f60905da57aa3750d968adf8915ff07e170b1cef9bba802a8b88fd",
+      "yolo_label_sha256": "d82e40360a55e5f9ade83b29472867e9875f07ad84e61d6a9cfd74b59060e699",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1427.9041095890418,
+            544.5205479452056,
+            1710.4383561643835,
+            1089.041095890411
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00045\\0004583.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00045\\0004583.json",
+      "source_annotation_sha256": "7124a20b3d1303698e47c12d13d303e7da5b3b7bbef373da6002fb8498c5c029"
+    },
+    {
+      "relative_path": "s00_00046_0004681.jpg",
+      "sequence": "s00_00046",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "1b6f80eadd6c60f8354a42ef087f14a6ed50a9df91a07efd4695294abd2a4c33",
+      "annotation_sha256": "cca2f515e866b70b951145f52aad0aaa18c8cba24dc9834efdc0e840a90d2f6e",
+      "yolo_label_sha256": "0a0cfc29acb2ed32e3df9edb4472ecbac732633bc868d49cb699d2b5cbd48d6e",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1141.945205479452,
+            643.8356164383562,
+            1465.5753424657535,
+            1236.3013698630139
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00046\\0004681.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00046\\0004681.json",
+      "source_annotation_sha256": "c2b9733f7f6ddc6f522cd6fd56323b3f3e2ce19443499b9ad4a007eebab53204"
+    },
+    {
+      "relative_path": "s00_00047_0004701.jpg",
+      "sequence": "s00_00047",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "5889aa4779d212283a6ff8a64c28f6c26fa3ed680413b1296dcea16cb3aac4a8",
+      "annotation_sha256": "586a83a61a030772cbf5fec2a7a24b394cbbecb80890235cf3985a601e26cfac",
+      "yolo_label_sha256": "ad13b7ca7d084cc7d770cf7bbf60f32798acccb36d44d36b9dcdddbf43ec01f4",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1155.6438356164383,
+            683.2191780821918,
+            1489.5479452054794,
+            1250.0
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00047\\0004701.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00047\\0004701.json",
+      "source_annotation_sha256": "006531a5ca06dee733cafc2dab8e1b34aab29ecfc3e115ab87849c11ce7101e0"
+    },
+    {
+      "relative_path": "s00_00048_0004830.jpg",
+      "sequence": "s00_00048",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "c2a74570e3cdc8126509fbd05eee231be49ca9d684e005e193f86f391bf3c1f4",
+      "annotation_sha256": "617e6e55326ad6644153827d672e3872c4f99de471a3def4431aecf8506f55f1",
+      "yolo_label_sha256": "39e8d8f00d91317dbedad905ccb16c5459d49bc02adb44db5e9a4923aa96907e",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1205.3013698630136,
+            325.3424657534247,
+            1520.3698630136985,
+            880.1369863013699
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00048\\0004830.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00048\\0004830.json",
+      "source_annotation_sha256": "79ce4a82bc098f49baad1de85b34a3e08bd3f820ebc33dc3bd2f5985bb5bbf5d"
+    },
+    {
+      "relative_path": "s00_00049_0004950.jpg",
+      "sequence": "s00_00049",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "599000ee99328d45296969b65ff2888fcac3ee8ba1ee357d148e62ac5fb11e66",
+      "annotation_sha256": "3c1c2e34793b387002a7ab9e820bb4a83a65ea59c816dc12d41ca55705673ea3",
+      "yolo_label_sha256": "990bc0be50a60b8b29fea9d6fe007c3ef2e833753a76c51ee0175e621f22cc69",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1184.7534246575342,
+            710.6164383561644,
+            1516.945205479452,
+            1318.4931506849316
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00049\\0004950.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00049\\0004950.json",
+      "source_annotation_sha256": "df34c5288aca105e8381d85a8bd24e9d31002652416fbaee251152fd6630cf8b"
+    },
+    {
+      "relative_path": "s00_00049_0004975.jpg",
+      "sequence": "s00_00049",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "e6e002b41836d640a48ecf265e800e38f48702a18d278cfea14174726613ebe8",
+      "annotation_sha256": "7861a92246d572c9c06a0b542d594d2c126673cd97fceca390da45cc84be0032",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00049\\0004975.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00049\\0004975.json",
+      "source_annotation_sha256": "7a94ef2c951dcb0971ab73671a98a0c4521846111db5163d14bba3b3f0223988"
+    },
+    {
+      "relative_path": "s00_00049_0004978.jpg",
+      "sequence": "s00_00049",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "17423d2d874bb0c201600038d9df2939ac636dc8161be77bbf54193d596a0789",
+      "annotation_sha256": "d09fdb2c9a399ce4fd871639cef26022bedb3561df054c1ccfe897355530c71e",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00049\\0004978.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00049\\0004978.json",
+      "source_annotation_sha256": "6b296cc7ef085edb9a91bccdffbe6c3849c63cd946e530791ffbecb878b00213"
+    },
+    {
+      "relative_path": "s00_00049_0004981.jpg",
+      "sequence": "s00_00049",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "954ed75fefda7ebcd168ffee415e5ea87a0cc84172525116984d4dde1fb2acb4",
+      "annotation_sha256": "988600853e70af64980327434f7320575923f5e200425349cf64ca138d216c06",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00049\\0004981.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00049\\0004981.json",
+      "source_annotation_sha256": "3c250be36fa7f0cd7d2570a7b20979f25840564988bba1345cd452fde3cf1684"
+    },
+    {
+      "relative_path": "s00_00051_0005151.jpg",
+      "sequence": "s00_00051",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "3cb20a9d851a47611b78b50fe74b590a997305d693b5a824ecd93350a13a647d",
+      "annotation_sha256": "2952353c1b31b3200628de662c7b8daf49601a8f3cd656993a978dea6d39f046",
+      "yolo_label_sha256": "b8a2716d59b7d59a33a7b1e7f45e9c7098e7791f8622ac66d2e537f136d21716",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            2301,
+            440,
+            2419,
+            688
+          ]
+        },
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1498,
+            628,
+            1790,
+            1162
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "hanging_object_det1_0_0_0_1_val/images/s00_00051_0005151.jpg",
+      "source_image_id": 1051
+    },
+    {
+      "relative_path": "s00_00052_0005216.jpg",
+      "sequence": "s00_00052",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "2418810e2e5a9d732c2dc11bdb5487e8f42c6db32d437151c3edf1984a99d3bb",
+      "annotation_sha256": "805514d49ee839c82c1ca3dde984b3d0c924883a0daad6294ae51e96a870e8f5",
+      "yolo_label_sha256": "849bce28335b78d270a24cd3d575dc5c24be5bedfdc8579a028ee4082b7565be",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            2302.904109589041,
+            436.64383561643837,
+            2422.7671232876714,
+            678.082191780822
+          ]
+        },
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            2039.2054794520548,
+            589.041095890411,
+            2321.7397260273974,
+            1159.2465753424658
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00052\\0005216.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00052\\0005216.json",
+      "source_annotation_sha256": "7246f496179643df756eeb1b72e62b7e255a7bd4c1e835938ea63d8e6308c106"
+    },
+    {
+      "relative_path": "s00_00053_0005384.jpg",
+      "sequence": "s00_00053",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "b174f228c087dd127de4f70a0c9c80ef91987d5a40b8a6a323712e43527abad6",
+      "annotation_sha256": "08319c68a79c2cd22e209c2af2f817b9346bcdc24dcb88a2dbdb47a9211b3cde",
+      "yolo_label_sha256": "644ec7e50557bbf12d7d3c093998ef965b6ba9e44f22667642435acd11f51663",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            2278.931506849315,
+            613.013698630137,
+            2482.698630136986,
+            1030.8219178082193
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00053\\0005384.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00053\\0005384.json",
+      "source_annotation_sha256": "ce090f67bd586db3673e4ed43dcfd4d94971ed174c43b4f6c20bbbe8899e0aa2"
+    },
+    {
+      "relative_path": "s00_00054_0005471.jpg",
+      "sequence": "s00_00054",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "4e111a30504a54423791b802c55528cb61b4f2c3468993117b185bfb69b7b2c1",
+      "annotation_sha256": "6b4060c3a41d8be4ce51471f34b8b6ae64f9da64b5f490df5128a6987bfa7fa7",
+      "yolo_label_sha256": "946a598a9d45b03d9b6973382b63074ac59160a2c4204294c24a87374beb236f",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            491.2602739726027,
+            380.13698630136986,
+            878.1463414634147,
+            1093.5365853658536
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00054\\0005471.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00054\\0005471.json",
+      "source_annotation_sha256": "deec8f6b2be1eeb09f32a6a2924ca4c021e1ed1797bbeb01df5fe1be130c3b1f"
+    },
+    {
+      "relative_path": "s00_00055_0005506.jpg",
+      "sequence": "s00_00055",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "5b96edd3ef87bbadb96c3c8c056965d5804558849a68267aecea7b1555b21aa6",
+      "annotation_sha256": "18e1f745f61dd2e1f59329d534fb16decdd9e9dd88e8e09e7ec1e5343e8dbb23",
+      "yolo_label_sha256": "43536b239d17be3704821c0b063dd2425e13951a8fad8f7a32663b22a49078a1",
+      "ground_truth": [
+        {
+          "label": "hanging object",
+          "bbox_pixels_xyxy": [
+            1020.3698630136986,
+            273.972602739726,
+            1387.9024390243903,
+            939.8780487804878
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_image_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00055\\0005506.jpg",
+      "source_annotation_path": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00055\\0005506.json",
+      "source_annotation_sha256": "5ff61eb55f7855407cdfb75f45dbe59d619142001bff964c3abe5a587be814b0"
+    }
+  ],
+  "split_seed": 42,
+  "group_by": "source_sequence_target_presence_class_and_frame_distance",
+  "split_ratios": {
+    "train": 0,
+    "val": 1,
+    "test": 0
+  },
+  "purpose": "fine_tuning_validation_holdout"
+}

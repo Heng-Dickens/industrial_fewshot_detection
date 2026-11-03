@@ -1,0 +1,28 @@
+输入类型：YOLOE 视觉提示，无文字 prompt。
+模型使用参考原图及其目标框生成视觉原型；本文件仅说明输入方式，不作为模型文字输入。
+参考样本数：25
+- positive/images/0005072.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0005072.jpg
+- positive/images/0001233.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0001233.jpg
+- positive/images/0002970.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0002970.jpg
+- positive/images/0002578.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0002578.jpg
+- positive/images/0003939.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0003939.jpg
+- positive/images/0005551.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0005551.jpg
+- positive/images/0003003.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0003003.jpg
+- positive/images/0004185.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0004185.jpg
+- positive/images/0001512.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0001512.jpg
+- positive/images/0002001.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0002001.jpg
+- positive/images/0004793.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0004793.jpg
+- positive/images/0000189.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0000189.jpg
+- positive/images/0001362.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0001362.jpg
+- positive/images/0003383.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0003383.jpg
+- positive/images/0000181.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0000181.jpg
+- positive/images/0004094.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0004094.jpg
+- positive/images/0001127.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0001127.jpg
+- positive/images/0000914.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0000914.jpg
+- positive/images/0000090.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0000090.jpg
+- positive/images/0004501.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0004501.jpg
+- positive/images/0002175.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0002175.jpg
+- positive/images/0003992.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0003992.jpg
+- positive/images/0001320.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0001320.jpg
+- positive/images/0001352.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0001352.jpg
+- positive/images/0003191.jpg | D:\Learn\VLM\industrial_fewshot_detection\data\processed\diaowu\references\positive\images\0003191.jpg

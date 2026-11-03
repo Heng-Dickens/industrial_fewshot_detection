@@ -1,0 +1,59 @@
+{
+  "scene_name": "chache_val300",
+  "task_id": "Chache3",
+  "labels": [
+    {
+      "name": "Chache3",
+      "description": "紧凑起重机车，车体较小，驾驶员站着，前方有明显竖直高门架及下部货叉，无驾驶位护顶架。"
+    }
+  ],
+  "dataset": {
+    "image_dir": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images",
+    "ground_truth_dir": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val300/images",
+    "recursive": false,
+    "missing_ground_truth": "error",
+    "manifest_file": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/pet_dino_shots_20261027/manifests/chache_val300/Chache3.json"
+  },
+  "evaluation": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.5,
+    "score_thresholds": [
+      0.001,
+      0.002,
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "max_detections_per_image": 100
+  },
+  "backend": "yoloe",
+  "mode": "train",
+  "reference_image_dir": "/home/yuheng/Work/industrial_fewshot_detection/data/references/chache/Chache3",
+  "support_manifest_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/pet_dino_shots_20261027/supports/chache_val300/Chache3",
+  "max_reference_examples": 0,
+  "max_reference_crops": 0,
+  "max_reference_negatives": 0,
+  "output_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/YOLOE",
+  "results_layout": false,
+  "reuse_predictions": false,
+  "yoloe": {
+    "source_dir": "/home/yuheng/Work/industrial_fewshot_detection/third_party/yoloe",
+    "weights": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/yoloe-v8l-seg.pt",
+    "positive_count": 10,
+    "selection_seed": 0,
+    "aggregation": "normalized_mean",
+    "device": "cuda:6",
+    "torch_threads": 4,
+    "imgsz": 640,
+    "confidence": 0.001,
+    "nms_iou": 0.7,
+    "max_detections": 100,
+    "exclude_reference_overlap": true
+  }
+}

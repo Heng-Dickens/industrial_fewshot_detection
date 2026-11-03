@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "wedetect",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+  "kind": "text",
+  "text": "低位搬运车，车体小而低，驾驶员站着，前方伸出贴近地面的长双叉，无高起升门架和护顶架。",
+  "text_sha256": "b38e72faddaf462bd819143d24bc1af80f816ca8fd4ee8a0b96b09314118bcf1",
+  "text_source": "wedetect.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "wedetect",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "6166562d4aa0e6476f8ebb20fb1bd5c657087f7258382de1cdf3b4e31bba5a38"
+  },
+  "request_signature": "e5c9546988c79000bd049b7e18d2029a95ad68a7b38d04921f134bd397a16b89"
+}

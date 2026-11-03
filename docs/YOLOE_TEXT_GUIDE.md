@@ -18,7 +18,7 @@ a large hollow cylindrical load suspended from a yellow lifting hook by two taut
 
 `yoloe_text` 是独立 backend。原 `visual_5shot.yaml` 等配置仍然使用视觉提示。文字模式的 `max_reference_examples/crops/negatives` 必须全部为 0，不能配置 `positive_count`。保留参考池仅用于排除与已有支持集重复的测试图片，以便与其他方法使用相同测试队列；参考池不是模型输入。标签 description 只用于记录，实际编码的是 `yoloe_text.text_prompt`。
 
-结果直接保存到 `outputs/runs/diaowu_99/文字提示_v1/yoloe-11l-seg_0shot/`，重跑使用 `_第2次` 等同级目录。包含 `prompt.txt`、`prompt.json`、`run.json`、`config.resolved.json`、`records.jsonl`、`predictions/`、`feedback/`、`metrics.json`、`evaluation.txt`，并自动更新 `outputs/runs/prompt_results.md`。终端继续输出 COCO AP/AR 和逐类统计。反馈保存检测框和分数，不生成自然语言框选理由。
+结果直接保存到 `outputs/YOLOE/experiments/diaowu_99/文字提示_v1/yoloe-11l-seg_0shot/`，重跑使用 `_第2次` 等同级目录。包含 `prompt.txt`、`prompt.json`、`run.json`、`config.resolved.json`、`records.jsonl`、`predictions/`、`feedback/`、`metrics.json`、`evaluation.txt`，并自动更新 `outputs/_shared/indexes/prompt_results.md`。终端继续输出 COCO AP/AR 和逐类统计。反馈保存检测框和分数，不生成自然语言框选理由。
 
 模型保留候选分数阈值为 0.001，NMS IoU 为 0.7，输入大小为 640；评估 IoU 为 0.5、工作点 score_threshold 为 0.5，与最新保存的 GroundingDINO 评估一致。AP 使用候选框分数排序，工作点 precision/recall 则使用评估阈值，两者含义不同。
 
@@ -42,4 +42,4 @@ a large hollow cylindrical load suspended from a yellow lifting hook by two taut
 
 已安装依赖、下载并校验文字编码器，使用上述配置实际运行全部 99 张固定测试图，99 张成功、0 张失败、0 张复用。描述、图片顺序、数据与真值指纹、评估参数均与当前保留的 GroundingDINO 精简描述记录一致。
 
-实际输出位于 `outputs/runs/diaowu_99/文字提示_v1/yoloe-11l-seg_0shot/`：AP50 为 4.60%，AP50:95 为 2.43%。在既定工作点 score>=0.5 下没有框通过筛选，因此 Precision/Recall 为 0；这表示当前描述和模型的检测效果有限，不是推理请求失败。此处没有为了得到更好结果而调整文字或阈值。
+实际输出位于 `outputs/YOLOE/experiments/diaowu_99/文字提示_v1/yoloe-11l-seg_0shot/`：AP50 为 4.60%，AP50:95 为 2.43%。在既定工作点 score>=0.5 下没有框通过筛选，因此 Precision/Recall 为 0；这表示当前描述和模型的检测效果有限，不是推理请求失败。此处没有为了得到更好结果而调整文字或阈值。

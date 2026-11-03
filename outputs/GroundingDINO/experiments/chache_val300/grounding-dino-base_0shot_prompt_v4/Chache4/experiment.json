@@ -1,0 +1,50 @@
+{
+  "protocol": "Frozen 300-image cohorts. YOLOE uses exactly the PET-DINO 1/5/10-shot supports, boxes and seed=0. GroundingDINO uses verbatim WeDetect Chinese prompts. Every class queries every image; class-labelled predictions are merged without cross-class NMS. Candidate floor=0.001, NMS IoU=0.7, maxDets=100/class, evaluation IoU=0.5 and score=0.5. Model-native preprocessing and feature aggregation are retained. Fresh inference; no training/API calls.",
+  "job": {
+    "id": "chache_val300_groundingdino_long_Chache4",
+    "experiment_id": "chache_val300_groundingdino_long",
+    "dataset": "chache_val300",
+    "backend": "groundingdino",
+    "target_id": "Chache4",
+    "label": "Chache4",
+    "shot": 0,
+    "config_file": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runtime/aligned_baselines_20261027/configs/chache_val300_groundingdino_long_Chache4.local.json",
+    "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO/grounding-dino-base_0shot_prompt_v4/Chache4",
+    "result_layout": {
+      "root": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs",
+      "dataset_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300",
+      "dataset_name": "chache_val300",
+      "dataset_sha256": "bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b",
+      "prompt_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO",
+      "prompt_version": "prompt_v4",
+      "prompt_identity": "01c5ce6d43208d41c6d0a55f6238718fccfe9eb640c5bcea9b766467e84664d3",
+      "method": "GroundingDINO",
+      "method_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO",
+      "prompt_registry_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/chache_val300/GroundingDINO/.prompts/prompt_v4",
+      "model_name_suffix": "_prompt_v4"
+    },
+    "expected_prompt": {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "带大型专用属具的座驾叉车，驾驶员坐着，带护顶架和粗壮门架，前端装有醒目的黄色宽大搬运属具；车身通常为橙色。",
+      "text_sha256": "7e1f71e802248fff3e418b6901b01af3c979c8837a66fb79b1dc98946f3ad598",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "0f6037d07c3db3c553b82c976ca126d5696f6d0c3b5a01eafc5a6ab32469d5b0"
+      },
+      "request_signature": "2f31b89eeda09305121de8a54a1dfccff4472854eaa792846a3ef4a2edb116d1"
+    }
+  }
+}

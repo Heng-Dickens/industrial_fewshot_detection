@@ -17,9 +17,9 @@ from industrial_fewshot.labels import all_label_names
 from industrial_fewshot.runtime import run_async
 from industrial_fewshot.paths import resolve_location
 
-RUNTIME=ROOT/'outputs/runtime/chache_expanded_shots'
+RUNTIME=ROOT/'outputs/_shared/runtime/chache_expanded_shots'
 STATE=RUNTIME/'status.json'
-REPORT=ROOT/'outputs/runs/chache_val300/qwen_expanded_shot_comparison.md'
+REPORT=ROOT/'outputs/Qwen/comparisons/chache_val300/qwen_expanded_shot_comparison.md'
 CONFIGS={
     'qwen3.8-27b':ROOT/'configs/specific/chache_qwen27b_expanded_shots.yaml',
     'qwen3.8-flash':ROOT/'configs/specific/chache_qwenflash_expanded_shots.yaml',
@@ -193,7 +193,7 @@ if __name__=='__main__':
     if args.model:
         RUNTIME=RUNTIME/args.model
         STATE=RUNTIME/'status.json'
-        REPORT=ROOT/f'outputs/runs/chache_val300/{args.model}_expanded_shot_progress.md'
+        REPORT=ROOT/f'outputs/chache_val300/{args.model}_expanded_shot_progress.md'
     logging.basicConfig(level=logging.INFO,format='%(asctime)s %(levelname)s %(message)s')
     if not args.dry_run:
         RUNTIME.mkdir(parents=True,exist_ok=True)

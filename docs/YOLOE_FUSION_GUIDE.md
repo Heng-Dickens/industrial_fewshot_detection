@@ -26,7 +26,7 @@ yoloe_fusion:
 a large hollow cylindrical load suspended from a yellow lifting hook by two taut slings spread to opposite sides, including the hook and slings.
 ```
 
-结果直接保存到 `outputs/runs/diaowu_99/文字提示_v1/yoloe-11l-seg_5shot_裁剪图0.75+文字0.25/`，重跑使用同级 `_第2次` 等后缀。保存原有 COCO/VOC 评估、预测与反馈，`prompt.txt` 保留实际英文；`prompt.json` 记录文字、两路权重、参考原图身份、各裁剪路径及内容指纹，并更新根目录 `prompt_results.md`。
+结果直接保存到 `outputs/YOLOE/experiments/diaowu_99/文字提示_v1/yoloe-11l-seg_5shot_裁剪图0.75+文字0.25/`，重跑使用同级 `_第2次` 等后缀。保存原有 COCO/VOC 评估、预测与反馈，`prompt.txt` 保留实际英文；`prompt.json` 记录文字、两路权重、参考原图身份、各裁剪路径及内容指纹，并更新根目录 `prompt_results.md`。
 
 修改文字、裁剪内容、两路权重或模型权重会使旧推理缓存失效；只修改评估阈值可以复用框。沿用现有固定 99 张测试图，模型候选阈值 0.001、NMS IoU 0.7、输入 640，评估 IoU 0.5、工作点分数阈值 0.5。不要用测试集结果调权重后再将其当作独立评估。
 

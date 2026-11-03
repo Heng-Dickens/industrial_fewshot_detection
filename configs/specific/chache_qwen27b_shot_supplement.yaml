@@ -1,0 +1,8 @@
+# Only 1shot is eligible for supplementation; 20shot was cancelled by the user.
+extends: chache_qwen27b_full5shot_top3.yaml
+concurrency: 2
+experiment_suite:
+  positive_counts: [1]
+  positive_variants: [O+C+B]
+  include_prompt_only: false
+  negative_variants: [false]

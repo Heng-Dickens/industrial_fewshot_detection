@@ -1,0 +1,2171 @@
+{
+  "schema": "industrial_fewshot.split.v1",
+  "split": "val",
+  "image_root": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val100/images",
+  "ground_truth_root": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\raw\\chache_val100\\images",
+  "dataset_sha256": "5f40a57f0fd83edf2ddf76c774de60a84a901d1e1900192b360580acd6028bf1",
+  "samples": [
+    {
+      "relative_path": "s00_00000_0000010.jpg",
+      "sequence": "s00_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "9dec0fe168f52fec56a8a7ba3850a141110c881f8e289f12cba8e1dd1b65be86",
+      "annotation_sha256": "10be2cf9ad460d8e0c8e3c4eeb18d79943976cef2669a47d80231aa83344e755",
+      "yolo_label_sha256": "dc17cf3dd76dd41970647484fa359f507986b672a5471fcd612afe1be74a9685",
+      "ground_truth": [
+        {
+          "label": "Chache2",
+          "bbox_pixels_xyxy": [
+            119.2052928,
+            567.5754672,
+            188.4810048,
+            675.3164616000001
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00000_0000010.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00000_0000010.txt"
+    },
+    {
+      "relative_path": "s00_00000_0000016.jpg",
+      "sequence": "s00_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "47d25980d51f1b215f3a2fe39bd544e2f11489ea475d4dc2c2914904130f7dff",
+      "annotation_sha256": "2ae466e94dcf8afb9ede1a87a55279f2970265c6e785261f76082c0f52914ae9",
+      "yolo_label_sha256": "d26f42e11c568a6902f4b0887b60da2f3470814331ed713d4a0eda6d2723c453",
+      "ground_truth": [
+        {
+          "label": "Chache2",
+          "bbox_pixels_xyxy": [
+            606.610176,
+            661.1864436000001,
+            737.1186432,
+            791.694918
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00000_0000016.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00000_0000016.txt"
+    },
+    {
+      "relative_path": "s00_00000_0000037.jpg",
+      "sequence": "s00_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "18e5e3dcf39a007078a4021c69af1ec980575ece84680a883743ec5d85397ce4",
+      "annotation_sha256": "6407d89ce3ada2f2719e551ad173e9d073ac3ad8508995520abd2161222cf357",
+      "yolo_label_sha256": "e694d39cc9ba3557a3e44f4a2200f46ea8c47cc14263e309cef391c6509ba114",
+      "ground_truth": [
+        {
+          "label": "Chache2",
+          "bbox_pixels_xyxy": [
+            530.3389728,
+            766.2711888,
+            743.2745567999999,
+            1078.1228088
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00000_0000037.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00000_0000037.txt"
+    },
+    {
+      "relative_path": "s00_00000_0000050.jpg",
+      "sequence": "s00_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "46329df2cdc13c9ee552fa28c72352a943fcb51e7cd56ded39eba3c12ff36a45",
+      "annotation_sha256": "70330478f0de8866219287ec7fba755606990114eddace64a7093dff91482011",
+      "yolo_label_sha256": "7512b8d7a513bbe17696c90a3d945ea5922300bb2959e04aa093824ec86d233e",
+      "ground_truth": [
+        {
+          "label": "Chache2",
+          "bbox_pixels_xyxy": [
+            676.6462656,
+            462.60302040000005,
+            722.4030912000001,
+            529.8449652
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00000_0000050.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00000_0000050.txt"
+    },
+    {
+      "relative_path": "s00_00000_0000066.jpg",
+      "sequence": "s00_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "7c18c1186b5e5ae414f27e341f9719ac184c829b7669205432b42c59f6d73b5c",
+      "annotation_sha256": "7383756571479abd1ee58d226c1a779113bdadc31cf9f0050f91d974525189e7",
+      "yolo_label_sha256": "2a79161d81c9a1914e1fd4b2746111637b45b5d4ae4522c9619f833e6f00546f",
+      "ground_truth": [
+        {
+          "label": "Chache2",
+          "bbox_pixels_xyxy": [
+            716.868864,
+            540.0000054,
+            785.4237312,
+            640.0000025999999
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00000_0000066.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00000_0000066.txt"
+    },
+    {
+      "relative_path": "s00_00000_0000082.jpg",
+      "sequence": "s00_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "d6f5148a405f5aacee7a4cd72ee39433cbe459fb9dfcfe2d5fc482d8fbdd7f70",
+      "annotation_sha256": "0bcbba5b6f458ccff224a9e29439524200175d869669c2ce3fdea141decababe",
+      "yolo_label_sha256": "c557eb37abde79f096563113fc1fb70b172f46be393198c4b42446f4816d766c",
+      "ground_truth": [
+        {
+          "label": "Chache2",
+          "bbox_pixels_xyxy": [
+            660.0000095999999,
+            524.7457668000001,
+            743.8983072,
+            603.5593284
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00000_0000082.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00000_0000082.txt"
+    },
+    {
+      "relative_path": "s00_00000_0000090.jpg",
+      "sequence": "s00_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "8037e221ed03dc91887aaf00b2d64afc37d304b1538cee30d830ec1b13061e09",
+      "annotation_sha256": "a059a801374948b8932dc91053c83b465d3ffd99169ad6e90e84d6c485a95579",
+      "yolo_label_sha256": "ab04a89ced2bac3cd8eb9724c68d38b42ba1c45ef8b630fad8378679efb719b6",
+      "ground_truth": [
+        {
+          "label": "Chache2",
+          "bbox_pixels_xyxy": [
+            95.5932096,
+            557.7966126,
+            155.7627072,
+            651.8644074
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00000_0000090.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00000_0000090.txt"
+    },
+    {
+      "relative_path": "s00_00000_0000171.jpg",
+      "sequence": "s00_00000",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "a76dbe69e3cb632338d7540a31f61c1a09a3f3be903fd2ae637c29e433f7901d",
+      "annotation_sha256": "8ecd0d7c77ca0e0dffaaaeca905736f75d2cb38eee1e3a6b24f7dfde757cc599",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00000_0000171.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00000_0000171.txt"
+    },
+    {
+      "relative_path": "s00_00000_0000270.jpg",
+      "sequence": "s00_00000",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "8694cc59d71ff9d74eb949b6340bbe161b52b99a61a9a754d60c5a991a5baa9e",
+      "annotation_sha256": "43e626fe7b246825d6708b9c4bead0ea66c3e3ff28a5d44bcc80bcb2d5991576",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00000_0000270.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00000_0000270.txt"
+    },
+    {
+      "relative_path": "s00_00000_0000360.jpg",
+      "sequence": "s00_00000",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "feb7075093819b54190c61b26b9c9781dbdfb7c08899a3a2e9854ef6c302bb8e",
+      "annotation_sha256": "eeeb47854f4c502d727cf459f515ff2e7ce62f261022dd59cc6dc349c798d828",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00000_0000360.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00000_0000360.txt"
+    },
+    {
+      "relative_path": "s00_00000_0000450.jpg",
+      "sequence": "s00_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "956cf8e630dad80c6c079902ec8e04714bfa9eec7dba9deb9da63a0d3c1e4979",
+      "annotation_sha256": "0d78887f3e1cc3fc6731b21de68d9a9c35c5461f829c649384343d80d189f19e",
+      "yolo_label_sha256": "0461f40ea9f3ccfbb5c99085d7ec17e9b7645ddc1e4e37ca2c25efafb8d5bfb2",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            53.859657600000006,
+            496.14034680000003,
+            232.8070176,
+            664.5614004
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00000_0000450.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00000_0000450.txt"
+    },
+    {
+      "relative_path": "s00_00000_0000499.jpg",
+      "sequence": "s00_00000",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "8e89c96e7b98932abd0832e42549cf0c1df110a83ab137613082cfd60f9d6040",
+      "annotation_sha256": "9847ca7536bdaf2b947a478cc52cce6f1732d12354d0a06e6d1f34e0f6f27cdc",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00000_0000499.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00000_0000499.txt"
+    },
+    {
+      "relative_path": "s00_00008_0004000.jpg",
+      "sequence": "s00_00008",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "0c1d982da152e2e55de97d351fbcbdddd64c2932b78f41ee28c6e96b1c18589b",
+      "annotation_sha256": "21b6b1af64a4ce654ac85348056f6b08a01fd106ccd78976ba867049d448d9b2",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00008_0004000.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00008_0004000.txt"
+    },
+    {
+      "relative_path": "s00_00008_0004040.jpg",
+      "sequence": "s00_00008",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "02a28342fed2acb3513ab4efc0a56a956f2c3c4306cfa17901e749ee0d16ed82",
+      "annotation_sha256": "e176faea3fcac6a3ad84257b0ae3d5b3ef4d1a77e8a6981bdca50e0d52c38fc6",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00008_0004040.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00008_0004040.txt"
+    },
+    {
+      "relative_path": "s00_00008_0004080.jpg",
+      "sequence": "s00_00008",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "d3d7ba32a888dfead995ed18e99ddd42716501c2c84de8a8ba8a49422b8ebebf",
+      "annotation_sha256": "a474ad9e8cf3c9c96d51bb5fd93d634fbe691e602f3704a2c999374e13dfca88",
+      "yolo_label_sha256": "b06eb259ba554d4bdfa7dfd48ccf622dfb4d3c73bb04b9ae3874ba9828b4b5db",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            798.5872224,
+            536.8342931999999,
+            932.3117088,
+            770.9324363999999
+          ]
+        },
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            27.788678399999995,
+            500.54223779999995,
+            137.8234176,
+            659.9848086
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00008_0004080.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00008_0004080.txt"
+    },
+    {
+      "relative_path": "s00_00008_0004083.jpg",
+      "sequence": "s00_00008",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "d29edc899d783e309a911f2959a3c804d15c57498317db238c65d57abd163256",
+      "annotation_sha256": "7ec7d09a655beb183a5f06d4d047e56b216aaeb0378289d6d9c138aa8545b356",
+      "yolo_label_sha256": "4c73083243b27611b1403d233f77d8689458540bcdc5753910c633697f0650a1",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            523.7168064,
+            506.3716836,
+            622.8318527999999,
+            602.831862
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00008_0004083.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00008_0004083.txt"
+    },
+    {
+      "relative_path": "s00_00008_0004134.jpg",
+      "sequence": "s00_00008",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "045516ff966e43e2b06dcdad39704d1106195e16da02c41e549696bdff639b2c",
+      "annotation_sha256": "507c331ec55405f4040dd32f1fcc243f530aff53998151b1cdd3cc4bd2b49ebe",
+      "yolo_label_sha256": "3025722227fd0a7518b27357cc4c2e2dad0d1eeceed17f1dc4e34191f2bdc3f0",
+      "ground_truth": [
+        {
+          "label": "Chache2",
+          "bbox_pixels_xyxy": [
+            876.8141568000001,
+            564.7787586000001,
+            1067.9645952,
+            659.4690221999999
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00008_0004134.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00008_0004134.txt"
+    },
+    {
+      "relative_path": "s00_00008_0004137.jpg",
+      "sequence": "s00_00008",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "fe40632852681e567e36ee7cb6e23eeeb059912f5aae1c827103e3effd4f3a5d",
+      "annotation_sha256": "a21455539b5be4a6a80fea437a38085cacdb63261a5c02a95a82a581c1eac035",
+      "yolo_label_sha256": "dbda2a42a675a956dfd86a91f74139df2552bbbde97c23712eb64b6a2b7561ab",
+      "ground_truth": [
+        {
+          "label": "Chache2",
+          "bbox_pixels_xyxy": [
+            527.2566432,
+            560.353977,
+            725.967408,
+            665.650143
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00008_0004137.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00008_0004137.txt"
+    },
+    {
+      "relative_path": "s00_00008_0004140.jpg",
+      "sequence": "s00_00008",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "05adae7a0968c000cb249145f236b547fd484b232b5736bc3ecd7199c009a3a5",
+      "annotation_sha256": "182ee0fa47b9c21ee7d58e0a2b8b7f3761e96f289562423ae17802db4629a0f8",
+      "yolo_label_sha256": "84d13281a8766e056eed9821e5e37e6fac74514962d8b454f36f6a37ca95b476",
+      "ground_truth": [
+        {
+          "label": "Chache2",
+          "bbox_pixels_xyxy": [
+            210.4424832,
+            568.3185882,
+            366.19468800000004,
+            668.3185854
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00008_0004140.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00008_0004140.txt"
+    },
+    {
+      "relative_path": "s00_00008_0004167.jpg",
+      "sequence": "s00_00008",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "292136b4250ae1742813184237ae8d8a741c89de6d5ca7b2ef6ceaf28f79cdc1",
+      "annotation_sha256": "2fb58c1530dfb64baa1baeeb1aef2ac753b554cf661ec56322dd8a90da163cb8",
+      "yolo_label_sha256": "6734d1c217e67fd6629e2dd3b1cda6097b4ac824897ca02a39082cafdb83277f",
+      "ground_truth": [
+        {
+          "label": "Chache2",
+          "bbox_pixels_xyxy": [
+            311.327424,
+            528.4955753999999,
+            429.9115008,
+            613.4513238
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00008_0004167.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00008_0004167.txt"
+    },
+    {
+      "relative_path": "s00_00008_0004172.jpg",
+      "sequence": "s00_00008",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "0bebeb8453cef07d738397abf5d074e85446c14aa5fcedb84e0d390f7a3db7d9",
+      "annotation_sha256": "16c099a96620ee9e4ece86740f67af8e3ed21bbe957a6d910d56b7ee1477e44c",
+      "yolo_label_sha256": "352465c2c2a9596d767d3719eaa2137a7b3ac1fcf45ec1fcaf0c1caa09c7a323",
+      "ground_truth": [
+        {
+          "label": "Chache2",
+          "bbox_pixels_xyxy": [
+            626.3716800000001,
+            486.9026586,
+            729.0265536,
+            566.5486734
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00008_0004172.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00008_0004172.txt"
+    },
+    {
+      "relative_path": "s00_00008_0004241.jpg",
+      "sequence": "s00_00008",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "82f93ce0f6ff6a1ede1a428767fbd3c35517ef23fc00bb537b98e9b8f8209670",
+      "annotation_sha256": "432bbfc9798fae0e1a8d547f72c397a9a3b79eed34e6ac38af58ee23a38fd3b8",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00008_0004241.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00008_0004241.txt"
+    },
+    {
+      "relative_path": "s00_00008_0004276.jpg",
+      "sequence": "s00_00008",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "517222840c5664ee684d943147cd48bc1cfa18da48e58baeb860cf8280780701",
+      "annotation_sha256": "f592f8164c04bd4c977d7c71d7e48e244133ed591757210966c25f981f60fe4b",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00008_0004276.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00008_0004276.txt"
+    },
+    {
+      "relative_path": "s00_00008_0004310.jpg",
+      "sequence": "s00_00008",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "0e017e52002af4bc54e3246bd28c1370e74c7e2b90e55354fe05a4e218c6d14c",
+      "annotation_sha256": "7aa32f24bdef8534603658364624f519c0c9832b71ed620b2c04de005cc615ce",
+      "yolo_label_sha256": "933809260fbb8b88297782f1c41a3dd555d51654d5b48c7803b45fbdece889aa",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            370.3485216,
+            598.2515226,
+            479.5914336,
+            677.5141590000001
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s00_00008_0004310.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s00_00008_0004310.txt"
+    },
+    {
+      "relative_path": "s01_00000_0000000.jpg",
+      "sequence": "s01_00000",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "85bb5e4fa0eddd9b22778787e9447df8f924c2585d14dfd4c6263516c988dd44",
+      "annotation_sha256": "44478a1485d5fafc6d9a0197173a00bbde99851dbd05644c6709c5fc7c2c0dad",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s01_00000_0000000.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s01_00000_0000000.txt"
+    },
+    {
+      "relative_path": "s01_00000_0000038.jpg",
+      "sequence": "s01_00000",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "d6f2dd8f465188cc1f2e72fd52c33eaac108a8e050aa0915e394141226e87209",
+      "annotation_sha256": "8948a54f501874a97ac3bf0e785e0d3c3c513655e785d5b9164ae77232973285",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s01_00000_0000038.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s01_00000_0000038.txt"
+    },
+    {
+      "relative_path": "s01_00000_0000075.jpg",
+      "sequence": "s01_00000",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "c28748a152bdbb52c821c39ccffe49f579d4a205e1d4c20f2e5651c1fda3eaaf",
+      "annotation_sha256": "3f9400517ccf1a9d09c72d7b94e12ec7514257de58e4718e2bbebb62269faec7",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s01_00000_0000075.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s01_00000_0000075.txt"
+    },
+    {
+      "relative_path": "s01_00000_0000149.jpg",
+      "sequence": "s01_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "7727c71dbe23b99030b59ffc5a179a78644c1d642618afeafebe60cd3e330375",
+      "annotation_sha256": "153e828437d49af0ee7a72dd4786aaf3185daf5fb6a31f6ad8e8a3a44f3d83ac",
+      "yolo_label_sha256": "b2a97e61d06ad00e3e2e13ab3080a8af886064380344ac663bdf222c5540fdf6",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            1253.2862688,
+            447.722154,
+            1570.3839263999998,
+            630.033498
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s01_00000_0000149.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s01_00000_0000149.txt"
+    },
+    {
+      "relative_path": "s01_00000_0000189.jpg",
+      "sequence": "s01_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "1de52484d7571632c1839331e47aa5d1b9729ae04811ea5b54b8315ba7c2b742",
+      "annotation_sha256": "6d2afb0e8d4f062e3bbb7859d6cfe63ef5eaf118acf3c1349c9cd509dcc93579",
+      "yolo_label_sha256": "9f2c697792e3c33945c5660733ad449d09506def612e3accb86e18ef4d05de0c",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            288.4636704,
+            400.2245154,
+            448.8130272,
+            522.8342262
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s01_00000_0000189.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s01_00000_0000189.txt"
+    },
+    {
+      "relative_path": "s01_00000_0000229.jpg",
+      "sequence": "s01_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "c986bf3b6209372ff35f510eddbf8f49b97dea41ac0ffdda44410c682aedc786",
+      "annotation_sha256": "d46bffd5f4fd0cb0bda9a1047dbdaab491e739ffe5f9d49859c1775bdf39b651",
+      "yolo_label_sha256": "8ce006b35b51a5e2a0f0852ccd0cb98004a1a6a04a9a7f98bfab5c1d172b06dd",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            1353.8053056,
+            439.11504540000004,
+            1533.2384448,
+            626.7482514000001
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s01_00000_0000229.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s01_00000_0000229.txt"
+    },
+    {
+      "relative_path": "s01_00000_0000269.jpg",
+      "sequence": "s01_00000",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "96f21ad743b26a49287cf6bc357feb40bc43229fce70d99473e7daf7b1265fb9",
+      "annotation_sha256": "a524356ed6e35338b75fe7199a10b48f27788f77e9e5ed89059f9ccaa13bec0f",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s01_00000_0000269.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s01_00000_0000269.txt"
+    },
+    {
+      "relative_path": "s01_00000_0000309.jpg",
+      "sequence": "s01_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "f9adbe6e3d806fecf1be13242172d55e86b8e0b671b39f3af95dda9e10797db4",
+      "annotation_sha256": "5d6038a198041d7848ca9beb976b850468fc51c71b2fa7fa5424d483b4c02d4c",
+      "yolo_label_sha256": "5dabd5aa3d545b9444615714ec70e06659d05bcdeba1de8ff7282e36bb3d2260",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            561.7699008,
+            418.76106300000004,
+            728.1415872,
+            575.3982258
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s01_00000_0000309.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s01_00000_0000309.txt"
+    },
+    {
+      "relative_path": "s01_00000_0000349.jpg",
+      "sequence": "s01_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "803a7c1a4080dfbe4455ccb83ac1e667f93b756014750b8965ba50ab8d633ef0",
+      "annotation_sha256": "b1840efbb8b905b4fd017d2be54d3f5d5a62140702f280c011f54da5361697ca",
+      "yolo_label_sha256": "111a21df872413585381ed7c1452d900b4a7e20f1f1fe6d9b81ab3ca5fbcabe8",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            635.2212288,
+            405.486729,
+            795.3982272000001,
+            555.9292062000001
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s01_00000_0000349.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s01_00000_0000349.txt"
+    },
+    {
+      "relative_path": "s01_00000_0000389.jpg",
+      "sequence": "s01_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "106704a7c566cdfad3fb576a1a193cea090859ce610f991d292ec3a84b043286",
+      "annotation_sha256": "f61f80f94d5099ceb86fcd3fb0ead8999ee9b0962d48efcd491ce8a8efb9ea68",
+      "yolo_label_sha256": "64b2a9e89ee92b9487ab24950c371d0e9bdb6b38f38e66740ef2a9e788ade28d",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            636.1061951999999,
+            404.6017716,
+            795.3982272000001,
+            556.8141635999999
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s01_00000_0000389.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s01_00000_0000389.txt"
+    },
+    {
+      "relative_path": "s01_00000_0000468.jpg",
+      "sequence": "s01_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "51f15a9a1353d31893efa2c7f483d7b56ed8599a93a08c2b32ec0d6aed4f26ff",
+      "annotation_sha256": "2c35a6e517ad1d89ab3768ef4dfd88dd1e45902a14e5e27c2166edccbdfc5d25",
+      "yolo_label_sha256": "61a09bc729beec660543a2fb32084f17e0c0743fabd2b55d7f7e67827d8cdba8",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            634.0980192,
+            403.840458,
+            790.9734432,
+            556.8141635999999
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s01_00000_0000468.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s01_00000_0000468.txt"
+    },
+    {
+      "relative_path": "s02_00002_0001071.jpg",
+      "sequence": "s02_00002",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "0cdded82b32610790529d01e6ab144ce7e832b9734a0a7c528b13ea4e5a23f18",
+      "annotation_sha256": "1cee2939fcbca6620baca965289f49646cea8a97ace8b391acce358d5a11d7d2",
+      "yolo_label_sha256": "1e0ea41368aabd0bd7c6a0abae745cd3fa99386a7d5fe93a2c6fb83d5d9ebc9c",
+      "ground_truth": [
+        {
+          "label": "Chache4",
+          "bbox_pixels_xyxy": [
+            1337.7499968,
+            411.24999919999993,
+            2175.24999552,
+            954.9999944
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00002_0001071.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00002_0001071.txt"
+    },
+    {
+      "relative_path": "s02_00002_0001075.jpg",
+      "sequence": "s02_00002",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "a44578463c71459f73d4900f0ef2483e16e194bd352450b5e5bb2e2c67b443c4",
+      "annotation_sha256": "461468acca7b67d1d649a99e87ba3b1ce2a7d95b02b5778e16f3682f14158547",
+      "yolo_label_sha256": "94e9602330292a781e04314e04360ec5347fa48acd7d27d2d2602f182a9b5e12",
+      "ground_truth": [
+        {
+          "label": "Chache4",
+          "bbox_pixels_xyxy": [
+            1276.50000576,
+            414.9999912,
+            2137.75001664,
+            963.749996
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00002_0001075.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00002_0001075.txt"
+    },
+    {
+      "relative_path": "s02_00002_0001082.jpg",
+      "sequence": "s02_00002",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "68f65c20ec498d187bc6d905044c0a711c3b92540bb406cb809d4fdaff001b6d",
+      "annotation_sha256": "e2fbe5bc9ecd24ef46f98161300a629e637af25557625ce3f7f486780df3912c",
+      "yolo_label_sha256": "035bc592d3f1aff5bdaad91c0f8b25d998a5427e742ae0a90b6df1bd1a3d5d04",
+      "ground_truth": [
+        {
+          "label": "Chache4",
+          "bbox_pixels_xyxy": [
+            1839.00001152,
+            436.2500016,
+            2239.00000128,
+            1006.2500016
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00002_0001082.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00002_0001082.txt"
+    },
+    {
+      "relative_path": "s02_00002_0001086.jpg",
+      "sequence": "s02_00002",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "7f372d6c1ebdfcbbc1f7fd3632651a726d965ae7864eef194960bdb383b974d6",
+      "annotation_sha256": "5a49ac51ba2b60f163b778c5ea48bbfc4539f3974d53c298249f0e11d40e141d",
+      "yolo_label_sha256": "9de9de56b7d97f5c8699edbdd9a3175297b0027b8050a91894c9b9d9b80f6759",
+      "ground_truth": [
+        {
+          "label": "Chache4",
+          "bbox_pixels_xyxy": [
+            1815.2500128,
+            436.2500016,
+            2226.50000832,
+            1023.7500048
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00002_0001086.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00002_0001086.txt"
+    },
+    {
+      "relative_path": "s02_00002_0001091.jpg",
+      "sequence": "s02_00002",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "0d0daf320d8a4412513577dad1e826ce2c6bf6433bb79f017a186a21022e0a73",
+      "annotation_sha256": "4b75d8e872ff52c6d7a1e88f9ac4aaec931970f5257d058465547ac3f46c732c",
+      "yolo_label_sha256": "4cb623ad6b1b4f37e028e1abd782f94d4a1272460282c223bf2f81c82c99aba4",
+      "ground_truth": [
+        {
+          "label": "Chache4",
+          "bbox_pixels_xyxy": [
+            1972.74999936,
+            401.2500027999999,
+            2313.99998592,
+            853.7500052
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00002_0001091.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00002_0001091.txt"
+    },
+    {
+      "relative_path": "s02_00002_0001193.jpg",
+      "sequence": "s02_00002",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "0020f1f2be808f12d8fccb58dcd722c42deb7014deee97e7168da2a094466155",
+      "annotation_sha256": "dd16ea05ffe2efe4c03141a851c100232dea38218ef5159192961946ff63dbb5",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00002_0001193.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00002_0001193.txt"
+    },
+    {
+      "relative_path": "s02_00002_0001295.jpg",
+      "sequence": "s02_00002",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "9f16c221ad195afd20470cd3db5305a3d4a9458c68096c78be2ef75c44a0479d",
+      "annotation_sha256": "0bc131c88e15043907a9460eb5648b04cfcec817d724e46b6cf93193ec0532e7",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00002_0001295.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00002_0001295.txt"
+    },
+    {
+      "relative_path": "s02_00002_0001397.jpg",
+      "sequence": "s02_00002",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "d151bc7a87b94b69bdb9a555e825714692c0be281e4efda8d4f72e790ef283d8",
+      "annotation_sha256": "a523eda009ba318d6b1069907be568fab40813afd403e176a0fa7f8cd24245ab",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00002_0001397.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00002_0001397.txt"
+    },
+    {
+      "relative_path": "s02_00002_0001499.jpg",
+      "sequence": "s02_00002",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "c93771d4e2fd8d120f2aecc7188d8e2367ea25a33bea0f56d0ff6c3d5a93df91",
+      "annotation_sha256": "ca8888a91ef4f778b633e0ebe2671079efc572725009d3e369e9b15818a0aec2",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00002_0001499.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00002_0001499.txt"
+    },
+    {
+      "relative_path": "s02_00006_0003000.jpg",
+      "sequence": "s02_00006",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "2cb3e4598184449c129360bdc62080079e0619de40eea42a7dcfb279de868242",
+      "annotation_sha256": "fff5c775d94d75b9d964ca342a6bc5b7d3f86bc95c8f6f7e079c8d2675f18848",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00006_0003000.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00006_0003000.txt"
+    },
+    {
+      "relative_path": "s02_00006_0003117.jpg",
+      "sequence": "s02_00006",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "63b10665627266c1784366210928797cdc99a6a5a1c921b90a9f713d9773dfd2",
+      "annotation_sha256": "69d5b86c0af8c26faf7a3d557bb9fe12f894000bf09d42eb394c8ac4d5a63174",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00006_0003117.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00006_0003117.txt"
+    },
+    {
+      "relative_path": "s02_00006_0003234.jpg",
+      "sequence": "s02_00006",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "ca679f4ffb8a781a089ed38cc128f1777be9dad55e211b2616df5eec7e637b69",
+      "annotation_sha256": "01cb3532861e9c4a022bbf5c6bf45de555764aae63552dce7ae83faca15ab004",
+      "yolo_label_sha256": "ca9e0f8197bef9a378e385350652e244777ff8464a4d48c5a89e855d847ff07b",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            1418.4818054400002,
+            504.25958959999997,
+            1666.4999904000001,
+            850.0000056
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00006_0003234.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00006_0003234.txt"
+    },
+    {
+      "relative_path": "s02_00006_0003236.jpg",
+      "sequence": "s02_00006",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "f763676b980bbfe2e81a894ca85b6159ee13bf3d06e0afe51e9b5fa5d51c70d2",
+      "annotation_sha256": "6f15b55f5670e731d518f18a86124c37ef08a3c9f4bb7ef33024902b43d38d54",
+      "yolo_label_sha256": "9ad74fae58acf8036d200062534a4871e098c8ad418193309f2de0f24035930b",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            1299.9940262400003,
+            502.741178,
+            1570.25000832,
+            871.2499932
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00006_0003236.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00006_0003236.txt"
+    },
+    {
+      "relative_path": "s02_00006_0003237.jpg",
+      "sequence": "s02_00006",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "e6adf5682b6f05d62b073e99a956538365c1b1c10cac7141514e6db2648ab1fd",
+      "annotation_sha256": "f9535a4a858c42a9f9ecf0f09a91de8482a19e39a4c3a2af6a06306447d52c85",
+      "yolo_label_sha256": "9ad74fae58acf8036d200062534a4871e098c8ad418193309f2de0f24035930b",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            1299.9940262400003,
+            502.741178,
+            1570.25000832,
+            871.2499932
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00006_0003237.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00006_0003237.txt"
+    },
+    {
+      "relative_path": "s02_00006_0003238.jpg",
+      "sequence": "s02_00006",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "debe3d219eb6a042fa32daf114c8b03cb2f9380818a338645c4bd3b675034d8c",
+      "annotation_sha256": "644e0318c2668a3453b411128be15e8d6d7fc411b40d4fa900b95ed9d635a296",
+      "yolo_label_sha256": "b8f126a23675990d0b1d1d84577f338b27d37043895af25c10b3b9b6a5a31d8e",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            1347.7500153600001,
+            502.4999996,
+            1645.9813305599998,
+            835.8103572
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00006_0003238.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00006_0003238.txt"
+    },
+    {
+      "relative_path": "s02_00006_0003241.jpg",
+      "sequence": "s02_00006",
+      "presence": "positive",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "6bb1feef8514486157b3c5aec4b1bb8b300bd0b70b2b6dde44434e552491c4b2",
+      "annotation_sha256": "e4cd3bbf8c399a6f68b44608087b5d191f13b5322852797f20ec0c37f407954e",
+      "yolo_label_sha256": "e856422fa55b03103a0830262d6eafbcb82605b5d92442e9d3c486791ec6cee0",
+      "ground_truth": [
+        {
+          "label": "Chache1",
+          "bbox_pixels_xyxy": [
+            1517.99315136,
+            499.35464840000003,
+            1853.8120070400003,
+            813.941342
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00006_0003241.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00006_0003241.txt"
+    },
+    {
+      "relative_path": "s02_00006_0003370.jpg",
+      "sequence": "s02_00006",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "564e633747946f8c41bc50eaa51a9fd0c0e6ac217270d196824cc59a26c4be2b",
+      "annotation_sha256": "7cb1ad45fedf55ea279c9ea3102b170e565068e569c60994317c26f841e177c4",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00006_0003370.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00006_0003370.txt"
+    },
+    {
+      "relative_path": "s02_00006_0003499.jpg",
+      "sequence": "s02_00006",
+      "presence": "negative",
+      "width": 2688,
+      "height": 1520,
+      "image_sha256": "d7766f454a09f382a0129f53788f4a9f56fdee5f9a354a29d75b9f6f8bb51bda",
+      "annotation_sha256": "cfa847e0b449b8ee1c194bd0cbb9cce815ed47351103bd9e5383bfa77e9e78ac",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s02_00006_0003499.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s02_00006_0003499.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000000.jpg",
+      "sequence": "s03_00000",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "dcfcfb311b2a12d3983341191d74cee2824c3530a93151097b885d607c1ea3ee",
+      "annotation_sha256": "f4982f9fcd0a414106a90e8cb63edb237be1fc06c7f651e8657723abb8b82f9b",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000000.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000000.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000032.jpg",
+      "sequence": "s03_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "dfea749cea3f43ccfa320f9fa0bf2efdd17f7271a0514977d2ee968662e3592c",
+      "annotation_sha256": "c1bec026fb38faacdd0407189f9a57d4757e489bdcd05e6d68a5564f6efe0fff",
+      "yolo_label_sha256": "2eb1c7f4f2e5fa2497bc3b135afa281b2ab1c78d81886776d78219114052dd84",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            1032.5663712,
+            235.57521599999998,
+            1161.7699104,
+            423.1858392
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000032.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000032.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000056.jpg",
+      "sequence": "s03_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "262d57c3c0a1c54a50670786d8afcccaa90de42cbef43a1d46b63a0f2dbd94f2",
+      "annotation_sha256": "f9798cd830aa8e7960caa77c7bbad287aeb8a2868847b4c121dfb099b696a93a",
+      "yolo_label_sha256": "c14296ecf97e2f1a6744b762ba02c5b7a284d58fb283131f94f1391c23f6caa9",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            601.1887872,
+            498.836421,
+            709.1768831999999,
+            609.4052118000001
+          ]
+        },
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            1049.3805408,
+            270.08850060000003,
+            1226.3716895999999,
+            435.5752266
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000056.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000056.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000083.jpg",
+      "sequence": "s03_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "043797bcc9d569933fd9dd0452f47ef7f4104a04fc0bc3f7d181c02c6086011c",
+      "annotation_sha256": "809b9f846cb4e2cf8c7f9b80ce9d8257efc4332745e2c16c6ad6589b2e9be534",
+      "yolo_label_sha256": "1cc53e6d1f24e3c2525a96b003f7e452f314a9f64e8cab2a59335c40685adb52",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            1049.3805407999998,
+            270.0884952,
+            1229.0265504,
+            439.11504
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000083.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000083.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000110.jpg",
+      "sequence": "s03_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "d90a5cfab028bfc53d1120e578eaaaa21a5f4df6b306c28ff3e226c42bc74594",
+      "annotation_sha256": "8a5ba2ca17f14fc05df48525c046a027b634ee272b54031559cda089c595cf48",
+      "yolo_label_sha256": "1cc53e6d1f24e3c2525a96b003f7e452f314a9f64e8cab2a59335c40685adb52",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            1049.3805407999998,
+            270.0884952,
+            1229.0265504,
+            439.11504
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000110.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000110.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000137.jpg",
+      "sequence": "s03_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "e71c2c63d87d6e0e2d7a737e5e0a842c0ae4a8463565304aa91a70dc42b7cf27",
+      "annotation_sha256": "3d77bc4d64753157d7a030bdb9ae564d249fb1e3725d391fa59033a3b2efea18",
+      "yolo_label_sha256": "1cc53e6d1f24e3c2525a96b003f7e452f314a9f64e8cab2a59335c40685adb52",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            1049.3805407999998,
+            270.0884952,
+            1229.0265504,
+            439.11504
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000137.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000137.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000165.jpg",
+      "sequence": "s03_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "15d65654a5a815e8180692820f3d6bec270d320b78c9df71e220ed2214c00b3e",
+      "annotation_sha256": "760a819d3af7aac767cc3047ac48b6f8b0d5c36363ca9b74023d7b79e0e9ada1",
+      "yolo_label_sha256": "974701bb0d8fceed423c0b5ae5dcccc706585f8b9e9bc3a71bdda48e340e454f",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            1100.7079584,
+            557.699121,
+            1240.5728736,
+            953.2921158
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000165.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000165.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000200.jpg",
+      "sequence": "s03_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "6b0207c52b18ca98a8ab6c126fb05ae2d9ec10f24bcbff3ffe39aa68c8a1c943",
+      "annotation_sha256": "12d6eab6c92ce4cd1af57b9ada5635db206d3c5943933d8b967d0e8f2426db9b",
+      "yolo_label_sha256": "2ee13dfa9c274a2a4a2f6c6f9a59164e2d94847ded3d8d2020039cb61bd39722",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            1154.2658688000001,
+            325.89775979999996,
+            1223.0549376000001,
+            414.80358659999996
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000200.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000200.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000233.jpg",
+      "sequence": "s03_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "340bf3d2c44cb9690cf9cf56112bdcb2797538c2656de00eebc7c0ab53eb2ffc",
+      "annotation_sha256": "3c168385e01868a38e58afedf24f1eb19773542e97050ed8fc611a8b32bc1a80",
+      "yolo_label_sha256": "04e527924c4777d9dd4e643cf4709fac56964629169a1e988715bdbee6dd5b90",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            1184.7787584,
+            364.7787588,
+            1267.9646016,
+            455.9292036
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000233.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000233.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000281.jpg",
+      "sequence": "s03_00000",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "91d7233c9ca6ba15f6eac1f5dd657b1b22d9a576a8396d9b631452aac0f11f09",
+      "annotation_sha256": "329cba2dac67bb406296ef8925a8e87cbcc22ad99802105de068b40c585841ff",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000281.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000281.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000330.jpg",
+      "sequence": "s03_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "c486b14ed281b70125e52e3af1cd6605b123e620346db724a3b3c72fcfb1f0de",
+      "annotation_sha256": "c9dfa64ac53dc4f8b4661f9634ae3edefa227098a96e8ebddb8aec9051fb26d1",
+      "yolo_label_sha256": "6e6e91960468d042c9fce3c3ec26fe020798009a50255938ba4f7ffe7a70dd47",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            1017.5221248000001,
+            483.362829,
+            1173.2743295999999,
+            601.9469045999999
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000330.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000330.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000361.jpg",
+      "sequence": "s03_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "bd306415d12c51f6b0436b5f327abe552981a94751ee94b6279cd276118c2a0a",
+      "annotation_sha256": "4e65fdca66a47f976dc05bf9d7983c72e3562bf4ceb5e44db5c8524e848ee9a3",
+      "yolo_label_sha256": "6e6e91960468d042c9fce3c3ec26fe020798009a50255938ba4f7ffe7a70dd47",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            1017.5221248000001,
+            483.362829,
+            1173.2743295999999,
+            601.9469045999999
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000361.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000361.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000393.jpg",
+      "sequence": "s03_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "fa12f0b79d283c99d8bb0cf3ab701372c664ced5ab7669d2f6be4a7c355c1b25",
+      "annotation_sha256": "bce302599dbff2032e9a8d054bb920b89e9ed067425eec2960876b520e117e90",
+      "yolo_label_sha256": "5a88f972ae5675e597e4a47ab37e6d8fdff3bcd2769110de0e07b3acbc13b211",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            1044.0708,
+            485.13273840000005,
+            1173.2743392000002,
+            601.9468992
+          ]
+        },
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            1017.5221248000001,
+            483.362829,
+            1173.2743295999999,
+            601.9469045999999
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000393.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000393.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000427.jpg",
+      "sequence": "s03_00000",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "9dae8e84a2a217580b7ffa36cb67d6b62d806111e983cf01578c4727885eb4e4",
+      "annotation_sha256": "91055a0c211cf65231c799b36f8df1bd01e481e1e4ed9b663e22ca0c8d1bc211",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000427.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000427.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000462.jpg",
+      "sequence": "s03_00000",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "a33c4b2ab4fe5f9b91c9a4bb7b4e126ad03c99dd04abd4196bfa65dbc421857b",
+      "annotation_sha256": "750bac587864443afebfdf63b2e098573b0f82f37039ff479d2c0a69a3f619e0",
+      "yolo_label_sha256": "ae9a537a6164d5e377bdfd6589f37a2851391489a7a72afe696c1801cfd5f803",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            1368.8495616,
+            386.01770400000004,
+            1467.964608,
+            580.7079648
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000462.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000462.txt"
+    },
+    {
+      "relative_path": "s03_00000_0000498.jpg",
+      "sequence": "s03_00000",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "9083f97ad624d86d166e1e63f5ca99de6bdce64bc22340017cc673e4c2415f00",
+      "annotation_sha256": "f5cc124e7a419966588124b9eef643750d9790f40bd723b39c711b7b18b6635f",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s03_00000_0000498.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s03_00000_0000498.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000500.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "a50feb98b5232ab71fd9bb14a5ac705517914831fc2abac13b6b8d6f6fcf5e5f",
+      "annotation_sha256": "d93a176b88d39d84cdf01d7e5c33d4c7fde7727432a5c4bcedf3dc2a4d21896d",
+      "yolo_label_sha256": "da77ee79db056df2896332a47eb27762b044cd1fc8f53da54c17d1ca8d314b33",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            1062.631584,
+            232.1052624,
+            1200.35088,
+            396.14034960000004
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000500.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000500.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000559.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "e2fd4116b2a8aaab56e32335e451ae41fb8515d9ad834374f87a75cf86c6378e",
+      "annotation_sha256": "abba76caad949e0d7702a809add67e06c842c0d0a120d02903794b4bcdbf49b0",
+      "yolo_label_sha256": "aa946635e67b27c2363338a5b6382fc8cf76d0cabbc673fd2f1fb350e0315a35",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            1070.5263168,
+            231.22806480000003,
+            1200.35088,
+            396.14034960000004
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000559.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000559.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000617.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "890cbe60cb2fed529518b30933498f11bc7d530fa8c5e1de2182e8a3fa3e2863",
+      "annotation_sha256": "3edae2e72744f379f73c009201520e0ade30f30b0b364622c9182b13ecaa02bc",
+      "yolo_label_sha256": "47a1ca899cb92e83ae8b13dd2097dd14e891749af407382dbf32d45ae91f5239",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            1070.5263168,
+            231.22806480000003,
+            1200.35088,
+            396.14034960000004
+          ]
+        },
+        {
+          "label": "Chache4",
+          "bbox_pixels_xyxy": [
+            496.842096,
+            165.43859580000003,
+            1120.1769888,
+            1078.9380522
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000617.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000617.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000672.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "b32eb511b7426d8159104e8272f413c9607c1dc681bb2686eb9371d49e6ed252",
+      "annotation_sha256": "3c5e13a7070e1e425b90577f8ef9cec686054ef4b986bd578c725117634c20f1",
+      "yolo_label_sha256": "aa946635e67b27c2363338a5b6382fc8cf76d0cabbc673fd2f1fb350e0315a35",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            1070.5263168,
+            231.22806480000003,
+            1200.35088,
+            396.14034960000004
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000672.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000672.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000728.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "d051c3f04ce6753fe0690b62e9cd2c1b6c198d87d4f109b93aa7605be5779093",
+      "annotation_sha256": "55f54c481a53ea381f6e15c3ceaa290185c9988b7445c06d0cd99d970e6b08d9",
+      "yolo_label_sha256": "70642acfaf58bda6dd80370123f0605706d6579f87d21b511e694f8c092aaf27",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            1070.5263168,
+            231.22806480000003,
+            1200.35088,
+            396.14034960000004
+          ]
+        },
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            576.1016831999999,
+            153.55932479999998,
+            709.1525376,
+            262.0338984
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000728.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000728.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000790.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "c0c5914500aefd846a93732d58008b3df9012b4d289355265132a8be22284edf",
+      "annotation_sha256": "4b786d5769fff2748b0ed8a3cd4847df04470a2b5602c42075cb3b5117d83dec",
+      "yolo_label_sha256": "aa946635e67b27c2363338a5b6382fc8cf76d0cabbc673fd2f1fb350e0315a35",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            1070.5263168,
+            231.22806480000003,
+            1200.35088,
+            396.14034960000004
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000790.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000790.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000851.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "dc095d92d774ce6ebb72c02d5ed2400288b5da6dc211a6195629edc1033fbad9",
+      "annotation_sha256": "8c13f931fb283d9faaa068c4440d84045bb344bccf938c44628d1f7403a23c8a",
+      "yolo_label_sha256": "eb020f914b42aab81328300ae5618fdbaf6c79cbbb63aeb0fb578f751cbc7752",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            1070.5263168,
+            231.22806480000003,
+            1200.35088,
+            396.14034960000004
+          ]
+        },
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            728.6440608,
+            365.4237348,
+            900.3508704,
+            571.5789516
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000851.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000851.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000886.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "3fc6ffc9c46e6db4e44839d099f70c01af09934070572e0f875d31aa797f1056",
+      "annotation_sha256": "39c5adfe0238cda337cda43e0aef404f3f3d459b68fd583ad5b77d96a84fe66b",
+      "yolo_label_sha256": "48429a9fc29a59064d7e91bcc98b9a75a239ca4120ab2dfebfa0739b22edc093",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            856.6101696000001,
+            404.4067776,
+            1031.9298239999998,
+            593.5087728
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000886.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000886.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000920.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "ee9531276cc3962f95c1398c084d3691eebdea4ed9e408f203b291605b50f810",
+      "annotation_sha256": "ec3cdcc5b7f289e7f3452b16096d591a7cc4477fb716801289c7de67c2dd40c2",
+      "yolo_label_sha256": "1d0b63e0d98cf02161512a09b841144081052eeeeea8d878c7c999af05af4b9a",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            206.4912288,
+            452.28069899999997,
+            531.9298272000001,
+            1079.000001
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000920.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000920.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000925.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "2f08615d8d3a622da4366b40811b80991c4a35d7e4d59077d56d471ecb83d78d",
+      "annotation_sha256": "0d68ff55446157c34e7640c3a537cc7b8e9570afdb488e653850aa01340c14c4",
+      "yolo_label_sha256": "7411634674547b2b4d3bc4727387c3ad454a612b5fe45454bc876fa1f8fdb491",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            502.1052576,
+            202.28070599999995,
+            677.543856,
+            563.6842164
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000925.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000925.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000927.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "b9bf54f0ff0a5c38c6e9545e1552a7465d3fd957fc4c125ca86bfda06c328ed7",
+      "annotation_sha256": "945c368117b4c46a2b87d452f1a5a4a1725e32191584fc51d8e5e08cf8ec554b",
+      "yolo_label_sha256": "eeaa4a1ab5a1b603a88e22563ac8b91b5fdeec98b34003bad4cc957f86ea1b97",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            544.2105312,
+            154.91227859999998,
+            681.0526368,
+            453.15789659999996
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000927.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000927.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000928.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "b911611bf381e2b67ca47039cc2c03de50d35fe61f46c940260dc75e380514b8",
+      "annotation_sha256": "6434f34f3c1fbb7fb22d5513d5ae21f03015c3997d5551e062bc4eaabb21fc8a",
+      "yolo_label_sha256": "14d93530edd6b8bc44a298359710067b2f1ef10818b5ecca49d1d7a13137bc66",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            565.263168,
+            135.61402859999998,
+            684.5614079999999,
+            404.91227699999996
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000928.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000928.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000929.jpg",
+      "sequence": "s04_00001",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "00eef99cd4c323e3d1ebe412da1e93f07ec0981672cf827e1038af07d4db6b5a",
+      "annotation_sha256": "3da8ee296b4f77940eb3a657631ce209f1b64807d547d9c5d9101c0d6d8bbe35",
+      "yolo_label_sha256": "bd4651b2b1fb5e6a75c669264e4aaaa90c9f9a39f2c256ae94d25cd56ca62866",
+      "ground_truth": [
+        {
+          "label": "Chache3",
+          "bbox_pixels_xyxy": [
+            574.9122816,
+            115.43859719999999,
+            683.0088576,
+            379.82300760000004
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000929.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000929.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000963.jpg",
+      "sequence": "s04_00001",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "e1d247bf553763093ca771e2c6cfdf5919251cb8011e447875956971d80fd2a0",
+      "annotation_sha256": "427cb41cb8f4b13ed48e52568904271a5f7269f3d6408b4dcdbe93e23ff91af7",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000963.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000963.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000981.jpg",
+      "sequence": "s04_00001",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "5b4d12700fd9341cef021cd549179a5d07988ab8cf437fcedb0cb2e9eef666c0",
+      "annotation_sha256": "446de50a6c0a0314fa2bc78b12fa4b2cd86153aa9850fe7b106c4e00fcc5a16e",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000981.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000981.txt"
+    },
+    {
+      "relative_path": "s04_00001_0000999.jpg",
+      "sequence": "s04_00001",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "a2e5d1ee3efca3c9739329f27eb59804422f0ab0e18c373e46c07c0df308d314",
+      "annotation_sha256": "3cd31d21be774b06241cce117487f066c61e914df361ca138949cdd2f7db8758",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00001_0000999.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00001_0000999.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002003.jpg",
+      "sequence": "s04_00004",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "8b0815e035a4a5fe6476553deaabd33ea6fab0b755f6082928f70a144891fda8",
+      "annotation_sha256": "97fb16bdcddf387792abc3fa33229b2ba1837f929bac07055fffa0ee4811f6be",
+      "yolo_label_sha256": "28b3d5148e18852a301b9ac3ae0a28a1c4758c19c49a00d807f42daa19f40e1d",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            921.8644032000001,
+            706.1016888,
+            1236.3157824,
+            1076.8421016
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002003.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002003.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002055.jpg",
+      "sequence": "s04_00004",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "52631b65db57d2ae891318862ec0ff982b2d401bfb843c5ddb6e9f137241ca7e",
+      "annotation_sha256": "d29f676fefb698d45493044906d4c8ff7822231bfb75284c3d1367d224c3c4da",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002055.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002055.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002106.jpg",
+      "sequence": "s04_00004",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "d659d9bd0b6850b30cbdd399339c0365f297e88e3cdcb49a3d189474c1f568d1",
+      "annotation_sha256": "b37492af8ab28c6308370bce8fad74374ebf3bb6b20ee319952ac6dbbd52693d",
+      "yolo_label_sha256": "8d17229c1db64876d384c76e480fc829def880b379753c099132b9d82b9502c6",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            532.8813504,
+            168.813558,
+            705.6140352,
+            303.15789
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002106.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002106.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002149.jpg",
+      "sequence": "s04_00004",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "754e5d1ef557928a4b995c9a3d5e64aa7545d0bd14cd208b414279940ad0cf78",
+      "annotation_sha256": "19955b160c878737275797590a155129941749402811f69252421b273408b1fb",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002149.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002149.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002191.jpg",
+      "sequence": "s04_00004",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "477cca328857a6506507d7e0fdfb86cb338cea455b1c43abe3adf7a73d44753e",
+      "annotation_sha256": "57b4b7cfcb379298d1b91ba411e754f90658d4ccfda4780fea8347f2b3bad77a",
+      "yolo_label_sha256": "caff0aa50f37bcaba84417fe0bda7a789558f62e1daf8d6ba3a5713592740e4d",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            754.9152671999999,
+            152.71186500000002,
+            929.2982496,
+            273.333339
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002191.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002191.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002275.jpg",
+      "sequence": "s04_00004",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "e499013c2246a587d375304eb37c04e78d7cbe896ca5c850439cc6b9468a1beb",
+      "annotation_sha256": "32d56c0068a87496038b839fe2a804521173ec25fc4d956fca29078cba178b8a",
+      "yolo_label_sha256": "8b35bfdd88e34fb8123b54957046ebc0c8f5f19d40a9f3df335539fe25b5578c",
+      "ground_truth": [
+        {
+          "label": "Chache4",
+          "bbox_pixels_xyxy": [
+            434.5614144,
+            116.31578939999999,
+            1076.6666688,
+            1079.000001
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002275.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002275.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002280.jpg",
+      "sequence": "s04_00004",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "7873adf4ee54c38d896ee726b6dedf3285311bfa63f4d6fcf1086966a5c027bd",
+      "annotation_sha256": "c3503d07c44662d4e52b33bc0db03af38912d413d0091e4d476d45f27c168dae",
+      "yolo_label_sha256": "ae7e8dccb5b169a1b19b7efcb2d03ad9aeb11fcd45c5aaaf06d10a7315dad4e2",
+      "ground_truth": [
+        {
+          "label": "Chache4",
+          "bbox_pixels_xyxy": [
+            627.5438688,
+            7.543864799999986,
+            946.8421152,
+            548.7719328
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002280.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002280.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002283.jpg",
+      "sequence": "s04_00004",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "907f2b3fa22e114fc31939c535bb338a0b02ef812be662c6435aa2ce984602e5",
+      "annotation_sha256": "e06227bc02a9058a692033ab4a0c90715e6e80e0140faefcbe5bdc308acbc3dc",
+      "yolo_label_sha256": "fda7bfbceb5d382d1057f46c34a541867d0ce65741a3beb007e01b055553e415",
+      "ground_truth": [
+        {
+          "label": "Chache4",
+          "bbox_pixels_xyxy": [
+            654.736848,
+            0.5263163999999787,
+            937.1929824,
+            402.28070039999994
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002283.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002283.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002287.jpg",
+      "sequence": "s04_00004",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "2d88ef844f814e99127e334722b12addecbf7efaaf9b20fc5aa8c7104f227672",
+      "annotation_sha256": "6572e0b9b7ad8b6a1779104a1a5030273665753972f875a12f9ca229c1a70d6f",
+      "yolo_label_sha256": "1137ccd9123d0c26d1f656a4596250352828df6aad5934cdfe8fc445fdfafe44",
+      "ground_truth": [
+        {
+          "label": "Chache4",
+          "bbox_pixels_xyxy": [
+            488.94736320000004,
+            0.0,
+            856.491216,
+            289.12280400000003
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002287.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002287.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002338.jpg",
+      "sequence": "s04_00004",
+      "presence": "negative",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "194f4f85e68ee2458c00fb5de58017871ed423f26237e42b15ce781e1fa84336",
+      "annotation_sha256": "be152c11d1acc34c280aa25c658f678f6ff0aac9c13a38f685483384dd8ffd29",
+      "yolo_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ground_truth": [],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002338.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002338.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002390.jpg",
+      "sequence": "s04_00004",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "73e464d9f342a08486bac2fc2eb499ba790737f400b0232447d563333cb11b75",
+      "annotation_sha256": "d7256b7a5ee7e6633e68f656bf8bf6684de33af6523c6812ab623fed3af9cb90",
+      "yolo_label_sha256": "ea13a4a1011c2a767d7d669dbcc5a85d7e21182fa5b10b21a81be971993b878d",
+      "ground_truth": [
+        {
+          "label": "Chache4",
+          "bbox_pixels_xyxy": [
+            533.6842176,
+            0.0,
+            883.7288256,
+            311.052636
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002390.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002390.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002394.jpg",
+      "sequence": "s04_00004",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "bb20d8da780dd544b7fa52000140dd31bad5d6d549e7bea2987c12e027618f5a",
+      "annotation_sha256": "3f2a66a56a0bb31d4a804708a994e2e43cce9e6f5b26856becfb242f1d3e1414",
+      "yolo_label_sha256": "baa74bcdbb051e5532c3526455edbfee9ed23847fbe9248a8cdc92de073444d2",
+      "ground_truth": [
+        {
+          "label": "Chache4",
+          "bbox_pixels_xyxy": [
+            622.2807072,
+            0.0,
+            915.2631648,
+            441.7543872
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002394.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002394.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002434.jpg",
+      "sequence": "s04_00004",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "4527dc2017a879f5a3bf8faacde32eabf4c3014eae855db2de2f7ef2c04f865e",
+      "annotation_sha256": "3d331ff3a3e8277df7d310907ce186f7a774d7dd448954c608acfdc1780fd99a",
+      "yolo_label_sha256": "a94feaa79380d44c9e8672e386b748ed54cd6729288b1206d8b51c91945e3fec",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            412.54238399999997,
+            857.796615,
+            778.4210592000001,
+            1079.000001
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002434.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002434.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002467.jpg",
+      "sequence": "s04_00004",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "2cf70b7f1b5ea82622deecca34f68188a207e83f7149351f5556a9607b442dbe",
+      "annotation_sha256": "2317f48b08c6629aa6f2f4419d2180157a2056fae3252c60aabdaca0095bcc5e",
+      "yolo_label_sha256": "d4a7e95cc2478f970150cfe4dca57efa5f09161b3cee5430bc0a76ccef5cd1b5",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            753.8001792,
+            195.6794544,
+            878.6440704,
+            329.8305096
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002467.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002467.txt"
+    },
+    {
+      "relative_path": "s04_00004_0002497.jpg",
+      "sequence": "s04_00004",
+      "presence": "positive",
+      "width": 1920,
+      "height": 1080,
+      "image_sha256": "af50e5632d82bd68eece0dc28d0f3df78d1648f5677b1fe316afc1ec8233f6fc",
+      "annotation_sha256": "87344799c1a766201d8a7e99e37bc6e53199ef2861f9a3b8e77c8f313444aaeb",
+      "yolo_label_sha256": "3871cf85654156a3024420b6f2ebc9fce66bf8e7f78e90f86a88e8a894b08a3c",
+      "ground_truth": [
+        {
+          "label": "Qianyinche",
+          "bbox_pixels_xyxy": [
+            621.0169536,
+            557.7966126,
+            847.7193023999998,
+            836.4912282
+          ]
+        }
+      ],
+      "ground_truth_source": "json",
+      "source_archive_member": "datasets/valdata/valdata0911/images/val/s04_00004_0002497.jpg",
+      "source_label_member": "datasets/valdata/valdata0911/labels/val/s04_00004_0002497.txt"
+    }
+  ],
+  "split_seed": 42,
+  "group_by": "source_sequence_target_presence_class_and_frame_distance",
+  "split_ratios": {
+    "train": 0,
+    "val": 1,
+    "test": 0
+  },
+  "purpose": "fine_tuning_validation_holdout"
+}

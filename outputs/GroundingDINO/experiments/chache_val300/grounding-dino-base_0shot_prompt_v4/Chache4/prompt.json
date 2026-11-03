@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+  "kind": "text",
+  "text": "带大型专用属具的座驾叉车，驾驶员坐着，带护顶架和粗壮门架，前端装有醒目的黄色宽大搬运属具；车身通常为橙色。",
+  "text_sha256": "7e1f71e802248fff3e418b6901b01af3c979c8837a66fb79b1dc98946f3ad598",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "5e804f053092f342c1f47a7a7059d7dfa219eb68668a41686a918ac68eacdb00"
+  },
+  "request_signature": "f341ecbd0dd2a20d498c433b05557b40dc5f456af47df06f85ecc4dde51260fd"
+}

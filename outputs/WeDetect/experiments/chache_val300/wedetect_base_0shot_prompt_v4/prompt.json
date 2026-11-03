@@ -1,0 +1,127 @@
+{
+  "schema": "wedetect.multi_query_prompt.v1",
+  "prompts": {
+    "Chache1": "普通座驾叉车，驾驶位上方有护顶架，驾驶员坐着，前方有高门架和普通成对细长货叉；车身多为绿色或红色。",
+    "Chache2": "低位搬运车，车体小而低，驾驶员站着，前方伸出贴近地面的长双叉，无高起升门架和护顶架。",
+    "Chache3": "紧凑起重机车，车体较小，驾驶员站着，前方有明显竖直高门架及下部货叉，无驾驶位护顶架。",
+    "Chache4": "带大型专用属具的座驾叉车，驾驶员坐着，带护顶架和粗壮门架，前端装有醒目的黄色宽大搬运属具；车身通常为橙色。",
+    "Qianyinche": "单座位牵引车，车体低矮紧凑、外形圆润，带座椅和靠背，驾驶员坐着，无起升门架和成对货叉；车身通常为绿色。"
+  },
+  "snapshots": [
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "普通座驾叉车，驾驶位上方有护顶架，驾驶员坐着，前方有高门架和普通成对细长货叉；车身多为绿色或红色。",
+      "text_sha256": "419432b6ebdf416c6ca82cce6f08363d1345243ad565ee21810a277d2695a9d5",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "03a8b1bdf8a5a1e35c59442e464780edd53520c0324b3607b7196c192bb472f4"
+      },
+      "request_signature": "eca3aac2bbe75a1640f5d56792de903b950973771cc7fc19ac6a831c4e29cf46"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "低位搬运车，车体小而低，驾驶员站着，前方伸出贴近地面的长双叉，无高起升门架和护顶架。",
+      "text_sha256": "b38e72faddaf462bd819143d24bc1af80f816ca8fd4ee8a0b96b09314118bcf1",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "6166562d4aa0e6476f8ebb20fb1bd5c657087f7258382de1cdf3b4e31bba5a38"
+      },
+      "request_signature": "e5c9546988c79000bd049b7e18d2029a95ad68a7b38d04921f134bd397a16b89"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "紧凑起重机车，车体较小，驾驶员站着，前方有明显竖直高门架及下部货叉，无驾驶位护顶架。",
+      "text_sha256": "d302c6d86231383600e372c615b079ccf248e80738c8981b371c05cc5f062ba7",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "0816dac5449b61b276b8f73ebec9cbb06a76c014a4944c975491d45dbbf72d77"
+      },
+      "request_signature": "3442a290c341f149fb2ebf250f3e1634ee26d0e8144ed80557c4967b4a20546d"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "带大型专用属具的座驾叉车，驾驶员坐着，带护顶架和粗壮门架，前端装有醒目的黄色宽大搬运属具；车身通常为橙色。",
+      "text_sha256": "7e1f71e802248fff3e418b6901b01af3c979c8837a66fb79b1dc98946f3ad598",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "0f6037d07c3db3c553b82c976ca126d5696f6d0c3b5a01eafc5a6ab32469d5b0"
+      },
+      "request_signature": "2f31b89eeda09305121de8a54a1dfccff4472854eaa792846a3ef4a2edb116d1"
+    },
+    {
+      "schema": "industrial_fewshot.prompt.v1",
+      "backend": "wedetect",
+      "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+      "kind": "text",
+      "text": "单座位牵引车，车体低矮紧凑、外形圆润，带座椅和靠背，驾驶员坐着，无起升门架和成对货叉；车身通常为绿色。",
+      "text_sha256": "31f6e7e6dcd616bd06c9de506e633cbaadea692cc1914167d13df4914a500309",
+      "text_source": "wedetect.text_prompt",
+      "references": null,
+      "review_template": "",
+      "reference_inputs": {
+        "mode": "wedetect",
+        "counts": {
+          "reference_examples": 0,
+          "reference_crops": 0,
+          "reference_negatives": 0,
+          "reference_originals": 0,
+          "reference_boxed_images": 0
+        },
+        "manifest_sha256": "3e197a1406491b650c4765de4d2f0174b58ce665c0e30e101be21b1355bf838b"
+      },
+      "request_signature": "9bbe1afdb00868e1acf4c944c47782fe7e783d673af563e53481a627239a9fdd"
+    }
+  ]
+}

@@ -90,7 +90,7 @@ evaluation:
     box_iou: 1.0
     false_positive: 1.0
     false_negative: 1.0
-output_dir: ../../outputs/runs  # 自动按实际模型与 shot 数创建结果目录。
+output_dir: ../../outputs  # 自动按实际模型与 shot 数创建结果目录。
 output_suffix: _annotations
 reuse_predictions: true
 cache_version: v1

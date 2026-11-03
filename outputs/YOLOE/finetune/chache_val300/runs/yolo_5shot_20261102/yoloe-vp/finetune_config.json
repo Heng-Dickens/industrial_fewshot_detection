@@ -1,0 +1,89 @@
+{
+  "paths": {
+    "source_dir": "/home/yuheng/Work/industrial_fewshot_detection/third_party/yoloe",
+    "weights": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/yoloe-v8l-seg.pt",
+    "text_encoder": "/home/yuheng/Work/industrial_fewshot_detection/weights/yoloe/mobileclip_blt.pt",
+    "data": "/home/yuheng/Work/industrial_fewshot_detection/data/finetune/chache_5shot_val100/dataset.yaml",
+    "project": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/chache_val300/runs/yolo_5shot_20261102"
+  },
+  "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/YOLOE/finetune/chache_val300/runs/yolo_5shot_20261102/yoloe-vp",
+  "method": "yoloe-vp",
+  "strategy": "full",
+  "scene": "chache",
+  "shot_per_class": 5,
+  "dev_images": "data/raw/chache_val100/images",
+  "dev_manifest": "data/raw/chache_val100/manifest.json",
+  "test_manifest": "data/raw/chache_val300/manifest.json",
+  "class_names": [
+    "Chache1",
+    "Chache2",
+    "Chache3",
+    "Chache4",
+    "Qianyinche"
+  ],
+  "text_prompts": [
+    "a seated forklift with an overhead guard, a tall mast and two narrow forks",
+    "a low pallet truck with two long forks near the ground, without a tall mast or overhead guard",
+    "a compact stand-on stacker with a tall vertical mast and forks, without an overhead guard",
+    "a seated forklift with an overhead guard and a large wide yellow load handling attachment",
+    "a small seated industrial tow tractor without a lifting mast or forks"
+  ],
+  "device": "0",
+  "cuda_visible_devices": "2",
+  "batch": 4,
+  "training": {
+    "epochs": 100,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 0.1,
+    "weight_decay": 0.0005,
+    "patience": 10,
+    "workers": 0,
+    "seed": 0,
+    "amp": false,
+    "half": false,
+    "warmup_epochs": 0.0,
+    "mosaic": 0.0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "close_mosaic": 0,
+    "degrees": 0.0,
+    "translate": 0.05,
+    "scale": 0.1,
+    "fliplr": 0.0,
+    "flipud": 0.0,
+    "cache": false,
+    "deterministic": true,
+    "plots": false,
+    "save_period": -1,
+    "val_interval": 1
+  },
+  "adaptation": {
+    "scope": "full",
+    "protocol": "same_image",
+    "loss": "detection",
+    "freeze_savpe_bn_stats": true
+  },
+  "execute": true,
+  "initialize_only": false,
+  "freeze": [],
+  "source": {
+    "repository": "https://github.com/THU-MIG/yoloe",
+    "revision": "40cd606cabdbe2b566d6f14a6b162c89206e9a1b",
+    "archive_sha256": "bec9d01917b2b96764b84c1338a4e72604e3890acecf9005ebc22c485d9951db",
+    "local_modifications": []
+  },
+  "input_sha256": {
+    "weights": "14e9c146f7f7efa0bfea8c5f82952c9f95fb1f9c3bf0f18b3727b76624f9d746",
+    "data": "e16e6869ae8bf058c8856180ca3f0d37a0f04ceed8100b22ad09118d450d86f5"
+  },
+  "preparation_sha256": "40111b0ffc27e88e51675bc9f77c1202fb770ef92bd1b5c958283a095f7294e7",
+  "dev_manifest_sha256": "4d46d8f22fcfbdc0d7326407279a6841f5fe706190f4925246d011494b7ba053",
+  "test_manifest_sha256": "5785e116b57c5f02185d0fd2fa6bdb5b7cd1ffc4af04cd736294c2bebe23c04d",
+  "nbs": 4,
+  "status": "completed",
+  "note": "New FP32 warm start; not resume. Independent dev for checkpoint selection.",
+  "visual_training_protocol": "same_image bbox-conditioned training; cross-image dev validation with training-only support prototypes; scope=full, loss=detection",
+  "trainable_parameter_count": 51165414
+}

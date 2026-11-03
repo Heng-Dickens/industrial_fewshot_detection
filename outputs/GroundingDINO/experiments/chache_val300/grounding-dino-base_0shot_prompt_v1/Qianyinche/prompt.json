@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "groundingdino",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/grounding-dino-base",
+  "kind": "text",
+  "text": "牵引车",
+  "text_sha256": "24b27587b8d6e625dc4a42f0d4293dab02ec488e022152c41b12325703138883",
+  "text_source": "groundingdino.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "ovd_text",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "29e56e12fa218566786fc23b77ea79548898b3a4da1e40ebdd7f07fe02445139"
+  },
+  "request_signature": "11e3dae21a73227b61b26927abad9268e2dac1eb48d9aafe90360fe9bd7027c0"
+}

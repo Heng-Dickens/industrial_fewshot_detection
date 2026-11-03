@@ -1,0 +1,14 @@
+{
+  "identity": "965a8a0fb109ee6b8e828946a7d668323b5c4040fadb530586687fda953aa338",
+  "family": "监督检测",
+  "description": "本次实际输入，完整文字及复核模板见各运行目录的 prompt.txt / review_template.txt。",
+  "prompts": [
+    {
+      "text": null,
+      "review_template": ""
+    }
+  ],
+  "text_sha256": [
+    null
+  ]
+}

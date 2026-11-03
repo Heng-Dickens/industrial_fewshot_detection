@@ -1,0 +1,42 @@
+{
+  "id": "diaowu_val300_yoloe_10shot",
+  "dataset": "diaowu_val300",
+  "backend": "yoloe",
+  "variant": "10shot",
+  "description": "10-shot",
+  "shot_per_class": 10,
+  "run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/YOLOE/yoloe-v8l-seg_10shot",
+  "baseline_run_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/PET-DINO/pet_dino_swin_t_10shot",
+  "evaluation": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.5,
+    "score_thresholds": [
+      0.001,
+      0.002,
+      0.005,
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.7
+    ],
+    "max_detections_per_image": 100
+  },
+  "result_layout": {
+    "root": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs",
+    "dataset_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300",
+    "dataset_name": "diaowu_val300",
+    "dataset_sha256": "470b98531e4a34810e7ee42bf250e39c97480e42427c3d84152e29e4d368f3fc",
+    "prompt_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/YOLOE",
+    "prompt_version": "视觉提示",
+    "prompt_identity": "5dcfea801b71c21dacdc998f1a45eb556c372947c8b06bce6d4dbf6d9c54bedc",
+    "method": "YOLOE",
+    "method_dir": "/home/yuheng/Work/industrial_fewshot_detection/outputs/runs/diaowu_val300/YOLOE"
+  },
+  "jobs": [
+    "diaowu_val300_yoloe_10shot_diaowu"
+  ]
+}

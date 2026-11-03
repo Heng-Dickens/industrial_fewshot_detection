@@ -1,0 +1,34 @@
+{
+  "identity": "ad05f9da84748990dba98dd7fad257762df603330252df1edc74fc5e302df151",
+  "family": "文字提示",
+  "description": "本次实际输入，完整文字及复核模板见各运行目录的 prompt.txt / review_template.txt。",
+  "prompts": [
+    {
+      "text": "平衡重叉车",
+      "review_template": ""
+    },
+    {
+      "text": "电动托盘搬运车",
+      "review_template": ""
+    },
+    {
+      "text": "站驾式堆高车",
+      "review_template": ""
+    },
+    {
+      "text": "带属具的叉车",
+      "review_template": ""
+    },
+    {
+      "text": "电动牵引车",
+      "review_template": ""
+    }
+  ],
+  "text_sha256": [
+    "33f7f2324e91b082bdfbb6c079e9208070d85a999cbe59f8dcd2f007a19c0b50",
+    "3c7a2bdf03e9f24ede66a18a7478047bb6dc30d8915592d60436af237189df58",
+    "95f3766e0cc3e32b71576cb0921986e53d188c69b8e99317131e266058a394a2",
+    "cff654f7fd8cebcae984705c619574419d7c1dec9ec5b95d7262893627be3b3a",
+    "864f8a0ec3b44b95157d4757da02f5eb9214a912a3396338460b98d161dd8ea2"
+  ]
+}

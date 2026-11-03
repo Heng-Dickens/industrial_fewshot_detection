@@ -27,4 +27,4 @@ evaluation:
   score_threshold: 0.5
   max_detections_per_image: 100  # COCO/VOC展示口径；模型候选上限为300。
 # JSTY 监督训练吊物检测模型；不输入 few-shot 参考图。
-output_dir: ../../outputs/runs
+output_dir: ../../outputs

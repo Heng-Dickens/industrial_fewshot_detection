@@ -27,4 +27,4 @@ evaluation:
   score_threshold: 0.5
   max_detections_per_image: 100
 # YOLOE-11L, 0-shot text prompting; results directly in model_0shot/.
-output_dir: ../../outputs/runs
+output_dir: ../../outputs

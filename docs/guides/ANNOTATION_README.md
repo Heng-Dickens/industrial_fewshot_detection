@@ -37,22 +37,8 @@ YOLOE 基线使用 `configs/common/diaowu_yoloe_config.json`，源码保留在 `
 
 ## 测试职责
 
-```text
-tests/
-  support.py                 # 统一样例工厂与假客户端，无网络调用
-  unit/                      # 配置、参考输入、模型响应、LabelMe、指标
-  integration/               # 场景切换和完整 train/test 流程
-  tools/                     # tool/ 下转换、复核、清理等独立工具
-```
-
-运行全部测试或单独运行一组：
-
-```powershell
-python -m unittest discover -t . -s tests
-python -m unittest discover -t . -s tests/unit
-python -m unittest discover -t . -s tests/integration
-python -m unittest discover -t . -s tests/tools
-```
+项目按方法保存实验脚本和结果，入口见 [实验导航](../../outputs/README.md)。
+执行基础检查：`python scripts/check_environment.py`、`python scripts/check_links.py`。
 
 ## 旧入口的替代方式
 
@@ -62,7 +48,7 @@ python -m unittest discover -t . -s tests/tools
 
 推理已完成、只有评估失败时，在同一 Python 环境补齐 `numpy` 和 `scipy` 后重跑原命令，成功推理会自动复用。也可用 `python main.py --evaluate-only "原运行目录"` 指定一次旧运行补算。详细规则见 [MAIN_GUIDE.md](MAIN_GUIDE.md)。
 
-原 `annotate/test.py` 是单图 API 演示，已移到 `examples/chat_image.py`，不会被当作测试或自动发起请求。依赖统一在项目根目录 `requirements.txt`。
+原 `annotate/test.py` 是单图 API 演示，已移到 `outputs/Qwen/scripts/chat_image.py`，不会被当作测试或自动发起请求。依赖统一在项目根目录 `requirements.txt`。
 
 ## 独立工具
 

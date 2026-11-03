@@ -60,7 +60,7 @@ python main.py --config configs/specific/diaowu_ablation_config.json --dry-run
 python main.py --config configs/specific/diaowu_ablation_config.json
 ```
 
-当前 MLLM YAML 将结果写入 `outputs/runs/<实际模型>_<shot数>shot/`，例如 `qwen3.8-27b_5shot/`。其中 `comparison.csv`、`comparison.json`、`comparison.txt` 汇总所有组；下一层使用 `仅文字提示`、`原图+标注JSON_无负例`、`原图+裁剪图+带框图_含5张负例` 等可读名称。各组目录中直接保存 `run.json`、`summary.json`、`records.jsonl`、`metrics.json`、`evaluation.txt`、`predictions/` 和 `feedback/`，没有额外的时间戳／随机串／task_id 层级。重复运行使用同级 `_第2次` 等后缀保留已有结果。未显式设置 output_dir 的历史配置仍以输入目录同级 `<目录名>_annotations` 为输出根，再使用同样的可读命名。
+当前 MLLM YAML 将结果写入 `outputs/<方法>/experiments/<实际模型>_<shot数>shot/`，例如 `qwen3.8-27b_5shot/`。其中 `comparison.csv`、`comparison.json`、`comparison.txt` 汇总所有组；下一层使用 `仅文字提示`、`原图+标注JSON_无负例`、`原图+裁剪图+带框图_含5张负例` 等可读名称。各组目录中直接保存 `run.json`、`summary.json`、`records.jsonl`、`metrics.json`、`evaluation.txt`、`predictions/` 和 `feedback/`，没有额外的时间戳／随机串／task_id 层级。重复运行使用同级 `_第2次` 等后缀保留已有结果。未显式设置 output_dir 的历史配置仍以输入目录同级 `<目录名>_annotations` 为输出根，再使用同样的可读命名。
 
 CSV 新增实验 ID、正/负原图张数、原图例子总数、实际参考图片数、原图/裁剪图/带框图/JSON/负样本计数。每组 `experiment.reference_sets` 记录正负样本文件名，可核对配对关系。`reference_image_count` 不包括最后一张待测图。
 

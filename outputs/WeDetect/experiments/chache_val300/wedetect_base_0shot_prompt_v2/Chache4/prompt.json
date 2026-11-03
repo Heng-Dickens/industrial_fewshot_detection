@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "wedetect",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+  "kind": "text",
+  "text": "带属具的叉车",
+  "text_sha256": "cff654f7fd8cebcae984705c619574419d7c1dec9ec5b95d7262893627be3b3a",
+  "text_source": "wedetect.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "wedetect",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "b5852dad0f97de3665addc981dbcc7eb571eb3142b2c3480956a187fcf625f52"
+  },
+  "request_signature": "c14822639ca74bd6fb238422004face5d39f12b5dfca81342be820a389a2a58f"
+}

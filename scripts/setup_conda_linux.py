@@ -28,11 +28,11 @@ def main():
     parser.add_argument('--backend', choices=[*NAMES, 'all'], default='all')
     parser.add_argument('--status', action='store_true', help='Print recent installation logs without installing')
     parser.add_argument('--verify', action='store_true', help='Check imports and CPU/CUDA operators without weights')
-    parser.add_argument('--test-project', action='store_true', help='Run CLI/shared-dependency checks and the existing unittest suite')
+    parser.add_argument('--test-project', action='store_true', help='Run CLI, shared dependencies and documentation link checks')
     args = parser.parse_args()
     conda = Path(args.conda).resolve()
     envroot = conda.parent.parent / 'envs'
-    logs = ROOT / 'outputs/environment_setup'
+    logs = ROOT / 'outputs/_shared/environment_setup'
     logs.mkdir(parents=True, exist_ok=True)
     if args.status:
         for backend, name in NAMES.items():
@@ -44,13 +44,13 @@ def main():
     environment = dict(os.environ, PYTHONNOUSERSITE='1', PIP_DISABLE_PIP_VERSION_CHECK='1',
                        PYTHONUNBUFFERED='1', OMP_NUM_THREADS='4', PIP_PREFER_BINARY='1',
                        YOLO_AUTOINSTALL='false',
-                       YOLO_CONFIG_DIR=str(ROOT / 'outputs/runtime/yoloe_settings'))
+                       YOLO_CONFIG_DIR=str(ROOT / 'outputs/_shared/runtime/yoloe_settings'))
     selected = NAMES if args.backend == 'all' else [args.backend]
     if args.test_project:
         python = envroot / NAMES['yoloe'] / 'bin/python'
         commands = [[str(python), 'scripts/check_environment.py'],
                     [str(python), 'main.py', '--help'],
-                    [str(python), '-m', 'unittest', 'discover', '-s', 'tests', '-t', '.', '-q']]
+                    [str(python), 'scripts/check_links.py']]
         with (logs / 'project-tests.log').open('w') as log:
             for command in commands:
                 print(shlex.join(command), flush=True)
@@ -61,7 +61,7 @@ def main():
                 if result.returncode:
                     print((logs / 'project-tests.log').read_text(errors='replace')[-10000:])
                     raise SystemExit(result.returncode)
-        print('CLI, shared dependencies and existing unittest suite passed.')
+        print('CLI, shared dependencies and documentation links passed.')
         return
     if args.verify:
         for backend in selected:

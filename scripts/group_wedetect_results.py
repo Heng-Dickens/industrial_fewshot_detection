@@ -12,6 +12,7 @@ from run_wedetect_chache_prompts import (
 )
 from relocate_wedetect_comparison import PROTECTED, records_digest, verify
 from organize_results import checked, relocate, relocate_text
+from industrial_fewshot.comparison_layout import comparison_dir
 from industrial_fewshot.cache import image_sha256
 from industrial_fewshot.data.labelme import read_json, write_json
 from industrial_fewshot.prompt_records import refresh_prompt_index
@@ -32,7 +33,7 @@ def group_results(output):
         assert read_json(source/'summary.json')['failed_request_count'] == 0, source
         assert all((source/label/'metrics.json').is_file() for label in LABELS), source
     plan = reserve_runs(output, copy.deepcopy(old_plan))
-    archive = ROOT/'outputs/archive/previous_prompt_layout'/output.name
+    archive = ROOT/'outputs/_shared/archive/history/previous_prompt_layout'/output.name
     backup = ROOT/'.planning'/f'{output.name}_method_layout_backup'
     if backup.exists():
         raise RuntimeError(f'Refusing to overwrite backup: {backup}')
@@ -116,10 +117,10 @@ def group_results(output):
     save(output/'comparison.json',comparison)
     save(output/'run_index.json',dict(runs=plan['runs'],runtime_dir=str(runtime),migration=str(journal)))
     path = output/'report.md'
-    save(path,path.read_text().replace('outputs/runs/chache_val300/文字提示_vN/wedetect_base_0shot/',
-        'outputs/runs/chache_val300/WeDetect/wedetect_base_0shot_prompt_vN/'))
+    save(path,path.read_text().replace('outputs/chache_val300/文字提示_vN/wedetect_base_0shot/',
+        'outputs/WeDetect/experiments/chache_val300/wedetect_base_0shot_prompt_vN/'))
     method_dir = Path(next(iter(plan['runs'].values()))['run_dir']).parent
-    for root in [ROOT/'outputs/runs',method_dir.parent,method_dir]:
+    for root in [ROOT/'outputs',method_dir.parent,method_dir]:
         refresh_prompt_index(root)
     refresh_method_results(method_dir)
     verify(manifest)
@@ -130,7 +131,7 @@ def group_results(output):
 
 if __name__ == '__main__':
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output',type=Path,default=ROOT/'outputs/comparisons/wedetect_chache_prompts_20261027')
+    parser.add_argument('--output',type=Path,default=comparison_dir('wedetect_chache_prompts_20261027'))
     parser.add_argument('--apply',action='store_true',required=True)
     args=parser.parse_args()
     group_results(args.output.resolve())

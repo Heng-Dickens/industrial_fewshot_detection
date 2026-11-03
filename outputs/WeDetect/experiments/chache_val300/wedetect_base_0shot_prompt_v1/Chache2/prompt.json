@@ -1,0 +1,23 @@
+{
+  "schema": "industrial_fewshot.prompt.v1",
+  "backend": "wedetect",
+  "model": "/home/yuheng/Work/industrial_fewshot_detection/weights/wedetect/wedetect_base.pth",
+  "kind": "text",
+  "text": "搬运车",
+  "text_sha256": "0d999bc48ea38b2b9527b9d9a907c231c7f504977baaee840c7e39eab76a703e",
+  "text_source": "wedetect.text_prompt",
+  "references": null,
+  "review_template": "",
+  "reference_inputs": {
+    "mode": "wedetect",
+    "counts": {
+      "reference_examples": 0,
+      "reference_crops": 0,
+      "reference_negatives": 0,
+      "reference_originals": 0,
+      "reference_boxed_images": 0
+    },
+    "manifest_sha256": "810c2501623dabd03b941a3125d71ee5c870c7c0dd44b33f81f102ba469c220b"
+  },
+  "request_signature": "a2c4e57085d55e5da4a920b2a941d376f770be37322472c4c89a8442a5b7e872"
+}

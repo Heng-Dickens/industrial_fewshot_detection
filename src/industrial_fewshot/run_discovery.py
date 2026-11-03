@@ -4,7 +4,8 @@ import logging
 
 LOGGER = logging.getLogger(__name__)
 
-EXCLUDED = {'legacy', 'runtime', '.inference_cache', 'logs', 'predictions', 'feedback', 'visualizations', 'test_tmp_reference_suite'}
+EXCLUDED = {'legacy', 'runtime', '_shared', 'finetune', 'comparisons', 'scripts',
+            '.inference_cache', 'logs', 'predictions', 'feedback', 'visualizations', 'test_tmp_reference_suite'}
 
 
 def saved_runs(root: Path):

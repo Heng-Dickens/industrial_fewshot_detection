@@ -3,7 +3,7 @@
 extends: [mllm_ablation.yaml, ../common/diaowu_val300.yaml]
 model: qwen3.8-27b
 prompt_file: ../../src/industrial_fewshot/prompts/templates/diaowu.txt
-output_dir: ../../outputs/runs
+output_dir: ../../outputs
 results_layout: true
 # 单独缓存版本：本次600张次重新推理；中断后仍可复用本次成功结果。
 cache_version: diaowu_large_v2_qwen27b_text_ob5_v1

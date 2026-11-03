@@ -1,0 +1,75 @@
+{
+  "scene_name": "mold_workshop_hanging_object_yoloe",
+  "task_id": "diaowu",
+  "labels": [
+    {
+      "name": "hanging object",
+      "description": "模具车间内符合吊物标注规则的被吊物本体及应纳入框选的组件"
+    }
+  ],
+  "dataset": {
+    "image_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+    "ground_truth_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+    "recursive": true,
+    "missing_ground_truth": "negative",
+    "manifest_file": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\splits\\diaowu\\test.json"
+  },
+  "reference_image_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu\\references",
+  "support_manifest_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\supports\\diaowu",
+  "preparation": {
+    "prepared_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\processed\\diaowu",
+    "splits_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\splits\\diaowu",
+    "supports_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\supports\\diaowu",
+    "support_counts": [
+      1,
+      5,
+      10,
+      25
+    ],
+    "support_seeds": [
+      0
+    ],
+    "split_seed": 0,
+    "group_by": "parent",
+    "split_ratios": {
+      "train": 0,
+      "val": 0,
+      "test": 1
+    }
+  },
+  "evaluation": {
+    "iou_threshold": 0.5,
+    "score_threshold": 0.5,
+    "max_detections_per_image": 100,
+    "loss_weights": {
+      "box_l1": 1.0,
+      "box_iou": 1.0,
+      "false_positive": 1.0,
+      "false_negative": 1.0
+    }
+  },
+  "backend": "yoloe",
+  "mode": "train",
+  "image_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+  "ground_truth_dir": null,
+  "recursive": true,
+  "missing_ground_truth": "negative",
+  "yoloe": {
+    "source_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\third_party\\yoloe",
+    "weights": "D:\\Learn\\VLM\\industrial_fewshot_detection\\weights\\yoloe\\yoloe-v8l-seg.pt",
+    "positive_count": 25,
+    "selection_seed": 0,
+    "aggregation": "normalized_mean",
+    "device": "cpu",
+    "torch_threads": 4,
+    "imgsz": 640,
+    "confidence": 0.001,
+    "nms_iou": 0.7,
+    "max_detections": 100,
+    "exclude_reference_overlap": true
+  },
+  "output_dir": "D:\\Learn\\VLM\\industrial_fewshot_detection\\outputs\\runs",
+  "output_suffix": "_yoloe_annotations",
+  "reuse_predictions": true,
+  "cache_version": "v1"
+}

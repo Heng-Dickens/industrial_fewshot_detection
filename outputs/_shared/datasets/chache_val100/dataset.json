@@ -1,0 +1,9 @@
+{
+  "identity": "5f40a57f0fd83edf2ddf76c774de60a84a901d1e1900192b360580acd6028bf1",
+  "name": "chache_val100",
+  "image_count": 100,
+  "image_dir": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val100/images",
+  "ground_truth_dir": "/home/yuheng/Work/industrial_fewshot_detection/data/raw/chache_val100/images",
+  "dataset_manifest": "/home/yuheng/Work/industrial_fewshot_detection/outputs/OVD-MLLM/experiments/chache_val100/yoloe_v8l_10shot_qwen38_v1_20261030/cohort.json",
+  "dataset_sha256": "5f40a57f0fd83edf2ddf76c774de60a84a901d1e1900192b360580acd6028bf1"
+}

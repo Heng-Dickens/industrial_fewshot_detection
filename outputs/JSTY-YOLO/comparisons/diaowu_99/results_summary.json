@@ -1,0 +1,93 @@
+{
+  "schema": "industrial_fewshot.dataset_summary.v1",
+  "dataset": {
+    "identity": "65dcc186b3d1d8cc2de51f6ca992bd5b629be8c987a111692306d386d5f4a22a",
+    "name": "diaowu_99",
+    "image_count": 99,
+    "image_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+    "ground_truth_dir": "D:\\Data\\江苏通用\\训练数据\\模具吊物喷油\\模具车间1\\00000",
+    "dataset_manifest": "D:\\Learn\\VLM\\industrial_fewshot_detection\\data\\splits\\diaowu\\test.json",
+    "dataset_sha256": "65dcc186b3d1d8cc2de51f6ca992bd5b629be8c987a111692306d386d5f4a22a"
+  },
+  "manifest_available": true,
+  "class_ground_truth_counts": {
+    "hanging object": 55
+  },
+  "row_count": 1,
+  "counts": {
+    "完成（元数据）": 1
+  },
+  "methods": {
+    "JSTY-YOLO（监督）": 1
+  },
+  "rows": [
+    {
+      "dataset": "diaowu_99",
+      "method": "JSTY-YOLO（监督）",
+      "model": "jsty_hanging_object_det1_0_0_0_1_fp32",
+      "prompt_version": "监督检测",
+      "prompt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "shot_per_class": null,
+      "input": "监督检测",
+      "negative_references": 0,
+      "reference_images": 0,
+      "seed": null,
+      "protocol": "",
+      "repeat": 1,
+      "AP50": 0.9321243125503487,
+      "AP75": 0.9321243125503487,
+      "AP50_95": 0.8318265373876764,
+      "precision_0_5": 0.8666666666666667,
+      "recall_0_5": 0.9454545454545454,
+      "f1_0_5": null,
+      "f2_0_5": 0.9285714285714287,
+      "tp_0_5": 52,
+      "fp_0_5": 8,
+      "fn_0_5": 3,
+      "precision_0_7": 0.9411764705882353,
+      "recall_0_7": 0.8727272727272727,
+      "f1_0_7": null,
+      "f2_0_7": 0.8856088560885608,
+      "tp_0_7": 48,
+      "fp_0_7": 3,
+      "fn_0_7": 7,
+      "total_images": 99,
+      "evaluated_images": 99,
+      "success_images": null,
+      "failed_images": 0,
+      "ground_truth_count": 55,
+      "classes": {
+        "hanging object": 55
+      },
+      "class_AP50": {
+        "hanging object": 0.9321243125503487
+      },
+      "status": "完成（元数据）",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "仅保存的指标与元数据",
+      "dataset_sha256": "65dcc186b3d1d8cc2de51f6ca992bd5b629be8c987a111692306d386d5f4a22a",
+      "iou_threshold": 0.5,
+      "max_detections_per_image": 100,
+      "default_score_threshold": 0.5,
+      "review_enabled": false,
+      "review_fallback_count": null,
+      "run_dir": "../../experiments/diaowu_99/jsty_hanging_object_det1_0_0_0_1_fp32",
+      "report": "../../experiments/diaowu_99/jsty_hanging_object_det1_0_0_0_1_fp32/evaluation.txt",
+      "prompt_file": "../../experiments/diaowu_99/jsty_hanging_object_det1_0_0_0_1_fp32/prompt.txt",
+      "metric_file": "../../experiments/diaowu_99/jsty_hanging_object_det1_0_0_0_1_fp32/metrics.json",
+      "component_runs": [],
+      "record_evidence": null,
+      "notes": "本机无records.jsonl，未进行逐图内容核验"
+    }
+  ],
+  "coverage": {
+    "primary_runs": 1,
+    "component_runs": 0,
+    "metadata_directories": 1
+  },
+  "generated_at": "2026-10-30 16:03:05",
+  "method_folder": "JSTY-YOLO"
+}

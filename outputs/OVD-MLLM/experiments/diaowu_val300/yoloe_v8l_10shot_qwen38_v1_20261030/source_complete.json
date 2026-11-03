@@ -1,0 +1,12 @@
+{
+  "scene": "diaowu",
+  "split": "val300",
+  "images": 300,
+  "predictions": 30000,
+  "candidate_floor": 0.001,
+  "reference_shot_per_class": 10,
+  "labels": [
+    "hanging object"
+  ],
+  "stamp": "yoloe_v8l_10shot_qwen38_v1_20261030"
+}

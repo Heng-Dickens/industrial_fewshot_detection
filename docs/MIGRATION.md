@@ -7,13 +7,13 @@
 | 原路径 | 当前实现／数据 |
 |---|---|
 | `annotate/*.py` | `src/industrial_fewshot/` 的 runner、config、detectors、data、evaluation 等模块 |
-| `annotate/tests` | `tests/` |
+| `annotate/tests` | 已按目录精简要求移除 |
 | `config/*.json` | 共享设置在 `configs/common/`，专用JSON与实验YAML在 `configs/specific/` |
 | `prompts` | `src/industrial_fewshot/prompts/templates` |
 | `data/DiaoWuexample_prepared` | `data/references/diaowu` |
 | `data/DiaoGouexample` | `data/references/diaogou` |
 | `data/Chacheexampledata` | `data/references/chache/review` |
-| `runs` | `outputs/archive/runs_legacy` |
+| `runs` | `outputs/_shared/archive/history/runs_legacy` |
 | `tool` 的完整实现 | `src/industrial_fewshot`，新入口在 `scripts` |
 | `annotate` 中的指南 | `docs/guides` |
 
