@@ -1,0 +1,230 @@
+{
+  "schema": "cascade.stage_equivalence.v1",
+  "merge_rule": "Merge filtered/deduplicated only when all 300 complete records are exactly identical; retain both actual runs in the topic CSV and raw ledger.",
+  "groups": [
+    {
+      "dataset": "chache_val300",
+      "method": "pretrained",
+      "image_count": 300,
+      "record_files": {
+        "source": "outputs/OVD-MLLM/experiments/chache_val300/yoloe_v8l_10shot_qwen38_v1_20261030/source/records.jsonl",
+        "baseline": "outputs/OVD-MLLM/experiments/chache_val300/yoloe_v8l_10shot_qwen38_v1_20261030/baseline/records.jsonl",
+        "filtered": "outputs/OVD-MLLM/experiments/chache_val300/yoloe_v8l_10shot_qwen38_v1_20261030/filtered/records.jsonl",
+        "deduplicated": "outputs/OVD-MLLM/experiments/chache_val300/yoloe_v8l_10shot_qwen38_v1_20261030/deduplicated/records.jsonl"
+      },
+      "record_sha256": {
+        "source": "5bfd43384cfb1814a2a3272314401da10ecab04f4c153d4e3d2d4cab127da733",
+        "baseline": "8583f1c23b3707c3cb0374a5a9ed6883620fcda83cb011a8183718bce757f177",
+        "filtered": "5e6726522609f7a6f3dc1fec404eaa81c4926996a29c8410c8adbb8c5ced357d",
+        "deduplicated": "650ff1a7d7aaf765bf382b35f9e8213a425b653c3fec19537d637edb8f072356"
+      },
+      "box_counts": {
+        "source": 122211,
+        "baseline": 38252,
+        "filtered": 1812,
+        "deduplicated": 1766
+      },
+      "filtered_deduplicated_identical": false,
+      "filtered_deduplicated_metrics_identical": false,
+      "dedup_changed_images": 33,
+      "source_baseline_operating_predictions_identical": true,
+      "dedup_removed_boxes": 46
+    },
+    {
+      "dataset": "chache_val300",
+      "method": "savpe_frozen",
+      "image_count": 300,
+      "record_files": {
+        "source": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/source/records.jsonl",
+        "baseline": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/baseline/records.jsonl",
+        "filtered": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/filtered/records.jsonl",
+        "deduplicated": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/deduplicated/records.jsonl"
+      },
+      "record_sha256": {
+        "source": "4d3ba901a695198bcec1cea3d32fe9c0ae83fe6cb3ee5fa9a5f7290711b87b96",
+        "baseline": "e743a6130dff9320b1fe6f850e340a98397af16cb1f403f5f48fbf8887b8374e",
+        "filtered": "5fe87be2105b2ce7a7d72775bbba22a5d19f92585935d72b3ab5a8cc4776346b",
+        "deduplicated": "5fe87be2105b2ce7a7d72775bbba22a5d19f92585935d72b3ab5a8cc4776346b"
+      },
+      "box_counts": {
+        "source": 16878,
+        "baseline": 3651,
+        "filtered": 203,
+        "deduplicated": 203
+      },
+      "filtered_deduplicated_identical": true,
+      "filtered_deduplicated_metrics_identical": true,
+      "dedup_changed_images": 0,
+      "source_baseline_operating_predictions_identical": true,
+      "dedup_removed_boxes": 0
+    },
+    {
+      "dataset": "chache_val300",
+      "method": "head",
+      "image_count": 300,
+      "record_files": {
+        "source": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_head_10shot_qwen27b_1shot_20261103/source/records.jsonl",
+        "baseline": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_head_10shot_qwen27b_1shot_20261103/baseline/records.jsonl",
+        "filtered": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_head_10shot_qwen27b_1shot_20261103/filtered/records.jsonl",
+        "deduplicated": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_head_10shot_qwen27b_1shot_20261103/deduplicated/records.jsonl"
+      },
+      "record_sha256": {
+        "source": "a69e71cfba9ced34212ef34d2d512b759b2ebed5a18a4c1cb88ecddaad364a02",
+        "baseline": "5810ae96bfbe0b4fcd3c6a42d24417f93f83e46d6c037ef9f18a3a498a6ccd05",
+        "filtered": "92850c275208df95efaf775b7932e197fef00000fa1f9709b835ed66df9a8288",
+        "deduplicated": "92850c275208df95efaf775b7932e197fef00000fa1f9709b835ed66df9a8288"
+      },
+      "box_counts": {
+        "source": 1283,
+        "baseline": 445,
+        "filtered": 137,
+        "deduplicated": 137
+      },
+      "filtered_deduplicated_identical": true,
+      "filtered_deduplicated_metrics_identical": true,
+      "dedup_changed_images": 0,
+      "source_baseline_operating_predictions_identical": true,
+      "dedup_removed_boxes": 0
+    },
+    {
+      "dataset": "chache_val300",
+      "method": "savpe_train",
+      "image_count": 300,
+      "record_files": {
+        "source": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/source/records.jsonl",
+        "baseline": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/baseline/records.jsonl",
+        "filtered": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/filtered/records.jsonl",
+        "deduplicated": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/deduplicated/records.jsonl"
+      },
+      "record_sha256": {
+        "source": "b09eb371898f5031af42f50c2bba0b8e45c9cc5f7fff57decb2e12d9d93a21dc",
+        "baseline": "8a9764b0943a81ee28c5821eaf94a80073a77c13cfd3a78f8186dda2ebc2c5b5",
+        "filtered": "843f9c6cdeef638928259b309a461b9a0b42a562c7b391ea8d5d439bba235b66",
+        "deduplicated": "843f9c6cdeef638928259b309a461b9a0b42a562c7b391ea8d5d439bba235b66"
+      },
+      "box_counts": {
+        "source": 15544,
+        "baseline": 3250,
+        "filtered": 190,
+        "deduplicated": 190
+      },
+      "filtered_deduplicated_identical": true,
+      "filtered_deduplicated_metrics_identical": true,
+      "dedup_changed_images": 0,
+      "source_baseline_operating_predictions_identical": true,
+      "dedup_removed_boxes": 0
+    },
+    {
+      "dataset": "diaowu_val300",
+      "method": "pretrained",
+      "image_count": 300,
+      "record_files": {
+        "source": "outputs/OVD-MLLM/experiments/diaowu_val300/yoloe_v8l_10shot_qwen38_v1_20261030/source/records.jsonl",
+        "baseline": "outputs/OVD-MLLM/experiments/diaowu_val300/yoloe_v8l_10shot_qwen38_v1_20261030/baseline/records.jsonl",
+        "filtered": "outputs/OVD-MLLM/experiments/diaowu_val300/yoloe_v8l_10shot_qwen38_v1_20261030/filtered/records.jsonl",
+        "deduplicated": "outputs/OVD-MLLM/experiments/diaowu_val300/yoloe_v8l_10shot_qwen38_v1_20261030/deduplicated/records.jsonl"
+      },
+      "record_sha256": {
+        "source": "984e361e7dd78b45f4f80deb82c06f7008807de6b48518ee93194c551ca958cf",
+        "baseline": "1ea7d00fba1bbf48b2f48320d24d7c1d8a87f19e1d8565422f38fe5e5146608b",
+        "filtered": "943fd361e49a7a8d4bd9afca6ff6369d0135370d46109689d0bf8814f1f5d501",
+        "deduplicated": "943fd361e49a7a8d4bd9afca6ff6369d0135370d46109689d0bf8814f1f5d501"
+      },
+      "box_counts": {
+        "source": 30000,
+        "baseline": 5867,
+        "filtered": 367,
+        "deduplicated": 367
+      },
+      "filtered_deduplicated_identical": true,
+      "filtered_deduplicated_metrics_identical": true,
+      "dedup_changed_images": 0,
+      "source_baseline_operating_predictions_identical": true,
+      "dedup_removed_boxes": 0
+    },
+    {
+      "dataset": "diaowu_val300",
+      "method": "savpe_frozen",
+      "image_count": 300,
+      "record_files": {
+        "source": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/source/records.jsonl",
+        "baseline": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/baseline/records.jsonl",
+        "filtered": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/filtered/records.jsonl",
+        "deduplicated": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/deduplicated/records.jsonl"
+      },
+      "record_sha256": {
+        "source": "323d33371beecaa4eefec258a64aec4b83659cd010716a894cb319828ea3155e",
+        "baseline": "484f31a783e290563b4035bc24091a23172543bd1c56e1f147dbc6f4a252a5f9",
+        "filtered": "a4fcb053fc277b78e39f94ac16595ccb8b8ad4d3c98bbecd5c081ea183e4b20b",
+        "deduplicated": "a4fcb053fc277b78e39f94ac16595ccb8b8ad4d3c98bbecd5c081ea183e4b20b"
+      },
+      "box_counts": {
+        "source": 2091,
+        "baseline": 487,
+        "filtered": 231,
+        "deduplicated": 231
+      },
+      "filtered_deduplicated_identical": true,
+      "filtered_deduplicated_metrics_identical": true,
+      "dedup_changed_images": 0,
+      "source_baseline_operating_predictions_identical": true,
+      "dedup_removed_boxes": 0
+    },
+    {
+      "dataset": "diaowu_val300",
+      "method": "head",
+      "image_count": 300,
+      "record_files": {
+        "source": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_head_10shot_qwen27b_1shot_20261103/source/records.jsonl",
+        "baseline": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_head_10shot_qwen27b_1shot_20261103/baseline/records.jsonl",
+        "filtered": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_head_10shot_qwen27b_1shot_20261103/filtered/records.jsonl",
+        "deduplicated": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_head_10shot_qwen27b_1shot_20261103/deduplicated/records.jsonl"
+      },
+      "record_sha256": {
+        "source": "aafeb34a8c854061a2ca1c87099965a31e125ab8b15201a33a15c37ccbe1e50b",
+        "baseline": "f1efe8bda5b3b0a2047b5d6392cc74582adffacd73f3f093f590a145c6deaa5c",
+        "filtered": "21c600c5b894e7509c2ffae1b4646e1405346d8c46bd3ede5870ff88baee7b29",
+        "deduplicated": "21c600c5b894e7509c2ffae1b4646e1405346d8c46bd3ede5870ff88baee7b29"
+      },
+      "box_counts": {
+        "source": 1333,
+        "baseline": 505,
+        "filtered": 228,
+        "deduplicated": 228
+      },
+      "filtered_deduplicated_identical": true,
+      "filtered_deduplicated_metrics_identical": true,
+      "dedup_changed_images": 0,
+      "source_baseline_operating_predictions_identical": true,
+      "dedup_removed_boxes": 0
+    },
+    {
+      "dataset": "diaowu_val300",
+      "method": "savpe_train",
+      "image_count": 300,
+      "record_files": {
+        "source": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/source/records.jsonl",
+        "baseline": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/baseline/records.jsonl",
+        "filtered": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/filtered/records.jsonl",
+        "deduplicated": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/deduplicated/records.jsonl"
+      },
+      "record_sha256": {
+        "source": "81398d4e236153e5ce82b14fb5840a4de158bb9f4ed08939ca34ebb87a398223",
+        "baseline": "7df23370c621d6c19dc555c174ac6d1167ad14910a89ed152352611c4df3ce99",
+        "filtered": "2b5ce92317ac3bdebbe907d63b83a6046dd2dea8a2f10b16ac10e46feff7295b",
+        "deduplicated": "2b5ce92317ac3bdebbe907d63b83a6046dd2dea8a2f10b16ac10e46feff7295b"
+      },
+      "box_counts": {
+        "source": 1318,
+        "baseline": 405,
+        "filtered": 228,
+        "deduplicated": 228
+      },
+      "filtered_deduplicated_identical": true,
+      "filtered_deduplicated_metrics_identical": true,
+      "dedup_changed_images": 0,
+      "source_baseline_operating_predictions_identical": true,
+      "dedup_removed_boxes": 0
+    }
+  ]
+}

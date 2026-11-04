@@ -1,0 +1,6 @@
+{
+  "method": "OVD-MLLM",
+  "dataset": "chache_val300",
+  "stage": "filtered",
+  "source_run": "outputs/YOLOE/finetune/chache_val300/runs/yoloe_search_20261029_r2/vp_cross_neck/test_val300/visual_10shot"
+}

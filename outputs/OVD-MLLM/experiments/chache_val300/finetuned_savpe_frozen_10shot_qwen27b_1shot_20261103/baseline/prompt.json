@@ -1,0 +1,6 @@
+{
+  "text": "",
+  "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "reference_shot_per_class": 0,
+  "input_protocol": "finetuned.cascade.original1280+overlay24px+context1.5.crop640.v1"
+}

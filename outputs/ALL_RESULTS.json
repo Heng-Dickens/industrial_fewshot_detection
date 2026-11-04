@@ -4,7 +4,7 @@
     "chache_val300",
     "diaowu_val300"
   ],
-  "row_count": 190,
+  "row_count": 201,
   "rows": [
     {
       "dataset": "chache_val300",
@@ -17426,6 +17426,1061 @@
       "training_regime": "fewshot微调→Qwen候选复核",
       "training_shot_per_class": 10,
       "training_image_count": 50,
+      "inference_shot_per_class": 10,
+      "mllm_reference_shot_per_class": 0,
+      "negative_references": 0,
+      "savpe": "冻结",
+      "training_scope": "",
+      "training_protocol": "",
+      "seed": null,
+      "support_seed": null,
+      "prompt_version": "finetuned_cascade_v1",
+      "input_variant": "baseline",
+      "input_size": "",
+      "precision": null,
+      "AP50": 0.5899281827523616,
+      "AP75": 0.4972750814064918,
+      "AP50_95": 0.46073283680319654,
+      "AP_box20": null,
+      "mean_matched_iou": 0.8690632375298892,
+      "image_accuracy": 0.4866666666666667,
+      "negative_false_positive_rate": 0.2222222222222222,
+      "negative_error_rate": 0.2222222222222222,
+      "correct_images": 146,
+      "negative_images": 126,
+      "negative_fp_images": 28,
+      "negative_failed_images": 0,
+      "total_images": 300,
+      "success_images": 300,
+      "failed_images": 0,
+      "ground_truth_count": 188,
+      "status": "完成",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "逐图内容核验",
+      "iou_threshold": 0.5,
+      "operating_score": 0.5,
+      "max_detections": 100,
+      "candidate_floor": null,
+      "nms_iou": null,
+      "execution_device": "",
+      "elapsed_seconds": null,
+      "run_dir": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/baseline",
+      "metric_file": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/baseline/metrics.json",
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/baseline/evaluation.txt",
+      "metrics_sha256": "3bdc55614d7d2587e274dac44b9a084b8b2f4158b8c5230e800a2165cf6a927d",
+      "weights_sha256": null,
+      "dataset_sha256": "7a2b3d9dafdf98a26aa4d476a01b7798547f417cc045a095839fcc1923d26266",
+      "notes": "清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集",
+      "prompt_file": "",
+      "prompt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "training_seed": null,
+      "cascade_method": "savpe_frozen",
+      "cascade_source_run": "outputs/YOLOE/finetune/chache_val300/runs/yoloe_chache_frozen_savpe_20261030/vp_cross_neck_frozen_savpe_seed1/test_val300/visual_10shot",
+      "per_class": {
+        "Chache1": {
+          "ground_truth_count": 40,
+          "tp": 10,
+          "fp": 55,
+          "fn": 30,
+          "precision": 0.15384615384615385,
+          "recall": 0.25,
+          "f1": 0.1904761904761905,
+          "AP50": 0.18651328897727648,
+          "AP75": 0.13347225079217834,
+          "AP50_95": 0.13544446181990205,
+          "ap_by_iou": {
+            "0.5": 0.18651328897727648,
+            "0.55": 0.1762314358396083,
+            "0.6": 0.1672258357673672,
+            "0.65": 0.14770203367269247,
+            "0.7": 0.13977729192358626,
+            "0.75": 0.13347225079217834,
+            "0.8": 0.12612367216409665,
+            "0.85": 0.12612367216409665,
+            "0.9": 0.08390010671217286,
+            "0.95": 0.06737503018594541
+          },
+          "f2": 0.22222222222222224
+        },
+        "Chache2": {
+          "ground_truth_count": 30,
+          "tp": 17,
+          "fp": 51,
+          "fn": 13,
+          "precision": 0.25,
+          "recall": 0.5666666666666667,
+          "f1": 0.3469387755102041,
+          "AP50": 0.4679899279615833,
+          "AP75": 0.40782174555836526,
+          "AP50_95": 0.3598372764664851,
+          "ap_by_iou": {
+            "0.5": 0.4679899279615833,
+            "0.55": 0.4665132984630693,
+            "0.6": 0.4665132984630693,
+            "0.65": 0.43380179355327975,
+            "0.7": 0.422747452412951,
+            "0.75": 0.40782174555836526,
+            "0.8": 0.4040585726616626,
+            "0.85": 0.3828032149255439,
+            "0.9": 0.1380223436844805,
+            "0.95": 0.008101116980845932
+          },
+          "f2": 0.45212765957446804
+        },
+        "Chache3": {
+          "ground_truth_count": 40,
+          "tp": 30,
+          "fp": 19,
+          "fn": 10,
+          "precision": 0.6122448979591837,
+          "recall": 0.75,
+          "f1": 0.6741573033707865,
+          "AP50": 0.6602469325535539,
+          "AP75": 0.40956508353289833,
+          "AP50_95": 0.43668422850464755,
+          "ap_by_iou": {
+            "0.5": 0.6602469325535539,
+            "0.55": 0.6602469325535539,
+            "0.6": 0.6585788689371828,
+            "0.65": 0.59110884666238,
+            "0.7": 0.5541101946248178,
+            "0.75": 0.40956508353289833,
+            "0.8": 0.3544630450558502,
+            "0.85": 0.28684418512952514,
+            "0.9": 0.1553745656336767,
+            "0.95": 0.036303630363036306
+          },
+          "f2": 0.7177033492822967
+        },
+        "Chache4": {
+          "ground_truth_count": 30,
+          "tp": 28,
+          "fp": 37,
+          "fn": 2,
+          "precision": 0.4307692307692308,
+          "recall": 0.9333333333333333,
+          "f1": 0.5894736842105264,
+          "AP50": 0.7192176304733828,
+          "AP75": 0.6439610403231606,
+          "AP50_95": 0.6061747925510445,
+          "ap_by_iou": {
+            "0.5": 0.7192176304733828,
+            "0.55": 0.7192176304733828,
+            "0.6": 0.6811705383613422,
+            "0.65": 0.6811705383613422,
+            "0.7": 0.6811705383613422,
+            "0.75": 0.6439610403231606,
+            "0.8": 0.5776981177784144,
+            "0.85": 0.5498823211814271,
+            "0.9": 0.5007186202491211,
+            "0.95": 0.3075409499475292
+          },
+          "f2": 0.7567567567567568
+        },
+        "Qianyinche": {
+          "ground_truth_count": 48,
+          "tp": 43,
+          "fp": 13,
+          "fn": 5,
+          "precision": 0.7678571428571429,
+          "recall": 0.8958333333333334,
+          "f1": 0.8269230769230769,
+          "AP50": 0.9156731337960117,
+          "AP75": 0.8915552868258566,
+          "AP50_95": 0.7655234246739034,
+          "ap_by_iou": {
+            "0.5": 0.9156731337960117,
+            "0.55": 0.9109534443271574,
+            "0.6": 0.904987994225662,
+            "0.65": 0.8915552868258566,
+            "0.7": 0.8915552868258566,
+            "0.75": 0.8915552868258566,
+            "0.8": 0.8547242089963414,
+            "0.85": 0.7146132716835101,
+            "0.9": 0.6704769577567735,
+            "0.95": 0.009139375476009138
+          },
+          "f2": 0.8669354838709677
+        }
+      },
+      "AP85": 0.41205333301682057,
+      "AP90": 0.3096985188072449,
+      "AP95": 0.08569202059067318,
+      "COCO_AR100": 0.7403333333333333,
+      "COCO_AP_small": null,
+      "COCO_AP_medium": 0.4132250585991943,
+      "COCO_AP_large": 0.4881204042944504,
+      "precision_0_5": 0.42244224422442245,
+      "recall_0_5": 0.6808510638297872,
+      "f1_0_5": 0.5213849287169043,
+      "f2_0_5": 0.6066350710900473,
+      "tp_0_5": 128,
+      "fp_0_5": 175,
+      "fn_0_5": 60,
+      "precision_0_7": 0.5091743119266054,
+      "recall_0_7": 0.5904255319148937,
+      "f1_0_7": 0.5467980295566502,
+      "f2_0_7": 0.5721649484536082,
+      "tp_0_7": 111,
+      "fp_0_7": 107,
+      "fn_0_7": 77,
+      "id": 84
+    },
+    {
+      "dataset": "chache_val300",
+      "algorithm": "OVD-MLLM",
+      "model": "yoloe→qwen3.8-27b",
+      "experiment": "deduplicated / finetuned_cascade_v1 / deduplicated",
+      "training_regime": "fewshot微调→Qwen候选复核",
+      "training_shot_per_class": 10,
+      "training_image_count": 50,
+      "inference_shot_per_class": 10,
+      "mllm_reference_shot_per_class": 1,
+      "negative_references": 0,
+      "savpe": "冻结",
+      "training_scope": "",
+      "training_protocol": "",
+      "seed": null,
+      "support_seed": null,
+      "prompt_version": "finetuned_cascade_v1",
+      "input_variant": "deduplicated",
+      "input_size": "",
+      "precision": null,
+      "AP50": 0.42268351777766144,
+      "AP75": 0.3662331516552465,
+      "AP50_95": 0.33285499207323366,
+      "AP_box20": null,
+      "mean_matched_iou": 0.889982835912063,
+      "image_accuracy": 0.6466666666666666,
+      "negative_false_positive_rate": 0.0,
+      "negative_error_rate": 0.0,
+      "correct_images": 194,
+      "negative_images": 126,
+      "negative_fp_images": 0,
+      "negative_failed_images": 0,
+      "total_images": 300,
+      "success_images": 300,
+      "failed_images": 0,
+      "ground_truth_count": 188,
+      "status": "完成",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "逐图内容核验",
+      "iou_threshold": 0.5,
+      "operating_score": 0.5,
+      "max_detections": 100,
+      "candidate_floor": null,
+      "nms_iou": null,
+      "execution_device": "",
+      "elapsed_seconds": null,
+      "run_dir": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/deduplicated",
+      "metric_file": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/deduplicated/metrics.json",
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/deduplicated/evaluation.txt",
+      "metrics_sha256": "d0c786d0ab6ebe406cf578700178ac2c00e1907f8d0928a71ec79085f34e1a8b",
+      "weights_sha256": null,
+      "dataset_sha256": "7a2b3d9dafdf98a26aa4d476a01b7798547f417cc045a095839fcc1923d26266",
+      "notes": "清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集",
+      "prompt_file": "",
+      "prompt_sha256": "65c5478e79a5c3225aaa44171c5682b999574f46cb113c0a557aeef74287c7d6",
+      "training_seed": null,
+      "cascade_method": "savpe_frozen",
+      "cascade_source_run": "outputs/YOLOE/finetune/chache_val300/runs/yoloe_chache_frozen_savpe_20261030/vp_cross_neck_frozen_savpe_seed1/test_val300/visual_10shot",
+      "per_class": {
+        "Chache1": {
+          "ground_truth_count": 40,
+          "tp": 8,
+          "fp": 18,
+          "fn": 32,
+          "precision": 0.3076923076923077,
+          "recall": 0.2,
+          "f1": 0.24242424242424246,
+          "AP50": 0.17518001800180014,
+          "AP75": 0.10887028552479311,
+          "AP50_95": 0.1171605976387112,
+          "ap_by_iou": {
+            "0.5": 0.17518001800180014,
+            "0.55": 0.14451858719706548,
+            "0.6": 0.14451858719706548,
+            "0.65": 0.1267773393880742,
+            "0.7": 0.11583413980495788,
+            "0.75": 0.10887028552479311,
+            "0.8": 0.1018208963753518,
+            "0.85": 0.1018208963753518,
+            "0.9": 0.08295829582958295,
+            "0.95": 0.06930693069306931
+          },
+          "f2": 0.21505376344086022
+        },
+        "Chache2": {
+          "ground_truth_count": 30,
+          "tp": 6,
+          "fp": 1,
+          "fn": 24,
+          "precision": 0.8571428571428571,
+          "recall": 0.2,
+          "f1": 0.32432432432432434,
+          "AP50": 0.23391089108910892,
+          "AP75": 0.23391089108910892,
+          "AP50_95": 0.19872112211221124,
+          "ap_by_iou": {
+            "0.5": 0.23391089108910892,
+            "0.55": 0.23391089108910892,
+            "0.6": 0.23391089108910892,
+            "0.65": 0.23391089108910892,
+            "0.7": 0.23391089108910892,
+            "0.75": 0.23391089108910892,
+            "0.8": 0.23391089108910892,
+            "0.85": 0.23391089108910892,
+            "0.9": 0.11097359735973596,
+            "0.95": 0.0049504950495049506
+          },
+          "f2": 0.2362204724409449
+        },
+        "Chache3": {
+          "ground_truth_count": 40,
+          "tp": 9,
+          "fp": 2,
+          "fn": 31,
+          "precision": 0.8181818181818182,
+          "recall": 0.225,
+          "f1": 0.35294117647058826,
+          "AP50": 0.2399811409712399,
+          "AP75": 0.14356435643564353,
+          "AP50_95": 0.16187636620804935,
+          "ap_by_iou": {
+            "0.5": 0.2399811409712399,
+            "0.55": 0.2399811409712399,
+            "0.6": 0.23194998071235692,
+            "0.65": 0.19871094252282365,
+            "0.7": 0.19871094252282365,
+            "0.75": 0.14356435643564353,
+            "0.8": 0.14356435643564353,
+            "0.85": 0.1067892503536068,
+            "0.9": 0.07920792079207922,
+            "0.95": 0.036303630363036306
+          },
+          "f2": 0.2631578947368421
+        },
+        "Chache4": {
+          "ground_truth_count": 30,
+          "tp": 15,
+          "fp": 1,
+          "fn": 15,
+          "precision": 0.9375,
+          "recall": 0.5,
+          "f1": 0.6521739130434783,
+          "AP50": 0.5588558855885587,
+          "AP75": 0.4566831683168318,
+          "AP50_95": 0.4259075907590759,
+          "ap_by_iou": {
+            "0.5": 0.5588558855885587,
+            "0.55": 0.5588558855885587,
+            "0.6": 0.4566831683168318,
+            "0.65": 0.4566831683168318,
+            "0.7": 0.4566831683168318,
+            "0.75": 0.4566831683168318,
+            "0.8": 0.36633663366336633,
+            "0.85": 0.36633663366336633,
+            "0.9": 0.36633663366336633,
+            "0.95": 0.2156215621562157
+          },
+          "f2": 0.5514705882352942
+        },
+        "Qianyinche": {
+          "ground_truth_count": 48,
+          "tp": 42,
+          "fp": 7,
+          "fn": 6,
+          "precision": 0.8571428571428571,
+          "recall": 0.875,
+          "f1": 0.8659793814432989,
+          "AP50": 0.9054896532375994,
+          "AP75": 0.8881370569098551,
+          "AP50_95": 0.7606092836481205,
+          "ap_by_iou": {
+            "0.5": 0.9054896532375994,
+            "0.55": 0.9054896532375994,
+            "0.6": 0.9054896532375994,
+            "0.65": 0.8881370569098551,
+            "0.7": 0.8881370569098551,
+            "0.75": 0.8881370569098551,
+            "0.8": 0.8514403085561799,
+            "0.85": 0.7064977752836006,
+            "0.9": 0.6581352467230523,
+            "0.95": 0.009139375476009138
+          },
+          "f2": 0.871369294605809
+        }
+      },
+      "AP85": 0.3030710893530069,
+      "AP90": 0.25952233887356335,
+      "AP95": 0.06706439874756707,
+      "COCO_AR100": 0.3725,
+      "COCO_AP_small": null,
+      "COCO_AP_medium": 0.3232673267326733,
+      "COCO_AP_large": 0.3525150257884342,
+      "precision_0_5": 0.7339449541284404,
+      "recall_0_5": 0.425531914893617,
+      "f1_0_5": 0.5387205387205388,
+      "f2_0_5": 0.4645760743321719,
+      "tp_0_5": 80,
+      "fp_0_5": 29,
+      "fn_0_5": 108,
+      "precision_0_7": 0.7934782608695652,
+      "recall_0_7": 0.3882978723404255,
+      "f1_0_7": 0.5214285714285714,
+      "f2_0_7": 0.4324644549763033,
+      "tp_0_7": 73,
+      "fp_0_7": 19,
+      "fn_0_7": 115,
+      "id": 85
+    },
+    {
+      "dataset": "chache_val300",
+      "algorithm": "OVD-MLLM",
+      "model": "yoloe→qwen3.8-27b",
+      "experiment": "filtered / finetuned_cascade_v1 / filtered",
+      "training_regime": "fewshot微调→Qwen候选复核",
+      "training_shot_per_class": 10,
+      "training_image_count": 50,
+      "inference_shot_per_class": 10,
+      "mllm_reference_shot_per_class": 1,
+      "negative_references": 0,
+      "savpe": "冻结",
+      "training_scope": "",
+      "training_protocol": "",
+      "seed": null,
+      "support_seed": null,
+      "prompt_version": "finetuned_cascade_v1",
+      "input_variant": "filtered",
+      "input_size": "",
+      "precision": null,
+      "AP50": 0.42268351777766144,
+      "AP75": 0.3662331516552465,
+      "AP50_95": 0.33285499207323366,
+      "AP_box20": null,
+      "mean_matched_iou": 0.889982835912063,
+      "image_accuracy": 0.6466666666666666,
+      "negative_false_positive_rate": 0.0,
+      "negative_error_rate": 0.0,
+      "correct_images": 194,
+      "negative_images": 126,
+      "negative_fp_images": 0,
+      "negative_failed_images": 0,
+      "total_images": 300,
+      "success_images": 300,
+      "failed_images": 0,
+      "ground_truth_count": 188,
+      "status": "完成",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "逐图内容核验",
+      "iou_threshold": 0.5,
+      "operating_score": 0.5,
+      "max_detections": 100,
+      "candidate_floor": null,
+      "nms_iou": null,
+      "execution_device": "",
+      "elapsed_seconds": null,
+      "run_dir": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/filtered",
+      "metric_file": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/filtered/metrics.json",
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/filtered/evaluation.txt",
+      "metrics_sha256": "d0c786d0ab6ebe406cf578700178ac2c00e1907f8d0928a71ec79085f34e1a8b",
+      "weights_sha256": null,
+      "dataset_sha256": "7a2b3d9dafdf98a26aa4d476a01b7798547f417cc045a095839fcc1923d26266",
+      "notes": "清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集",
+      "prompt_file": "",
+      "prompt_sha256": "65c5478e79a5c3225aaa44171c5682b999574f46cb113c0a557aeef74287c7d6",
+      "training_seed": null,
+      "cascade_method": "savpe_frozen",
+      "cascade_source_run": "outputs/YOLOE/finetune/chache_val300/runs/yoloe_chache_frozen_savpe_20261030/vp_cross_neck_frozen_savpe_seed1/test_val300/visual_10shot",
+      "per_class": {
+        "Chache1": {
+          "ground_truth_count": 40,
+          "tp": 8,
+          "fp": 18,
+          "fn": 32,
+          "precision": 0.3076923076923077,
+          "recall": 0.2,
+          "f1": 0.24242424242424246,
+          "AP50": 0.17518001800180014,
+          "AP75": 0.10887028552479311,
+          "AP50_95": 0.1171605976387112,
+          "ap_by_iou": {
+            "0.5": 0.17518001800180014,
+            "0.55": 0.14451858719706548,
+            "0.6": 0.14451858719706548,
+            "0.65": 0.1267773393880742,
+            "0.7": 0.11583413980495788,
+            "0.75": 0.10887028552479311,
+            "0.8": 0.1018208963753518,
+            "0.85": 0.1018208963753518,
+            "0.9": 0.08295829582958295,
+            "0.95": 0.06930693069306931
+          },
+          "f2": 0.21505376344086022
+        },
+        "Chache2": {
+          "ground_truth_count": 30,
+          "tp": 6,
+          "fp": 1,
+          "fn": 24,
+          "precision": 0.8571428571428571,
+          "recall": 0.2,
+          "f1": 0.32432432432432434,
+          "AP50": 0.23391089108910892,
+          "AP75": 0.23391089108910892,
+          "AP50_95": 0.19872112211221124,
+          "ap_by_iou": {
+            "0.5": 0.23391089108910892,
+            "0.55": 0.23391089108910892,
+            "0.6": 0.23391089108910892,
+            "0.65": 0.23391089108910892,
+            "0.7": 0.23391089108910892,
+            "0.75": 0.23391089108910892,
+            "0.8": 0.23391089108910892,
+            "0.85": 0.23391089108910892,
+            "0.9": 0.11097359735973596,
+            "0.95": 0.0049504950495049506
+          },
+          "f2": 0.2362204724409449
+        },
+        "Chache3": {
+          "ground_truth_count": 40,
+          "tp": 9,
+          "fp": 2,
+          "fn": 31,
+          "precision": 0.8181818181818182,
+          "recall": 0.225,
+          "f1": 0.35294117647058826,
+          "AP50": 0.2399811409712399,
+          "AP75": 0.14356435643564353,
+          "AP50_95": 0.16187636620804935,
+          "ap_by_iou": {
+            "0.5": 0.2399811409712399,
+            "0.55": 0.2399811409712399,
+            "0.6": 0.23194998071235692,
+            "0.65": 0.19871094252282365,
+            "0.7": 0.19871094252282365,
+            "0.75": 0.14356435643564353,
+            "0.8": 0.14356435643564353,
+            "0.85": 0.1067892503536068,
+            "0.9": 0.07920792079207922,
+            "0.95": 0.036303630363036306
+          },
+          "f2": 0.2631578947368421
+        },
+        "Chache4": {
+          "ground_truth_count": 30,
+          "tp": 15,
+          "fp": 1,
+          "fn": 15,
+          "precision": 0.9375,
+          "recall": 0.5,
+          "f1": 0.6521739130434783,
+          "AP50": 0.5588558855885587,
+          "AP75": 0.4566831683168318,
+          "AP50_95": 0.4259075907590759,
+          "ap_by_iou": {
+            "0.5": 0.5588558855885587,
+            "0.55": 0.5588558855885587,
+            "0.6": 0.4566831683168318,
+            "0.65": 0.4566831683168318,
+            "0.7": 0.4566831683168318,
+            "0.75": 0.4566831683168318,
+            "0.8": 0.36633663366336633,
+            "0.85": 0.36633663366336633,
+            "0.9": 0.36633663366336633,
+            "0.95": 0.2156215621562157
+          },
+          "f2": 0.5514705882352942
+        },
+        "Qianyinche": {
+          "ground_truth_count": 48,
+          "tp": 42,
+          "fp": 7,
+          "fn": 6,
+          "precision": 0.8571428571428571,
+          "recall": 0.875,
+          "f1": 0.8659793814432989,
+          "AP50": 0.9054896532375994,
+          "AP75": 0.8881370569098551,
+          "AP50_95": 0.7606092836481205,
+          "ap_by_iou": {
+            "0.5": 0.9054896532375994,
+            "0.55": 0.9054896532375994,
+            "0.6": 0.9054896532375994,
+            "0.65": 0.8881370569098551,
+            "0.7": 0.8881370569098551,
+            "0.75": 0.8881370569098551,
+            "0.8": 0.8514403085561799,
+            "0.85": 0.7064977752836006,
+            "0.9": 0.6581352467230523,
+            "0.95": 0.009139375476009138
+          },
+          "f2": 0.871369294605809
+        }
+      },
+      "AP85": 0.3030710893530069,
+      "AP90": 0.25952233887356335,
+      "AP95": 0.06706439874756707,
+      "COCO_AR100": 0.3725,
+      "COCO_AP_small": null,
+      "COCO_AP_medium": 0.3232673267326733,
+      "COCO_AP_large": 0.3525150257884342,
+      "precision_0_5": 0.7339449541284404,
+      "recall_0_5": 0.425531914893617,
+      "f1_0_5": 0.5387205387205388,
+      "f2_0_5": 0.4645760743321719,
+      "tp_0_5": 80,
+      "fp_0_5": 29,
+      "fn_0_5": 108,
+      "precision_0_7": 0.7934782608695652,
+      "recall_0_7": 0.3882978723404255,
+      "f1_0_7": 0.5214285714285714,
+      "f2_0_7": 0.4324644549763033,
+      "tp_0_7": 73,
+      "fp_0_7": 19,
+      "fn_0_7": 115,
+      "id": 86
+    },
+    {
+      "dataset": "chache_val300",
+      "algorithm": "OVD-MLLM",
+      "model": "yoloe→qwen3.8-27b",
+      "experiment": "refined / finetuned_cascade_v1 / refined",
+      "training_regime": "fewshot微调→Qwen候选复核",
+      "training_shot_per_class": 10,
+      "training_image_count": 50,
+      "inference_shot_per_class": 10,
+      "mllm_reference_shot_per_class": 1,
+      "negative_references": 0,
+      "savpe": "冻结",
+      "training_scope": "",
+      "training_protocol": "",
+      "seed": null,
+      "support_seed": null,
+      "prompt_version": "finetuned_cascade_v1",
+      "input_variant": "refined",
+      "input_size": "",
+      "precision": null,
+      "AP50": 0.4996659846868793,
+      "AP75": 0.3728441027968671,
+      "AP50_95": 0.35181260013311794,
+      "AP_box20": null,
+      "mean_matched_iou": 0.8457657176274246,
+      "image_accuracy": 0.69,
+      "negative_false_positive_rate": 0.0,
+      "negative_error_rate": 0.0,
+      "correct_images": 207,
+      "negative_images": 126,
+      "negative_fp_images": 0,
+      "negative_failed_images": 0,
+      "total_images": 300,
+      "success_images": 300,
+      "failed_images": 0,
+      "ground_truth_count": 188,
+      "status": "完成",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "逐图内容核验",
+      "iou_threshold": 0.5,
+      "operating_score": 0.5,
+      "max_detections": 100,
+      "candidate_floor": null,
+      "nms_iou": null,
+      "execution_device": "",
+      "elapsed_seconds": null,
+      "run_dir": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/refined",
+      "metric_file": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/refined/metrics.json",
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/refined/evaluation.txt",
+      "metrics_sha256": "db8b20b5ff5cbac88b01b58ffd8d97ffc7d60f0cffb491d9dbafbfa2e7cf628a",
+      "weights_sha256": null,
+      "dataset_sha256": "7a2b3d9dafdf98a26aa4d476a01b7798547f417cc045a095839fcc1923d26266",
+      "notes": "清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集",
+      "prompt_file": "",
+      "prompt_sha256": "5251e2700e2e0d4f9f26e2e557240d8ccc0cd2887f2ad9cc081b0103b50b9a8f",
+      "training_seed": null,
+      "cascade_method": "savpe_frozen",
+      "cascade_source_run": "outputs/YOLOE/finetune/chache_val300/runs/yoloe_chache_frozen_savpe_20261030/vp_cross_neck_frozen_savpe_seed1/test_val300/visual_10shot",
+      "per_class": {
+        "Chache1": {
+          "ground_truth_count": 40,
+          "tp": 20,
+          "fp": 6,
+          "fn": 20,
+          "precision": 0.7692307692307693,
+          "recall": 0.5,
+          "f1": 0.6060606060606061,
+          "AP50": 0.5308275382892195,
+          "AP75": 0.12189565730766626,
+          "AP50_95": 0.25019071105888585,
+          "ap_by_iou": {
+            "0.5": 0.5308275382892195,
+            "0.55": 0.5308275382892195,
+            "0.6": 0.5038981907928334,
+            "0.65": 0.28132104367277655,
+            "0.7": 0.18662063574778526,
+            "0.75": 0.12189565730766626,
+            "0.8": 0.11529499724165969,
+            "0.85": 0.09440782787956213,
+            "0.9": 0.0747074707470747,
+            "0.95": 0.06210621062106211
+          },
+          "f2": 0.5376344086021505
+        },
+        "Chache2": {
+          "ground_truth_count": 30,
+          "tp": 6,
+          "fp": 1,
+          "fn": 24,
+          "precision": 0.8571428571428571,
+          "recall": 0.2,
+          "f1": 0.32432432432432434,
+          "AP50": 0.23391089108910892,
+          "AP75": 0.18811881188118815,
+          "AP50_95": 0.1498019801980198,
+          "ap_by_iou": {
+            "0.5": 0.23391089108910892,
+            "0.55": 0.23391089108910892,
+            "0.6": 0.23391089108910892,
+            "0.65": 0.23391089108910892,
+            "0.7": 0.18811881188118815,
+            "0.75": 0.18811881188118815,
+            "0.8": 0.15841584158415845,
+            "0.85": 0.02772277227722772,
+            "0.9": 0.0,
+            "0.95": 0.0
+          },
+          "f2": 0.2362204724409449
+        },
+        "Chache3": {
+          "ground_truth_count": 40,
+          "tp": 10,
+          "fp": 1,
+          "fn": 30,
+          "precision": 0.9090909090909091,
+          "recall": 0.25,
+          "f1": 0.392156862745098,
+          "AP50": 0.2845355964167846,
+          "AP75": 0.17167609618104662,
+          "AP50_95": 0.17902522395096648,
+          "ap_by_iou": {
+            "0.5": 0.2845355964167846,
+            "0.55": 0.2845355964167846,
+            "0.6": 0.27725986884402726,
+            "0.65": 0.23194998071235692,
+            "0.7": 0.19871094252282365,
+            "0.75": 0.17167609618104662,
+            "0.8": 0.14356435643564353,
+            "0.85": 0.1287128712871287,
+            "0.9": 0.066006600660066,
+            "0.95": 0.0033003300330033
+          },
+          "f2": 0.29239766081871343
+        },
+        "Chache4": {
+          "ground_truth_count": 30,
+          "tp": 16,
+          "fp": 0,
+          "fn": 14,
+          "precision": 1.0,
+          "recall": 0.5333333333333333,
+          "f1": 0.6956521739130436,
+          "AP50": 0.6039603960396039,
+          "AP75": 0.6039603960396039,
+          "AP50_95": 0.5122211644241348,
+          "ap_by_iou": {
+            "0.5": 0.6039603960396039,
+            "0.55": 0.6039603960396039,
+            "0.6": 0.6039603960396039,
+            "0.65": 0.6039603960396039,
+            "0.7": 0.6039603960396039,
+            "0.75": 0.6039603960396039,
+            "0.8": 0.5533553355335531,
+            "0.85": 0.4369544646772369,
+            "0.9": 0.3707632301691706,
+            "0.95": 0.1373762376237624
+          },
+          "f2": 0.5882352941176471
+        },
+        "Qianyinche": {
+          "ground_truth_count": 48,
+          "tp": 40,
+          "fp": 9,
+          "fn": 8,
+          "precision": 0.8163265306122449,
+          "recall": 0.8333333333333334,
+          "f1": 0.8247422680412372,
+          "AP50": 0.8450955015996798,
+          "AP75": 0.7785695525748307,
+          "AP50_95": 0.6678239210335828,
+          "ap_by_iou": {
+            "0.5": 0.8450955015996798,
+            "0.55": 0.8450955015996798,
+            "0.6": 0.824499312508524,
+            "0.65": 0.8073740827581997,
+            "0.7": 0.7912551961391872,
+            "0.75": 0.7785695525748307,
+            "0.8": 0.7230246293770647,
+            "0.85": 0.6050178780448247,
+            "0.9": 0.44147587256552084,
+            "0.95": 0.016831683168316833
+          },
+          "f2": 0.8298755186721992
+        }
+      },
+      "AP85": 0.258563162833196,
+      "AP90": 0.19059063482836644,
+      "AP95": 0.04392289228922893,
+      "COCO_AR100": 0.3966666666666667,
+      "COCO_AP_small": null,
+      "COCO_AP_medium": 0.13712871287128714,
+      "COCO_AP_large": 0.3739503124105734,
+      "precision_0_5": 0.8440366972477065,
+      "recall_0_5": 0.48936170212765956,
+      "f1_0_5": 0.6195286195286196,
+      "f2_0_5": 0.5342624854819977,
+      "tp_0_5": 92,
+      "fp_0_5": 17,
+      "fn_0_5": 96,
+      "precision_0_7": 0.8586956521739131,
+      "recall_0_7": 0.42021276595744683,
+      "f1_0_7": 0.5642857142857144,
+      "f2_0_7": 0.46800947867298576,
+      "tp_0_7": 79,
+      "fp_0_7": 13,
+      "fn_0_7": 109,
+      "id": 87
+    },
+    {
+      "dataset": "chache_val300",
+      "algorithm": "OVD-MLLM",
+      "model": "yoloe→qwen3.8-27b",
+      "experiment": "source / finetuned_cascade_v1 / source",
+      "training_regime": "fewshot微调→Qwen候选复核",
+      "training_shot_per_class": 10,
+      "training_image_count": 50,
+      "inference_shot_per_class": 10,
+      "mllm_reference_shot_per_class": 0,
+      "negative_references": 0,
+      "savpe": "冻结",
+      "training_scope": "",
+      "training_protocol": "",
+      "seed": null,
+      "support_seed": null,
+      "prompt_version": "finetuned_cascade_v1",
+      "input_variant": "source",
+      "input_size": "",
+      "precision": null,
+      "AP50": 0.5902106146442287,
+      "AP75": 0.49759821929670667,
+      "AP50_95": 0.46105389236690186,
+      "AP_box20": null,
+      "mean_matched_iou": 0.8690632375298892,
+      "image_accuracy": 0.4866666666666667,
+      "negative_false_positive_rate": 0.2222222222222222,
+      "negative_error_rate": 0.2222222222222222,
+      "correct_images": 146,
+      "negative_images": 126,
+      "negative_fp_images": 28,
+      "negative_failed_images": 0,
+      "total_images": 300,
+      "success_images": 300,
+      "failed_images": 0,
+      "ground_truth_count": 188,
+      "status": "完成",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "逐图内容核验",
+      "iou_threshold": 0.5,
+      "operating_score": 0.5,
+      "max_detections": 100,
+      "candidate_floor": null,
+      "nms_iou": null,
+      "execution_device": "",
+      "elapsed_seconds": null,
+      "run_dir": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/source",
+      "metric_file": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/source/metrics.json",
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/source/evaluation.txt",
+      "metrics_sha256": "337ba14f1eeff920404da219ce696023c0eb0de00095c933976cd23f82bc352b",
+      "weights_sha256": null,
+      "dataset_sha256": "7a2b3d9dafdf98a26aa4d476a01b7798547f417cc045a095839fcc1923d26266",
+      "notes": "清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集",
+      "prompt_file": "",
+      "prompt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "training_seed": null,
+      "cascade_method": "savpe_frozen",
+      "cascade_source_run": "outputs/YOLOE/finetune/chache_val300/runs/yoloe_chache_frozen_savpe_20261030/vp_cross_neck_frozen_savpe_seed1/test_val300/visual_10shot",
+      "per_class": {
+        "Chache1": {
+          "ground_truth_count": 40,
+          "tp": 10,
+          "fp": 55,
+          "fn": 30,
+          "precision": 0.15384615384615385,
+          "recall": 0.25,
+          "f1": 0.1904761904761905,
+          "AP50": 0.18704693357780325,
+          "AP75": 0.13415071059795788,
+          "AP50_95": 0.13575763126507653,
+          "ap_by_iou": {
+            "0.5": 0.18704693357780325,
+            "0.55": 0.17676508044013506,
+            "0.6": 0.1678278560437671,
+            "0.65": 0.1482055287881486,
+            "0.7": 0.14005772197664182,
+            "0.75": 0.13415071059795788,
+            "0.8": 0.12612367216409665,
+            "0.85": 0.12612367216409665,
+            "0.9": 0.08390010671217286,
+            "0.95": 0.06737503018594541
+          },
+          "f2": 0.22222222222222224
+        },
+        "Chache2": {
+          "ground_truth_count": 30,
+          "tp": 17,
+          "fp": 51,
+          "fn": 13,
+          "precision": 0.25,
+          "recall": 0.5666666666666667,
+          "f1": 0.3469387755102041,
+          "AP50": 0.46886844282039225,
+          "AP75": 0.40782174555836526,
+          "AP50_95": 0.36009185394028503,
+          "ap_by_iou": {
+            "0.5": 0.46886844282039225,
+            "0.55": 0.4672184296958888,
+            "0.6": 0.4672184296958888,
+            "0.65": 0.4340587909668314,
+            "0.7": 0.422747452412951,
+            "0.75": 0.40782174555836526,
+            "0.8": 0.4040585726616626,
+            "0.85": 0.3828032149255439,
+            "0.9": 0.1380223436844805,
+            "0.95": 0.008101116980845932
+          },
+          "f2": 0.45212765957446804
+        },
+        "Chache3": {
+          "ground_truth_count": 40,
+          "tp": 30,
+          "fp": 19,
+          "fn": 10,
+          "precision": 0.6122448979591837,
+          "recall": 0.75,
+          "f1": 0.6741573033707865,
+          "AP50": 0.6602469325535539,
+          "AP75": 0.40956508353289833,
+          "AP50_95": 0.43672652189061256,
+          "ap_by_iou": {
+            "0.5": 0.6602469325535539,
+            "0.55": 0.6602469325535539,
+            "0.6": 0.6585788689371828,
+            "0.65": 0.5915317805220309,
+            "0.7": 0.5541101946248178,
+            "0.75": 0.40956508353289833,
+            "0.8": 0.3544630450558502,
+            "0.85": 0.28684418512952514,
+            "0.9": 0.1553745656336767,
+            "0.95": 0.036303630363036306
+          },
+          "f2": 0.7177033492822967
+        },
+        "Chache4": {
+          "ground_truth_count": 30,
+          "tp": 28,
+          "fp": 37,
+          "fn": 2,
+          "precision": 0.4307692307692308,
+          "recall": 0.9333333333333333,
+          "f1": 0.5894736842105264,
+          "AP50": 0.7192176304733828,
+          "AP75": 0.6448982699684552,
+          "AP50_95": 0.606920437907238,
+          "ap_by_iou": {
+            "0.5": 0.7192176304733828,
+            "0.55": 0.7192176304733828,
+            "0.6": 0.683472228874159,
+            "0.65": 0.6821798625947362,
+            "0.7": 0.6821798625947362,
+            "0.75": 0.6448982699684552,
+            "0.8": 0.5784911582475099,
+            "0.85": 0.5506032670624228,
+            "0.9": 0.5014035188360672,
+            "0.95": 0.3075409499475292
+          },
+          "f2": 0.7567567567567568
+        },
+        "Qianyinche": {
+          "ground_truth_count": 48,
+          "tp": 43,
+          "fp": 13,
+          "fn": 5,
+          "precision": 0.7678571428571429,
+          "recall": 0.8958333333333334,
+          "f1": 0.8269230769230769,
+          "AP50": 0.9156731337960117,
+          "AP75": 0.8915552868258566,
+          "AP50_95": 0.7657730168312968,
+          "ap_by_iou": {
+            "0.5": 0.9156731337960117,
+            "0.55": 0.9109534443271574,
+            "0.6": 0.9060705626191755,
+            "0.65": 0.8922619634160669,
+            "0.7": 0.8922619634160669,
+            "0.75": 0.8915552868258566,
+            "0.8": 0.8547242089963414,
+            "0.85": 0.7146132716835101,
+            "0.9": 0.6704769577567735,
+            "0.95": 0.009139375476009138
+          },
+          "f2": 0.8669354838709677
+        }
+      },
+      "AP85": 0.41219752219301975,
+      "AP90": 0.30983549852463416,
+      "AP95": 0.08569202059067318,
+      "COCO_AR100": 0.7575833333333333,
+      "COCO_AP_small": null,
+      "COCO_AP_medium": 0.4136428265067671,
+      "COCO_AP_large": 0.48845190483758216,
+      "precision_0_5": 0.42244224422442245,
+      "recall_0_5": 0.6808510638297872,
+      "f1_0_5": 0.5213849287169043,
+      "f2_0_5": 0.6066350710900473,
+      "tp_0_5": 128,
+      "fp_0_5": 175,
+      "fn_0_5": 60,
+      "precision_0_7": 0.5091743119266054,
+      "recall_0_7": 0.5904255319148937,
+      "f1_0_7": 0.5467980295566502,
+      "f2_0_7": 0.5721649484536082,
+      "tp_0_7": 111,
+      "fp_0_7": 107,
+      "fn_0_7": 77,
+      "id": 88
+    },
+    {
+      "dataset": "chache_val300",
+      "algorithm": "OVD-MLLM",
+      "model": "yoloe→qwen3.8-27b",
+      "experiment": "baseline / finetuned_cascade_v1 / baseline",
+      "training_regime": "fewshot微调→Qwen候选复核",
+      "training_shot_per_class": 10,
+      "training_image_count": 50,
       "inference_shot_per_class": null,
       "mllm_reference_shot_per_class": 0,
       "negative_references": 0,
@@ -17627,7 +18682,7 @@
       "tp_0_7": 142,
       "fp_0_7": 30,
       "fn_0_7": 46,
-      "id": 84
+      "id": 89
     },
     {
       "dataset": "chache_val300",
@@ -17838,7 +18893,7 @@
       "tp_0_7": 111,
       "fp_0_7": 1,
       "fn_0_7": 77,
-      "id": 85
+      "id": 90
     },
     {
       "dataset": "chache_val300",
@@ -18049,7 +19104,7 @@
       "tp_0_7": 111,
       "fp_0_7": 1,
       "fn_0_7": 77,
-      "id": 86
+      "id": 91
     },
     {
       "dataset": "chache_val300",
@@ -18260,7 +19315,7 @@
       "tp_0_7": 108,
       "fp_0_7": 4,
       "fn_0_7": 80,
-      "id": 87
+      "id": 92
     },
     {
       "dataset": "chache_val300",
@@ -18471,7 +19526,7 @@
       "tp_0_7": 142,
       "fp_0_7": 30,
       "fn_0_7": 46,
-      "id": 88
+      "id": 93
     },
     {
       "dataset": "chache_val300",
@@ -18682,7 +19737,640 @@
       "tp_0_7": 111,
       "fp_0_7": 82,
       "fn_0_7": 77,
-      "id": 89
+      "id": 94
+    },
+    {
+      "dataset": "chache_val300",
+      "algorithm": "OVD-MLLM",
+      "model": "yoloe→qwen3.8-27b",
+      "experiment": "deduplicated / finetuned_cascade_v1 / deduplicated",
+      "training_regime": "fewshot微调→Qwen候选复核",
+      "training_shot_per_class": 10,
+      "training_image_count": 50,
+      "inference_shot_per_class": 10,
+      "mllm_reference_shot_per_class": 1,
+      "negative_references": 0,
+      "savpe": "训练",
+      "training_scope": "",
+      "training_protocol": "",
+      "seed": null,
+      "support_seed": null,
+      "prompt_version": "finetuned_cascade_v1",
+      "input_variant": "deduplicated",
+      "input_size": "",
+      "precision": null,
+      "AP50": 0.4345380397962206,
+      "AP75": 0.3600606138918077,
+      "AP50_95": 0.331815346432646,
+      "AP_box20": null,
+      "mean_matched_iou": 0.8905351286485153,
+      "image_accuracy": 0.65,
+      "negative_false_positive_rate": 0.0,
+      "negative_error_rate": 0.0,
+      "correct_images": 195,
+      "negative_images": 126,
+      "negative_fp_images": 0,
+      "negative_failed_images": 0,
+      "total_images": 300,
+      "success_images": 300,
+      "failed_images": 0,
+      "ground_truth_count": 188,
+      "status": "完成",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "逐图内容核验",
+      "iou_threshold": 0.5,
+      "operating_score": 0.5,
+      "max_detections": 100,
+      "candidate_floor": null,
+      "nms_iou": null,
+      "execution_device": "",
+      "elapsed_seconds": null,
+      "run_dir": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/deduplicated",
+      "metric_file": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/deduplicated/metrics.json",
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/deduplicated/evaluation.txt",
+      "metrics_sha256": "9ec3a576fe4e38fde7e7fa7b46e94dd0751b0de36bfa19cb20d8976461dc9dde",
+      "weights_sha256": null,
+      "dataset_sha256": "7a2b3d9dafdf98a26aa4d476a01b7798547f417cc045a095839fcc1923d26266",
+      "notes": "清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集",
+      "prompt_file": "",
+      "prompt_sha256": "65c5478e79a5c3225aaa44171c5682b999574f46cb113c0a557aeef74287c7d6",
+      "training_seed": null,
+      "cascade_method": "savpe_train",
+      "cascade_source_run": "outputs/YOLOE/finetune/chache_val300/runs/yoloe_search_20261029_r2/vp_cross_neck/test_val300/visual_10shot",
+      "per_class": {
+        "Chache1": {
+          "ground_truth_count": 40,
+          "tp": 5,
+          "fp": 18,
+          "fn": 35,
+          "precision": 0.21739130434782608,
+          "recall": 0.125,
+          "f1": 0.15873015873015875,
+          "AP50": 0.13149886417213164,
+          "AP75": 0.11746174617461753,
+          "AP50_95": 0.11218936179332226,
+          "ap_by_iou": {
+            "0.5": 0.13149886417213164,
+            "0.55": 0.13149886417213164,
+            "0.6": 0.12631263126312642,
+            "0.65": 0.12631263126312642,
+            "0.7": 0.11746174617461753,
+            "0.75": 0.11746174617461753,
+            "0.8": 0.10943594359435942,
+            "0.85": 0.10943594359435942,
+            "0.9": 0.07821782178217823,
+            "0.95": 0.07425742574257425
+          },
+          "f2": 0.13661202185792348
+        },
+        "Chache2": {
+          "ground_truth_count": 30,
+          "tp": 9,
+          "fp": 1,
+          "fn": 21,
+          "precision": 0.9,
+          "recall": 0.3,
+          "f1": 0.45000000000000007,
+          "AP50": 0.2999999999999999,
+          "AP75": 0.2999999999999999,
+          "AP50_95": 0.24957095709570948,
+          "ap_by_iou": {
+            "0.5": 0.2999999999999999,
+            "0.55": 0.2999999999999999,
+            "0.6": 0.2999999999999999,
+            "0.65": 0.2999999999999999,
+            "0.7": 0.2999999999999999,
+            "0.75": 0.2999999999999999,
+            "0.8": 0.2999999999999999,
+            "0.85": 0.2999999999999999,
+            "0.9": 0.09570957095709569,
+            "0.95": 0.0
+          },
+          "f2": 0.34615384615384615
+        },
+        "Chache3": {
+          "ground_truth_count": 40,
+          "tp": 12,
+          "fp": 3,
+          "fn": 28,
+          "precision": 0.8,
+          "recall": 0.3,
+          "f1": 0.4363636363636363,
+          "AP50": 0.31848184818481834,
+          "AP75": 0.10612132641835609,
+          "AP50_95": 0.17377259154486874,
+          "ap_by_iou": {
+            "0.5": 0.31848184818481834,
+            "0.55": 0.31848184818481834,
+            "0.6": 0.2438943894389439,
+            "0.65": 0.2438943894389439,
+            "0.7": 0.21144114411441145,
+            "0.75": 0.10612132641835609,
+            "0.8": 0.0977054848341977,
+            "0.85": 0.08879459374508877,
+            "0.9": 0.07260726072607261,
+            "0.95": 0.036303630363036306
+          },
+          "f2": 0.34285714285714286
+        },
+        "Chache4": {
+          "ground_truth_count": 30,
+          "tp": 14,
+          "fp": 0,
+          "fn": 16,
+          "precision": 1.0,
+          "recall": 0.4666666666666667,
+          "f1": 0.6363636363636364,
+          "AP50": 0.5346534653465347,
+          "AP75": 0.40594059405940597,
+          "AP50_95": 0.3847909790979097,
+          "ap_by_iou": {
+            "0.5": 0.5346534653465347,
+            "0.55": 0.504950495049505,
+            "0.6": 0.43564356435643564,
+            "0.65": 0.43564356435643564,
+            "0.7": 0.40594059405940597,
+            "0.75": 0.40594059405940597,
+            "0.8": 0.36633663366336633,
+            "0.85": 0.3339333933393339,
+            "0.9": 0.2887288728872887,
+            "0.95": 0.13613861386138615
+          },
+          "f2": 0.5223880597014926
+        },
+        "Qianyinche": {
+          "ground_truth_count": 48,
+          "tp": 41,
+          "fp": 8,
+          "fn": 7,
+          "precision": 0.8367346938775511,
+          "recall": 0.8541666666666666,
+          "f1": 0.845360824742268,
+          "AP50": 0.8880560212776185,
+          "AP75": 0.8707794028066591,
+          "AP50_95": 0.7387528426314197,
+          "ap_by_iou": {
+            "0.5": 0.8880560212776185,
+            "0.55": 0.8880560212776185,
+            "0.6": 0.8880560212776185,
+            "0.65": 0.8707794028066591,
+            "0.7": 0.8707794028066591,
+            "0.75": 0.8707794028066591,
+            "0.8": 0.7977298920979191,
+            "0.85": 0.6874983820267823,
+            "0.9": 0.6019991107015601,
+            "0.95": 0.023794769235102743
+          },
+          "f2": 0.850622406639004
+        }
+      },
+      "AP85": 0.3039324625411129,
+      "AP90": 0.22745252741083907,
+      "AP95": 0.0540988878404199,
+      "COCO_AR100": 0.3728333333333333,
+      "COCO_AP_small": null,
+      "COCO_AP_medium": 0.3311881188118812,
+      "COCO_AP_large": 0.3410095882364374,
+      "precision_0_5": 0.7297297297297297,
+      "recall_0_5": 0.4308510638297872,
+      "f1_0_5": 0.5418060200668896,
+      "f2_0_5": 0.46929316338354576,
+      "tp_0_5": 81,
+      "fp_0_5": 30,
+      "fn_0_5": 107,
+      "precision_0_7": 0.7731958762886598,
+      "recall_0_7": 0.39893617021276595,
+      "f1_0_7": 0.5263157894736842,
+      "f2_0_7": 0.4416961130742049,
+      "tp_0_7": 75,
+      "fp_0_7": 22,
+      "fn_0_7": 113,
+      "id": 95
+    },
+    {
+      "dataset": "chache_val300",
+      "algorithm": "OVD-MLLM",
+      "model": "yoloe→qwen3.8-27b",
+      "experiment": "filtered / finetuned_cascade_v1 / filtered",
+      "training_regime": "fewshot微调→Qwen候选复核",
+      "training_shot_per_class": 10,
+      "training_image_count": 50,
+      "inference_shot_per_class": 10,
+      "mllm_reference_shot_per_class": 1,
+      "negative_references": 0,
+      "savpe": "训练",
+      "training_scope": "",
+      "training_protocol": "",
+      "seed": null,
+      "support_seed": null,
+      "prompt_version": "finetuned_cascade_v1",
+      "input_variant": "filtered",
+      "input_size": "",
+      "precision": null,
+      "AP50": 0.4345380397962206,
+      "AP75": 0.3600606138918077,
+      "AP50_95": 0.331815346432646,
+      "AP_box20": null,
+      "mean_matched_iou": 0.8905351286485153,
+      "image_accuracy": 0.65,
+      "negative_false_positive_rate": 0.0,
+      "negative_error_rate": 0.0,
+      "correct_images": 195,
+      "negative_images": 126,
+      "negative_fp_images": 0,
+      "negative_failed_images": 0,
+      "total_images": 300,
+      "success_images": 300,
+      "failed_images": 0,
+      "ground_truth_count": 188,
+      "status": "完成",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "逐图内容核验",
+      "iou_threshold": 0.5,
+      "operating_score": 0.5,
+      "max_detections": 100,
+      "candidate_floor": null,
+      "nms_iou": null,
+      "execution_device": "",
+      "elapsed_seconds": null,
+      "run_dir": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/filtered",
+      "metric_file": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/filtered/metrics.json",
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/filtered/evaluation.txt",
+      "metrics_sha256": "9ec3a576fe4e38fde7e7fa7b46e94dd0751b0de36bfa19cb20d8976461dc9dde",
+      "weights_sha256": null,
+      "dataset_sha256": "7a2b3d9dafdf98a26aa4d476a01b7798547f417cc045a095839fcc1923d26266",
+      "notes": "清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集",
+      "prompt_file": "",
+      "prompt_sha256": "65c5478e79a5c3225aaa44171c5682b999574f46cb113c0a557aeef74287c7d6",
+      "training_seed": null,
+      "cascade_method": "savpe_train",
+      "cascade_source_run": "outputs/YOLOE/finetune/chache_val300/runs/yoloe_search_20261029_r2/vp_cross_neck/test_val300/visual_10shot",
+      "per_class": {
+        "Chache1": {
+          "ground_truth_count": 40,
+          "tp": 5,
+          "fp": 18,
+          "fn": 35,
+          "precision": 0.21739130434782608,
+          "recall": 0.125,
+          "f1": 0.15873015873015875,
+          "AP50": 0.13149886417213164,
+          "AP75": 0.11746174617461753,
+          "AP50_95": 0.11218936179332226,
+          "ap_by_iou": {
+            "0.5": 0.13149886417213164,
+            "0.55": 0.13149886417213164,
+            "0.6": 0.12631263126312642,
+            "0.65": 0.12631263126312642,
+            "0.7": 0.11746174617461753,
+            "0.75": 0.11746174617461753,
+            "0.8": 0.10943594359435942,
+            "0.85": 0.10943594359435942,
+            "0.9": 0.07821782178217823,
+            "0.95": 0.07425742574257425
+          },
+          "f2": 0.13661202185792348
+        },
+        "Chache2": {
+          "ground_truth_count": 30,
+          "tp": 9,
+          "fp": 1,
+          "fn": 21,
+          "precision": 0.9,
+          "recall": 0.3,
+          "f1": 0.45000000000000007,
+          "AP50": 0.2999999999999999,
+          "AP75": 0.2999999999999999,
+          "AP50_95": 0.24957095709570948,
+          "ap_by_iou": {
+            "0.5": 0.2999999999999999,
+            "0.55": 0.2999999999999999,
+            "0.6": 0.2999999999999999,
+            "0.65": 0.2999999999999999,
+            "0.7": 0.2999999999999999,
+            "0.75": 0.2999999999999999,
+            "0.8": 0.2999999999999999,
+            "0.85": 0.2999999999999999,
+            "0.9": 0.09570957095709569,
+            "0.95": 0.0
+          },
+          "f2": 0.34615384615384615
+        },
+        "Chache3": {
+          "ground_truth_count": 40,
+          "tp": 12,
+          "fp": 3,
+          "fn": 28,
+          "precision": 0.8,
+          "recall": 0.3,
+          "f1": 0.4363636363636363,
+          "AP50": 0.31848184818481834,
+          "AP75": 0.10612132641835609,
+          "AP50_95": 0.17377259154486874,
+          "ap_by_iou": {
+            "0.5": 0.31848184818481834,
+            "0.55": 0.31848184818481834,
+            "0.6": 0.2438943894389439,
+            "0.65": 0.2438943894389439,
+            "0.7": 0.21144114411441145,
+            "0.75": 0.10612132641835609,
+            "0.8": 0.0977054848341977,
+            "0.85": 0.08879459374508877,
+            "0.9": 0.07260726072607261,
+            "0.95": 0.036303630363036306
+          },
+          "f2": 0.34285714285714286
+        },
+        "Chache4": {
+          "ground_truth_count": 30,
+          "tp": 14,
+          "fp": 0,
+          "fn": 16,
+          "precision": 1.0,
+          "recall": 0.4666666666666667,
+          "f1": 0.6363636363636364,
+          "AP50": 0.5346534653465347,
+          "AP75": 0.40594059405940597,
+          "AP50_95": 0.3847909790979097,
+          "ap_by_iou": {
+            "0.5": 0.5346534653465347,
+            "0.55": 0.504950495049505,
+            "0.6": 0.43564356435643564,
+            "0.65": 0.43564356435643564,
+            "0.7": 0.40594059405940597,
+            "0.75": 0.40594059405940597,
+            "0.8": 0.36633663366336633,
+            "0.85": 0.3339333933393339,
+            "0.9": 0.2887288728872887,
+            "0.95": 0.13613861386138615
+          },
+          "f2": 0.5223880597014926
+        },
+        "Qianyinche": {
+          "ground_truth_count": 48,
+          "tp": 41,
+          "fp": 8,
+          "fn": 7,
+          "precision": 0.8367346938775511,
+          "recall": 0.8541666666666666,
+          "f1": 0.845360824742268,
+          "AP50": 0.8880560212776185,
+          "AP75": 0.8707794028066591,
+          "AP50_95": 0.7387528426314197,
+          "ap_by_iou": {
+            "0.5": 0.8880560212776185,
+            "0.55": 0.8880560212776185,
+            "0.6": 0.8880560212776185,
+            "0.65": 0.8707794028066591,
+            "0.7": 0.8707794028066591,
+            "0.75": 0.8707794028066591,
+            "0.8": 0.7977298920979191,
+            "0.85": 0.6874983820267823,
+            "0.9": 0.6019991107015601,
+            "0.95": 0.023794769235102743
+          },
+          "f2": 0.850622406639004
+        }
+      },
+      "AP85": 0.3039324625411129,
+      "AP90": 0.22745252741083907,
+      "AP95": 0.0540988878404199,
+      "COCO_AR100": 0.3728333333333333,
+      "COCO_AP_small": null,
+      "COCO_AP_medium": 0.3311881188118812,
+      "COCO_AP_large": 0.3410095882364374,
+      "precision_0_5": 0.7297297297297297,
+      "recall_0_5": 0.4308510638297872,
+      "f1_0_5": 0.5418060200668896,
+      "f2_0_5": 0.46929316338354576,
+      "tp_0_5": 81,
+      "fp_0_5": 30,
+      "fn_0_5": 107,
+      "precision_0_7": 0.7731958762886598,
+      "recall_0_7": 0.39893617021276595,
+      "f1_0_7": 0.5263157894736842,
+      "f2_0_7": 0.4416961130742049,
+      "tp_0_7": 75,
+      "fp_0_7": 22,
+      "fn_0_7": 113,
+      "id": 96
+    },
+    {
+      "dataset": "chache_val300",
+      "algorithm": "OVD-MLLM",
+      "model": "yoloe→qwen3.8-27b",
+      "experiment": "refined / finetuned_cascade_v1 / refined",
+      "training_regime": "fewshot微调→Qwen候选复核",
+      "training_shot_per_class": 10,
+      "training_image_count": 50,
+      "inference_shot_per_class": 10,
+      "mllm_reference_shot_per_class": 1,
+      "negative_references": 0,
+      "savpe": "训练",
+      "training_scope": "",
+      "training_protocol": "",
+      "seed": null,
+      "support_seed": null,
+      "prompt_version": "finetuned_cascade_v1",
+      "input_variant": "refined",
+      "input_size": "",
+      "precision": null,
+      "AP50": 0.5072173483833122,
+      "AP75": 0.36753459579165776,
+      "AP50_95": 0.357718714567615,
+      "AP_box20": null,
+      "mean_matched_iou": 0.8533769570766543,
+      "image_accuracy": 0.69,
+      "negative_false_positive_rate": 0.0,
+      "negative_error_rate": 0.0,
+      "correct_images": 207,
+      "negative_images": 126,
+      "negative_fp_images": 0,
+      "negative_failed_images": 0,
+      "total_images": 300,
+      "success_images": 300,
+      "failed_images": 0,
+      "ground_truth_count": 188,
+      "status": "完成",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "逐图内容核验",
+      "iou_threshold": 0.5,
+      "operating_score": 0.5,
+      "max_detections": 100,
+      "candidate_floor": null,
+      "nms_iou": null,
+      "execution_device": "",
+      "elapsed_seconds": null,
+      "run_dir": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/refined",
+      "metric_file": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/refined/metrics.json",
+      "report": "outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/refined/evaluation.txt",
+      "metrics_sha256": "09694967b1c2d600a418c18c6cd8b3429bc9fe1217a18f1491e79c1b81faaacf",
+      "weights_sha256": null,
+      "dataset_sha256": "7a2b3d9dafdf98a26aa4d476a01b7798547f417cc045a095839fcc1923d26266",
+      "notes": "清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集",
+      "prompt_file": "",
+      "prompt_sha256": "5251e2700e2e0d4f9f26e2e557240d8ccc0cd2887f2ad9cc081b0103b50b9a8f",
+      "training_seed": null,
+      "cascade_method": "savpe_train",
+      "cascade_source_run": "outputs/YOLOE/finetune/chache_val300/runs/yoloe_search_20261029_r2/vp_cross_neck/test_val300/visual_10shot",
+      "per_class": {
+        "Chache1": {
+          "ground_truth_count": 40,
+          "tp": 18,
+          "fp": 5,
+          "fn": 22,
+          "precision": 0.782608695652174,
+          "recall": 0.45,
+          "f1": 0.5714285714285714,
+          "AP50": 0.5400951019471693,
+          "AP75": 0.13336976554798338,
+          "AP50_95": 0.2607974074718396,
+          "ap_by_iou": {
+            "0.5": 0.5400951019471693,
+            "0.55": 0.5072046700468367,
+            "0.6": 0.5072046700468367,
+            "0.65": 0.30678282113925703,
+            "0.7": 0.23714800051433693,
+            "0.75": 0.13336976554798338,
+            "0.8": 0.13336976554798338,
+            "0.85": 0.1177296301058677,
+            "0.9": 0.11021816467361023,
+            "0.95": 0.01485148514851485
+          },
+          "f2": 0.4918032786885246
+        },
+        "Chache2": {
+          "ground_truth_count": 30,
+          "tp": 8,
+          "fp": 2,
+          "fn": 22,
+          "precision": 0.8,
+          "recall": 0.26666666666666666,
+          "f1": 0.4,
+          "AP50": 0.2613861386138614,
+          "AP75": 0.19377652050919383,
+          "AP50_95": 0.1755586987270156,
+          "ap_by_iou": {
+            "0.5": 0.2613861386138614,
+            "0.55": 0.2613861386138614,
+            "0.6": 0.2613861386138614,
+            "0.65": 0.2613861386138614,
+            "0.7": 0.19377652050919383,
+            "0.75": 0.19377652050919383,
+            "0.8": 0.19377652050919383,
+            "0.85": 0.1056105610561056,
+            "0.9": 0.0231023102310231,
+            "0.95": 0.0
+          },
+          "f2": 0.30769230769230765
+        },
+        "Chache3": {
+          "ground_truth_count": 40,
+          "tp": 13,
+          "fp": 2,
+          "fn": 27,
+          "precision": 0.8666666666666667,
+          "recall": 0.325,
+          "f1": 0.4727272727272728,
+          "AP50": 0.33234323432343243,
+          "AP75": 0.15983026874115985,
+          "AP50_95": 0.18911716171617168,
+          "ap_by_iou": {
+            "0.5": 0.33234323432343243,
+            "0.55": 0.30112761276127625,
+            "0.6": 0.29771727172717277,
+            "0.65": 0.29771727172717277,
+            "0.7": 0.2359578815024361,
+            "0.75": 0.15983026874115985,
+            "0.8": 0.14695898161244697,
+            "0.85": 0.07496463932107494,
+            "0.9": 0.039603960396039604,
+            "0.95": 0.0049504950495049506
+          },
+          "f2": 0.3714285714285715
+        },
+        "Chache4": {
+          "ground_truth_count": 30,
+          "tp": 14,
+          "fp": 0,
+          "fn": 16,
+          "precision": 1.0,
+          "recall": 0.4666666666666667,
+          "f1": 0.6363636363636364,
+          "AP50": 0.5346534653465347,
+          "AP75": 0.5346534653465347,
+          "AP50_95": 0.4638464560741789,
+          "ap_by_iou": {
+            "0.5": 0.5346534653465347,
+            "0.55": 0.5346534653465347,
+            "0.6": 0.5346534653465347,
+            "0.65": 0.5346534653465347,
+            "0.7": 0.5346534653465347,
+            "0.75": 0.5346534653465347,
+            "0.8": 0.5346534653465347,
+            "0.85": 0.5346534653465347,
+            "0.9": 0.2749567813924251,
+            "0.95": 0.08628005657708629
+          },
+          "f2": 0.5223880597014926
+        },
+        "Qianyinche": {
+          "ground_truth_count": 48,
+          "tp": 40,
+          "fp": 9,
+          "fn": 8,
+          "precision": 0.8163265306122449,
+          "recall": 0.8333333333333334,
+          "f1": 0.8247422680412372,
+          "AP50": 0.8676088016855636,
+          "AP75": 0.816042958813417,
+          "AP50_95": 0.6992738488488692,
+          "ap_by_iou": {
+            "0.5": 0.8676088016855636,
+            "0.55": 0.8676088016855636,
+            "0.6": 0.8469193749064357,
+            "0.65": 0.8469193749064357,
+            "0.7": 0.816042958813417,
+            "0.75": 0.816042958813417,
+            "0.8": 0.7579697511905283,
+            "0.85": 0.5851865414137424,
+            "0.9": 0.573722237088573,
+            "0.95": 0.014717687985014714
+          },
+          "f2": 0.8298755186721992
+        }
+      },
+      "AP85": 0.28362896744866506,
+      "AP90": 0.2043206907563342,
+      "AP95": 0.024159944952024164,
+      "COCO_AR100": 0.40341666666666676,
+      "COCO_AP_small": null,
+      "COCO_AP_medium": 0.2581683168316832,
+      "COCO_AP_large": 0.37825335493000944,
+      "precision_0_5": 0.8378378378378378,
+      "recall_0_5": 0.4946808510638298,
+      "f1_0_5": 0.6220735785953178,
+      "f2_0_5": 0.5388180764774044,
+      "tp_0_5": 93,
+      "fp_0_5": 18,
+      "fn_0_5": 95,
+      "precision_0_7": 0.865979381443299,
+      "recall_0_7": 0.44680851063829785,
+      "f1_0_7": 0.5894736842105264,
+      "f2_0_7": 0.49469964664310956,
+      "tp_0_7": 84,
+      "fp_0_7": 13,
+      "fn_0_7": 104,
+      "id": 97
     },
     {
       "dataset": "chache_val300",
@@ -18893,7 +20581,7 @@
       "tp_0_7": 111,
       "fp_0_7": 82,
       "fn_0_7": 77,
-      "id": 90
+      "id": 98
     },
     {
       "dataset": "chache_val300",
@@ -19104,7 +20792,7 @@
       "tp_0_7": 146,
       "fp_0_7": 4,
       "fn_0_7": 42,
-      "id": 91
+      "id": 99
     },
     {
       "dataset": "diaowu_val300",
@@ -19215,7 +20903,7 @@
       "tp_0_7": 0,
       "fp_0_7": 0,
       "fn_0_7": 350,
-      "id": 92
+      "id": 100
     },
     {
       "dataset": "diaowu_val300",
@@ -19326,7 +21014,7 @@
       "tp_0_7": 0,
       "fp_0_7": 0,
       "fn_0_7": 350,
-      "id": 93
+      "id": 101
     },
     {
       "dataset": "diaowu_val300",
@@ -19437,7 +21125,7 @@
       "tp_0_7": 0,
       "fp_0_7": 0,
       "fn_0_7": 350,
-      "id": 94
+      "id": 102
     },
     {
       "dataset": "diaowu_val300",
@@ -19548,7 +21236,7 @@
       "tp_0_7": 0,
       "fp_0_7": 0,
       "fn_0_7": 350,
-      "id": 95
+      "id": 103
     },
     {
       "dataset": "diaowu_val300",
@@ -19659,7 +21347,7 @@
       "tp_0_7": 0,
       "fp_0_7": 0,
       "fn_0_7": 350,
-      "id": 96
+      "id": 104
     },
     {
       "dataset": "diaowu_val300",
@@ -19770,7 +21458,7 @@
       "tp_0_7": 0,
       "fp_0_7": 0,
       "fn_0_7": 350,
-      "id": 97
+      "id": 105
     },
     {
       "dataset": "diaowu_val300",
@@ -19881,7 +21569,7 @@
       "tp_0_7": 0,
       "fp_0_7": 0,
       "fn_0_7": 350,
-      "id": 98
+      "id": 106
     },
     {
       "dataset": "diaowu_val300",
@@ -19992,7 +21680,7 @@
       "tp_0_7": 122,
       "fp_0_7": 14,
       "fn_0_7": 228,
-      "id": 99
+      "id": 107
     },
     {
       "dataset": "diaowu_val300",
@@ -20103,7 +21791,7 @@
       "tp_0_7": 162,
       "fp_0_7": 33,
       "fn_0_7": 188,
-      "id": 100
+      "id": 108
     },
     {
       "dataset": "diaowu_val300",
@@ -20214,7 +21902,7 @@
       "tp_0_7": 136,
       "fp_0_7": 21,
       "fn_0_7": 214,
-      "id": 101
+      "id": 109
     },
     {
       "dataset": "diaowu_val300",
@@ -20325,7 +22013,7 @@
       "tp_0_7": 178,
       "fp_0_7": 18,
       "fn_0_7": 172,
-      "id": 102
+      "id": 110
     },
     {
       "dataset": "diaowu_val300",
@@ -20436,7 +22124,7 @@
       "tp_0_7": 84,
       "fp_0_7": 1,
       "fn_0_7": 266,
-      "id": 103
+      "id": 111
     },
     {
       "dataset": "diaowu_val300",
@@ -20547,7 +22235,7 @@
       "tp_0_7": 181,
       "fp_0_7": 48,
       "fn_0_7": 169,
-      "id": 104
+      "id": 112
     },
     {
       "dataset": "diaowu_val300",
@@ -20658,7 +22346,7 @@
       "tp_0_7": 125,
       "fp_0_7": 9,
       "fn_0_7": 225,
-      "id": 105
+      "id": 113
     },
     {
       "dataset": "diaowu_val300",
@@ -20769,7 +22457,7 @@
       "tp_0_7": 136,
       "fp_0_7": 8,
       "fn_0_7": 214,
-      "id": 106
+      "id": 114
     },
     {
       "dataset": "diaowu_val300",
@@ -20880,7 +22568,7 @@
       "tp_0_7": 101,
       "fp_0_7": 6,
       "fn_0_7": 249,
-      "id": 107
+      "id": 115
     },
     {
       "dataset": "diaowu_val300",
@@ -20991,7 +22679,7 @@
       "tp_0_7": 132,
       "fp_0_7": 9,
       "fn_0_7": 218,
-      "id": 108
+      "id": 116
     },
     {
       "dataset": "diaowu_val300",
@@ -21102,7 +22790,7 @@
       "tp_0_7": 173,
       "fp_0_7": 42,
       "fn_0_7": 177,
-      "id": 109
+      "id": 117
     },
     {
       "dataset": "diaowu_val300",
@@ -21213,7 +22901,7 @@
       "tp_0_7": 91,
       "fp_0_7": 3,
       "fn_0_7": 259,
-      "id": 110
+      "id": 118
     },
     {
       "dataset": "diaowu_val300",
@@ -21324,7 +23012,7 @@
       "tp_0_7": 89,
       "fp_0_7": 3,
       "fn_0_7": 261,
-      "id": 111
+      "id": 119
     },
     {
       "dataset": "diaowu_val300",
@@ -21435,7 +23123,7 @@
       "tp_0_7": 55,
       "fp_0_7": 2,
       "fn_0_7": 295,
-      "id": 112
+      "id": 120
     },
     {
       "dataset": "diaowu_val300",
@@ -21546,7 +23234,7 @@
       "tp_0_7": 108,
       "fp_0_7": 7,
       "fn_0_7": 242,
-      "id": 113
+      "id": 121
     },
     {
       "dataset": "diaowu_val300",
@@ -21657,7 +23345,7 @@
       "tp_0_7": 58,
       "fp_0_7": 5,
       "fn_0_7": 292,
-      "id": 114
+      "id": 122
     },
     {
       "dataset": "diaowu_val300",
@@ -21768,7 +23456,7 @@
       "tp_0_7": 217,
       "fp_0_7": 15,
       "fn_0_7": 133,
-      "id": 115
+      "id": 123
     },
     {
       "dataset": "diaowu_val300",
@@ -21879,7 +23567,7 @@
       "tp_0_7": 245,
       "fp_0_7": 19,
       "fn_0_7": 105,
-      "id": 116
+      "id": 124
     },
     {
       "dataset": "diaowu_val300",
@@ -21990,7 +23678,7 @@
       "tp_0_7": 254,
       "fp_0_7": 18,
       "fn_0_7": 96,
-      "id": 117
+      "id": 125
     },
     {
       "dataset": "diaowu_val300",
@@ -22101,7 +23789,7 @@
       "tp_0_7": 220,
       "fp_0_7": 18,
       "fn_0_7": 130,
-      "id": 118
+      "id": 126
     },
     {
       "dataset": "diaowu_val300",
@@ -22212,7 +23900,7 @@
       "tp_0_7": 228,
       "fp_0_7": 22,
       "fn_0_7": 122,
-      "id": 119
+      "id": 127
     },
     {
       "dataset": "diaowu_val300",
@@ -22323,7 +24011,7 @@
       "tp_0_7": 169,
       "fp_0_7": 36,
       "fn_0_7": 181,
-      "id": 120
+      "id": 128
     },
     {
       "dataset": "diaowu_val300",
@@ -22434,7 +24122,7 @@
       "tp_0_7": 182,
       "fp_0_7": 45,
       "fn_0_7": 168,
-      "id": 121
+      "id": 129
     },
     {
       "dataset": "diaowu_val300",
@@ -22545,7 +24233,7 @@
       "tp_0_7": 127,
       "fp_0_7": 10,
       "fn_0_7": 223,
-      "id": 122
+      "id": 130
     },
     {
       "dataset": "diaowu_val300",
@@ -22656,7 +24344,7 @@
       "tp_0_7": 121,
       "fp_0_7": 10,
       "fn_0_7": 229,
-      "id": 123
+      "id": 131
     },
     {
       "dataset": "diaowu_val300",
@@ -22767,7 +24455,7 @@
       "tp_0_7": 100,
       "fp_0_7": 4,
       "fn_0_7": 250,
-      "id": 124
+      "id": 132
     },
     {
       "dataset": "diaowu_val300",
@@ -22878,7 +24566,7 @@
       "tp_0_7": 116,
       "fp_0_7": 6,
       "fn_0_7": 234,
-      "id": 125
+      "id": 133
     },
     {
       "dataset": "diaowu_val300",
@@ -22989,7 +24677,7 @@
       "tp_0_7": 152,
       "fp_0_7": 31,
       "fn_0_7": 198,
-      "id": 126
+      "id": 134
     },
     {
       "dataset": "diaowu_val300",
@@ -23100,7 +24788,7 @@
       "tp_0_7": 178,
       "fp_0_7": 42,
       "fn_0_7": 172,
-      "id": 127
+      "id": 135
     },
     {
       "dataset": "diaowu_val300",
@@ -23211,7 +24899,7 @@
       "tp_0_7": 90,
       "fp_0_7": 4,
       "fn_0_7": 260,
-      "id": 128
+      "id": 136
     },
     {
       "dataset": "diaowu_val300",
@@ -23322,7 +25010,7 @@
       "tp_0_7": 91,
       "fp_0_7": 3,
       "fn_0_7": 259,
-      "id": 129
+      "id": 137
     },
     {
       "dataset": "diaowu_val300",
@@ -23433,7 +25121,7 @@
       "tp_0_7": 59,
       "fp_0_7": 1,
       "fn_0_7": 291,
-      "id": 130
+      "id": 138
     },
     {
       "dataset": "diaowu_val300",
@@ -23544,7 +25232,7 @@
       "tp_0_7": 97,
       "fp_0_7": 5,
       "fn_0_7": 253,
-      "id": 131
+      "id": 139
     },
     {
       "dataset": "diaowu_val300",
@@ -23655,7 +25343,7 @@
       "tp_0_7": 0,
       "fp_0_7": 0,
       "fn_0_7": 350,
-      "id": 132
+      "id": 140
     },
     {
       "dataset": "diaowu_val300",
@@ -23766,7 +25454,7 @@
       "tp_0_7": 112,
       "fp_0_7": 14,
       "fn_0_7": 238,
-      "id": 133
+      "id": 141
     },
     {
       "dataset": "diaowu_val300",
@@ -23877,7 +25565,7 @@
       "tp_0_7": 328,
       "fp_0_7": 257,
       "fn_0_7": 22,
-      "id": 134
+      "id": 142
     },
     {
       "dataset": "diaowu_val300",
@@ -23988,7 +25676,7 @@
       "tp_0_7": 201,
       "fp_0_7": 29,
       "fn_0_7": 149,
-      "id": 135
+      "id": 143
     },
     {
       "dataset": "diaowu_val300",
@@ -24099,7 +25787,7 @@
       "tp_0_7": 207,
       "fp_0_7": 40,
       "fn_0_7": 143,
-      "id": 136
+      "id": 144
     },
     {
       "dataset": "diaowu_val300",
@@ -24210,7 +25898,7 @@
       "tp_0_7": 208,
       "fp_0_7": 30,
       "fn_0_7": 142,
-      "id": 137
+      "id": 145
     },
     {
       "dataset": "diaowu_val300",
@@ -24321,7 +26009,7 @@
       "tp_0_7": 208,
       "fp_0_7": 37,
       "fn_0_7": 142,
-      "id": 138
+      "id": 146
     },
     {
       "dataset": "diaowu_val300",
@@ -24432,7 +26120,7 @@
       "tp_0_7": 220,
       "fp_0_7": 45,
       "fn_0_7": 130,
-      "id": 139
+      "id": 147
     },
     {
       "dataset": "diaowu_val300",
@@ -24543,7 +26231,7 @@
       "tp_0_7": 207,
       "fp_0_7": 37,
       "fn_0_7": 143,
-      "id": 140
+      "id": 148
     },
     {
       "dataset": "diaowu_val300",
@@ -24654,7 +26342,7 @@
       "tp_0_7": 209,
       "fp_0_7": 34,
       "fn_0_7": 141,
-      "id": 141
+      "id": 149
     },
     {
       "dataset": "diaowu_val300",
@@ -24765,7 +26453,7 @@
       "tp_0_7": 220,
       "fp_0_7": 50,
       "fn_0_7": 130,
-      "id": 142
+      "id": 150
     },
     {
       "dataset": "diaowu_val300",
@@ -24876,7 +26564,7 @@
       "tp_0_7": 214,
       "fp_0_7": 25,
       "fn_0_7": 136,
-      "id": 143
+      "id": 151
     },
     {
       "dataset": "diaowu_val300",
@@ -24987,7 +26675,7 @@
       "tp_0_7": 222,
       "fp_0_7": 48,
       "fn_0_7": 128,
-      "id": 144
+      "id": 152
     },
     {
       "dataset": "diaowu_val300",
@@ -25098,7 +26786,7 @@
       "tp_0_7": 196,
       "fp_0_7": 5,
       "fn_0_7": 154,
-      "id": 145
+      "id": 153
     },
     {
       "dataset": "diaowu_val300",
@@ -25209,7 +26897,7 @@
       "tp_0_7": 189,
       "fp_0_7": 18,
       "fn_0_7": 161,
-      "id": 146
+      "id": 154
     },
     {
       "dataset": "diaowu_val300",
@@ -25320,7 +27008,7 @@
       "tp_0_7": 194,
       "fp_0_7": 25,
       "fn_0_7": 156,
-      "id": 147
+      "id": 155
     },
     {
       "dataset": "diaowu_val300",
@@ -25431,7 +27119,7 @@
       "tp_0_7": 217,
       "fp_0_7": 39,
       "fn_0_7": 133,
-      "id": 148
+      "id": 156
     },
     {
       "dataset": "diaowu_val300",
@@ -25542,7 +27230,7 @@
       "tp_0_7": 204,
       "fp_0_7": 28,
       "fn_0_7": 146,
-      "id": 149
+      "id": 157
     },
     {
       "dataset": "diaowu_val300",
@@ -25653,7 +27341,7 @@
       "tp_0_7": 208,
       "fp_0_7": 26,
       "fn_0_7": 142,
-      "id": 150
+      "id": 158
     },
     {
       "dataset": "diaowu_val300",
@@ -25764,7 +27452,7 @@
       "tp_0_7": 197,
       "fp_0_7": 24,
       "fn_0_7": 153,
-      "id": 151
+      "id": 159
     },
     {
       "dataset": "diaowu_val300",
@@ -25875,7 +27563,7 @@
       "tp_0_7": 207,
       "fp_0_7": 28,
       "fn_0_7": 143,
-      "id": 152
+      "id": 160
     },
     {
       "dataset": "diaowu_val300",
@@ -25986,7 +27674,7 @@
       "tp_0_7": 193,
       "fp_0_7": 15,
       "fn_0_7": 157,
-      "id": 153
+      "id": 161
     },
     {
       "dataset": "diaowu_val300",
@@ -26097,7 +27785,7 @@
       "tp_0_7": 200,
       "fp_0_7": 22,
       "fn_0_7": 150,
-      "id": 154
+      "id": 162
     },
     {
       "dataset": "diaowu_val300",
@@ -26208,7 +27896,7 @@
       "tp_0_7": 225,
       "fp_0_7": 42,
       "fn_0_7": 125,
-      "id": 155
+      "id": 163
     },
     {
       "dataset": "diaowu_val300",
@@ -26319,7 +28007,7 @@
       "tp_0_7": 206,
       "fp_0_7": 28,
       "fn_0_7": 144,
-      "id": 156
+      "id": 164
     },
     {
       "dataset": "diaowu_val300",
@@ -26430,7 +28118,7 @@
       "tp_0_7": 207,
       "fp_0_7": 23,
       "fn_0_7": 143,
-      "id": 157
+      "id": 165
     },
     {
       "dataset": "diaowu_val300",
@@ -26541,7 +28229,7 @@
       "tp_0_7": 207,
       "fp_0_7": 27,
       "fn_0_7": 143,
-      "id": 158
+      "id": 166
     },
     {
       "dataset": "diaowu_val300",
@@ -26652,7 +28340,7 @@
       "tp_0_7": 202,
       "fp_0_7": 23,
       "fn_0_7": 148,
-      "id": 159
+      "id": 167
     },
     {
       "dataset": "diaowu_val300",
@@ -26763,7 +28451,7 @@
       "tp_0_7": 204,
       "fp_0_7": 25,
       "fn_0_7": 146,
-      "id": 160
+      "id": 168
     },
     {
       "dataset": "diaowu_val300",
@@ -26874,7 +28562,7 @@
       "tp_0_7": 219,
       "fp_0_7": 44,
       "fn_0_7": 131,
-      "id": 161
+      "id": 169
     },
     {
       "dataset": "diaowu_val300",
@@ -26985,7 +28673,7 @@
       "tp_0_7": 205,
       "fp_0_7": 24,
       "fn_0_7": 145,
-      "id": 162
+      "id": 170
     },
     {
       "dataset": "diaowu_val300",
@@ -27096,7 +28784,7 @@
       "tp_0_7": 206,
       "fp_0_7": 29,
       "fn_0_7": 144,
-      "id": 163
+      "id": 171
     },
     {
       "dataset": "diaowu_val300",
@@ -27207,7 +28895,7 @@
       "tp_0_7": 205,
       "fp_0_7": 23,
       "fn_0_7": 145,
-      "id": 164
+      "id": 172
     },
     {
       "dataset": "diaowu_val300",
@@ -27318,7 +29006,7 @@
       "tp_0_7": 208,
       "fp_0_7": 31,
       "fn_0_7": 142,
-      "id": 165
+      "id": 173
     },
     {
       "dataset": "diaowu_val300",
@@ -27429,7 +29117,7 @@
       "tp_0_7": 199,
       "fp_0_7": 18,
       "fn_0_7": 151,
-      "id": 166
+      "id": 174
     },
     {
       "dataset": "diaowu_val300",
@@ -27540,7 +29228,7 @@
       "tp_0_7": 206,
       "fp_0_7": 24,
       "fn_0_7": 144,
-      "id": 167
+      "id": 175
     },
     {
       "dataset": "diaowu_val300",
@@ -27651,7 +29339,7 @@
       "tp_0_7": 201,
       "fp_0_7": 19,
       "fn_0_7": 149,
-      "id": 168
+      "id": 176
     },
     {
       "dataset": "diaowu_val300",
@@ -27762,7 +29450,7 @@
       "tp_0_7": 206,
       "fp_0_7": 29,
       "fn_0_7": 144,
-      "id": 169
+      "id": 177
     },
     {
       "dataset": "diaowu_val300",
@@ -27873,7 +29561,7 @@
       "tp_0_7": 202,
       "fp_0_7": 19,
       "fn_0_7": 148,
-      "id": 170
+      "id": 178
     },
     {
       "dataset": "diaowu_val300",
@@ -27984,7 +29672,7 @@
       "tp_0_7": 207,
       "fp_0_7": 29,
       "fn_0_7": 143,
-      "id": 171
+      "id": 179
     },
     {
       "dataset": "diaowu_val300",
@@ -28095,7 +29783,7 @@
       "tp_0_7": 218,
       "fp_0_7": 41,
       "fn_0_7": 132,
-      "id": 172
+      "id": 180
     },
     {
       "dataset": "diaowu_val300",
@@ -28207,7 +29895,7 @@
       "tp_0_7": 162,
       "fp_0_7": 33,
       "fn_0_7": 188,
-      "id": 173
+      "id": 181
     },
     {
       "dataset": "diaowu_val300",
@@ -28319,7 +30007,7 @@
       "tp_0_7": 161,
       "fp_0_7": 17,
       "fn_0_7": 189,
-      "id": 174
+      "id": 182
     },
     {
       "dataset": "diaowu_val300",
@@ -28431,7 +30119,7 @@
       "tp_0_7": 161,
       "fp_0_7": 17,
       "fn_0_7": 189,
-      "id": 175
+      "id": 183
     },
     {
       "dataset": "diaowu_val300",
@@ -28543,7 +30231,7 @@
       "tp_0_7": 159,
       "fp_0_7": 19,
       "fn_0_7": 191,
-      "id": 176
+      "id": 184
     },
     {
       "dataset": "diaowu_val300",
@@ -28655,7 +30343,7 @@
       "tp_0_7": 162,
       "fp_0_7": 33,
       "fn_0_7": 188,
-      "id": 177
+      "id": 185
     },
     {
       "dataset": "diaowu_val300",
@@ -28766,7 +30454,340 @@
       "tp_0_7": 125,
       "fp_0_7": 9,
       "fn_0_7": 225,
-      "id": 178
+      "id": 186
+    },
+    {
+      "dataset": "diaowu_val300",
+      "algorithm": "OVD-MLLM",
+      "model": "yoloe→qwen3.8-27b",
+      "experiment": "deduplicated / finetuned_cascade_v1 / deduplicated",
+      "training_regime": "fewshot微调→Qwen候选复核",
+      "training_shot_per_class": 10,
+      "training_image_count": 10,
+      "inference_shot_per_class": 10,
+      "mllm_reference_shot_per_class": 1,
+      "negative_references": 0,
+      "savpe": "冻结",
+      "training_scope": "",
+      "training_protocol": "",
+      "seed": null,
+      "support_seed": null,
+      "prompt_version": "finetuned_cascade_v1",
+      "input_variant": "deduplicated",
+      "input_size": "",
+      "precision": null,
+      "AP50": 0.5561580179533575,
+      "AP75": 0.467392006638917,
+      "AP50_95": 0.42648171747485375,
+      "AP_box20": null,
+      "mean_matched_iou": 0.9049790435144297,
+      "image_accuracy": 0.35,
+      "negative_false_positive_rate": 0.14444444444444443,
+      "negative_error_rate": 0.14444444444444443,
+      "correct_images": 105,
+      "negative_images": 90,
+      "negative_fp_images": 13,
+      "negative_failed_images": 0,
+      "total_images": 300,
+      "success_images": 300,
+      "failed_images": 0,
+      "ground_truth_count": 350,
+      "status": "完成",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "逐图内容核验",
+      "iou_threshold": 0.5,
+      "operating_score": 0.5,
+      "max_detections": 100,
+      "candidate_floor": null,
+      "nms_iou": null,
+      "execution_device": "",
+      "elapsed_seconds": null,
+      "run_dir": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/deduplicated",
+      "metric_file": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/deduplicated/metrics.json",
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/deduplicated/evaluation.txt",
+      "metrics_sha256": "6dfafcd19a1886e26fa6430cfa03fe1244ceaa074213f8a8a316979fb3e2a133",
+      "weights_sha256": null,
+      "dataset_sha256": "8a15a2b51d367c9a94f3747241a04143b193347be14c7276c53866809b26c0af",
+      "notes": "清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集",
+      "prompt_file": "",
+      "prompt_sha256": "65c5478e79a5c3225aaa44171c5682b999574f46cb113c0a557aeef74287c7d6",
+      "training_seed": null,
+      "cascade_method": "savpe_frozen",
+      "cascade_source_run": "outputs/YOLOE/finetune/diaowu_val300/runs/yoloe_diaowu_frozen_savpe_20261030/vp_full_lr0.0001_frozen_savpe/test_val300/visual_10shot",
+      "per_class": {
+        "hanging object": {
+          "ground_truth_count": 350,
+          "tp": 142,
+          "fp": 13,
+          "fn": 208,
+          "precision": 0.9161290322580645,
+          "recall": 0.4057142857142857,
+          "f1": 0.5623762376237624,
+          "AP50": 0.5561580179533575,
+          "AP75": 0.467392006638917,
+          "AP50_95": 0.42648171747485375,
+          "ap_by_iou": {
+            "0.5": 0.5561580179533575,
+            "0.55": 0.5342834625974501,
+            "0.6": 0.5238659557119544,
+            "0.65": 0.5109483002418879,
+            "0.7": 0.4870666614563191,
+            "0.75": 0.467392006638917,
+            "0.8": 0.4494430128583564,
+            "0.85": 0.39709737925519645,
+            "0.9": 0.2934752377421215,
+            "0.95": 0.04508714029297666
+          },
+          "f2": 0.4565916398713827
+        }
+      },
+      "AP85": 0.39709737925519645,
+      "AP90": 0.2934752377421215,
+      "AP95": 0.04508714029297666,
+      "COCO_AR100": 0.46514285714285714,
+      "COCO_AP_small": null,
+      "COCO_AP_medium": null,
+      "COCO_AP_large": 0.42648171747485353,
+      "precision_0_5": 0.9161290322580645,
+      "recall_0_5": 0.4057142857142857,
+      "f1_0_5": 0.5623762376237624,
+      "f2_0_5": 0.4565916398713827,
+      "tp_0_5": 142,
+      "fp_0_5": 13,
+      "fn_0_5": 208,
+      "precision_0_7": 0.928,
+      "recall_0_7": 0.3314285714285714,
+      "f1_0_7": 0.488421052631579,
+      "f2_0_7": 0.380327868852459,
+      "tp_0_7": 116,
+      "fp_0_7": 9,
+      "fn_0_7": 234,
+      "id": 187
+    },
+    {
+      "dataset": "diaowu_val300",
+      "algorithm": "OVD-MLLM",
+      "model": "yoloe→qwen3.8-27b",
+      "experiment": "filtered / finetuned_cascade_v1 / filtered",
+      "training_regime": "fewshot微调→Qwen候选复核",
+      "training_shot_per_class": 10,
+      "training_image_count": 10,
+      "inference_shot_per_class": 10,
+      "mllm_reference_shot_per_class": 1,
+      "negative_references": 0,
+      "savpe": "冻结",
+      "training_scope": "",
+      "training_protocol": "",
+      "seed": null,
+      "support_seed": null,
+      "prompt_version": "finetuned_cascade_v1",
+      "input_variant": "filtered",
+      "input_size": "",
+      "precision": null,
+      "AP50": 0.5561580179533575,
+      "AP75": 0.467392006638917,
+      "AP50_95": 0.42648171747485375,
+      "AP_box20": null,
+      "mean_matched_iou": 0.9049790435144297,
+      "image_accuracy": 0.35,
+      "negative_false_positive_rate": 0.14444444444444443,
+      "negative_error_rate": 0.14444444444444443,
+      "correct_images": 105,
+      "negative_images": 90,
+      "negative_fp_images": 13,
+      "negative_failed_images": 0,
+      "total_images": 300,
+      "success_images": 300,
+      "failed_images": 0,
+      "ground_truth_count": 350,
+      "status": "完成",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "逐图内容核验",
+      "iou_threshold": 0.5,
+      "operating_score": 0.5,
+      "max_detections": 100,
+      "candidate_floor": null,
+      "nms_iou": null,
+      "execution_device": "",
+      "elapsed_seconds": null,
+      "run_dir": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/filtered",
+      "metric_file": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/filtered/metrics.json",
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/filtered/evaluation.txt",
+      "metrics_sha256": "6dfafcd19a1886e26fa6430cfa03fe1244ceaa074213f8a8a316979fb3e2a133",
+      "weights_sha256": null,
+      "dataset_sha256": "8a15a2b51d367c9a94f3747241a04143b193347be14c7276c53866809b26c0af",
+      "notes": "清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集",
+      "prompt_file": "",
+      "prompt_sha256": "65c5478e79a5c3225aaa44171c5682b999574f46cb113c0a557aeef74287c7d6",
+      "training_seed": null,
+      "cascade_method": "savpe_frozen",
+      "cascade_source_run": "outputs/YOLOE/finetune/diaowu_val300/runs/yoloe_diaowu_frozen_savpe_20261030/vp_full_lr0.0001_frozen_savpe/test_val300/visual_10shot",
+      "per_class": {
+        "hanging object": {
+          "ground_truth_count": 350,
+          "tp": 142,
+          "fp": 13,
+          "fn": 208,
+          "precision": 0.9161290322580645,
+          "recall": 0.4057142857142857,
+          "f1": 0.5623762376237624,
+          "AP50": 0.5561580179533575,
+          "AP75": 0.467392006638917,
+          "AP50_95": 0.42648171747485375,
+          "ap_by_iou": {
+            "0.5": 0.5561580179533575,
+            "0.55": 0.5342834625974501,
+            "0.6": 0.5238659557119544,
+            "0.65": 0.5109483002418879,
+            "0.7": 0.4870666614563191,
+            "0.75": 0.467392006638917,
+            "0.8": 0.4494430128583564,
+            "0.85": 0.39709737925519645,
+            "0.9": 0.2934752377421215,
+            "0.95": 0.04508714029297666
+          },
+          "f2": 0.4565916398713827
+        }
+      },
+      "AP85": 0.39709737925519645,
+      "AP90": 0.2934752377421215,
+      "AP95": 0.04508714029297666,
+      "COCO_AR100": 0.46514285714285714,
+      "COCO_AP_small": null,
+      "COCO_AP_medium": null,
+      "COCO_AP_large": 0.42648171747485353,
+      "precision_0_5": 0.9161290322580645,
+      "recall_0_5": 0.4057142857142857,
+      "f1_0_5": 0.5623762376237624,
+      "f2_0_5": 0.4565916398713827,
+      "tp_0_5": 142,
+      "fp_0_5": 13,
+      "fn_0_5": 208,
+      "precision_0_7": 0.928,
+      "recall_0_7": 0.3314285714285714,
+      "f1_0_7": 0.488421052631579,
+      "f2_0_7": 0.380327868852459,
+      "tp_0_7": 116,
+      "fp_0_7": 9,
+      "fn_0_7": 234,
+      "id": 188
+    },
+    {
+      "dataset": "diaowu_val300",
+      "algorithm": "OVD-MLLM",
+      "model": "yoloe→qwen3.8-27b",
+      "experiment": "refined / finetuned_cascade_v1 / refined",
+      "training_regime": "fewshot微调→Qwen候选复核",
+      "training_shot_per_class": 10,
+      "training_image_count": 10,
+      "inference_shot_per_class": 10,
+      "mllm_reference_shot_per_class": 1,
+      "negative_references": 0,
+      "savpe": "冻结",
+      "training_scope": "",
+      "training_protocol": "",
+      "seed": null,
+      "support_seed": null,
+      "prompt_version": "finetuned_cascade_v1",
+      "input_variant": "refined",
+      "input_size": "",
+      "precision": null,
+      "AP50": 0.5551009836970893,
+      "AP75": 0.44617841891768245,
+      "AP50_95": 0.3936026607389214,
+      "AP_box20": null,
+      "mean_matched_iou": 0.8778411382068801,
+      "image_accuracy": 0.35,
+      "negative_false_positive_rate": 0.14444444444444443,
+      "negative_error_rate": 0.14444444444444443,
+      "correct_images": 105,
+      "negative_images": 90,
+      "negative_fp_images": 13,
+      "negative_failed_images": 0,
+      "total_images": 300,
+      "success_images": 300,
+      "failed_images": 0,
+      "ground_truth_count": 350,
+      "status": "完成",
+      "complete": true,
+      "same_dataset": true,
+      "full_class_scope": true,
+      "eligible_for_comparison": true,
+      "verification": "逐图内容核验",
+      "iou_threshold": 0.5,
+      "operating_score": 0.5,
+      "max_detections": 100,
+      "candidate_floor": null,
+      "nms_iou": null,
+      "execution_device": "",
+      "elapsed_seconds": null,
+      "run_dir": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/refined",
+      "metric_file": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/refined/metrics.json",
+      "report": "outputs/OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/refined/evaluation.txt",
+      "metrics_sha256": "4c30130bb497c55654762adba98f7173ddb81450ed33224b2bb5635f3b4e2951",
+      "weights_sha256": null,
+      "dataset_sha256": "8a15a2b51d367c9a94f3747241a04143b193347be14c7276c53866809b26c0af",
+      "notes": "清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集",
+      "prompt_file": "",
+      "prompt_sha256": "5251e2700e2e0d4f9f26e2e557240d8ccc0cd2887f2ad9cc081b0103b50b9a8f",
+      "training_seed": null,
+      "cascade_method": "savpe_frozen",
+      "cascade_source_run": "outputs/YOLOE/finetune/diaowu_val300/runs/yoloe_diaowu_frozen_savpe_20261030/vp_full_lr0.0001_frozen_savpe/test_val300/visual_10shot",
+      "per_class": {
+        "hanging object": {
+          "ground_truth_count": 350,
+          "tp": 142,
+          "fp": 13,
+          "fn": 208,
+          "precision": 0.9161290322580645,
+          "recall": 0.4057142857142857,
+          "f1": 0.5623762376237624,
+          "AP50": 0.5551009836970893,
+          "AP75": 0.44617841891768245,
+          "AP50_95": 0.3936026607389214,
+          "ap_by_iou": {
+            "0.5": 0.5551009836970893,
+            "0.55": 0.5435471870600656,
+            "0.6": 0.5193733260773837,
+            "0.65": 0.5043041008555783,
+            "0.7": 0.4837180525162536,
+            "0.75": 0.44617841891768245,
+            "0.8": 0.412626181011525,
+            "0.85": 0.3202523519571974,
+            "0.9": 0.13913261293852677,
+            "0.95": 0.011793392357912044
+          },
+          "f2": 0.4565916398713827
+        }
+      },
+      "AP85": 0.3202523519571974,
+      "AP90": 0.13913261293852677,
+      "AP95": 0.011793392357912044,
+      "COCO_AR100": 0.4442857142857143,
+      "COCO_AP_small": null,
+      "COCO_AP_medium": null,
+      "COCO_AP_large": 0.3936026607389215,
+      "precision_0_5": 0.9161290322580645,
+      "recall_0_5": 0.4057142857142857,
+      "f1_0_5": 0.5623762376237624,
+      "f2_0_5": 0.4565916398713827,
+      "tp_0_5": 142,
+      "fp_0_5": 13,
+      "fn_0_5": 208,
+      "precision_0_7": 0.928,
+      "recall_0_7": 0.3314285714285714,
+      "f1_0_7": 0.488421052631579,
+      "f2_0_7": 0.380327868852459,
+      "tp_0_7": 116,
+      "fp_0_7": 9,
+      "fn_0_7": 234,
+      "id": 189
     },
     {
       "dataset": "diaowu_val300",
@@ -28877,7 +30898,7 @@
       "tp_0_7": 125,
       "fp_0_7": 9,
       "fn_0_7": 225,
-      "id": 179
+      "id": 190
     },
     {
       "dataset": "diaowu_val300",
@@ -28988,7 +31009,7 @@
       "tp_0_7": 254,
       "fp_0_7": 18,
       "fn_0_7": 96,
-      "id": 180
+      "id": 191
     },
     {
       "dataset": "diaowu_val300",
@@ -29099,7 +31120,7 @@
       "tp_0_7": 184,
       "fp_0_7": 8,
       "fn_0_7": 166,
-      "id": 181
+      "id": 192
     },
     {
       "dataset": "diaowu_val300",
@@ -29210,7 +31231,7 @@
       "tp_0_7": 184,
       "fp_0_7": 8,
       "fn_0_7": 166,
-      "id": 182
+      "id": 193
     },
     {
       "dataset": "diaowu_val300",
@@ -29321,7 +31342,7 @@
       "tp_0_7": 182,
       "fp_0_7": 10,
       "fn_0_7": 168,
-      "id": 183
+      "id": 194
     },
     {
       "dataset": "diaowu_val300",
@@ -29432,7 +31453,7 @@
       "tp_0_7": 254,
       "fp_0_7": 18,
       "fn_0_7": 96,
-      "id": 184
+      "id": 195
     },
     {
       "dataset": "diaowu_val300",
@@ -29543,7 +31564,7 @@
       "tp_0_7": 127,
       "fp_0_7": 10,
       "fn_0_7": 223,
-      "id": 185
+      "id": 196
     },
     {
       "dataset": "diaowu_val300",
@@ -29654,7 +31675,7 @@
       "tp_0_7": 124,
       "fp_0_7": 8,
       "fn_0_7": 226,
-      "id": 186
+      "id": 197
     },
     {
       "dataset": "diaowu_val300",
@@ -29765,7 +31786,7 @@
       "tp_0_7": 124,
       "fp_0_7": 8,
       "fn_0_7": 226,
-      "id": 187
+      "id": 198
     },
     {
       "dataset": "diaowu_val300",
@@ -29876,7 +31897,7 @@
       "tp_0_7": 123,
       "fp_0_7": 9,
       "fn_0_7": 227,
-      "id": 188
+      "id": 199
     },
     {
       "dataset": "diaowu_val300",
@@ -29987,7 +32008,7 @@
       "tp_0_7": 127,
       "fp_0_7": 10,
       "fn_0_7": 223,
-      "id": 189
+      "id": 200
     },
     {
       "dataset": "diaowu_val300",
@@ -30098,7 +32119,7 @@
       "tp_0_7": 302,
       "fp_0_7": 1,
       "fn_0_7": 48,
-      "id": 190
+      "id": 201
     }
   ]
 }

@@ -1,6 +1,6 @@
 # 实验结论与全局比较
 
-更新：2026-11-03 19:57（北京时间）。先按子任务分析，再在此比较关键代表方案。
+更新：2026-11-04 09:00（北京时间）。先按子任务分析，再在此比较关键代表方案。
 
 - [Qwen输入、shot与模型对比](_shared/comparisons/final_results/01_qwen_inputs.md)
 - [Qwen与开放词汇模型对比](_shared/comparisons/final_results/02_model_comparison.md)
@@ -12,7 +12,7 @@
 
 Qwen3.8-Max已找到8组旧吊物99张实验，单列在[Qwen输入子表的Max历史部分](_shared/comparisons/final_results/01_qwen_inputs.md)；与当前300张队列不同，未纳入下面的同队列排名。
 
-原始全类别明细190条保留在[全部运行明细](ALL_RESULTS.md)；本页仅选取每个场景、每种方案/训练预算的AP50或AP50:95实际最高配置的并集。两项最优来自不同实验时列两行，每行全部指标来自同一次运行；不逐列拼接。†沿用子表的元数据证据限制。以下为已见类别的完整300张测试结果，按场景分别计算粗体。训练预算、输入尺寸、文字/视觉提示与搜索次数并未统一，JSTY为监督参考；粗体表示本表数值最高，不等于公平预算下的普遍优胜。
+原始全类别明细201条保留在[全部运行明细](ALL_RESULTS.md)；本页仅选取每个场景、每种方案/训练预算的AP50或AP50:95实际最高配置的并集。两项最优来自不同实验时列两行，每行全部指标来自同一次运行；不逐列拼接。†沿用子表的元数据证据限制。以下为已见类别的完整300张测试结果，按场景分别计算粗体。训练预算、输入尺寸、文字/视觉提示与搜索次数并未统一，JSTY为监督参考；粗体表示本表数值最高，不等于公平预算下的普遍优胜。
 
 ### 已见类全局代表方案
 
@@ -36,7 +36,9 @@ Qwen3.8-Max已找到8组旧吊物99张实验，单列在[Qwen输入子表的Max�
 | 叉车（五类） | [Qwen/qwen3.8-max](_shared/comparisons/final_results/01_qwen_inputs.md) | Qwen-max; MLLM提示_v2; O+C+B; 正10/负0 | AP50及AP50:95最高 | 76.42 | 43.64 | 76.33 | 84.04 | 80.00 | 82.38 | 10.32 | [查看](Qwen/experiments/chache_val300/MLLM%E6%8F%90%E7%A4%BA_v2/qwen3.8-max_10shot/%E5%8E%9F%E5%9B%BE%2B%E8%A3%81%E5%89%AA%E5%9B%BE%2B%E5%B8%A6%E6%A1%86%E5%9B%BE_%E6%97%A0%E8%B4%9F%E4%BE%8B/evaluation.txt) |
 | 叉车（五类） | [YOLOE→Qwen / 未微调](_shared/comparisons/final_results/04_yoloe_qwen.md) | 未微调; 训练0/类; B2框修正; YOLOE 10 / Qwen 1; 候选≥0.01 | AP50最高 | 52.20 | 27.86 | 80.00 | 31.91 | 45.63 | 36.28 | **0.00** | [查看](OVD-MLLM/experiments/chache_val300/yoloe_v8l_10shot_qwen38_v1_20261030/refined/evaluation.txt) |
 | 叉车（五类） | [YOLOE→Qwen / 未微调](_shared/comparisons/final_results/04_yoloe_qwen.md) | 未微调; 训练0/类; B1D去重; YOLOE 10 / Qwen 1; 候选≥0.01 | AP50:95最高 | 49.38 | 27.93 | 80.00 | 31.91 | 45.63 | 36.28 | **0.00** | [查看](OVD-MLLM/experiments/chache_val300/yoloe_v8l_10shot_qwen38_v1_20261030/deduplicated/evaluation.txt) |
+| 叉车（五类） | [YOLOE→Qwen / 冻结SAVPE](_shared/comparisons/final_results/04_yoloe_qwen.md) | 冻结SAVPE; 训练10/类; B2框修正; YOLOE 10 / Qwen 1; 候选≥0.01 | AP50及AP50:95最高 | 49.97 | 35.18 | 84.40 | 48.94 | 61.95 | 53.43 | **0.00** | [查看](OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/refined/evaluation.txt) |
 | 叉车（五类） | [YOLOE→Qwen / 固定头](_shared/comparisons/final_results/04_yoloe_qwen.md) | 固定头; 训练10/类; B1D去重; YOLOE 固定头 / Qwen 1; 候选≥0.01 | AP50及AP50:95最高 | 63.98 | 56.47 | 95.93 | 62.77 | 75.88 | 67.43 | **0.00** | [查看](OVD-MLLM/experiments/chache_val300/finetuned_head_10shot_qwen27b_1shot_20261103/deduplicated/evaluation.txt) |
+| 叉车（五类） | [YOLOE→Qwen / 更新SAVPE](_shared/comparisons/final_results/04_yoloe_qwen.md) | 更新SAVPE; 训练10/类; B2框修正; YOLOE 10 / Qwen 1; 候选≥0.01 | AP50及AP50:95最高 | 50.72 | 35.77 | 83.78 | 49.47 | 62.21 | 53.88 | **0.00** | [查看](OVD-MLLM/experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/refined/evaluation.txt) |
 | 叉车（五类） | [JSTY定制监督参考](_shared/comparisons/final_results/06_supervised_reference.md) | FP32 ONNX; 960×1280; 监督预算未绑定 | AP50及AP50:95最高 | **93.68** | **71.53** | 90.64 | 82.45 | **86.35** | 83.97 | 1.59 | [查看](JSTY-YOLO/experiments/chache_val300/jsty_chache_det5_960_1280_0_0_0_2_fp32_val300_20261102/evaluation.txt) |
 | 吊物（单类） | [GroundingDINO / 未微调](_shared/comparisons/final_results/02_model_comparison.md) | grounding-dino-base; 提示0; prompt_v2; 输入未记录 | AP50及AP50:95最高 | 1.00 | 0.52 | 0.00 | 0.00 | 0.00 | 0.00 | **0.00** | [查看](GroundingDINO/experiments/diaowu_val300/grounding-dino-base_0shot_prompt_v2/evaluation.txt) |
 | 吊物（单类） | [PET-DINO / 未微调](_shared/comparisons/final_results/02_model_comparison.md) | pet_dino_swin_t; 提示1; 视觉提示; 输入未记录 | AP50及AP50:95最高 | 19.00 | 13.22 | **100.00** | 2.29 | 4.47 | 2.84 | **0.00** | [查看](PET-DINO/experiments/diaowu_val300/pet_dino_swin_t_1shot/evaluation.txt) |
@@ -55,6 +57,7 @@ Qwen3.8-Max已找到8组旧吊物99张实验，单列在[Qwen输入子表的Max�
 | 吊物（单类） | [Qwen/qwen3.8-flash](_shared/comparisons/final_results/01_qwen_inputs.md) | Qwen-flash; MLLM提示_v1; O+B; 正10/负0 | AP50及AP50:95最高 | 58.06 | 46.05 | 84.77 | 62.00 | 71.62 | 65.52 | 38.89 | [查看](Qwen/experiments/diaowu_val300/MLLM%E6%8F%90%E7%A4%BA_v1/qwen3.8-flash_10shot/%E5%8E%9F%E5%9B%BE%2B%E5%B8%A6%E6%A1%86%E5%9B%BE_%E6%97%A0%E8%B4%9F%E4%BE%8B/evaluation.txt) |
 | 吊物（单类） | [Qwen/qwen3.8-max](_shared/comparisons/final_results/01_qwen_inputs.md) | Qwen-max; MLLM提示_v1; O+B+J; 正10/负0 | AP50及AP50:95最高 | 56.04 | 44.38 | 97.51 | 56.00 | 71.14 | 61.21 | 2.22 | [查看](Qwen/experiments/diaowu_val300/MLLM%E6%8F%90%E7%A4%BA_v1/qwen3.8-max_10shot/%E5%8E%9F%E5%9B%BE%2B%E5%B8%A6%E6%A1%86%E5%9B%BE%2B%E6%A0%87%E6%B3%A8JSON_%E6%97%A0%E8%B4%9F%E4%BE%8B/evaluation.txt) |
 | 吊物（单类） | [YOLOE→Qwen / 未微调](_shared/comparisons/final_results/04_yoloe_qwen.md) | 未微调; 训练0/类; B2框修正; YOLOE 10 / Qwen 1; 候选≥0.01 | AP50及AP50:95最高 | 58.36 | 36.44 | 84.19 | 51.71 | 64.07 | 56.04 | 22.22 | [查看](OVD-MLLM/experiments/diaowu_val300/yoloe_v8l_10shot_qwen38_v1_20261030/refined/evaluation.txt) |
+| 吊物（单类） | [YOLOE→Qwen / 冻结SAVPE](_shared/comparisons/final_results/04_yoloe_qwen.md) | 冻结SAVPE; 训练10/类; B1D去重; YOLOE 10 / Qwen 1; 候选≥0.01 | AP50及AP50:95最高 | 55.62 | 42.65 | 91.61 | 40.57 | 56.24 | 45.66 | 14.44 | [查看](OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/deduplicated/evaluation.txt) |
 | 吊物（单类） | [YOLOE→Qwen / 固定头](_shared/comparisons/final_results/04_yoloe_qwen.md) | 固定头; 训练10/类; B1D去重; YOLOE 固定头 / Qwen 1; 候选≥0.01 | AP50及AP50:95最高 | 57.95 | 47.59 | 95.12 | 55.71 | 70.27 | 60.75 | 10.00 | [查看](OVD-MLLM/experiments/diaowu_val300/finetuned_head_10shot_qwen27b_1shot_20261103/deduplicated/evaluation.txt) |
 | 吊物（单类） | [YOLOE→Qwen / 更新SAVPE](_shared/comparisons/final_results/04_yoloe_qwen.md) | 更新SAVPE; 训练10/类; B1D去重; YOLOE 10 / Qwen 1; 候选≥0.01 | AP50及AP50:95最高 | 55.09 | 42.11 | 94.59 | 40.00 | 56.22 | 45.22 | 8.89 | [查看](OVD-MLLM/experiments/diaowu_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/deduplicated/evaluation.txt) |
 | 吊物（单类） | [JSTY定制监督参考](_shared/comparisons/final_results/06_supervised_reference.md) | FP32 ONNX; 960×1280; 监督预算未绑定 | AP50及AP50:95最高 | **98.69** | **87.37** | 99.04 | 88.86 | **93.67** | **90.72** | 3.33 | [查看](JSTY-YOLO/experiments/diaowu_val300/jsty_hanging_object_det1_0_0_0_1_fp32_val300_20261102/evaluation.txt) |
@@ -78,11 +81,14 @@ Qwen3.8-Max已找到8组旧吊物99张实验，单列在[Qwen输入子表的Max�
 - 叉车（五类）训练5shot/类：YOLOv8、固定头YOLOE、训练SAVPE的视觉提示YOLOE，已测试最高AP50分别为54.06/60.30/48.80%。这是各自实际配置的测试最高值，尺寸与搜索预算仍需查看，不能当作等预算统计显著结论。
 - 叉车（五类）训练10shot/类：YOLOv8、固定头YOLOE、训练SAVPE的视觉提示YOLOE，已测试最高AP50分别为79.26/82.22/64.13%。这是各自实际配置的测试最高值，尺寸与搜索预算仍需查看，不能当作等预算统计显著结论。
 - 叉车（五类）未微调YOLOE→Qwen：B2相对B0的AP50从28.98%到52.20%，变化+23.22个百分点；R从37.77%到31.91%。因此同时报告筛选收益与召回代价。
+- 叉车（五类）冻结SAVPEYOLOE→Qwen：B2相对B0的AP50从58.99%到49.97%，变化-9.03个百分点；R从68.09%到48.94%。因此同时报告筛选收益与召回代价。
 - 叉车（五类）固定头YOLOE→Qwen：B2相对B0的AP50从80.94%到62.06%，变化-18.89个百分点；R从80.32%到61.17%。因此同时报告筛选收益与召回代价。
+- 叉车（五类）更新SAVPEYOLOE→Qwen：B2相对B0的AP50从64.10%到50.72%，变化-13.38个百分点；R从69.68%到49.47%。因此同时报告筛选收益与召回代价。
 - 吊物（单类）未微调方法：AP50最高为Qwen/qwen3.8-flash，58.06%；AP50:95最高为Qwen/qwen3.8-flash，46.05%。两项最优可以来自不同配置，详见子表，不将它们拼成一次实验。
 - 吊物（单类）训练5shot/类：YOLOv8、固定头YOLOE、训练SAVPE的视觉提示YOLOE，已测试最高AP50分别为39.65/60.87/59.71%。这是各自实际配置的测试最高值，尺寸与搜索预算仍需查看，不能当作等预算统计显著结论。
 - 吊物（单类）训练10shot/类：YOLOv8、固定头YOLOE、训练SAVPE的视觉提示YOLOE，已测试最高AP50分别为92.19/92.85/84.98%。这是各自实际配置的测试最高值，尺寸与搜索预算仍需查看，不能当作等预算统计显著结论。
 - 吊物（单类）未微调YOLOE→Qwen：B2相对B0的AP50从55.83%到58.36%，变化+2.53个百分点；R从53.43%到51.71%。因此同时报告筛选收益与召回代价。
+- 吊物（单类）冻结SAVPEYOLOE→Qwen：B2相对B0的AP50从77.05%到55.51%，变化-21.54个百分点；R从43.43%到40.57%。因此同时报告筛选收益与召回代价。
 - 吊物（单类）固定头YOLOE→Qwen：B2相对B0的AP50从91.33%到56.72%，变化-34.61个百分点；R从80.29%到54.86%。因此同时报告筛选收益与召回代价。
 - 吊物（单类）更新SAVPEYOLOE→Qwen：B2相对B0的AP50从77.44%到54.85%，变化-22.59个百分点；R从42.57%到39.71%。因此同时报告筛选收益与召回代价。
 - Chache4新增类5shot提示：四类微调后不再优化新类，AP50较原始权重33.68%→58.22%，支持本场景的提示迁移价值；score≥0.5召回为60.00%。此单类指标不参与上面的全类别排名。

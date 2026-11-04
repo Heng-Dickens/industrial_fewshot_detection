@@ -289,7 +289,7 @@
     "component_runs": 15,
     "metadata_directories": 18
   },
-  "generated_at": "2026-11-03 19:40:31",
+  "generated_at": "2026-11-03 22:01:28",
   "method_folder": "YOLOE",
   "finetuning_report": "../../finetune/chache_val300/comparisons/yoloe_search_20261029/ALL_EXPERIMENTS.md"
 }

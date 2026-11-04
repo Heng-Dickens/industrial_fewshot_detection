@@ -1,6 +1,6 @@
 # OVD-MLLM / chache_val300：实验结果总表
 
-更新时间：2026-11-03 19:40:31（北京时间）。共 12 组独立实验；算法分布：OVD-MLLM 12组。
+更新时间：2026-11-03 22:01:28（北京时间）。共 20 组独立实验；算法分布：OVD-MLLM 20组。
 
 当前数据集：300 张；真值框：Chache2=30、Chache1=40、Qianyinche=48、Chache4=30、Chache3=40。
 数据指纹：`bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b`。
@@ -25,8 +25,16 @@
 | 8 | OVD-MLLM | yoloe→qwen3.8-27b | — | — | filtered | 0 | 63.98 | 56.47 | 95.93 | 62.77 | 67.43 | 99.11/59.04/64.24 | 118/5/70 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_head_10shot_qwen27b_1shot_20261103/filtered/evaluation.txt) |
 | 9 | OVD-MLLM | yoloe→qwen3.8-27b | — | — | refined | 0 | 62.06 | 46.46 | 93.50 | 61.17 | 65.71 | 96.43/57.45/62.50 | 115/8/73 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_head_10shot_qwen27b_1shot_20261103/refined/evaluation.txt) |
 | 10 | OVD-MLLM | yoloe→qwen3.8-27b | — | — | source | 0 | 82.22 | 70.96 | 78.65 | 80.32 | 79.98 | 82.56/75.53/76.84 | 151/41/37 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_head_10shot_qwen27b_1shot_20261103/source/evaluation.txt) |
-| 11 | OVD-MLLM | yoloe→qwen3.8-27b | — | 10 | baseline | 0 | 64.10 | 49.84 | 47.46 | 69.68 | 63.72 | 57.51/59.04/58.73 | 131/145/57 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/baseline/evaluation.txt) |
-| 12 | OVD-MLLM | yoloe→qwen3.8-27b | — | 10 | source | 0 | 64.13 | 49.86 | 47.46 | 69.68 | 63.72 | 57.51/59.04/58.73 | 131/145/57 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/source/evaluation.txt) |
+| 11 | OVD-MLLM | yoloe→qwen3.8-27b | — | 10 | baseline | 0 | 58.99 | 46.07 | 42.24 | 68.09 | 60.66 | 50.92/59.04/57.22 | 128/175/60 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/baseline/evaluation.txt) |
+| 12 | OVD-MLLM | yoloe→qwen3.8-27b | — | 10 | baseline | 0 | 64.10 | 49.84 | 47.46 | 69.68 | 63.72 | 57.51/59.04/58.73 | 131/145/57 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/baseline/evaluation.txt) |
+| 13 | OVD-MLLM | yoloe→qwen3.8-27b | — | 10 | deduplicated | 0 | 42.27 | 33.29 | 73.39 | 42.55 | 46.46 | 79.35/38.83/43.25 | 80/29/108 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/deduplicated/evaluation.txt) |
+| 14 | OVD-MLLM | yoloe→qwen3.8-27b | — | 10 | deduplicated | 0 | 43.45 | 33.18 | 72.97 | 43.09 | 46.93 | 77.32/39.89/44.17 | 81/30/107 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/deduplicated/evaluation.txt) |
+| 15 | OVD-MLLM | yoloe→qwen3.8-27b | — | 10 | filtered | 0 | 42.27 | 33.29 | 73.39 | 42.55 | 46.46 | 79.35/38.83/43.25 | 80/29/108 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/filtered/evaluation.txt) |
+| 16 | OVD-MLLM | yoloe→qwen3.8-27b | — | 10 | filtered | 0 | 43.45 | 33.18 | 72.97 | 43.09 | 46.93 | 77.32/39.89/44.17 | 81/30/107 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/filtered/evaluation.txt) |
+| 17 | OVD-MLLM | yoloe→qwen3.8-27b | — | 10 | refined | 0 | 49.97 | 35.18 | 84.40 | 48.94 | 53.43 | 85.87/42.02/46.80 | 92/17/96 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/refined/evaluation.txt) |
+| 18 | OVD-MLLM | yoloe→qwen3.8-27b | — | 10 | refined | 0 | 50.72 | 35.77 | 83.78 | 49.47 | 53.88 | 86.60/44.68/49.47 | 93/18/95 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/refined/evaluation.txt) |
+| 19 | OVD-MLLM | yoloe→qwen3.8-27b | — | 10 | source | 0 | 59.02 | 46.11 | 42.24 | 68.09 | 60.66 | 50.92/59.04/57.22 | 128/175/60 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/source/evaluation.txt) |
+| 20 | OVD-MLLM | yoloe→qwen3.8-27b | — | 10 | source | 0 | 64.13 | 49.86 | 47.46 | 69.68 | 63.72 | 57.51/59.04/58.73 | 131/145/57 | 300/300 | 完成 | 0.5/100 | [查看](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/source/evaluation.txt) |
 
 ## 核验与特殊情况
 
@@ -40,8 +48,16 @@
 - 第8组 [yoloe→qwen3.8-27b / filtered](../../experiments/chache_val300/finetuned_head_10shot_qwen27b_1shot_20261103/filtered/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
 - 第9组 [yoloe→qwen3.8-27b / refined](../../experiments/chache_val300/finetuned_head_10shot_qwen27b_1shot_20261103/refined/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
 - 第10组 [yoloe→qwen3.8-27b / source](../../experiments/chache_val300/finetuned_head_10shot_qwen27b_1shot_20261103/source/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
-- 第11组 [yoloe→qwen3.8-27b / baseline](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/baseline/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
-- 第12组 [yoloe→qwen3.8-27b / source](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/source/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
+- 第11组 [yoloe→qwen3.8-27b / baseline](../../experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/baseline/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
+- 第12组 [yoloe→qwen3.8-27b / baseline](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/baseline/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
+- 第13组 [yoloe→qwen3.8-27b / deduplicated](../../experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/deduplicated/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
+- 第14组 [yoloe→qwen3.8-27b / deduplicated](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/deduplicated/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
+- 第15组 [yoloe→qwen3.8-27b / filtered](../../experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/filtered/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
+- 第16组 [yoloe→qwen3.8-27b / filtered](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/filtered/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
+- 第17组 [yoloe→qwen3.8-27b / refined](../../experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/refined/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
+- 第18组 [yoloe→qwen3.8-27b / refined](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/refined/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
+- 第19组 [yoloe→qwen3.8-27b / source](../../experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/source/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
+- 第20组 [yoloe→qwen3.8-27b / source](../../experiments/chache_val300/finetuned_savpe_train_10shot_qwen27b_1shot_20261103/source/evaluation.txt)：清单指纹与基准指纹口径不同，已按图像哈希及完整GT核对为同一数据集。
 
 CSV另含每类AP50、指纹、评估范围、复核开关、来源路径等字段；JSON包含单类子运行路径和记录核验统计。
 

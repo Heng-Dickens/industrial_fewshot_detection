@@ -1,6 +1,6 @@
 # WeDetect / chache_val300：实验结果总表
 
-更新时间：2026-11-03 19:40:31（北京时间）。共 4 组独立实验；算法分布：WeDetect 4组。
+更新时间：2026-11-03 22:01:28（北京时间）。共 4 组独立实验；算法分布：WeDetect 4组。
 
 当前数据集：300 张；真值框：Chache2=30、Chache1=40、Qianyinche=48、Chache4=30、Chache3=40。
 数据指纹：`bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b`。

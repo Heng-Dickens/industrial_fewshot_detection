@@ -2,7 +2,7 @@
 
 [微调模型的300张测试完整成绩（含P@0.5、R@0.5）](../../finetune/chache_val300/comparisons/yoloe_search_20261029/ALL_EXPERIMENTS.md)
 
-更新时间：2026-11-03 19:40:31（北京时间）。共 3 组独立实验；算法分布：YOLOE 3组。
+更新时间：2026-11-03 22:01:28（北京时间）。共 3 组独立实验；算法分布：YOLOE 3组。
 
 当前数据集：300 张；真值框：Chache2=30、Chache1=40、Qianyinche=48、Chache4=30、Chache3=40。
 数据指纹：`bf04a484ca78255b5d8a8208dac79a6ac350c0dae1b4aa696bb5d921140b8d2b`。

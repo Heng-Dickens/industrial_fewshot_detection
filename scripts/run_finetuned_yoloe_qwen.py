@@ -32,7 +32,7 @@ from industrial_fewshot.evaluation.evaluator import evaluate_records
 from industrial_fewshot.evaluation.reporting import save_text_report
 from industrial_fewshot.postprocess.boxes import box_iou
 from industrial_fewshot.postprocess.schema import clean_json_response
-from industrial_fewshot.service_errors import terminal_service_error
+from industrial_fewshot.service_errors import ModelServiceError, terminal_service_error
 from industrial_fewshot.prompts.references import encode_data_url
 
 SCRIPT=Path(__file__).resolve()
@@ -251,21 +251,41 @@ async def request(client,job,sample,boxes,stage,refs):
         if saved.get('key')!=key:raise ValueError('Cache identity mismatch.')
         validate_reviews({'reviews':saved['reviews']},boxes,stage)
         return saved['reviews']
+    messages=[{'role':'user','content':content}]
     for attempt in range(3):
         event=dict(key=key,job=job['id'],stage=stage,image=sample['relative_path'],attempt=attempt+1,started=time.time())
+        event['request_payload_sha256']=digest(messages)
+        raw=None
         try:
-            raw,finish,usage,_=await complete_message(client,job['model'],[{'role':'user','content':content}],{'type':'json_object'})
+            raw,finish,usage,_=await complete_message(client,job['model'],messages,{'type':'json_object'})
             event.update(usage=usage,finish_reason=finish)
             if finish!='stop':raise ValueError('Truncated or abnormal completion.')
             doc=clean_json_response(raw);rows=validate_reviews(doc,boxes,stage)
-            write(cache,dict(key=key,reviews=rows,usage=usage,finish_reason=finish))
+            write(cache,dict(key=key,reviews=rows,usage=usage,finish_reason=finish,
+                request_payload_sha256=event['request_payload_sha256'],format_correction=attempt>0))
             event['status']='success'
             return rows
         except Exception as exc:
             event.update(status='failed',error=str(exc))
-            if terminal_service_error(exc) or attempt==2:raise
+            if raw is not None:
+                feedback=RUNTIME/'invalid_responses'/job['id']/(key+f'.{time.time_ns()}.json')
+                write(feedback,dict(key=key,stage=stage,image=sample['relative_path'],raw_response=raw,error=str(exc),
+                    request_payload_sha256=event['request_payload_sha256']))
+                event['invalid_response_file']=str(feedback.relative_to(ROOT)) if feedback.is_relative_to(ROOT) else str(feedback)
+                # Correct formatting only. Never invent a decision, change candidate
+                # identity or accept malformed output as a successful review.
+                fields=('decision必须恰为keep、remove或uncertain中的一个英文小写单词；'
+                    'duplicate_of只能为null或本批另一个编号。' if stage=='filter' else
+                    'action必须恰为keep或refine中的一个英文小写单词；refine时bbox_1000必须为四个有效坐标。')
+                correction=('上一响应格式校验失败：'+str(exc)+'。请只修正JSON格式、字段和编号，重新输出本批完整reviews。'
+                    +fields+'每个requested_ids编号必须恰好出现一次；字符串中的换行必须转义。'
+                    '保留原审核标准，不改类别和分数，不新增候选。')
+                messages=[{'role':'user','content':content},{'role':'assistant','content':raw},
+                    {'role':'user','content':correction}]
+            if isinstance(exc,ModelServiceError) or terminal_service_error(exc) or attempt==2:raise
             await asyncio.sleep(2)
         finally:
+            event.setdefault('status','interrupted')
             event['finished']=time.time()
             with (RUNTIME/'requests.jsonl').open('a') as stream:stream.write(json.dumps(event,ensure_ascii=False)+'\n')
 
@@ -343,6 +363,7 @@ async def run_job(job):
     state=read(state_path(job))
     if state.get('identity')!=job['identity']:raise ValueError('Plan identity mismatch.')
     if state['status']=='completed':return
+    state.pop('error',None)
     state.update(status='running',pid=os.getpid(),started=time.time(),stage='source')
     write(state_path(job),state);render()
     save_stage(job,'source',manifest,records)
@@ -460,14 +481,17 @@ def render():
         '每请求最多20个候选；无候选不调用Qwen，uncertain保留。筛选禁止补框/改类/改分数；框修正保留候选集合、类别和分数。',
         '输入含原图、编号整图与1.5倍上下文裁图；整图最长边1280、裁图640、JPEG90。旧未微调级联保留作为历史对照。',
         '每场景并发2个图像任务，共最多4；逐请求记录usage及重试，验证成功的请求按完整输入哈希缓存。',
+        '格式异常最多尝试3次；重试仅追加格式纠错要求，保持图片、审核标准与候选不变。异常响应单独留档，不作为成功预测。',
         'AP50最佳来自现有测试结果的探索性选择，输入尺寸/seed/训练范围随选中配置保留，不当作等预算独立验证。',
         '',f'控制器状态：`{controller.get("status","prepared_offline")}`。',
         '', '| 场景 | 微调方式 | 原始AP50 | 候选框 | 筛选批数 | 状态 | 完成/300 | B1 AP50 | B2 AP50 |',
         '| --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: |']
     for j in jobs():
         s=read(state_path(j));m=s.get('metrics',{})
+        status=s['status']
+        if status=='running' and not live(s.get('pid')):status='interrupted_process_exited'
         values=[j['scene'],NAMES[j['method']],f'{100*j["source_AP50"]:.2f}',j['candidate_count'],j['filter_batches'],
-            s['status'],s.get('completed_images',0),
+            status,s.get('completed_images',0),
             *[f'{100*m[k]["mAP50"]:.2f}' if k in m else '—' for k in ('filtered','refined')]]
         lines.append('| '+' | '.join(map(str,values))+' |')
     accounting=Counter()
@@ -476,7 +500,7 @@ def render():
             try:event=json.loads(line)
             except ValueError:continue
             accounting['attempts']+=1
-            accounting['failures']+=event['status']!='success'
+            accounting['failures']+=event.get('status')!='success'
             for key in ('input_tokens','cache_read_input_tokens','output_tokens'):
                 accounting[key]+=(event.get('usage') or {}).get(key,0) or 0
     lines+=['',f'已落盘请求尝试{accounting["attempts"]}次（失败{accounting["failures"]}次）；'

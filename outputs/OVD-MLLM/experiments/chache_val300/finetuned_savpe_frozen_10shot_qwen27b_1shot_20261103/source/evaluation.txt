@@ -1,0 +1,79 @@
+
+chache_val300
+【提示词记录】
+MLLM 文字 prompt：完整内容见 prompt.txt，复核模板见 review_template.txt。
+输入快照：prompt.json；具体记录位于本次结果目录。
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.461
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.590
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.497
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.414
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.488
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.579
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.749
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.758
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.607
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.771
+
++------------+------+--------+------+
+| category   | AP   | Recall | F2   |
++------------+------+--------+------+
+| Chache1    | 18.7 | 90.0   | 3.3  |
++------------+------+--------+------+
+| Chache2    | 46.8 | 93.3   | 3.4  |
++------------+------+--------+------+
+| Chache3    | 66.0 | 97.5   | 3.9  |
++------------+------+--------+------+
+| Chache4    | 71.9 | 100.0  | 10.6 |
++------------+------+--------+------+
+| Qianyinche | 91.6 | 100.0  | 14.4 |
++------------+------+--------+------+
+| mean       | 59.0 | 96.2   | 7.1  |
++------------+------+--------+------+
+COCO categories: AP50 / Recall50; F2 from TP/FP at IoU=0.50, maxDets=100, all scores.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.5, maxDets=100
++------------+-----+------+-----+-----------+--------+------+-------+
+| class      | tps | dets | gts | precision | recall | F2   | error |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache1    | 10  | 65   | 40  | 15.4      | 25.0   | 22.2 | 0.85  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache2    | 17  | 68   | 30  | 25.0      | 56.7   | 45.2 | 0.75  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache3    | 30  | 49   | 40  | 61.2      | 75.0   | 71.8 | 0.39  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache4    | 28  | 65   | 30  | 43.1      | 93.3   | 75.7 | 0.57  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Qianyinche | 43  | 56   | 48  | 76.8      | 89.6   | 86.7 | 0.23  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| mean       | 128 | 303  | 188 | 44.3      | 67.9   | 60.3 | 0.56  |
++------------+-----+------+-----+-----------+--------+------+-------+
+TP=128 | FP=175 | FN=60
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+
+************************* VOC-style Evaluation *************************
+IoU=0.50, score>=0.7, maxDets=100
++------------+-----+------+-----+-----------+--------+------+-------+
+| class      | tps | dets | gts | precision | recall | F2   | error |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache1    | 6   | 30   | 40  | 20.0      | 15.0   | 15.8 | 0.80  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache2    | 15  | 50   | 30  | 30.0      | 50.0   | 44.1 | 0.70  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache3    | 24  | 34   | 40  | 70.6      | 60.0   | 61.9 | 0.29  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Chache4    | 26  | 57   | 30  | 45.6      | 86.7   | 73.4 | 0.54  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| Qianyinche | 40  | 47   | 48  | 85.1      | 83.3   | 83.7 | 0.15  |
++------------+-----+------+-----+-----------+--------+------+-------+
+| mean       | 111 | 218  | 188 | 50.3      | 59.0   | 55.8 | 0.50  |
++------------+-----+------+-----+-----------+--------+------+-------+
+TP=111 | FP=107 | FN=77
+AP/P/R/F2: percent; error=FP/dets; F2=5PR/(4P+R). mean: summed counts, macro-average rates.
+Score thresholds filter output boxes and P/R/F2 counts; COCO AP/AR above uses all saved scores.
+Status: complete | images: 300 | failed requests: 0 | image accuracy: 48.7% | proxy loss: 1.1091
+
+Results: /home/yuheng/Work/industrial_fewshot_detection/outputs/OVD-MLLM/experiments/chache_val300/finetuned_savpe_frozen_10shot_qwen27b_1shot_20261103/source

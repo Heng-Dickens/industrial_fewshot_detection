@@ -602,6 +602,40 @@ def make_finetune(report, novel):
     report.save(path,text,full_rows)
 
 
+def audit_cascade_stages(rows):
+    """Only merge stages after comparing complete prediction records, not rounded AP."""
+    groups=defaultdict(dict)
+    for r in rows:
+        if r['algorithm']=='OVD-MLLM':
+            groups[r['dataset'],r.get('cascade_method') or 'pretrained'][r['input_variant']]=r
+    audits={}
+    for key,group in groups.items():
+        if not {'source','baseline','filtered','deduplicated'}<=set(group):continue
+        paths={stage:ROOT/group[stage]['run_dir']/'records.jsonl'
+               for stage in ('source','baseline','filtered','deduplicated')}
+        if not all(p.is_file() for p in paths.values()):continue
+        records={stage:{(r['relative_path'],r['target_id']):r for r in
+            (json.loads(line) for line in p.read_text().splitlines() if line.strip())}
+            for stage,p in paths.items()}
+        if any(len(r)!=300 or any(z['status']!='success' for z in r.values()) for r in records.values()):continue
+        if any(set(r)!=set(records['source']) for r in records.values()):continue
+        def operating(r):
+            return sorted((o['label'],o['confidence'],tuple(o['bbox_pixels_xyxy']))
+                          for o in r['objects'] if o['confidence']>=.5)
+        audit=dict(dataset=key[0],method=key[1],image_count=300,
+            record_files={stage:str(p.relative_to(ROOT)) for stage,p in paths.items()},
+            record_sha256={stage:sha(p) for stage,p in paths.items()},
+            box_counts={stage:sum(len(r['objects']) for r in rs.values()) for stage,rs in records.items()},
+            filtered_deduplicated_identical=records['filtered']==records['deduplicated'],
+            filtered_deduplicated_metrics_identical=read(ROOT/group['filtered']['metric_file'])==read(ROOT/group['deduplicated']['metric_file']),
+            dedup_changed_images=sum(records['filtered'][p]!=records['deduplicated'][p] for p in records['filtered']),
+            source_baseline_operating_predictions_identical=all(operating(records['source'][p])==operating(records['baseline'][p])
+                                                               for p in records['source']))
+        audit['dedup_removed_boxes']=audit['box_counts']['filtered']-audit['box_counts']['deduplicated']
+        audits[key]=audit
+    return audits
+
+
 def make_cascade(report):
     path, text = report.page('cascade',
         '比较三种YOLOE微调获得候选后，再交由Qwen3.8-27B筛选、去重和修正框的效果。'
@@ -611,6 +645,12 @@ def make_cascade(report):
              'deduplicated':'B1D 去重', 'refined':'B2 框修正'}
     methods={'head':'固定头／移除SAVPE','savpe_train':'视觉提示／更新SAVPE','savpe_frozen':'视觉提示／冻结SAVPE'}
     order=list(names);displayed=[]
+    audits=audit_cascade_stages(report.rows)
+    audit_path=DETAIL/'04_yoloe_qwen_stage_audit.json'
+    audit_path.write_text(json.dumps(dict(schema='cascade.stage_equivalence.v1',
+        merge_rule='Merge filtered/deduplicated only when all 300 complete records are exactly identical; '
+            'retain both actual runs in the topic CSV and raw ledger.',
+        groups=list(audits.values())),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     progress=OUT/'OVD-MLLM/comparisons/finetuned_yoloe_qwen_20261103/README.md'
     if progress.is_file():text+=link('三种微调级联：6组补跑进度与选中权重',progress,path)+'\n\n'
     text+=('S0保留原始逐图预测，B0仅保留score≥0.01、每类最多100框的候选；'
@@ -618,12 +658,29 @@ def make_cascade(report):
         'B2只改坐标，候选集合、类别和原始分数固定，不补框。没有候选的图片不调用Qwen。'
         '候选score下限与P/R工作阈值0.5不同。S0→B0反映截断影响，B0→后续阶段反映Qwen处理影响。'
         '选择依据为现有测试AP50最高的实际配置，尺寸、seed和训练范围可能不同，不能当作等预算独立验证。\n\n')
+    merged=[a for a in audits.values() if a['method']!='pretrained' and a['filtered_deduplicated_identical']
+            and a['filtered_deduplicated_metrics_identical']]
+    if merged:
+        text+=(f'**相同阶段合并展示：**已逐图核验{len(merged)}组B1与B1D的全部300条预测完全相同，'
+            '独立去重阶段额外删除0框；表中合为“B1筛选 / B1D去重（无额外变化）”，不算两次独立改进。'
+            '原先相邻两行相同是实际输出未变，重复列出没有增加信息。B1D是本地后处理，未再次调用Qwen。'
+            '本批去重关联多数涉及筛选已删除的框，其余关联不满足同类或IoU门限，因此没有额外删除。'
+            'S0与B0仍分别保留：删去score<0.01的低分框会影响AP，而P/R使用score≥0.5，因此P/R可能完全相同。'+
+            link('逐图核验、框数和SHA256',audit_path,path)+' · '+
+            link('所有阶段完整CSV',path.with_suffix('.csv'),path)+'。\n\n')
     for dataset in DATASETS:
         stages=[copy.deepcopy(r) for r in report.rows if r['dataset']==dataset and r['algorithm']=='OVD-MLLM' and r.get('cascade_method')]
         stages.sort(key=lambda r:(list(methods).index(r['cascade_method']),order.index(r['input_variant'])))
-        for r in stages:r['stage_name']=names[r['input_variant']]
+        visible=[]
+        for r in stages:
+            r['stage_name']=names[r['input_variant']]
+            audit=audits.get((dataset,r['cascade_method']),{})
+            if audit.get('filtered_deduplicated_identical') and audit.get('filtered_deduplicated_metrics_identical'):
+                if r['input_variant']=='deduplicated':continue
+                if r['input_variant']=='filtered':r['stage_name']='B1筛选 / B1D去重（无额外变化）'
+            visible.append(r)
         if stages:
-            text+=report.table(path,SCENES[dataset]+' · 三种微调→Qwen27B',stages,
+            text+=report.table(path,SCENES[dataset]+' · 三种微调→Qwen27B',visible,
                 [('微调方式',lambda r:methods[r['cascade_method']]),('阶段',lambda r:r['stage_name']),
                  ('提示数量',lambda r:r['prompt_budget_display'])])
             displayed.extend(stages)
@@ -632,10 +689,17 @@ def make_cascade(report):
             group={r['input_variant']:r for r in stages if r['cascade_method']==method and eligible(r)}
             if 'baseline' not in group:continue
             a=group['baseline']
+            audit=audits.get((dataset,method),{})
+            if audit.get('filtered_deduplicated_identical') and audit.get('filtered_deduplicated_metrics_identical'):
+                text+=(f'{methods[method]}：B1保留{audit["box_counts"]["filtered"]}框，'
+                       f'B1D仍为{audit["box_counts"]["deduplicated"]}框，去重额外删除0框。'+
+                       link('B1D原始评估',ROOT/group['deduplicated']['report'],path)+'。\n\n')
             for stage in ('filtered','deduplicated','refined'):
                 if stage not in group:continue
+                if stage=='deduplicated' and audit.get('filtered_deduplicated_identical') and audit.get('filtered_deduplicated_metrics_identical'):continue
                 b=group[stage]
-                text+=(f'{methods[method]} · {names[stage]}相对B0：AP50变化{100*(b["AP50"]-a["AP50"]):+.2f}个百分点，'
+                stage_name=b['stage_name'] if stage=='filtered' else names[stage]
+                text+=(f'{methods[method]} · {stage_name}相对B0：AP50变化{100*(b["AP50"]-a["AP50"]):+.2f}个百分点，'
                     f'P变化{100*(b["precision_0_5"]-a["precision_0_5"]):+.2f}，R变化{100*(b["recall_0_5"]-a["recall_0_5"]):+.2f}。\n\n')
     text+='<details>\n<summary>附录：未微调YOLOE级联与直接Qwen对照</summary>\n\n'
     for dataset in DATASETS:
@@ -643,9 +707,16 @@ def make_cascade(report):
         stages.sort(key=lambda r:order.index(r['input_variant']))
         direct=qwen_representatives([r for r in report.rows if r['dataset']==dataset and r['model']=='qwen3.8-27b'
             and r['inference_shot_per_class'] in [1,10]])
-        for r in stages:r['stage_name']=names[r['input_variant']]
+        historical_visible=[]
+        audit=audits.get((dataset,'pretrained'),{})
+        for r in stages:
+            r['stage_name']=names[r['input_variant']]
+            if audit.get('filtered_deduplicated_identical') and audit.get('filtered_deduplicated_metrics_identical'):
+                if r['input_variant']=='deduplicated':continue
+                if r['input_variant']=='filtered':r['stage_name']='B1筛选 / B1D去重（无额外变化）'
+            historical_visible.append(r)
         for r in direct:r['stage_name']='直接Qwen对照'
-        pool=stages+direct;displayed.extend(pool)
+        pool=historical_visible+direct;displayed.extend(stages+direct)
         text+=report.table(path,SCENES[dataset]+' · 历史/直接对照',pool,
             [('处理阶段',lambda r:r['stage_name']),('参考数量',lambda r:r['prompt_budget_display']),
              ('关键输入',lambda r:('仅YOLOE' if r['input_variant'] in {'source','baseline'} else 'YOLOE候选→Qwen27B')
